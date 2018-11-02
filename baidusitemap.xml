@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/11/01/pc-win-no-voice/</loc>
+    <lastmod>2018-11-02T01:11:53.479Z</lastmod>
+    <data>
+        <display>
+        <title>win10台式机(插入耳机)没有声音</title>
+        <pubTime>2018-11-01T11:32:27.000Z</pubTime>
+        
+        <tag>no-voice </tag>
+         
+        <tag>win10 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/07/16/pyqt-mutilanguage/</loc>
+    <lastmod>2018-10-31T13:29:24.182Z</lastmod>
+    <data>
+        <display>
+        <title>PyQt5 多语言支持</title>
+        <pubTime>2018-07-16T03:37:48.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>blog </tag>
+         
+        <tag>PyQt5 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/10/30/summary-1810/</loc>
+    <lastmod>2018-10-31T13:23:10.288Z</lastmod>
+    <data>
+        <display>
+        <title>Tich·十月总结/2018</title>
+        <pubTime>2018-10-30T12:48:36.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/10/31/chrome-exts-hide2show/</loc>
+    <lastmod>2018-10-31T13:22:01.656Z</lastmod>
+    <data>
+        <display>
+        <title>如何显示已经隐藏的 chrome 扩展</title>
+        <pubTime>2018-10-31T12:57:16.000Z</pubTime>
+        
+        <tag>chrome </tag>
+         
+        <tag>chrome-extension </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/10/01/summary-1809/</loc>
+    <lastmod>2018-10-30T09:19:32.980Z</lastmod>
+    <data>
+        <display>
+        <title>Tich·九月总结/2018</title>
+        <pubTime>2018-10-01T12:48:36.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/07/11/windows-right-click-slow/</loc>
+    <lastmod>2018-10-29T08:23:32.641Z</lastmod>
+    <data>
+        <display>
+        <title>win10 桌面点右键很慢才出菜单</title>
+        <pubTime>2018-07-11T02:22:08.000Z</pubTime>
+        
+        <tag>Windows </tag>
+         
+        <tag>right-click </tag>
+         
+        <tag>menu </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/10/10/RAM-JD/</loc>
+    <lastmod>2018-10-29T08:21:07.270Z</lastmod>
+    <data>
+        <display>
+        <title>Python爬取京东内存条数据并作简单分析</title>
+        <pubTime>2017-10-10T10:17:56.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Crawler </tag>
+         
+        <tag>ECharts </tag>
+         
+        <tag>JavaScript </tag>
+         
+        <tag>RAM </tag>
+         
+        <tag>JD </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/07/26/hello-world/</loc>
+    <lastmod>2018-10-29T08:20:42.953Z</lastmod>
+    <data>
+        <display>
+        <title>第一篇博客</title>
+        <pubTime>2017-07-26T08:20:26.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/08/25/cloud-music-lyric/</loc>
+    <lastmod>2018-10-29T08:20:23.004Z</lastmod>
+    <data>
+        <display>
+        <title>网易云歌词下载器</title>
+        <pubTime>2017-08-25T10:50:05.000Z</pubTime>
+        
+        <tag>C++ </tag>
+         
+        <tag>QT </tag>
+         
+        <tag>lyric </tag>
+         
+        <tag>Netease-Cloud </tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://lewistian.github.io/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/07/03/intel-cpu-cpuid-instruction/</loc>
+    <lastmod>2018-10-29T08:19:36.275Z</lastmod>
+    <data>
+        <display>
+        <title>Intel CPU的CPUID指令（转载）</title>
+        <pubTime>2018-07-03T09:34:38.000Z</pubTime>
+        
+        <tag>intel </tag>
+         
+        <tag>cpuid </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/11/09/PythonAdvancedExercise/</loc>
+    <lastmod>2018-10-29T08:16:48.692Z</lastmod>
+    <data>
+        <display>
+        <title>慕课网【Python高效编程技巧实战】笔记</title>
+        <pubTime>2017-11-09T13:39:37.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>mooc </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/12/13/netease-hot-comments/</loc>
+    <lastmod>2018-10-29T08:16:29.208Z</lastmod>
+    <data>
+        <display>
+        <title>网易云热评</title>
+        <pubTime>2017-12-13T07:06:09.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Crawler </tag>
+         
+        <tag>Netease </tag>
+         
+        <tag>Hot-Comments </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/10/20/microphone-no-voice/</loc>
+    <lastmod>2018-10-29T08:14:27.588Z</lastmod>
+    <data>
+        <display>
+        <title>win10笔记本麦克风没声音</title>
+        <pubTime>2018-10-20T15:46:48.000Z</pubTime>
+        
+        <tag>microphone </tag>
+         
+        <tag>no-voice </tag>
+         
+        <tag>daily </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/01/01/donate/</loc>
+    <lastmod>2018-07-17T07:20:50.815Z</lastmod>
+    <data>
+        <display>
+        <title>donate</title>
+        <pubTime>2018-01-01T09:29:38.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/05/03/omnetpp-ini-open-error/</loc>
+    <lastmod>2018-05-18T02:15:36.667Z</lastmod>
+    <data>
+        <display>
+        <title>solve omnetpp run error</title>
+        <pubTime>2018-05-03T07:51:59.000Z</pubTime>
+        
+        <tag>SPEC CPU2006 </tag>
+         
+        <tag>command </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/03/13/film-women-zhihu/</loc>
+    <lastmod>2018-04-16T06:27:19.034Z</lastmod>
+    <data>
+        <display>
+        <title>影视作品里有哪些让人感到惊艳的女性角色，可以用视频分享吗？</title>
+        <pubTime>2018-03-13T06:47:57.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Crawler </tag>
+         
+        <tag>Zhihu </tag>
+         
+        <tag>film </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/10/14/HUST-RANk/</loc>
+    <lastmod>2018-04-16T06:27:10.022Z</lastmod>
+    <data>
+        <display>
+        <title>华中科技大学贴吧牛人排行榜数据分析</title>
+        <pubTime>2017-10-14T14:25:15.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Crawler </tag>
+         
+        <tag>Tieba </tag>
+         
+        <tag>Big-Data </tag>
+         
+        <tag>ECharts </tag>
+         
+        <tag>JavaScript </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/04/13/MPKI-RBL-BLP-SPEC/</loc>
+    <lastmod>2018-04-16T06:25:49.469Z</lastmod>
+    <data>
+        <display>
+        <title>MPKI, RBL and BLP of SPEC CPU2006 benchmarks</title>
+        <pubTime>2018-04-13T08:29:31.000Z</pubTime>
+        
+        <tag>SPEC CPU2006 </tag>
+         
+        <tag>MPKI </tag>
+         
+        <tag>RBL </tag>
+         
+        <tag>BLP </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/12/05/netease-radio/</loc>
+    <lastmod>2018-04-16T06:25:09.536Z</lastmod>
+    <data>
+        <display>
+        <title>网易云电台</title>
+        <pubTime>2017-12-05T07:06:09.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Crawler </tag>
+         
+        <tag>Netease-Cloud </tag>
+         
+        <tag>Netease-Radio </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/03/22/SPEC-run-cmd/</loc>
+    <lastmod>2018-04-16T06:23:59.602Z</lastmod>
+    <data>
+        <display>
+        <title>提取 SPEC CPU2006 的执行命令</title>
+        <pubTime>2018-03-22T13:26:37.000Z</pubTime>
+        
+        <tag>SPEC CPU2006 </tag>
+         
+        <tag>command </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/11/15/zhihu-ajax/</loc>
+    <lastmod>2018-04-16T06:23:52.027Z</lastmod>
+    <data>
+        <display>
+        <title>爬取知乎异步加载页面</title>
+        <pubTime>2017-11-15T12:47:01.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>Crawler </tag>
+         
+        <tag>Zhihu </tag>
+         
+        <tag>ajax </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/03/14/Linux-boost/</loc>
+    <lastmod>2018-03-14T09:26:00.307Z</lastmod>
+    <data>
+        <display>
+        <title>Linux编译和安装boost库</title>
+        <pubTime>2018-03-14T06:12:56.000Z</pubTime>
+        
+        <tag>Linux </tag>
+         
+        <tag>bost </tag>
+         
+        <tag>C++ </tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://lewistian.github.io/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/08/30/Premiere-Subtitle/</loc>
+    <lastmod>2018-03-12T07:21:21.947Z</lastmod>
+    <data>
+        <display>
+        <title>Premiere批量字幕生成器</title>
+        <pubTime>2017-08-30T11:38:34.000Z</pubTime>
+        
+        <tag>C++ </tag>
+         
+        <tag>QT </tag>
+         
+        <tag>Premiere </tag>
+         
+        <tag>Subtitle </tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://lewistian.github.io/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/08/17/json-format/</loc>
+    <lastmod>2017-10-17T10:55:16.361Z</lastmod>
+    <data>
+        <display>
+        <title>JSON格式化</title>
+        <pubTime>2017-08-17T10:39:44.000Z</pubTime>
+        
+        <tag>JavaScript </tag>
+         
+        <tag>JSON </tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://lewistian.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/08/07/Topology/</loc>
+    <lastmod>2017-10-17T10:53:24.456Z</lastmod>
+    <data>
+        <display>
+        <title>暑假实习：拓扑图可视化</title>
+        <pubTime>2017-08-07T13:04:45.000Z</pubTime>
+        
+        <tag>JavaScript </tag>
+         
+        <tag>Topology </tag>
+         
+        <tag>d3 </tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://lewistian.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2017/08/17/fish-game/</loc>
+    <lastmod>2017-10-17T10:47:45.108Z</lastmod>
+    <data>
+        <display>
+        <title>大鱼吃小鱼游戏</title>
+        <pubTime>2017-08-17T05:17:58.000Z</pubTime>
+        
+        <tag>JavaScript </tag>
+         
+        <tag>canvas </tag>
+         
+        <tag>game </tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://lewistian.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
