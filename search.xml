@@ -3,6 +3,66 @@
   
     
     <entry>
+      <title><![CDATA[Tich·十一月总结/2018]]></title>
+      <url>/2018/11/30/summary-1811/</url>
+      <content type="html"><![CDATA[<p>不知不觉又摸鱼一个月了:3<br>下面是 2018 年十一月的总结，更新中…。</p>
+<a id="more"></a>
+<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><ol>
+<li><p>『阿 Q 正传』 - 鲁迅<br>记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。</p>
+</li>
+<li><p>『我们仨』 - 杨绛<br>久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。</p>
+</li>
+</ol>
+<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
+<li><p>《Python Graph》(pdf)<br>这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《chrome扩展及应用开发》(pdf)<br>这本书的内容就是书名，介绍如何开发 chrome 扩展与应用。</p>
+</li>
+<li><p>《chrome扩展及应用开发》<br>除了看这本书的电子版，之前去图书馆借书正好查到有这本书于是就借过来了。</p>
+</li>
+</ul>
+<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><ol>
+<li><p>Efficient Shared Memory Orchestration Towards Demand Driven Memory Slicing<br>主要内容是提出了一个轻量级的动态和需求驱动的内存分片方法 MemLego，由三部分组成：</p>
+<ol>
+<li>MemExpand 在存在不断变化的工作负载时提供弹性共享内存分配和回收。 </li>
+<li>MemSwap 提供共享内存分页功能，可显着提高内存交换效率，加快 VM 执行的吞吐量恢复速度。 </li>
+<li>MemPipe 提供共享内存管道，用于共存 VM 之间的高性能通信。</li>
+</ol>
+</li>
+<li><p>Unikernels as Processes<br>主要内容是提出将 unikernel 作为进程运行，改善了对 VM 的隔离，同时对内核函数的访问权限减少一半；另外由于作为进程运行，所以继承了许多特定于进程的特性如高内存密度，性能，启动时间等。</p>
+</li>
+<li><p>Unikernel Monitors Extending Minimalism Outside of the Box<br>主要内容是对云出了一个新的执行单元，通过捆绑 unikernel 和专用的监视器 (monitor) 构建，这样的专用监视器小而简单，并且功能强大，足以运行真正的 unikernel。</p>
+</li>
+</ol>
+<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><ol>
+<li><p><a href="https://github.com/LewisTian/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
+</li>
+<li><p><a href="https://github.com/LewisTian/txt2img" target="_blank" rel="noopener">txt2img</a><br>分享文字为图片，将之前的代码稍微整理了一下。</p>
+</li>
+<li><p><a href="https://github.com/LewisTian/Slacking-Visualization" target="_blank" rel="noopener">Slacking-Visualization</a><br>摸鱼时间可视化，还有很多地方需要改进。</p>
+</li>
+</ol>
+<p>以上。</p>
+<p>十一月的总结大概就是这些，这个月要继续加油才是。</p>
+<p><img src="/images/summary_1811.png" alt="summary for 2018/11 by Tich." title="summary for 2018/11 by Tich."></p>
+]]></content>
+      
+        <categories>
+            
+            <category> essay </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[win10台式机(插入耳机)没有声音]]></title>
       <url>/2018/11/01/pc-win-no-voice/</url>
       <content type="html"><![CDATA[<p>今天实验室发新机器了，重装了 win10 之后，开机-网易云音乐-耳机-没有声音？不听歌还怎么玩，开始以为是驱动的问题，装好之后还是没有声音，就一直提示未插入扬声器或耳机，然而我明明插耳机了好吧。<br>于是乎上网找了许多方法，最后找到一个靠谱的方法。<br><a id="more"></a></p>
@@ -119,7 +179,9 @@
 <h3 id="4-看的论文"><a href="#4-看的论文" class="headerlink" title="4. 看的论文"></a>4. 看的论文</h3><ol>
 <li><p>Alto: Lightweight VMs using Virtualization-aware Managed Runtimes<br>主要内容是为数据中心提出了一个新的虚拟化技术 (Alto)，它在管理运行时层 (the managed runtime layer) 进行虚拟化，主要目标是提供小、安全、强隔离性的虚拟机。</p>
 </li>
-<li><p>An Application-Specific Memory Management Unit for FPGA-SoCs<br>主要内容是提出了在 FPGA 上附加一个MMU的概念以及如何在设计中实际使用它</p>
+<li><p>An Application-Specific Memory Management Unit for FPGA-SoCs<br>主要内容是提出了在 FPGA 上附加一个 MMU 的概念以及如何在设计中实际使用它</p>
+</li>
+<li><p>MirageOS Unikernel with Network Acceleration for IoT<br>主要内容是为 MirageOS 增加了一个网络性能加速器，提高了健壮性和网络性能</p>
 </li>
 <li><p>UniGuard: Protecting Unikernels using Intel SGX<br>主要内容是在 unikernel 中 集成 Intel SGX 以保护云环境中的安全敏感计算 (security-sensitive computations)</p>
 </li>
