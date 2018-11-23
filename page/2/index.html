@@ -374,6 +374,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/07/03/intel-cpu-cpuid-instruction/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tich">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/03/intel-cpu-cpuid-instruction/" itemprop="url">
+                  Intel CPU的CPUID指令（转载）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-03 17:34:38" itemprop="dateCreated datePublished" datetime="2018-07-03T17:34:38+08:00">2018-07-03</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p> Intel 有一个超过 100 页的文档，专门介绍 cpuid 这条指令，可见这条指令涉及内容的丰富。</p>
+<p>记得去年的时候，曾经有个“英布之剑”问过我这条指令，当时并没有给出一个满意的回答，现在放假，想起来，把资料整理了一下。很久以前确实用过这条指令，其实指令本身并没有什么难的，关键是看你有没有耐心研读完繁琐的资料，当然还得对 CPU 有一定的了解，如果“英布之剑”看到这篇文章，而且仍然需要更详细的资料，可以给我一个联系方式，或者相互之间可以交流一下。</p>
+<p>cpuid 就是一条读取 CPU 各种信息的一条指令，大概是从 80486 的某个版本开始就存在了。似乎是从 80386 开始，当 CPU 被 RESET 以后，CPU 会在 EDX 寄存器中返回一个 32bits 的 CPU 签名（Processor Identification Signature），但这时候 CPU 还没有 CPUID 这条指令，后来出现了这条指令后，软件无需以来 CPU 复位就可以读出这个 CPU 签名，同时还可以读出很多 CPU 的相关信息。</p>
+<p> CPUID 这条指令，除了用于识别 CPU（CPU 的型号、家族、类型等），还可以读出CPU支持的功能（比如是否支持MMX，是否支持 4MB 的页等等），内容的确是十分丰富。 CPUID 指令有两组功能，一组返回的是基本信息，另一组返回的是扩展信息，本文介绍基本信息部分，扩展信息部分下篇中介绍。本文所在程序或程序片段，均使用 MASM 6.11 编译连接，可以在 DOS（包括虚拟机的 DOS下）运行。<br>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/07/03/intel-cpu-cpuid-instruction/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/05/03/omnetpp-ini-open-error/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -967,7 +1130,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" rel="gallery_cjos8g3l4000fy8ubnd4iyhjl" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" rel="gallery_cjotsavdf0002e4ubfrkrhueg" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" itemprop="contentUrl">
               </a>
             
@@ -1143,7 +1306,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2018/03/13/5aa774fb0a508.png" rel="gallery_cjos8g46s002iy8ubrpmrrbfg" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2018/03/13/5aa774fb0a508.png" rel="gallery_cjotsaveb000we4ubfdy7caj6" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2018/03/13/5aa774fb0a508.png" itemprop="contentUrl">
               </a>
             
@@ -1824,164 +1987,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2017/11/09/PythonAdvancedExercise/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tich">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/09/PythonAdvancedExercise/" itemprop="url">
-                  慕课网【Python高效编程技巧实战】笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-11-09 21:39:37" itemprop="dateCreated datePublished" datetime="2017-11-09T21:39:37+08:00">2017-11-09</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://img.mukewang.com/szimg/59f7e6c600014f2020000520.jpg" alt=""></p>
-<blockquote>
-<p>人生苦短, 我用 Python.</p>
-</blockquote>
-<p>感觉慕课网的付费课程确实有用，学了一晚上感觉对 Python 有了好多新的了解 hhh，在 Girhub 上同步更新笔记，项目地址: <a href="https://github.com/LewisTian/PythonAdvancedExercise" target="_blank" rel="noopener">PythonAdvancedExercise</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2031,7 +2036,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">28</span>
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2163,7 +2168,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">47</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">50</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

@@ -3,6 +3,32 @@
 
     
   <url>
+    <loc>https://lewistian.github.io/2018/11/23/sizeof-arrayname-and-sizeof-pointer/</loc>
+    <lastmod>2018-11-23T08:38:13.618Z</lastmod>
+    <data>
+        <display>
+        <title>sizeof(数组名)和sizeof(指针)</title>
+        <pubTime>2018-11-23T08:21:49.000Z</pubTime>
+        
+        <tag>C++ </tag>
+         
+        <tag>sizeof </tag>
+         
+        <tag>array </tag>
+         
+        <tag>pointer </tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="https://lewistian.github.io/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lewistian.github.io/2018/11/03/summary-1811/</loc>
     <lastmod>2018-11-22T06:44:33.454Z</lastmod>
     <data>
