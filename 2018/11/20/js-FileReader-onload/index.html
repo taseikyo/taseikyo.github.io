@@ -120,14 +120,14 @@
 
 
   <meta name="description" content="今天写可视化的代码，首先要加载 CSV 文件，使用 FileReader 来加载，然后用 d3 来解析 csv，然而出现了一个问题。像下面这样写就会报错，Uncaught TypeError: Cannot read property &amp;#39;length&amp;#39; of undefined我输出文件长度，发现其值为 0，d3 无法解析所以报错。12345let readFile = file">
-<meta name="keywords" content="JavaScript - FileReader - d3">
+<meta name="keywords" content="JavaScript,d3,FileReader">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FileReader 的 onload 方法的一个问题&#x2F;JavaScript">
 <meta property="og:url" content="https://lewistian.github.io/2018/11/20/js-FileReader-onload/index.html">
 <meta property="og:site_name" content="Tich">
 <meta property="og:description" content="今天写可视化的代码，首先要加载 CSV 文件，使用 FileReader 来加载，然后用 d3 来解析 csv，然而出现了一个问题。像下面这样写就会报错，Uncaught TypeError: Cannot read property &amp;#39;length&amp;#39; of undefined我输出文件长度，发现其值为 0，d3 无法解析所以报错。12345let readFile = file">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-20T13:43:28.338Z">
+<meta property="og:updated_time" content="2018-11-23T09:13:34.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FileReader 的 onload 方法的一个问题&#x2F;JavaScript">
 <meta name="twitter:description" content="今天写可视化的代码，首先要加载 CSV 文件，使用 FileReader 来加载，然后用 d3 来解析 csv，然而出现了一个问题。像下面这样写就会报错，Uncaught TypeError: Cannot read property &amp;#39;length&amp;#39; of undefined我输出文件长度，发现其值为 0，d3 无法解析所以报错。12345let readFile = file">
@@ -477,7 +477,7 @@
 
       
         <p>今天写可视化的代码，首先要加载 CSV 文件，使用 FileReader 来加载，然后用 d3 来解析 csv，然而出现了一个问题。<br>像下面这样写就会报错，<br><code>Uncaught TypeError: Cannot read property &#39;length&#39; of undefined</code><br>我输出文件长度，发现其值为 0，d3 无法解析所以报错。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let readFile = file =&gt; &#123;</span><br><span class="line">	let r = new FileReader();</span><br><span class="line">	r.readAsText(file, config.encoding);</span><br><span class="line">	r.onload = () =&gt; console.log(d3.csvParse(this.result));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>改成这样就行了，不知道为什么。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let readFile = file =&gt; &#123;</span><br><span class="line">	...</span><br><span class="line">	r.onload = function () &#123;</span><br><span class="line">    	console.log(d3.csvParse(this.result))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>改成这样就行了，不知道为什么。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let readFile = file =&gt; &#123;</span><br><span class="line">	...</span><br><span class="line">	r.onload = function () &#123;</span><br><span class="line">		console.log(d3.csvParse(this.result))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -549,7 +549,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript-FileReader-d3/" rel="tag"># JavaScript - FileReader - d3</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/d3/" rel="tag"># d3</a>
+          
+            <a href="/tags/FileReader/" rel="tag"># FileReader</a>
           
         </div>
       
@@ -775,7 +779,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">50</span>
+                      
+                    
+                    <span class="site-state-item-count">51</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

@@ -3,8 +3,98 @@
 
     
   <url>
+    <loc>https://lewistian.github.io/2018/11/03/summary-1811/</loc>
+    <lastmod>2018-11-27T01:23:08.167Z</lastmod>
+    <data>
+        <display>
+        <title>Tich·十一月总结/2018</title>
+        <pubTime>2018-11-03T09:20:18.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+        <tag>hide </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/10/30/summary-1810/</loc>
+    <lastmod>2018-11-27T01:23:03.400Z</lastmod>
+    <data>
+        <display>
+        <title>Tich·十月总结/2018</title>
+        <pubTime>2018-10-30T12:48:36.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+        <tag>hide </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/10/01/summary-1809/</loc>
+    <lastmod>2018-11-27T01:22:59.916Z</lastmod>
+    <data>
+        <display>
+        <title>Tich·九月总结/2018</title>
+        <pubTime>2018-10-01T12:48:36.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+        <tag>hide </tag>
+         
+         
+           
+             
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lewistian.github.io/2018/11/20/js-FileReader-onload/</loc>
+    <lastmod>2018-11-23T09:13:34.175Z</lastmod>
+    <data>
+        <display>
+        <title>FileReader 的 onload 方法的一个问题/JavaScript</title>
+        <pubTime>2018-11-20T13:36:53.000Z</pubTime>
+        
+        <tag>JavaScript </tag>
+         
+        <tag>d3 </tag>
+         
+        <tag>FileReader </tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://lewistian.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lewistian.github.io/2018/11/23/sizeof-arrayname-and-sizeof-pointer/</loc>
-    <lastmod>2018-11-23T08:38:13.618Z</lastmod>
+    <lastmod>2018-11-23T08:55:42.630Z</lastmod>
     <data>
         <display>
         <title>sizeof(数组名)和sizeof(指针)</title>
@@ -22,66 +112,6 @@
            
              
               <breadCrumb title="C++" url="https://lewistian.github.io/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2018/11/03/summary-1811/</loc>
-    <lastmod>2018-11-22T06:44:33.454Z</lastmod>
-    <data>
-        <display>
-        <title>Tich·十一月总结/2018</title>
-        <pubTime>2018-11-03T09:20:18.000Z</pubTime>
-        
-        <tag>blog </tag>
-         
-         
-           
-             
-              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2018/11/20/js-FileReader-onload/</loc>
-    <lastmod>2018-11-20T13:43:28.338Z</lastmod>
-    <data>
-        <display>
-        <title>FileReader 的 onload 方法的一个问题/JavaScript</title>
-        <pubTime>2018-11-20T13:36:53.000Z</pubTime>
-        
-        <tag>JavaScript - FileReader - d3 </tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://lewistian.github.io/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2018/10/30/summary-1810/</loc>
-    <lastmod>2018-11-16T02:56:49.844Z</lastmod>
-    <data>
-        <display>
-        <title>Tich·十月总结/2018</title>
-        <pubTime>2018-10-30T12:48:36.000Z</pubTime>
-        
-        <tag>blog </tag>
-         
-         
-           
-             
-              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
           
         </display>
     </data>
@@ -150,26 +180,6 @@
            
              
               <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2018/10/01/summary-1809/</loc>
-    <lastmod>2018-10-30T09:19:32.980Z</lastmod>
-    <data>
-        <display>
-        <title>Tich·九月总结/2018</title>
-        <pubTime>2018-10-01T12:48:36.000Z</pubTime>
-        
-        <tag>blog </tag>
-         
-         
-           
-             
-              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
           
         </display>
     </data>
