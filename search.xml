@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[windows10 中 Linux 子系统的路径]]></title>
+    <url>%2F2018%2F11%2F30%2Fwin10-sublinux%2F</url>
+    <content type="text"><![CDATA[安装完 Linux 子系统之后想知道它的路径，结果它隐藏极深，经过一番搜索之后才发现它的目录，下面是我的 home 路径C:\Users\tian\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>Windows - sublinux - Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[每日一题-181127]]></title>
     <url>%2F2018%2F11%2F27%2Fexercise-181127%2F</url>
-    <content type="text"><![CDATA[要求如下：编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。-11 + 22 - 33 + 41 - 52 + 63 -71 + 82 - 93 +101 … 我的解法如下：12def func(n): return sum((-1)**i*i**((i-1)%3+1) for i in range(1, n+1))]]></content>
+    <content type="text"><![CDATA[要求如下：编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。-11 + 22 - 33 + 41 - 52 + 63 -71 + 82 - 93 +101 … 我的解法如下：12def func(n): return sum((-1)**i*i**((i-1)%3+1) for i in range(1, n+1)) 近来用 Python 解题更喜欢 one line 的方式了（装x【并不]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -15,7 +26,7 @@
   <entry>
     <title><![CDATA[sizeof(数组名)和sizeof(指针)]]></title>
     <url>%2F2018%2F11%2F23%2Fsizeof-arrayname-and-sizeof-pointer%2F</url>
-    <content type="text"><![CDATA[今天做了一道题，感觉很有趣，题目是下面这样的12345678910111213141532位系统下下面程序的输出结果为多少？void Func(char str_arg[100])&#123; printf(&quot;%d\n&quot;,sizeof(str_arg));&#125;int main(void)&#123; char str[]=&quot;Hello&quot;; printf(&quot;%d\n&quot;,sizeof(str)); printf(&quot;%d\n&quot;,strlen(str)); char*p=str; printf(&quot;%d\n&quot;,sizeof(p)); Func(str);&#125;A 5 5 4 4 B 6 5 4 4 C 6 5 6 4 D 5 5 5 100 然而我选不出来。。。我觉得是 6 5 6 6 才对于是把程序跑了一遍，毕竟 实践是检验的唯一标准 嘛结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）不过想想也是应该是，32位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p]]></content>
+    <content type="text"><![CDATA[今天做了一道题，感觉很有趣，题目是下面这样的12345678910111213141532 位系统下下面程序的输出结果为多少？void Func(char str_arg[100])&#123; printf("%d\n",sizeof(str_arg));&#125;int main(void)&#123; char str[]="Hello"; printf("%d\n",sizeof(str)); printf("%d\n",strlen(str)); char*p=str; printf("%d\n",sizeof(p)); Func(str);&#125;A 5 5 4 4 B 6 5 4 4 C 6 5 6 4 D 5 5 5 100 然而我选不出来。。。我觉得是 6 5 6 6 才对于是把程序跑了一遍，毕竟 实践是检验的唯一标准 嘛结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p]]></content>
       <categories>
         <category>C++</category>
       </categories>
@@ -42,7 +53,7 @@
   <entry>
     <title><![CDATA[Tich·十一月总结/2018]]></title>
     <url>%2F2018%2F11%2F03%2Fsummary-1811%2F</url>
-    <content type="text"><![CDATA[不知不觉又摸鱼一个月了:3下面是 2018 年十一月的总结，更新中…。 1. 看的非专业书籍 『阿 Q 正传』 - 鲁迅记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。 『我们仨』 - 杨绛久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。 2. 看的专业书籍 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库，还没看完。 《chrome扩展及应用开发》(pdf)这本书的内容就是书名，介绍如何开发 chrome 扩展与应用。 《chrome扩展及应用开发》除了看这本书的电子版，之前去图书馆借书正好查到有这本书于是就借过来了。 3. 看的论文 Efficient Shared Memory Orchestration Towards Demand Driven Memory Slicing主要内容是提出了一个轻量级的动态和需求驱动的内存分片方法 MemLego，由三部分组成： MemExpand 在存在不断变化的工作负载时提供弹性共享内存分配和回收。 MemSwap 提供共享内存分页功能，可显着提高内存交换效率，加快 VM 执行的吞吐量恢复速度。 MemPipe 提供共享内存管道，用于共存 VM 之间的高性能通信。 Unikernels as Processes主要内容是提出将 unikernel 作为进程运行，改善了对 VM 的隔离，同时对内核函数的访问权限减少一半；另外由于作为进程运行，所以继承了许多特定于进程的特性如高内存密度，性能，启动时间等。 Unikernel Monitors Extending Minimalism Outside of the Box主要内容是对云出了一个新的执行单元，通过捆绑 unikernel 和专用的监视器 (monitor) 构建，这样的专用监视器小而简单，并且功能强大，足以运行真正的 unikernel。 4. 写的几行代码 leetcode刷了一些 leetcode 题。 txt2img分享文字为图片，将之前的代码稍微整理了一下。 Slacking-Visualization摸鱼时间可视化，还有很多地方需要改进。 以上。 十一月的总结大概就是这些，这个月要继续加油才是。]]></content>
+    <content type="text"><![CDATA[不知不觉又摸鱼一个月了:3下面是 2018 年十一月的总结。 1. 看的非专业书籍 『阿 Q 正传』 - 鲁迅记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。 『我们仨』 - 杨绛久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。最后还是没看完，看了一部分看不下去了;3 2. 看的专业书籍 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。没看完，感觉还是用的时候直接查相应的函数比较靠谱吧。 《chrome扩展及应用开发》(pdf)这本书的内容就是书名，介绍如何开发 chrome 扩展与应用。 《chrome扩展及应用开发》除了看这本书的电子版，之前去图书馆借书正好查到有这本书于是就借过来了。 3. 看的论文 Efficient Shared Memory Orchestration Towards Demand Driven Memory Slicing主要内容是提出了一个轻量级的动态和需求驱动的内存分片方法 MemLego，由三部分组成： MemExpand 在存在不断变化的工作负载时提供弹性共享内存分配和回收。 MemSwap 提供共享内存分页功能，可显着提高内存交换效率，加快 VM 执行的吞吐量恢复速度。 MemPipe 提供共享内存管道，用于共存 VM 之间的高性能通信。 Unikernels as Processes主要内容是提出将 unikernel 作为进程运行，改善了对 VM 的隔离，同时对内核函数的访问权限减少一半；另外由于作为进程运行，所以继承了许多特定于进程的特性如高内存密度，性能，启动时间等。 Unikernel Monitors Extending Minimalism Outside of the Box主要内容是对云出了一个新的执行单元，通过捆绑 unikernel 和专用的监视器 (monitor) 构建，这样的专用监视器小而简单，并且功能强大，足以运行真正的 unikernel。 4. 写的几行代码 leetcode刷了一些 leetcode 题。 txt2img分享文字为图片，将之前的代码稍微整理了一下。 Slacking-Visualization摸鱼时间可视化，还有很多地方需要改进。【已删除】 牛客网在牛客网刷了一些题 以上。 十一月的总结大概就是这些，这个月要继续加油才是。]]></content>
       <categories>
         <category>essay</category>
       </categories>
@@ -193,9 +204,9 @@
         <category>Linux</category>
       </categories>
       <tags>
+        <tag>C++</tag>
         <tag>Linux</tag>
         <tag>bost</tag>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -317,8 +328,8 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>C++</tag>
         <tag>QT</tag>
+        <tag>C++</tag>
         <tag>Premiere</tag>
         <tag>Subtitle</tag>
       </tags>
@@ -331,8 +342,8 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>C++</tag>
         <tag>QT</tag>
+        <tag>C++</tag>
         <tag>lyric</tag>
         <tag>Netease-Cloud</tag>
       </tags>
