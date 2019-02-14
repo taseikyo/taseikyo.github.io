@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[codewars 初体验 XD]]></title>
+    <url>%2F2019%2F01%2F25%2Ffirst2codewars%2F</url>
+    <content type="text"><![CDATA[起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨： @GloomyGhost: 有这时间还不如刷codewar 然后就有点好奇了，就今天下午注册试了下，感觉还挺有趣的，其实呢，codewars 和其他如 leetcode 刷题网站类似，但它也有自己一些独特之处（虽然我也没怎么刷过 leetcode）。 首先你注册之后等级是 8 级，等级越高数字越低，是不是一下子就有刷题提升段位的冲动了呢（滑稽然后还有就是，如果你没有做过（train）题是没办法看别人的解题方法的 0w0另外好像和你段位差太多的题你是没办法点进去的（等级打击），因为我到了 7 级不能做 4 级的题 233 其他的应该基本上都差不多，哦对了还有 codewars 可以选择自己擅长的语言，在做题的时候也可以换语言（如果可以换的话）但是等级是和对应语言绑定的，也就是说就算你 Python 刷到 2级，但你想换成 JavaScript 还是得从 8 级慢慢刷~]]></content>
+      <categories>
+        <category>essay</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>JavaScript</tag>
+        <tag>codewars</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Tich·十二月总结/2018]]></title>
+    <url>%2F2018%2F12%2F30%2Fsummary-1812%2F</url>
+    <content type="text"><![CDATA[由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获 1. 看的论文 Unikernels: Library Operating Systems for the Cloud主要内容是介绍了 Mirage 这个 unikernel 2. 写的几行代码 bili-box用来下载哔哩哔哩视频/图片/收藏。 以上。 十二月的总结大概就是这些，下个月要继续加油才是。]]></content>
+      <categories>
+        <category>essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[单词拼写错误导致的"灾难"]]></title>
     <url>%2F2018%2F12%2F17%2Fspell-problem-disaster%2F</url>
     <content type="text"><![CDATA[本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=回想起来上一次犯这个错还是大二(？)，当时写了一个网页，然后在另一个单独的 CSS 文件中写样式，我给主体设置了一个类 “main”(鬼知道我为什么要设置这个)，那么问题又是什么呢？ 因为在 CSS 中写好了各种样式，结果在浏览器中没反应(wtf?)，不应该啊，我都写了那么多，为啥什么效果都么得。找了好久好久，最后发现我在 CSS 中写的是 “mian”….. 心中一万头神兽呼啸而过，鬼知道几年后的今天这个错误又重演了 今天做网络实验二 —— SYN flood攻击及SYN cookie原理分析 大概要求如下： 一个虚拟机 B 开启 telnet 服务，然后虚拟机 A 使用 netwox 命令对 B 进行 SYN flood 攻击，同时使用 telnet 远程登陆 B，当默认条件下，是可以登陆的；将 /proc/sys/net/ipv4/tcp_syncookies 设置为 0，/proc/sys/net/ipv4/tcp_syncookies 设置为 5，之后应该是无法登陆的。 照着实验要求做，本应该很容易，因为同实验室另外两个同学也是这样做的，很快就顺利完成了，可是我的出现问题了，在设置 cookies 为 0 之后，仍然能登陆？！在求助实验室同学/网络群同学之后仍然无法解决问题，本来打算放弃了。 后来网络群有个同学说了句 Shit Happens: @Snail 你的网关最后一位不要是.0结尾 我设定的就不是 0 结尾啊，A、B 网关都为 192.168.1.1，A 的 IP 为 192.168.1.2，B 的 IP 为 192.168.1.3。 然后我想告诉他事实，然后把 /etc/network/interfaces 文件截图发出去了，然后我突然发现最后一行的网关拼成了 gatway g a t w a y 突然感觉哪里不对劲… 我赶紧羞耻地撤回了，然后把 gateway 改回来了，之后结果不出所料，一路畅通。 所以就想做了记录，康康以后还会不会范这个蠢问题。]]></content>
@@ -76,7 +100,7 @@
   <entry>
     <title><![CDATA[Tich·十一月总结/2018]]></title>
     <url>%2F2018%2F11%2F30%2Fsummary-1811%2F</url>
-    <content type="text"><![CDATA[不知不觉又摸鱼一个月了:3下面是 2018 年十二月的总结。 1. 看的非专业书籍 『阿 Q 正传』 - 鲁迅记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。 『我们仨』 - 杨绛久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。最后还是没看完，看了一部分看不下去了;3 2. 看的专业书籍 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。没看完，感觉还是用的时候直接查相应的函数比较靠谱吧。 《chrome扩展及应用开发》(pdf)这本书的内容就是书名，介绍如何开发 chrome 扩展与应用。 《chrome扩展及应用开发》除了看这本书的电子版，之前去图书馆借书正好查到有这本书于是就借过来了。 3. 看的论文 Efficient Shared Memory Orchestration Towards Demand Driven Memory Slicing主要内容是提出了一个轻量级的动态和需求驱动的内存分片方法 MemLego，由三部分组成： MemExpand 在存在不断变化的工作负载时提供弹性共享内存分配和回收。 MemSwap 提供共享内存分页功能，可显着提高内存交换效率，加快 VM 执行的吞吐量恢复速度。 MemPipe 提供共享内存管道，用于共存 VM 之间的高性能通信。 Unikernels as Processes主要内容是提出将 unikernel 作为进程运行，改善了对 VM 的隔离，同时对内核函数的访问权限减少一半；另外由于作为进程运行，所以继承了许多特定于进程的特性如高内存密度，性能，启动时间等。 Unikernel Monitors Extending Minimalism Outside of the Box主要内容是对云出了一个新的执行单元，通过捆绑 unikernel 和专用的监视器 (monitor) 构建，这样的专用监视器小而简单，并且功能强大，足以运行真正的 unikernel。 4. 写的几行代码 leetcode刷了一些 leetcode 题。 txt2img分享文字为图片，将之前的代码稍微整理了一下。 Slacking-Visualization摸鱼时间可视化，还有很多地方需要改进。【已删除】 牛客网在牛客网刷了一些题 以上。 十一月的总结大概就是这些，这个月要继续加油才是。]]></content>
+    <content type="text"><![CDATA[不知不觉又摸鱼一个月了:3下面是 2018 年十一月的总结。 1. 看的非专业书籍 『阿 Q 正传』 - 鲁迅记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。 『我们仨』 - 杨绛久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。最后还是没看完，看了一部分看不下去了;3 2. 看的专业书籍 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。没看完，感觉还是用的时候直接查相应的函数比较靠谱吧。 《chrome扩展及应用开发》(pdf)这本书的内容就是书名，介绍如何开发 chrome 扩展与应用。 《chrome扩展及应用开发》除了看这本书的电子版，之前去图书馆借书正好查到有这本书于是就借过来了。 3. 看的论文 Efficient Shared Memory Orchestration Towards Demand Driven Memory Slicing主要内容是提出了一个轻量级的动态和需求驱动的内存分片方法 MemLego，由三部分组成： MemExpand 在存在不断变化的工作负载时提供弹性共享内存分配和回收。 MemSwap 提供共享内存分页功能，可显着提高内存交换效率，加快 VM 执行的吞吐量恢复速度。 MemPipe 提供共享内存管道，用于共存 VM 之间的高性能通信。 Unikernels as Processes主要内容是提出将 unikernel 作为进程运行，改善了对 VM 的隔离，同时对内核函数的访问权限减少一半；另外由于作为进程运行，所以继承了许多特定于进程的特性如高内存密度，性能，启动时间等。 Unikernel Monitors Extending Minimalism Outside of the Box主要内容是对云出了一个新的执行单元，通过捆绑 unikernel 和专用的监视器 (monitor) 构建，这样的专用监视器小而简单，并且功能强大，足以运行真正的 unikernel。 4. 写的几行代码 leetcode刷了一些 leetcode 题。 txt2img分享文字为图片，将之前的代码稍微整理了一下。 Slacking-Visualization摸鱼时间可视化，还有很多地方需要改进。【已删除】 牛客网在牛客网刷了一些题 以上。 十一月的总结大概就是这些，下个月要继续加油才是。]]></content>
       <categories>
         <category>essay</category>
       </categories>
@@ -150,7 +174,7 @@
   <entry>
     <title><![CDATA[Tich·十月总结/2018]]></title>
     <url>%2F2018%2F10%2F30%2Fsummary-1810%2F</url>
-    <content type="text"><![CDATA[这个月听了个学术论坛，然后去杭州参加了 cncc 2018，想着是总结就都列进去了。下面是 2018 年十月的总结。 1. 看的非专业书籍姑且完成了每个月两本书的小目标。。。 『蔡澜潮晒日本』 - 蔡澜主要就是蔡澜在日本的各种逛吃逛吃: )，看了一部分就看不下去了。 『正说大明十六帝』- 刘亚玲和之前看的『正说大宋十八帝』是同一个作者，讲述了大明十六位帝王的政治生涯。 2. 看的专业书籍 《Electron in Action》(pdf)这本书是介绍 Electron，从入门到入土 ：) 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。 《Creating Google Chrome Extensions》(pdf)这本书是介绍如何创建 Chrome 扩展的，但是我看了一章就不想看了，感觉写得好烂。。。可能是我太菜了吧。。。 《Xen 虚拟化技术完全导读》介绍 Xen 的，看了将近一个月还没看完第一章，断断续续。。。 3. 讲座&amp;会议 2018 年中南地区计算机学科研究生学术论坛 论坛主题：区块链——开启数字经济的新引擎 主办单位：华中科技大学计算机科学与技术学院 承办单位：WeBank 微众银行 时间：2018 年 10 月 17 日 地点：武汉光谷凯悦酒店 内容： 涂子沛——通往数据 2.0 时代 黄永峰——区块链与云计算融合机制下的大数据安全保护模型及应用 贾瑶琪——分片技术–区块链即将到来的扩容良方 张开翔——区块链技术在金融领域的应用实践 2018 中国计算机大会 会议主题：大数据推动数字经济（Big Data Drives the Digital Economy） 主办单位：中国计算机学会（CCF） 承办单位：萧山区人民政府、浙江大学 时间：2018 年 10 月 25 - 27 日 地点：杭州国际博览中心 3 场大会主题论坛，50 场前沿技术论坛、20 场特色活动及 100 个科技成果展 三场主题论坛 CPU 及 xPU 芯片未来之路 软件工程 50 周年了，路在何方？ 共享经济未来走向 4. 看的论文 Alto: Lightweight VMs using Virtualization-aware Managed Runtimes主要内容是为数据中心提出了一个新的虚拟化技术 (Alto)，它在管理运行时层 (the managed runtime layer) 进行虚拟化，主要目标是提供小、安全、强隔离性的虚拟机。 An Application-Specific Memory Management Unit for FPGA-SoCs主要内容是提出了在 FPGA 上附加一个 MMU 的概念以及如何在设计中实际使用它 MirageOS Unikernel with Network Acceleration for IoT主要内容是为 MirageOS 增加了一个网络性能加速器，提高了健壮性和网络性能 UniGuard: Protecting Unikernels using Intel SGX主要内容是在 unikernel 中 集成 Intel SGX 以保护云环境中的安全敏感计算 (security-sensitive computations) 5. 写的几行代码 project-euler刷了一些欧拉计划的题。 以上。 十月的总结大概就是这些，这个月要继续加油才是。]]></content>
+    <content type="text"><![CDATA[这个月听了个学术论坛，然后去杭州参加了 cncc 2018，想着是总结就都列进去了。下面是 2018 年十月的总结。 1. 看的非专业书籍姑且完成了每个月两本书的小目标。。。 『蔡澜潮晒日本』 - 蔡澜主要就是蔡澜在日本的各种逛吃逛吃: )，看了一部分就看不下去了。 『正说大明十六帝』- 刘亚玲和之前看的『正说大宋十八帝』是同一个作者，讲述了大明十六位帝王的政治生涯。 2. 看的专业书籍 《Electron in Action》(pdf)这本书是介绍 Electron，从入门到入土 ：) 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。 《Creating Google Chrome Extensions》(pdf)这本书是介绍如何创建 Chrome 扩展的，但是我看了一章就不想看了，感觉写得好烂。。。可能是我太菜了吧。。。 《Xen 虚拟化技术完全导读》介绍 Xen 的，看了将近一个月还没看完第一章，断断续续。。。 3. 讲座&amp;会议 2018 年中南地区计算机学科研究生学术论坛 论坛主题：区块链——开启数字经济的新引擎 主办单位：华中科技大学计算机科学与技术学院 承办单位：WeBank 微众银行 时间：2018 年 10 月 17 日 地点：武汉光谷凯悦酒店 内容： 涂子沛——通往数据 2.0 时代 黄永峰——区块链与云计算融合机制下的大数据安全保护模型及应用 贾瑶琪——分片技术–区块链即将到来的扩容良方 张开翔——区块链技术在金融领域的应用实践 2018 中国计算机大会 会议主题：大数据推动数字经济（Big Data Drives the Digital Economy） 主办单位：中国计算机学会（CCF） 承办单位：萧山区人民政府、浙江大学 时间：2018 年 10 月 25 - 27 日 地点：杭州国际博览中心 3 场大会主题论坛，50 场前沿技术论坛、20 场特色活动及 100 个科技成果展 三场主题论坛 CPU 及 xPU 芯片未来之路 软件工程 50 周年了，路在何方？ 共享经济未来走向 4. 看的论文 Alto: Lightweight VMs using Virtualization-aware Managed Runtimes主要内容是为数据中心提出了一个新的虚拟化技术 (Alto)，它在管理运行时层 (the managed runtime layer) 进行虚拟化，主要目标是提供小、安全、强隔离性的虚拟机。 An Application-Specific Memory Management Unit for FPGA-SoCs主要内容是提出了在 FPGA 上附加一个 MMU 的概念以及如何在设计中实际使用它 MirageOS Unikernel with Network Acceleration for IoT主要内容是为 MirageOS 增加了一个网络性能加速器，提高了健壮性和网络性能 UniGuard: Protecting Unikernels using Intel SGX主要内容是在 unikernel 中 集成 Intel SGX 以保护云环境中的安全敏感计算 (security-sensitive computations) 5. 写的几行代码 project-euler刷了一些欧拉计划的题。 以上。 十月的总结大概就是这些，下个月要继续加油才是。]]></content>
       <categories>
         <category>essay</category>
       </categories>
@@ -174,7 +198,7 @@
   <entry>
     <title><![CDATA[Tich·九月总结/2018]]></title>
     <url>%2F2018%2F10%2F01%2Fsummary-1809%2F</url>
-    <content type="text"><![CDATA[为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。主要内容也就是对上个月的工作简单做个回顾总结。下面是 2018 年九月的总结。 1. 看的非专业书籍『正说大宋十八帝』- 刘亚玲（本来打算是看两本的，结果另一本没看完）书的内容如书名那般，讲述了南北宋的十八位帝王的一生。本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。 2. 看的专业书籍 《Learn Python 3 the Hard Way》(pdf)这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。 《Cpp Application Development with Code Blocks》(pdf)这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。 《Python for Data Analysis》(pdf)介绍如何使用 Python 进行数据分析，还没看完。 《Xen 虚拟化技术完全解读》介绍 Xen 虚拟化技术的，还没看完。 《Real World OCaml》OCaml 从入门到入土，还没看完。 3. 看的论文很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy: 4. 写的几行代码这个月主要写了四个主要的东西吧（包括开始但未完成） 弹幕转换器主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。已经实现了腾讯、优酷的弹幕转化下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。 autoQA主要功能是自动提交 QA。 d3 可视化框架可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。已经出了一个 视频 leetcode刷了一些 leetcode 题。 project-euler刷了一些欧拉计划的题。这个欧拉计划还是那个 计科艺研小组 的一个大佬推荐给我的。 以上。 九月的总结大概就是这些，这个月要继续加油才是。]]></content>
+    <content type="text"><![CDATA[为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。主要内容也就是对上个月的工作简单做个回顾总结。下面是 2018 年九月的总结。 1. 看的非专业书籍『正说大宋十八帝』- 刘亚玲（本来打算是看两本的，结果另一本没看完）书的内容如书名那般，讲述了南北宋的十八位帝王的一生。本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。 2. 看的专业书籍 《Learn Python 3 the Hard Way》(pdf)这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。 《Cpp Application Development with Code Blocks》(pdf)这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。 《Python for Data Analysis》(pdf)介绍如何使用 Python 进行数据分析，还没看完。 《Xen 虚拟化技术完全解读》介绍 Xen 虚拟化技术的，还没看完。 《Real World OCaml》OCaml 从入门到入土，还没看完。 3. 看的论文很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy: 4. 写的几行代码这个月主要写了四个主要的东西吧（包括开始但未完成） 弹幕转换器主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。已经实现了腾讯、优酷的弹幕转化下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。 autoQA主要功能是自动提交 QA。 d3 可视化框架可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。已经出了一个 视频 leetcode刷了一些 leetcode 题。 project-euler刷了一些欧拉计划的题。这个欧拉计划还是那个 计科艺研小组 的一个大佬推荐给我的。 以上。 九月的总结大概就是这些，下个月要继续加油才是。]]></content>
       <categories>
         <category>essay</category>
       </categories>
@@ -322,17 +346,6 @@
         <tag>Crawler</tag>
         <tag>Netease-Cloud</tag>
         <tag>Netease-Radio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Tich·十二月总结/2018]]></title>
-    <url>%2F2017%2F11%2F30%2Fsummary-1812%2F</url>
-    <content type="text"><![CDATA[不知不觉又摸鱼一个月了:3下面是 2018 年十二月的总结。 1. 看的非专业书籍2. 看的专业书籍3. 看的论文 Unikernels: Library Operating Systems for the Cloud主要内容是介绍了 Mirage 这个 unikernel 4. 写的几行代码 bili-box用来下载哔哩哔哩视频/图片/收藏，还在实现中。 以上。 十二月的总结大概就是这些，这个月要继续加油才是。]]></content>
-      <categories>
-        <category>essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
