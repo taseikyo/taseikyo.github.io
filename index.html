@@ -121,13 +121,13 @@
 
   <meta name="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Komm Katze">
+<meta property="og:title" content="Tian&#39;s Daily Life">
 <meta property="og:url" content="https://lewistian.github.io/index.html">
-<meta property="og:site_name" content="Komm Katze">
+<meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Komm Katze">
+<meta name="twitter:title" content="Tian&#39;s Daily Life">
 <meta name="twitter:description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
 
 
@@ -145,7 +145,7 @@
   };
 </script>
 
-  <title>Komm Katze</title>
+  <title>Tian's Daily Life</title>
   
 
 
@@ -206,7 +206,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Komm Katze</span>
+        <span class="site-title">Tian's Daily Life</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -374,6 +374,184 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2019/02/15/bili-pendant/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/15/bili-pendant/" itemprop="url">
+                  为博客头像添加哔哩哔哩挂件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-15 21:01:09" itemprop="dateCreated datePublished" datetime="2019-02-15T21:01:09+08:00">2019-02-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjs63cp3t000s8ouby8p3rzjf" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/images/author-bili-pendant.png" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          <p>之前在做 <a href="https://github.com/LewisTian/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/LewisTian/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
+<p>昨天晚上参考该作者的 <a href="https://github.com/lewky/hexo-theme-beep" target="_blank" rel="noopener">hexo-theme-beep</a> 主题，修改了一下自定义的 js 和 css 文件，然后将挂件加到了我自己的博客头像上。</p>
+<p>和原作者稍有不同，我的是直接点击一次就改变头像，而且会显示挂件名称，每次都随机加载图片而不是按顺序。 </p>
+<p>实际效果可以点击我博客头像来感受一下~</p>
+<p>具体修改如下所示<br>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/02/15/bili-pendant/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2019/01/25/first2codewars/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -383,7 +561,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -474,7 +652,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjs4ki23v00109gubp026lone" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjs63cp4600168oub66784u7v" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -557,7 +735,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -648,7 +826,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjs4ki269002q9gub9xdd5lb8" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjs63cp5y002u8oubgpxby2or" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/summary_1812.png" itemprop="contentUrl">
               </a>
             
@@ -731,7 +909,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -822,7 +1000,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/WTMD-no-fuck.jpg" rel="gallery_cjs4ki25m002b9gub710sjxdw" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/WTMD-no-fuck.jpg" rel="gallery_cjs63cp5200298oubgglkrmj6" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/WTMD-no-fuck.jpg" itemprop="contentUrl">
               </a>
             
@@ -905,7 +1083,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -996,7 +1174,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/nem.png" rel="gallery_cjs4ki250001v9gublzxy1wv2" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/nem.png" rel="gallery_cjs63cp5i002n8oub814j0mz3" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/nem.png" itemprop="contentUrl">
               </a>
             
@@ -1079,7 +1257,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -1240,7 +1418,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -1331,7 +1509,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/18.06-Linear-Algebra.jpg" rel="gallery_cjs4ki22q000a9gub33wzibxd" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/18.06-Linear-Algebra.jpg" rel="gallery_cjs63cp2g00028oubo38fb9jy" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/18.06-Linear-Algebra.jpg" itemprop="contentUrl">
               </a>
             
@@ -1408,7 +1586,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
+      <meta itemprop="name" content="Tian's Daily Life">
     </span>
 
     
@@ -1499,7 +1677,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/bili-box.png" rel="gallery_cjs4ki23h000u9gubetd3wpq3" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/bili-box.png" rel="gallery_cjs63cp3f000i8oublmivv1wr" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/bili-box.png" itemprop="contentUrl">
               </a>
             
@@ -1525,174 +1703,6 @@
         
       
     </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/11/30/win10-sublinux/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Komm Katze">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/30/win10-sublinux/" itemprop="url">
-                  windows10 中 Linux 子系统的路径
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-11-30 19:30:15" itemprop="dateCreated datePublished" datetime="2018-11-30T19:30:15+08:00">2018-11-30</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/wsl.jpg" rel="gallery_cjs4ki26d002u9gubcnwkediy" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/wsl.jpg" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          
-            <p>安装完 Linux 子系统之后想知道它的路径，结果它隐藏极深，经过一番搜索之后才发现它的目录，下面是我的 home 路径<br><code>C:\Users\tian\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home</code></p>
-
-          
-        
-      
-    </div>
 
     
 
@@ -1775,7 +1785,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1941,7 +1951,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">63</span>
+                      
+                    
+                    <span class="site-state-item-count">64</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
