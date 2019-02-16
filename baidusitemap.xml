@@ -3,6 +3,28 @@
 
     
   <url>
+    <loc>https://lewistian.github.io/2019/02/16/codewars-190216/</loc>
+    <lastmod>2019-02-16T08:34:16.398Z</lastmod>
+    <data>
+        <display>
+        <title>codewars-190216</title>
+        <pubTime>2019-02-16T08:27:24.000Z</pubTime>
+        
+        <tag>Python </tag>
+         
+        <tag>codewars </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lewistian.github.io/2019/02/15/bili-pendant/</loc>
     <lastmod>2019-02-15T13:29:07.132Z</lastmod>
     <data>
@@ -224,9 +246,9 @@
         <title>Premiere批量字幕生成器</title>
         <pubTime>2017-08-30T11:38:34.000Z</pubTime>
         
-        <tag>C++ </tag>
-         
         <tag>QT </tag>
+         
+        <tag>C++ </tag>
          
         <tag>Premiere </tag>
          
@@ -324,9 +346,9 @@
         <title>网易云歌词下载器</title>
         <pubTime>2017-08-25T10:50:05.000Z</pubTime>
         
-        <tag>C++ </tag>
-         
         <tag>QT </tag>
+         
+        <tag>C++ </tag>
          
         <tag>lyric </tag>
          
@@ -488,9 +510,9 @@
         
         <tag>Python </tag>
          
-        <tag>PyQt5 </tag>
-         
         <tag>blog </tag>
+         
+        <tag>PyQt5 </tag>
          
          
            
@@ -826,11 +848,11 @@
         <title>Linux编译和安装boost库</title>
         <pubTime>2018-03-14T06:12:56.000Z</pubTime>
         
+        <tag>C++ </tag>
+         
         <tag>Linux </tag>
          
         <tag>bost </tag>
-         
-        <tag>C++ </tag>
          
          
            
