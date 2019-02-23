@@ -3,6 +3,94 @@
   
     
     <entry>
+      <title><![CDATA[补MAD计划]]></title>
+      <url>/2019/02/23/mad-review/</url>
+      <content type="html"><![CDATA[<p>最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。</p>
+<p>其投稿数的变化如图所示：<br><img src="/images/bili-mad-year-data.png" alt="投稿数" title="投稿数"></p>
+<p>播放量前十的 MAD 如下（去除播放量为–的稿件）：</p>
+<table>
+<thead>
+<tr>
+<th>标题</th>
+<th>up</th>
+<th>播放量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.bilibili.com/video/av810872/" target="_blank" rel="noopener">【炮姐/AMV】我永远都会守护在你的身边！</a></td>
+<td>暗猫の祝福</td>
+<td>11437890</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av113221/" target="_blank" rel="noopener">【魂】银魂——武士之魂</a></td>
+<td>N.ec鱼丸</td>
+<td>7855128</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av731700/" target="_blank" rel="noopener">【综漫 ASMV】 弱者（完整版）/The Weak (Full ver.)</a></td>
+<td>概念の天使</td>
+<td>6494493</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av1328701/" target="_blank" rel="noopener">【火影忍者】用战斗来祭奠这个世界 ！！</a></td>
+<td>花宫二橙</td>
+<td>6392419</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av3161283/" target="_blank" rel="noopener">【AMV】 点燃这绝望的火光！！！</a></td>
+<td>小小☆精灵</td>
+<td>4367202</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av1404184/" target="_blank" rel="noopener">【综漫燃/夜愿/AMV】Last ride of the day</a></td>
+<td>暗猫の祝福</td>
+<td>3717519</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av3698415/" target="_blank" rel="noopener">【泛式/单集MAD】一拳超人: 深海王篇——不屈的正义</a></td>
+<td>泛式</td>
+<td>3202031</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av2627270" target="_blank" rel="noopener">【ToLove】我的后宫不可能都是狐狸精！</a></td>
+<td>古川星尘</td>
+<td>3120416</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av2022873" target="_blank" rel="noopener">【综漫】好喜欢你，但是，再见了</a></td>
+<td>Yukari丶紫</td>
+<td>2927190</td>
+</tr>
+<tr>
+<td><a href="https://www.bilibili.com/video/av5690552" target="_blank" rel="noopener">【全程高燃/多素材/混剪】当我变成魔鬼的那一刻 世界就是地狱</a></td>
+<td>不知者_-</td>
+<td>2665211</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Crawler </tag>
+            
+            <tag> MAD </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[codewars-190216]]></title>
       <url>/2019/02/16/codewars-190216/</url>
       <content type="html"><![CDATA[<p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
@@ -722,9 +810,9 @@
             
             <tag> Python </tag>
             
-            <tag> blog </tag>
-            
             <tag> PyQt5 </tag>
+            
+            <tag> blog </tag>
             
         </tags>
         
@@ -1177,11 +1265,11 @@ cpuid
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Linux </tag>
             
             <tag> bost </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
@@ -1421,9 +1509,9 @@ cpuid
         
         <tags>
             
-            <tag> QT </tag>
-            
             <tag> C++ </tag>
+            
+            <tag> QT </tag>
             
             <tag> Premiere </tag>
             
@@ -1449,9 +1537,9 @@ cpuid
         
         <tags>
             
-            <tag> QT </tag>
-            
             <tag> C++ </tag>
+            
+            <tag> QT </tag>
             
             <tag> lyric </tag>
             
