@@ -475,9 +475,12 @@
         
           
             <p>最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。</p>
-<p>其投稿数的变化如图所示：<br><img src="/images/bili-mad-year-data.png" alt="投稿数" title="投稿数"></p>
-<p>播放量前十的 MAD 如下（去除播放量为–的稿件）：</p>
-<table>
+<ul>
+<li>具体代码见 <a href="https://github.com/LewisTian/Crawler#bilibili" target="_blank" rel="noopener">LewisTian/Crawler</a></li>
+<li>数据及词云的材料 <a href="https://github.com/LewisTian/Crawler/bilibili/bili-mad.7z" target="_blank" rel="noopener">bili-mad.7z</a></li>
+</ul>
+<h4 id="投稿数的变化如图所示："><a href="#投稿数的变化如图所示：" class="headerlink" title="投稿数的变化如图所示："></a>投稿数的变化如图所示：</h4><p><img src="/images/bili-mad-year-data.png" alt="投稿数" title="投稿数"></p>
+<h4 id="播放量前十的-MAD-如下（去除播放量为–的稿件）："><a href="#播放量前十的-MAD-如下（去除播放量为–的稿件）：" class="headerlink" title="播放量前十的 MAD 如下（去除播放量为–的稿件）："></a>播放量前十的 MAD 如下（去除播放量为–的稿件）：</h4><table>
 <thead>
 <tr>
 <th>标题</th>
@@ -538,6 +541,10 @@
 </tr>
 </tbody>
 </table>
+<h3 id="以下-2019-2-25-更新"><a href="#以下-2019-2-25-更新" class="headerlink" title="以下 2019/2/25 更新"></a>以下 2019/2/25 更新</h3><h4 id="播放数-top20-的稿件"><a href="#播放数-top20-的稿件" class="headerlink" title="播放数 top20 的稿件"></a>播放数 top20 的稿件</h4><p>id 为视频的 id，mid 为 UP 的 id。访问视频用 <code>https://www.bilibili.com/video/av{id}</code> 方式，访问 UP 的个人空间用 <code>https://space.bilibili.com/{mid}</code> 方式<br><img src="/images/bili-mad/play-top20.png" alt="播放数 top20 的稿件" title="播放数 top20 的稿件"></p>
+<h4 id="投稿时间-top20-的稿件"><a href="#投稿时间-top20-的稿件" class="headerlink" title="投稿时间 top20 的稿件"></a>投稿时间 top20 的稿件</h4><p>pubdate 为审核之后放出来的时间，这个是方便考古。<br><img src="/images/bili-mad/pub-top20.png" alt="投稿时间 top20 的稿件" title="投稿时间 top20 的稿件"></p>
+<h4 id="播放量-top20-的-UP"><a href="#播放量-top20-的-UP" class="headerlink" title="播放量 top20 的 UP"></a>播放量 top20 的 UP</h4><p>这个不太准确，因为爬虫只爬取了从 2010/1/1-2019/12/31 中每个月播放量前 20 的稿件。<br><img src="/images/bili-mad/author-sum-top20.png" alt="播放量 top20 的 UP" title="播放量 top20 的 UP"></p>
+<h4 id="标题词云图"><a href="#标题词云图" class="headerlink" title="标题词云图"></a>标题词云图</h4><p><img src="/images/bili-mad/wordcloud.png" alt="词云图" title="词云图"><br>去掉 MAD AMV 综漫这几个这几个关键词之后的图：<br><img src="/images/bili-mad/wordcloud-bilibili.png" alt="词云图" title="词云图"></p>
 
           
         
@@ -848,7 +855,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjshh5lmg000hd4ubl0qquagz" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjsk0k9qo000zqkubzu90ufx4" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -1026,7 +1033,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjshh5ln0000xd4ubxrdt63x6" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjsk0k9qq0015qkubt2hz9nks" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -1200,7 +1207,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjshh5lp20036d4ub15afc19b" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjsk0k9sa002yqkub7jhm9x41" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/summary_1812.png" itemprop="contentUrl">
               </a>
             
@@ -1374,7 +1381,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/WTMD-no-fuck.jpg" rel="gallery_cjshh5loo002md4ubaejamgj0" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/WTMD-no-fuck.jpg" rel="gallery_cjsk0k9rx002jqkubvdhksuhw" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/WTMD-no-fuck.jpg" itemprop="contentUrl">
               </a>
             
@@ -1548,7 +1555,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/nem.png" rel="gallery_cjshh5lo4001nd4ublpse7lof" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/nem.png" rel="gallery_cjsk0k9r6001yqkubr5ftovqi" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/nem.png" itemprop="contentUrl">
               </a>
             
