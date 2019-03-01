@@ -129,9 +129,9 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://lewistian.github.io/images/cnki-unikernel-result.png">
 <meta property="og:image" content="https://lewistian.github.io/images/cnki-unikernel-mm-result.png">
-<meta property="og:image" content="http://t12.baidu.com/it/u=803896070,550011247&fm=173&s=D18BB3571E1171DAD02CD0E80300A060&w=600&h=690&img.JPEG">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551366439154&di=cfb0f5eb1b4d65ba13526d2b91207d5e&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn12%2F746%2Fw440h306%2F20180413%2Fe4d2-fyzeyqc5136088.jpg">
-<meta property="og:updated_time" content="2019-02-28T12:20:11.968Z">
+<meta property="og:image" content="https://lewistian.github.io/2019/02/28/meeting-190227/images/yangmi-kuxiao.jpg">
+<meta property="og:image" content="https://lewistian.github.io/2019/02/28/meeting-190227/images/dog-lay.jpg">
+<meta property="og:updated_time" content="2019-03-01T03:04:42.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019&#x2F;02&#x2F;27组会小记">
 <meta name="twitter:description" content="昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）  搜索 unikernel 关键词结果只有 5 条   搜索 unikernel 内存管理关键词则没有😂  然后老师又要求每">
@@ -426,6 +426,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-01 11:04:42" itemprop="dateModified" datetime="2019-03-01T11:04:42+08:00">2019-03-01</time>
+              
+            
           </span>
 
           
@@ -501,9 +517,9 @@
 <li>自己添加一个库/模块，其作用是当 unikernel 处于 idle 状态/内存利用率不高的时候将空闲内存返还给 hypervisor，然后当其内存不够的时候再向 hypervisor 申请<br> 听完之后学长立马就说，这不是那个 ballooning 吗？（我沉默了一会，因为这就是借鉴它的思想）然后我反驳道：这个技术没被用到 unikernel 上啊。</li>
 <li>开始的时候初始化一个较大内存池，由 hypervisor 管理，结合上面一点来使用。</li>
 </ol>
-<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：<br><img src="http://t12.baidu.com/it/u=803896070,550011247&fm=173&s=D18BB3571E1171DAD02CD0E80300A060&w=600&h=690&img.JPEG" title="笑的很开心"></p>
+<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：<br><img src="images/yangmi-kuxiao.jpg"></p>
 <p>最后老师还是给我了一个思路：“大页”（就我理解大概就是比传统 4k 更大的页面吧233）<br>瞬间感觉得救了吧，至少有了一个方向，之前完全是两眼一抹黑，看的论文基本都是讲 unikernel 安全的。</p>
-<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551366439154&di=cfb0f5eb1b4d65ba13526d2b91207d5e&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn12%2F746%2Fw440h306%2F20180413%2Fe4d2-fyzeyqc5136088.jpg" title="差不多是条废狗了。"></p>
+<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。<br><img src="images/dog-lay.jpg" title="差不多是条废狗了。"></p>
 
       
     </div>
@@ -1108,18 +1124,18 @@
       function renderGitment(){
         var gitment = new Gitmint({
             <!-- id: window.location.pathname,-->
-            id: page.date,
+            id: '1551354130000',
             owner: 'LewisTian',
-            repo: 'https://github.com/LewisTian/LewisTian.github.io',
+            repo: 'LewisTian.github.io',
             
             lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
             
             oauth: {
             
             
-                client_secret: '1a876e82d4cd6647044fc0b9fe8401a0b1bc8f79',
+                client_secret: '2b50602fce1105baee45b38aa059e0bec4655f6f',
             
-                client_id: '6fe0fb9b4b289177d626'
+                client_id: '68a03d978ab32bdae740'
             }});
         gitment.render('gitment-container');
       }
