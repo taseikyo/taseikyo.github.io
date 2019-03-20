@@ -374,6 +374,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/20/includeOS-helloworld/" itemprop="url">
+                  includeOS 初体验 - Hello World!
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-20 11:20:02 / Modified: 15:14:35" itemprop="dateCreated datePublished" datetime="2019-03-20T11:20:02+08:00">2019-03-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Unikernel/" itemprop="url" rel="index"><span itemprop="name">Unikernel</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cjtgn8srz001vusubk06rbbgy" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/images/includeOS.png" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          
+            <p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
+<p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
+<h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
+<p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
+<h3 id="安装-includeOS"><a href="#安装-includeOS" class="headerlink" title="安装 includeOS"></a>安装 includeOS</h3><p>直接运行下面命令即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/hioa-cs/IncludeOS</span><br><span class="line">$ <span class="built_in">cd</span> IncludeOS</span><br><span class="line">$ ./install.sh</span><br></pre></td></tr></table></figure></p>
+<p>install.sh 脚本帮你做了如下工作：</p>
+<ol>
+<li>安装了一些必要的依赖： curl make clang-5.0 nasm bridge-utils qemu</li>
+<li>用 CMake 编译 IncludeOS (将所有东西安装在 $INCLUDEOS_PREFIX/includeos ，如果在开始没有做自定义安装位置那一步则默认安装在 /usr/local 目录下)</li>
+</ol>
+<h3 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h3><p><code>$ ./test.sh</code><br>这样貌似就成功了叭_(:△」∠)_<br><img src="/images/includeOS-test.sh.png" alt="test.sh" title="run test.sh"><br><img src="/images/includeOS-links.png" alt="includeOS-links" title="links -dump 10.0.0.42"></p>
+<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>终于到了这一步！(´ｰ∀ｰ`)<br>将 seed/service 目录复制一份，然后再 Service 类中开始实现 Service::start 函数即可（我发现里面已经有了 Hello world 2333<br>然后更新 CMakeLists.txt 来指定项目的名称<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r seed/service ~/includeos_hellowrold</span><br><span class="line">$ <span class="built_in">cd</span> ~/includeos_hellowrold</span><br><span class="line">$ subl service.cpp</span><br><span class="line">$ mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ boot HelloWrold</span><br></pre></td></tr></table></figure></p>
+<p>正如上面所说，该 service.cpp 文件中其实已经输出了想要的 Hello world，所以我就加了一些额外的话。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Service::start(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; args)</span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __GNUG__</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Built by g++ "</span> __VERSION__ <span class="string">"\n"</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello world! --LewisTian\n"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Congratulations! Your first IncludeOS program runs successfully!\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后改了 CMakeLists.txt 中的服务名与生成文件名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Human-readable name of your service</span><br><span class="line">set(SERVICE_NAME &quot;IncludeOS HelloWrold&quot;)</span><br><span class="line"></span><br><span class="line"># Name of your service binary</span><br><span class="line">set(BINARY       &quot;HelloWrold&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>一颗赛艇！最后使用命令 <code>boot HelloWrold</code> 运行你写的 IncludeOS HelloWrold<br>运行结果：<br><img src="/images/includeOS-HelloWorld.png" alt="includeOS-HelloWorld" title="boot HelloWrold"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2019/03/06/leetcode-190306/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1221,7 +1407,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjswxxbgi000hfsub0cc4t5c2" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjtgn8ss8002husubn9sq5hw6" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -1415,7 +1601,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjswxxbh3001afsubjt23ftnn" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjtgn8ss20022usubtmmmvz6y" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -1605,7 +1791,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjswxxbi60031fsubxu6ec3it" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjtgn8st90041usubpia7t4ya" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/summary_1812.png" itemprop="contentUrl">
               </a>
             
@@ -1631,184 +1817,6 @@
         
       
     </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/12/17/spell-problem-disaster/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/17/spell-problem-disaster/" itemprop="url">
-                  单词拼写错误导致的"灾难"
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-12-17 17:34:35 / Modified: 20:58:54" itemprop="dateCreated datePublished" datetime="2018-12-17T17:34:35+08:00">2018-12-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/WTMD-no-fuck.jpg" rel="gallery_cjswxxbhy002ofsubxavdra2n" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/WTMD-no-fuck.jpg" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <p>本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/12/17/spell-problem-disaster/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </p></div>
 
     
 
@@ -1890,7 +1898,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">44</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1919,7 +1927,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2072,7 +2082,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">70</span>
+                      
+                    
+                    <span class="site-state-item-count">71</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
