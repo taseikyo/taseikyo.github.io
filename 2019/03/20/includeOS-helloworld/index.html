@@ -128,7 +128,7 @@
 <meta property="og:description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。 自定义安装位置编辑 ~/.bashrc 文件，使用命令 subl ~/.bashrc，在文件尾添加下面代码12export INCLUDEOS_PREFIX=~/includeosexport PATH=$PATH:$INCLUDEOS_PREF">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://lewistian.github.io/images/includeOS.png">
-<meta property="og:updated_time" content="2019-03-20T07:14:35.327Z">
+<meta property="og:updated_time" content="2019-03-20T07:20:31.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="includeOS 初体验 - Hello World!">
 <meta name="twitter:description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。 自定义安装位置编辑 ~/.bashrc 文件，使用命令 subl ~/.bashrc，在文件尾添加下面代码12export INCLUDEOS_PREFIX=~/includeosexport PATH=$PATH:$INCLUDEOS_PREF">
@@ -419,7 +419,7 @@
                 
               
 
-              <time title="Created: 2019-03-20 11:20:02 / Modified: 15:14:35" itemprop="dateCreated datePublished" datetime="2019-03-20T11:20:02+08:00">2019-03-20</time>
+              <time title="Created: 2019-03-20 11:20:02 / Modified: 15:20:31" itemprop="dateCreated datePublished" datetime="2019-03-20T11:20:02+08:00">2019-03-20</time>
             
 
             
@@ -494,7 +494,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cjtgn8srz001vusubk06rbbgy" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cjtvbml9n001lm4ubtcfgd3d3" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/includeOS.png" itemprop="contentUrl">
               </a>
             
@@ -517,7 +517,7 @@
 <li>用 CMake 编译 IncludeOS (将所有东西安装在 $INCLUDEOS_PREFIX/includeos ，如果在开始没有做自定义安装位置那一步则默认安装在 /usr/local 目录下)</li>
 </ol>
 <h3 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h3><p><code>$ ./test.sh</code><br>这样貌似就成功了叭_(:△」∠)_<br><img src="/images/includeOS-test.sh.png" alt="test.sh" title="run test.sh"><br><img src="/images/includeOS-links.png" alt="includeOS-links" title="links -dump 10.0.0.42"></p>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>终于到了这一步！(´ｰ∀ｰ`)<br>将 seed/service 目录复制一份，然后再 Service 类中开始实现 Service::start 函数即可（我发现里面已经有了 Hello world 2333<br>然后更新 CMakeLists.txt 来指定项目的名称<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r seed/service ~/includeos_hellowrold</span><br><span class="line">$ <span class="built_in">cd</span> ~/includeos_hellowrold</span><br><span class="line">$ subl service.cpp</span><br><span class="line">$ mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ boot HelloWrold</span><br></pre></td></tr></table></figure></p>
+<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>终于到了这一步！(´ｰ∀ｰ`)<br>将 seed/service 目录复制一份，然后在 Service 类中实现 Service::start 函数即可（我发现里面已经有了 Hello world 2333<br>然后更新 CMakeLists.txt 来指定项目的名称<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r seed/service ~/includeos_hellowrold</span><br><span class="line">$ <span class="built_in">cd</span> ~/includeos_hellowrold</span><br><span class="line">$ subl service.cpp</span><br><span class="line">$ mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ boot HelloWrold</span><br></pre></td></tr></table></figure></p>
 <p>正如上面所说，该 service.cpp 文件中其实已经输出了想要的 Hello world，所以我就加了一些额外的话。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Service::start(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; args)</span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __GNUG__</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Built by g++ "</span> __VERSION__ <span class="string">"\n"</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello world! --LewisTian\n"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Congratulations! Your first IncludeOS program runs successfully!\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>然后改了 CMakeLists.txt 中的服务名与生成文件名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Human-readable name of your service</span><br><span class="line">set(SERVICE_NAME &quot;IncludeOS HelloWrold&quot;)</span><br><span class="line"></span><br><span class="line"># Name of your service binary</span><br><span class="line">set(BINARY       &quot;HelloWrold&quot;)</span><br></pre></td></tr></table></figure></p>
 <p>一颗赛艇！最后使用命令 <code>boot HelloWrold</code> 运行你写的 IncludeOS HelloWrold<br>运行结果：<br><img src="/images/includeOS-HelloWorld.png" alt="includeOS-HelloWorld" title="boot HelloWrold"></p>
