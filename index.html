@@ -420,12 +420,24 @@
                 
               
 
-              <time title="Created: 2019-03-20 11:20:02 / Modified: 15:20:31" itemprop="dateCreated datePublished" datetime="2019-03-20T11:20:02+08:00">2019-03-20</time>
+              <time title="Created: 2019-03-20 11:20:02" itemprop="dateCreated datePublished" datetime="2019-03-20T11:20:02+08:00">2019-03-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-06 21:14:42" itemprop="dateModified" datetime="2019-04-06T21:14:42+08:00">2019-04-06</time>
               
             
           </span>
@@ -478,7 +490,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cjtvbml9n001lm4ubtcfgd3d3" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cju5iy8gb001nwwubcmff5znp" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/includeOS.png" itemprop="contentUrl">
               </a>
             
@@ -496,6 +508,7 @@
 <p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
 <h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
 <p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
+<p><strong>20190406 更新</strong><br>有个地方忘记写了，少了这一步可能会导致安装出问题。<br>自己也是装了两遍才成功。下面分析是我 <strong>瞎分析的</strong> 233，不知道究竟是不是这样。<br>因为在安装过程中有请求 root 权限，导致用户改变了，所以 root 的环境变量也得变，下面是我添加的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=/home/tian/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
 <h3 id="安装-includeOS"><a href="#安装-includeOS" class="headerlink" title="安装 includeOS"></a>安装 includeOS</h3><p>直接运行下面命令即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/hioa-cs/IncludeOS</span><br><span class="line">$ <span class="built_in">cd</span> IncludeOS</span><br><span class="line">$ ./install.sh</span><br></pre></td></tr></table></figure></p>
 <p>install.sh 脚本帮你做了如下工作：</p>
 <ol>
@@ -1407,7 +1420,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjtvbml8u000tm4ubzcjeswuu" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cju5iy8fe000nwwubx9wd6j71" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -1601,7 +1614,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjtvbml9e001dm4ub3elg0s6h" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cju5iy8g0001cwwuboh1txtkm" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -1791,7 +1804,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjtvbmlb9002ym4ubahljrlqo" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cju5iy8w5007ewwubklr50trp" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/summary_1812.png" itemprop="contentUrl">
               </a>
             
