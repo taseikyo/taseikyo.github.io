@@ -120,7 +120,7 @@
 
 
   <meta name="description" content="主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。大致过程如下：  .ts 使用 pylupdate5 命令生成，命令如下： 12pylupdate5 mwin.py  -ts   zh_CN.tspylupdate5 mwin.py  -ts   en.ts  用 Qt Linguist.exe（/Lib/site-packages/">
-<meta name="keywords" content="Python,blog,PyQt5">
+<meta name="keywords" content="Python,PyQt5,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyQt5 多语言支持">
 <meta property="og:url" content="https://lewistian.github.io/2018/07/16/pyqt-mutilanguage/index.html">
@@ -464,16 +464,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/07/16/pyqt-mutilanguage/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/07/16/pyqt-mutilanguage/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -608,9 +598,9 @@
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/blog/" rel="tag"># blog</a>
-          
             <a href="/tags/PyQt5/" rel="tag"># PyQt5</a>
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
           
         </div>
       
@@ -666,7 +656,6 @@
 
   
 
-  
 
 
         </div>
@@ -1130,8 +1119,8 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css">
+        <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
     
 <!-- END LOCAL -->
 
@@ -1140,20 +1129,18 @@
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             <!-- id: window.location.pathname,-->
             id: '1531712268000',
             owner: 'LewisTian',
             repo: 'LewisTian.github.io',
             
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
             oauth: {
             
             
-                client_secret: '2b50602fce1105baee45b38aa059e0bec4655f6f',
+                client_secret: '751817fda009fa4f99de4c3f11db8619a4c6037c',
             
-                client_id: '68a03d978ab32bdae740'
+                client_id: '098e4bb457b3bde7a945'
             }});
         gitment.render('gitment-container');
       }
