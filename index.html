@@ -662,7 +662,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cju80kb67001si8ubd2iz6cht" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cjvggirmf0014tgublho7z5sf" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/includeOS.png" itemprop="contentUrl">
               </a>
             
@@ -692,166 +692,6 @@
 <p>正如上面所说，该 service.cpp 文件中其实已经输出了想要的 Hello world，所以我就加了一些额外的话。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Service::start(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; args)</span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __GNUG__</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Built by g++ "</span> __VERSION__ <span class="string">"\n"</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello world! --LewisTian\n"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Congratulations! Your first IncludeOS program runs successfully!\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>然后改了 CMakeLists.txt 中的服务名与生成文件名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Human-readable name of your service</span><br><span class="line">set(SERVICE_NAME &quot;IncludeOS HelloWrold&quot;)</span><br><span class="line"></span><br><span class="line"># Name of your service binary</span><br><span class="line">set(BINARY       &quot;HelloWrold&quot;)</span><br></pre></td></tr></table></figure></p>
 <p>一颗赛艇！最后使用命令 <code>boot HelloWrold</code> 运行你写的 IncludeOS HelloWrold<br>运行结果：<br><img src="/images/includeOS-HelloWorld.png" alt="includeOS-HelloWorld" title="boot HelloWrold"></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2019/03/06/leetcode-190306/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/06/leetcode-190306/" itemprop="url">
-                  leetcode-190306
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-06 16:19:37 / Modified: 16:27:41" itemprop="dateCreated datePublished" datetime="2019-03-06T16:19:37+08:00">2019-03-06</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天打算重新刷 leetcode，且使用 C 语言来做，感觉用 Python 是在作弊。<br>然后在做第一题时没啥想法，直接暴力求解然后看别人的解法，发现了一个有趣的库 <code>uthash.h</code></p>
-<p>结果就出现问题了。</p>
-<p>在我修改了代码之后，点 submit 之后报错了，然后我把错误案例复制过来跑结果却是对的，大概是有毒吧。<br><img src="/images/leetcode-190306-1.png" alt="leetcode-190306-1.png" title="submit"><br><img src="/images/leetcode-190306-2.png" alt="leetcode-190306-2.png" title="run code"></p>
 
           
         
@@ -1592,7 +1432,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cju80kb5s001oi8ubk31x21ka" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/author-bili-pendant.png" rel="gallery_cjvggirow002ztgubc5lat37r" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -1786,7 +1626,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cju80kb4z0019i8ubdgb2e3pr" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/first2codewars.png" rel="gallery_cjvggirma0011tgubcvntnl8e" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -1845,11 +1685,201 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/12/30/summary-1812/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/30/summary-1812/" itemprop="url">
+                  Tich·十二月总结/2018
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-30 17:20:18" itemprop="dateCreated datePublished" datetime="2018-12-30T17:20:18+08:00">2018-12-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-28 16:35:41" itemprop="dateModified" datetime="2019-01-28T16:35:41+08:00">2019-01-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="/images/summary_1812.png" rel="gallery_cjvggirp30034tgubpfln3loe" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/images/summary_1812.png" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          <p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/30/summary-1812/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1893,7 +1923,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1922,9 +1952,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2071,21 +2099,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">74</span>
+                    <span class="site-state-item-count">67</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

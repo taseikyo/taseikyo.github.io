@@ -27,18 +27,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[leetcode-190306]]></title>
-    <url>%2F2019%2F03%2F06%2Fleetcode-190306%2F</url>
-    <content type="text"><![CDATA[今天打算重新刷 leetcode，且使用 C 语言来做，感觉用 Python 是在作弊。然后在做第一题时没啥想法，直接暴力求解然后看别人的解法，发现了一个有趣的库 uthash.h 结果就出现问题了。 在我修改了代码之后，点 submit 之后报错了，然后我把错误案例复制过来跑结果却是对的，大概是有毒吧。]]></content>
-      <categories>
-        <category>C</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2019/02/27组会小记]]></title>
     <url>%2F2019%2F02%2F28%2Fmeeting-190227%2F</url>
     <content type="text"><![CDATA[昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文） 搜索 unikernel 关键词结果只有 5 条 搜索 unikernel 内存管理关键词则没有😂 然后老师又要求每个研一的同学说说自己的想法，没办法我只能借鉴之前看的一般异构内存管理的方法。我就大概有三点想法： 若是能知道启动的 unikernel 的读写比例，则可以相应给其分配不同比例的内存 然后学长说这一点这是不可能的，因为你无法决定数据到底放在 DRAM 还是 NVM。 自己添加一个库/模块，其作用是当 unikernel 处于 idle 状态/内存利用率不高的时候将空闲内存返还给 hypervisor，然后当其内存不够的时候再向 hypervisor 申请 听完之后学长立马就说，这不是那个 ballooning 吗？（我沉默了一会，因为这就是借鉴它的思想）然后我反驳道：这个技术没被用到 unikernel 上啊。 开始的时候初始化一个较大内存池，由 hypervisor 管理，结合上面一点来使用。 最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）而当时我是这个表情： 最后老师还是给我了一个思路：“大页”（就我理解大概就是比传统 4k 更大的页面吧233）瞬间感觉得救了吧，至少有了一个方向，之前完全是两眼一抹黑，看的论文基本都是讲 unikernel 安全的。 而且前两天看的 github 上的一个 unikernel 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。]]></content>
@@ -175,17 +163,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[windows10 中 Linux 子系统的路径]]></title>
-    <url>%2F2018%2F11%2F30%2Fwin10-sublinux%2F</url>
-    <content type="text"><![CDATA[安装完 Linux 子系统之后想知道它的路径，结果它隐藏极深，经过一番搜索之后才发现它的目录，下面是我的 home 路径C:\Users\tian\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>Windows - sublinux - Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Tich·十一月总结/2018]]></title>
     <url>%2F2018%2F11%2F30%2Fsummary-1811%2F</url>
     <content type="text"><![CDATA[不知不觉又摸鱼一个月了:3下面是 2018 年十一月的总结。 1. 看的非专业书籍 『阿 Q 正传』 - 鲁迅记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。 『我们仨』 - 杨绛久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。最后还是没看完，看了一部分看不下去了;3 2. 看的专业书籍 《Python Graph》(pdf)这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。没看完，感觉还是用的时候直接查相应的函数比较靠谱吧。 《chrome扩展及应用开发》(pdf)这本书的内容就是书名，介绍如何开发 chrome 扩展与应用。 《chrome扩展及应用开发》除了看这本书的电子版，之前去图书馆借书正好查到有这本书于是就借过来了。 3. 看的论文 Efficient Shared Memory Orchestration Towards Demand Driven Memory Slicing主要内容是提出了一个轻量级的动态和需求驱动的内存分片方法 MemLego，由三部分组成： MemExpand 在存在不断变化的工作负载时提供弹性共享内存分配和回收。 MemSwap 提供共享内存分页功能，可显着提高内存交换效率，加快 VM 执行的吞吐量恢复速度。 MemPipe 提供共享内存管道，用于共存 VM 之间的高性能通信。 Unikernels as Processes主要内容是提出将 unikernel 作为进程运行，改善了对 VM 的隔离，同时对内核函数的访问权限减少一半；另外由于作为进程运行，所以继承了许多特定于进程的特性如高内存密度，性能，启动时间等。 Unikernel Monitors Extending Minimalism Outside of the Box主要内容是对云出了一个新的执行单元，通过捆绑 unikernel 和专用的监视器 (monitor) 构建，这样的专用监视器小而简单，并且功能强大，足以运行真正的 unikernel。 4. 写的几行代码 leetcode刷了一些 leetcode 题。 txt2img分享文字为图片，将之前的代码稍微整理了一下。 Slacking-Visualization摸鱼时间可视化，还有很多地方需要改进。【已删除】 牛客网在牛客网刷了一些题 以上。 十一月的总结大概就是这些，下个月要继续加油才是。]]></content>
@@ -303,8 +280,8 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>PyQt5</tag>
         <tag>blog</tag>
+        <tag>PyQt5</tag>
       </tags>
   </entry>
   <entry>
@@ -451,18 +428,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[慕课网【Python高效编程技巧实战】笔记]]></title>
-    <url>%2F2017%2F11%2F09%2FPythonAdvancedExercise%2F</url>
-    <content type="text"><![CDATA[人生苦短, 我用 Python. 感觉慕课网的付费课程确实有用，学了一晚上感觉对 Python 有了好多新的了解 hhh，在 Girhub 上同步更新笔记，项目地址: PythonAdvancedExercise]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>mooc</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[华中科技大学贴吧牛人排行榜数据分析]]></title>
     <url>%2F2017%2F10%2F14%2FHUST-RANk%2F</url>
     <content type="text"><![CDATA[爬取了 华中科技大学贴吧牛人排行榜 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 HUST-Rank，可视化见 ECharts]]></content>
@@ -520,31 +485,6 @@
         <tag>QT</tag>
         <tag>lyric</tag>
         <tag>Netease-Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[JSON格式化]]></title>
-    <url>%2F2017%2F08%2F17%2Fjson-format%2F</url>
-    <content type="text"><![CDATA[格式化JSON代码格式，在线体验未格式化代码：1&#123;"employees": [&#123; "firstName":"Bill" , "lastName":"Gates" &#125;,&#123; "firstName":"George" , "lastName":"Bush" &#125;,&#123; "firstName":"Thomas" , "lastName":"Carter" &#125;]&#125; 格式化之后：12345678910111213141516&#123; "employees": [ &#123; "firstName": "Bill", "lastName": "Gates" &#125;, &#123; "firstName": "George", "lastName": "Bush" &#125;, &#123; "firstName": "Thomas", "lastName": "Carter" &#125; ]&#125; 使用说明：在输入框中贴入JSON代码然后敲击tab键，即可得到格式化的JSON代码。]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>JSON</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[大鱼吃小鱼游戏]]></title>
-    <url>%2F2017%2F08%2F17%2Ffish-game%2F</url>
-    <content type="text"><![CDATA[简单的大鱼吃小鱼游戏，使用w、s、a、d来控制方向，游戏截图：游戏试玩：大鱼吃小鱼]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>canvas</tag>
-        <tag>game</tag>
       </tags>
   </entry>
   <entry>
