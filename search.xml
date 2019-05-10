@@ -5,12 +5,12 @@
     <url>%2F2019%2F05%2F10%2Fgood-things-recommended-win-softwares%2F</url>
     <content type="text"><![CDATA[记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。目的是为了以后换了电脑/笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。 2345 看图王(绿色版)为什么要加个绿色版，因为其实这个看图王真的很好用，但是广告很恶心。我之前是用美图看看来着，其实也不错，但是好久没更新，有种年久失修的感觉，UI 很丑。 Adobe 全家桶这个就不多介绍了 hhh Bandizip一款免费精简的压缩/解压软件，从知乎上知道的，最开始是 2345 好压。后来有广告就打算换一个，在知乎上看到这个。它还有一个很棒的小功能，就是右键菜单下的 “新建文件夹”，习惯之后真的不想去点二级目录下的新建文件夹。 Cloverclover 是资源管理器的一个扩展，增加了类似 Chrome 多标签页的功能，不用每个目录单独开一个窗口。最开始知道这个软件是在 计算机艺术研究小组 那个群，群主上传了一个破解版的 clover，我下载来试试水，康康是个啥玩意，结果一下子就爱上了，不用多个窗口 alt + tab 来切换，直接点击 tab 页即可，可以说方便不少，日常必备。 Cmder一款超好用的 Windows 下的终端，如果你受够了 cmd 和 power shell，那么 cmder 就是你的不二之选。 Dism++其他网站上的介绍 “Dism++ 是一个强大同时轻量易用的小工具，集系统清理、优化、启动项管理、驱动管理等许多常用 Windows 设置与一身”，其实我就用来清垃圾 233。 FinalShell从知乎上知道的，据说是一款 “替代 Xshell 的良心国产软件 FinalShell”，不说其他的， UI 确实更好看。 Listary在知乎上知道的，本来自己就是一个强迫症，喜欢一个啥都没有的桌面，有个这个之后更是加剧了我的这一点，因为可以双击 ctrl 弹出搜索框。它搜索速度很快，很快就能将你要用的软件找到，同时还可以自定义快捷键，很棒的一款软件。 Mendeley同学推荐的论文管理软件，同时还可以直接用来看论文，但是我用得不多，因为我一般都是直接下下来看。 Mp3tag用来给音频加信息/封面的一款软件。 OBS免费录屏/直播推流软件，当然我是用来录屏的，最开始是用的 Bandicam，后来转 OBS 了。 Pandownload一个第三方百度云下载软件，可以不限速，不过现在好像不行了，只能下前两/三个，之后就限速了，不过比官方的还是好多了。 Potplayer一款很棒的多媒体播放器，甚至可以用它来看电视 233，太知名就不多赘述了。 ScreenToGif一款很棒的 gif 录制工具，我已经把之前用过的那款忘了 2333。 Snipaste一款多功能的截图软件，我主要用来采集屏幕颜色 233 Sublime Text 3其实我在纠结到底要不要加这个，因为我用了四年了，从大一知道这个就一直再用，每次重装系统都会装这个。后来出的 Atom 以及现在用的人很多的 VS Code 我都用过，只能说习惯真的是很可怕的东西。 坚果云一款超棒的自动同步网盘，我是在大三的时候从知乎上知道的，还推荐给管机房的老师（小虎哥），在一次重装系统之后，机房上都装上了坚果云，我觉得他们应该给我广告费 233。 天若 OCR 文字识别识别率还挺高的一款 ORC 识别软件，在老殁那看到的。 小丸工具箱作为一名 UP🐖 必备的视频压制软件。 火绒一款国产的免费高效的杀毒软件，从知乎上知道的，近来名气越来越大，确实感觉不错。 福昕 PDF 阅读器很棒的一款 PDF 阅读器，用了很久了，想了想最初的那款 PDF 阅读器，是啥来着？]]></content>
       <categories>
-        <category>Windows</category>
-        <category>win10</category>
-        <category>software</category>
+        <category>essay</category>
       </categories>
       <tags>
-        <tag>essay</tag>
+        <tag>Windows</tag>
+        <tag>win10</tag>
+        <tag>software</tag>
       </tags>
   </entry>
   <entry>
@@ -126,30 +126,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[网易云丧语录]]></title>
-    <url>%2F2018%2F12%2F16%2Fnem001%2F</url>
-    <content type="text"><![CDATA[最近看了 淋雨の伞 这个 up 做的网易云“正能量”评论系列视频，感觉触动挺大的，于是自己也动手做了一个。收集的评论过多，导致生成的图片太多，全部放进一个视频的话，时长可能就会超过 10 分钟。于是就选取了部分，而将全部图片放到这个博客。注：数据来自 句子迷，然后使用 txt2img 直接生成图片。]]></content>
-      <categories>
-        <category>essay</category>
-      </categories>
-      <tags>
-        <tag>Netease - Hot-Comments</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[流泪猫猫头表情包]]></title>
-    <url>%2F2018%2F12%2F13%2Fcrying-cat-memes%2F</url>
-    <content type="text"><![CDATA[等鸡吃完了米、狗舔完了面、火烧断了锁，你就喜欢我好不好？ 昨天看到那个 等鸡吃完了米、狗舔完了面、火烧断了锁表情包 就突然来了灵感，配合猫日表情就做了这么一个系列的表情包。 猫日：等鸡吃完了米、狗舔完了面、火烧断了锁，你就喜欢我好不好？ 阿娇：等鸡吃完了米、狗舔完了面、火烧断了锁，我就变瘦了。 胖子：等鸡吃完了米、狗舔完了面、火烧断了锁，我就谈恋爱。 傻锤：等鸡吃完了米、狗舔完了面、火烧断了锁，我就有钱了。 求求：等鸡吃完了米、狗舔完了面、火烧断了锁，我就忘了她。 我强迫症加的一个凑数的 233 加的一个 GIF 模板，可以自己拿去玩~ 感谢你能喜欢我做的表情包啊。 以上。]]></content>
-      <categories>
-        <category>meme</category>
-      </categories>
-      <tags>
-        <tag>meme</tag>
-        <tag>sundayday</tag>
-        <tag>cat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[MIT 18.06 Linear Algebra, Spring 2005]]></title>
     <url>%2F2018%2F12%2F10%2FMIT-18.06-Linear-Algebra-Spring-2005%2F</url>
     <content type="text"><![CDATA[2018/12/10 16:15 完结撒花！！！因为听矩阵论听不懂而跑去看 MIT 线性代数公开课 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_]]></content>
@@ -233,8 +209,8 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>no-voice</tag>
         <tag>win10</tag>
+        <tag>no-voice</tag>
       </tags>
   </entry>
   <entry>
@@ -374,20 +350,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[影视作品里有哪些让人感到惊艳的女性角色，可以用视频分享吗？]]></title>
-    <url>%2F2018%2F03%2F13%2Ffilm-women-zhihu%2F</url>
-    <content type="text"><![CDATA[看到知乎首页推荐的这个话题, 就找了几个电影来看看, 手动翻了几个回答, 就感觉累了, 于是直接写了个爬虫把所有回答都爬下来了.一共得到 16 个 json 文件, 每页回答都是一个单独的文件, 保存了回答者以及答案(答案有两种版本 content 和 excerpt ), 然后又写了个脚本将 excerpt 的内容保存到一个 txt 中, 用之前的一个词云脚本生成词云图, 结果并不是我想要的…本以为一些高频词汇回事一些电影, 结果是一些奇奇怪怪的词.]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Crawler</tag>
-        <tag>Zhihu</tag>
-        <tag>film</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[donate]]></title>
     <url>%2F2018%2F01%2F01%2Fdonate%2F</url>
     <content type="text"><![CDATA[thanks for your donation.]]></content>
@@ -473,20 +435,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Premiere批量字幕生成器]]></title>
-    <url>%2F2017%2F08%2F30%2FPremiere-Subtitle%2F</url>
-    <content type="text"><![CDATA[经常在B站投稿会用到 Premiere 剪辑视频，然而 Premiere 有个非常麻烦的地方就是做字幕，于是干脆用 QT 写了个程序来根据模版批量生成字幕。 项目地址下载链接: https://github.com/LewisTian/PremiereSubtitle/releases在 Premiere 中先自行做好一个模版字幕然后导出，将想打的字幕写到一个 txt 文档中，在程序中选好对应的文件路径和导出路径，点击开始生成，所有字幕就自动生成了。]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>QT</tag>
-        <tag>Premiere</tag>
-        <tag>Subtitle</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[网易云歌词下载器]]></title>
     <url>%2F2017%2F08%2F25%2Fcloud-music-lyric%2F</url>
     <content type="text"><![CDATA[2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1 中间 {id} 换成歌曲的 id 即可。于是就很简单了，用一个 QLineEdit 来输入歌曲的 id，然后 QNetworkAccessManager 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。 下载链接: https://github.com/LewisTian/NeteaseLyric/releases程序界面如下：输入歌曲 id 或者完整的链接，点击 get 按钮，或者敲击回车，然后就可以获取歌曲名、歌手、歌词信息。你可以隐藏时间轴和翻译。保存歌词快捷键是 Ctrl+S。]]></content>
@@ -496,8 +444,8 @@
       <tags>
         <tag>C++</tag>
         <tag>QT</tag>
-        <tag>Netease-Cloud</tag>
         <tag>lyric</tag>
+        <tag>Netease-Cloud</tag>
       </tags>
   </entry>
   <entry>

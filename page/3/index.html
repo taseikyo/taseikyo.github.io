@@ -374,362 +374,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/11/23/sizeof-arrayname-and-sizeof-pointer/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/23/sizeof-arrayname-and-sizeof-pointer/" itemprop="url">
-                  sizeof(数组名)和sizeof(指针)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-11-23 16:21:49" itemprop="dateCreated datePublished" datetime="2018-11-23T16:21:49+08:00">2018-11-23</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-11-27 17:30:01" itemprop="dateModified" datetime="2018-11-27T17:30:01+08:00">2018-11-27</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/c-pointer.jpg" rel="gallery_cjvhhv47i002bm0ub2f7d60st" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/c-pointer.jpg" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          
-            <p>今天做了一道题，感觉很有趣，题目是下面这样的<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str_arg[<span class="number">100</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">char</span> str[]=<span class="string">"Hello"</span>;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(str));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="built_in">strlen</span>(str));</span><br><span class="line">    <span class="keyword">char</span>*p=str;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(p));</span><br><span class="line">    Func(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span></span><br></pre></td></tr></table></figure></p>
-<p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）<br><img src="/images/c-pointer-result.png" alt="result" title="运行结果"><br>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/11/20/js-FileReader-onload/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/20/js-FileReader-onload/" itemprop="url">
-                  FileReader 的 onload 方法的一个问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-11-20 21:36:53" itemprop="dateCreated datePublished" datetime="2018-11-20T21:36:53+08:00">2018-11-20</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-11-28 08:49:17" itemprop="dateModified" datetime="2018-11-28T08:49:17+08:00">2018-11-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天写可视化的代码，首先要加载 CSV 文件，使用 FileReader 来加载，然后用 d3 来解析 csv，然而出现了一个问题。<br>像下面这样写就会报错，<br><code>Uncaught TypeError: Cannot read property &#39;length&#39; of undefined</code><br>我输出文件长度，发现其值为 0，d3 无法解析所以报错。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let readFile = file =&gt; &#123;</span><br><span class="line">	let r = new FileReader();</span><br><span class="line">	r.readAsText(file, config.encoding);</span><br><span class="line">	r.onload = () =&gt; console.log(d3.csvParse(this.result));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>改成这样就行了，不知道为什么。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let readFile = file =&gt; &#123;</span><br><span class="line">	...</span><br><span class="line">	r.onload = function () &#123;</span><br><span class="line">		console.log(d3.csvParse(this.result))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/11/01/pc-win-no-voice/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -846,7 +490,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/181101-no-voice-2.png" rel="gallery_cjvhhv47h0028m0ub0tig2vtk" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/181101-no-voice-2.png" rel="gallery_cjvhqbpos0023g4ubu3lx1pfi" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/181101-no-voice-2.png" itemprop="contentUrl">
               </a>
             
@@ -1036,7 +680,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/chrome.png" rel="gallery_cjvhhv44r000gm0ubxhgzvt03" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/chrome.png" rel="gallery_cjvhqbpll000mg4ubc6vmfblg" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/chrome.png" itemprop="contentUrl">
               </a>
             
@@ -1226,7 +870,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/summary_1810.png" rel="gallery_cjvhhv47u002jm0ubbtempw4v" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/summary_1810.png" rel="gallery_cjvhqbppg002hg4ubl0b6emir" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/summary_1810.png" itemprop="contentUrl">
               </a>
             
@@ -1592,7 +1236,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/images/summary_1809.png" rel="gallery_cjvhhv48g002qm0ubvvnmgyhu" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/images/summary_1809.png" rel="gallery_cjvhqbppa002eg4ubb71p18bg" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/images/summary_1809.png" itemprop="contentUrl">
               </a>
             
@@ -1840,11 +1484,361 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/07/11/windows-right-click-slow/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/11/windows-right-click-slow/" itemprop="url">
+                  win10 桌面点右键很慢才出菜单
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-11 10:22:08" itemprop="dateCreated datePublished" datetime="2018-07-11T10:22:08+08:00">2018-07-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-29 16:23:32" itemprop="dateModified" datetime="2018-10-29T16:23:32+08:00">2018-10-29</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>网上找了很多帖子，都说的是注册表的问题，我试了下，发现确实是由于 intel 集成显卡的两个注册表项引起的。解决办法：命令行输入 regedit，打开注册表，进入 HKEY_CLASSES_ROOT\Directory\Background\Shellex\ContextMenuHandlers，删除 ig 开头的两个注册表项，退出即可。</p>
+<p>作者：木鱼<br>链接：<a href="https://www.zhihu.com/question/48817635/answer/112772070" target="_blank" rel="noopener">https://www.zhihu.com/question/48817635/answer/112772070</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2018/07/03/intel-cpu-cpuid-instruction/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/03/intel-cpu-cpuid-instruction/" itemprop="url">
+                  Intel CPU的CPUID指令（转载）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-03 17:34:38" itemprop="dateCreated datePublished" datetime="2018-07-03T17:34:38+08:00">2018-07-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-29 16:19:36" itemprop="dateModified" datetime="2018-10-29T16:19:36+08:00">2018-10-29</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p> Intel 有一个超过 100 页的文档，专门介绍 cpuid 这条指令，可见这条指令涉及内容的丰富。</p>
+<p>记得去年的时候，曾经有个“英布之剑”问过我这条指令，当时并没有给出一个满意的回答，现在放假，想起来，把资料整理了一下。很久以前确实用过这条指令，其实指令本身并没有什么难的，关键是看你有没有耐心研读完繁琐的资料，当然还得对 CPU 有一定的了解，如果“英布之剑”看到这篇文章，而且仍然需要更详细的资料，可以给我一个联系方式，或者相互之间可以交流一下。</p>
+<p>cpuid 就是一条读取 CPU 各种信息的一条指令，大概是从 80486 的某个版本开始就存在了。似乎是从 80386 开始，当 CPU 被 RESET 以后，CPU 会在 EDX 寄存器中返回一个 32bits 的 CPU 签名（Processor Identification Signature），但这时候 CPU 还没有 CPUID 这条指令，后来出现了这条指令后，软件无需以来 CPU 复位就可以读出这个 CPU 签名，同时还可以读出很多 CPU 的相关信息。</p>
+<p> CPUID 这条指令，除了用于识别 CPU（CPU 的型号、家族、类型等），还可以读出CPU支持的功能（比如是否支持MMX，是否支持 4MB 的页等等），内容的确是十分丰富。 CPUID 指令有两组功能，一组返回的是基本信息，另一组返回的是扩展信息，本文介绍基本信息部分，扩展信息部分下篇中介绍。本文所在程序或程序片段，均使用 MASM 6.11 编译连接，可以在 DOS（包括虚拟机的 DOS下）运行。<br>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/07/03/intel-cpu-cpuid-instruction/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1889,7 +1883,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">41</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1916,15 +1910,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2059,21 +2045,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">68</span>
+                    <span class="site-state-item-count">61</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

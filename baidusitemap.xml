@@ -4,24 +4,22 @@
     
   <url>
     <loc>https://lewistian.github.io/2019/05/10/good-things-recommended-win-softwares/</loc>
-    <lastmod>2019-05-10T02:58:53.622Z</lastmod>
+    <lastmod>2019-05-10T03:24:16.294Z</lastmod>
     <data>
         <display>
         <title>好物推荐之 windows 软件</title>
         <pubTime>2019-05-10T01:19:43.000Z</pubTime>
         
-        <tag>essay </tag>
+        <tag>Windows </tag>
+         
+        <tag>win10 </tag>
+         
+        <tag>software </tag>
          
          
            
              
-              <breadCrumb title="Windows" url="https://lewistian.github.io/categories/Windows/"/>
-          
-             
-              <breadCrumb title="win10" url="https://lewistian.github.io/categories/Windows/win10/"/>
-          
-             
-              <breadCrumb title="software" url="https://lewistian.github.io/categories/Windows/win10/software/"/>
+              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
           
         </display>
     </data>
@@ -273,30 +271,6 @@
 
     
   <url>
-    <loc>https://lewistian.github.io/2018/12/13/crying-cat-memes/</loc>
-    <lastmod>2018-12-25T12:42:48.868Z</lastmod>
-    <data>
-        <display>
-        <title>流泪猫猫头表情包</title>
-        <pubTime>2018-12-13T10:56:22.000Z</pubTime>
-        
-        <tag>meme </tag>
-         
-        <tag>sundayday </tag>
-         
-        <tag>cat </tag>
-         
-         
-           
-             
-              <breadCrumb title="meme" url="https://lewistian.github.io/categories/meme/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://lewistian.github.io/2018/12/17/spell-problem-disaster/</loc>
     <lastmod>2018-12-17T12:58:54.657Z</lastmod>
     <data>
@@ -307,26 +281,6 @@
         <tag>spell-problem </tag>
          
         <tag>stupid </tag>
-         
-         
-           
-             
-              <breadCrumb title="essay" url="https://lewistian.github.io/categories/essay/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2018/12/16/nem001/</loc>
-    <lastmod>2018-12-16T08:58:28.568Z</lastmod>
-    <data>
-        <display>
-        <title>网易云丧语录</title>
-        <pubTime>2018-12-16T05:53:48.000Z</pubTime>
-        
-        <tag>Netease - Hot-Comments </tag>
          
          
            
@@ -356,32 +310,6 @@
            
              
               <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2017/08/30/Premiere-Subtitle/</loc>
-    <lastmod>2018-12-10T09:04:55.786Z</lastmod>
-    <data>
-        <display>
-        <title>Premiere批量字幕生成器</title>
-        <pubTime>2017-08-30T11:38:34.000Z</pubTime>
-        
-        <tag>C++ </tag>
-         
-        <tag>QT </tag>
-         
-        <tag>Premiere </tag>
-         
-        <tag>Subtitle </tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="https://lewistian.github.io/categories/C/"/>
           
         </display>
     </data>
@@ -474,9 +402,9 @@
          
         <tag>QT </tag>
          
-        <tag>Netease-Cloud </tag>
-         
         <tag>lyric </tag>
+         
+        <tag>Netease-Cloud </tag>
          
          
            
@@ -590,9 +518,9 @@
         <title>win10台式机(插入耳机)没有声音</title>
         <pubTime>2018-11-01T11:32:27.000Z</pubTime>
         
-        <tag>no-voice </tag>
-         
         <tag>win10 </tag>
+         
+        <tag>no-voice </tag>
          
          
            
@@ -790,32 +718,6 @@
            
              
               <breadCrumb title="Study" url="https://lewistian.github.io/categories/Study/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lewistian.github.io/2018/03/13/film-women-zhihu/</loc>
-    <lastmod>2018-04-16T06:27:19.034Z</lastmod>
-    <data>
-        <display>
-        <title>影视作品里有哪些让人感到惊艳的女性角色，可以用视频分享吗？</title>
-        <pubTime>2018-03-13T06:47:57.000Z</pubTime>
-        
-        <tag>Python </tag>
-         
-        <tag>Crawler </tag>
-         
-        <tag>Zhihu </tag>
-         
-        <tag>film </tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://lewistian.github.io/categories/Python/"/>
           
         </display>
     </data>

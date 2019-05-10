@@ -1969,7 +1969,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3bff;
+  background: #007ced;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3272,4 +3272,7 @@ ul.breadcrumb li+li:last-child {
   height: auto;
   z-index: 1;
   pointer-events: none;
+}
+body {
+  background: url("/images/74578367_p0.jpg");
 }
