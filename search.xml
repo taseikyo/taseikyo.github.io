@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[好物推荐之 windows 软件]]></title>
+    <url>%2F2019%2F05%2F10%2Fgood-things-recommended-win-softwares%2F</url>
+    <content type="text"><![CDATA[记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。目的是为了以后换了电脑/笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。 2345 看图王(绿色版)为什么要加个绿色版，因为其实这个看图王真的很好用，但是广告很恶心。我之前是用美图看看来着，其实也不错，但是好久没更新，有种年久失修的感觉，UI 很丑。 Adobe 全家桶这个就不多介绍了 hhh Bandizip一款免费精简的压缩/解压软件，从知乎上知道的，最开始是 2345 好压。后来有广告就打算换一个，在知乎上看到这个。它还有一个很棒的小功能，就是右键菜单下的 “新建文件夹”，习惯之后真的不想去点二级目录下的新建文件夹。 Cloverclover 是资源管理器的一个扩展，增加了类似 Chrome 多标签页的功能，不用每个目录单独开一个窗口。最开始知道这个软件是在 计算机艺术研究小组 那个群，群主上传了一个破解版的 clover，我下载来试试水，康康是个啥玩意，结果一下子就爱上了，不用多个窗口 alt + tab 来切换，直接点击 tab 页即可，可以说方便不少，日常必备。 Cmder一款超好用的 Windows 下的终端，如果你受够了 cmd 和 power shell，那么 cmder 就是你的不二之选。 Dism++其他网站上的介绍 “Dism++ 是一个强大同时轻量易用的小工具，集系统清理、优化、启动项管理、驱动管理等许多常用 Windows 设置与一身”，其实我就用来清垃圾 233。 FinalShell从知乎上知道的，据说是一款 “替代 Xshell 的良心国产软件 FinalShell”，不说其他的， UI 确实更好看。 Listary在知乎上知道的，本来自己就是一个强迫症，喜欢一个啥都没有的桌面，有个这个之后更是加剧了我的这一点，因为可以双击 ctrl 弹出搜索框。它搜索速度很快，很快就能将你要用的软件找到，同时还可以自定义快捷键，很棒的一款软件。 Mendeley同学推荐的论文管理软件，同时还可以直接用来看论文，但是我用得不多，因为我一般都是直接下下来看。 Mp3tag用来给音频加信息/封面的一款软件。 OBS免费录屏/直播推流软件，当然我是用来录屏的，最开始是用的 Bandicam，后来转 OBS 了。 Pandownload一个第三方百度云下载软件，可以不限速，不过现在好像不行了，只能下前两/三个，之后就限速了，不过比官方的还是好多了。 Potplayer一款很棒的多媒体播放器，甚至可以用它来看电视 233，太知名就不多赘述了。 ScreenToGif一款很棒的 gif 录制工具，我已经把之前用过的那款忘了 2333。 Snipaste一款多功能的截图软件，我主要用来采集屏幕颜色 233 Sublime Text 3其实我在纠结到底要不要加这个，因为我用了四年了，从大一知道这个就一直再用，每次重装系统都会装这个。后来出的 Atom 以及现在用的人很多的 VS Code 我都用过，只能说习惯真的是很可怕的东西。 坚果云一款超棒的自动同步网盘，我是在大三的时候从知乎上知道的，还推荐给管机房的老师（小虎哥），在一次重装系统之后，机房上都装上了坚果云，我觉得他们应该给我广告费 233。 天若 OCR 文字识别识别率还挺高的一款 ORC 识别软件，在老殁那看到的。 小丸工具箱作为一名 UP🐖 必备的视频压制软件。 火绒一款国产的免费高效的杀毒软件，从知乎上知道的，近来名气越来越大，确实感觉不错。 福昕 PDF 阅读器很棒的一款 PDF 阅读器，用了很久了，想了想最初的那款 PDF 阅读器，是啥来着？]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>win10</category>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>essay</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python3 中的 map 问题]]></title>
     <url>%2F2019%2F04%2F08%2Fpython3-map%2F</url>
     <content type="text"><![CDATA[在最近的 arts 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！ 部分 toc.py 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。 123456if __name__ == '__main__': if len(sys.argv) &gt; 1: filename = sys.argv[1:] else: filename = ['201903W4.md'] map(toc, filename) 然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。查了一下才知道，在 Python3 中，map 返回的是一个 &lt;map object at 0xXXXXXXXX&gt; 的对象，并没有执行。 最简单的方法是直接套一个 list 函数，即 list(map(toc, filename))，好像到这里就解决了问题。 然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下： 123456789all(iterable)Return True if all elements of the iterable are true (or if the iterable is empty). Equivalent to:def all(iterable): for element in iterable: if not element: return False return True 123456789any(iterable)Return True if any element of the iterable is true. If the iterable is empty, return False. Equivalent to:def any(iterable): for element in iterable: if element: return True return False 对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。 对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。 而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 any(map(toc, filename)) 解决问题。 另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。]]></content>
@@ -483,8 +496,8 @@
       <tags>
         <tag>C++</tag>
         <tag>QT</tag>
-        <tag>lyric</tag>
         <tag>Netease-Cloud</tag>
+        <tag>lyric</tag>
       </tags>
   </entry>
   <entry>
