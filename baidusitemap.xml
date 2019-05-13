@@ -3,6 +3,28 @@
 
     
   <url>
+    <loc>https://lewistian.github.io/2019/05/13/centos7-sudo-cmd/</loc>
+    <lastmod>2019-05-13T07:04:21.796Z</lastmod>
+    <data>
+        <display>
+        <title>sudo pip3 "command not found" in centos7</title>
+        <pubTime>2019-05-13T05:06:27.000Z</pubTime>
+        
+        <tag>centos7 </tag>
+         
+        <tag>pip3 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://lewistian.github.io/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lewistian.github.io/2019/05/10/good-things-recommended-win-softwares/</loc>
     <lastmod>2019-05-10T03:24:16.294Z</lastmod>
     <data>
@@ -542,9 +564,9 @@
         
         <tag>Python </tag>
          
-        <tag>PyQt5 </tag>
-         
         <tag>blog </tag>
+         
+        <tag>PyQt5 </tag>
          
          
            
