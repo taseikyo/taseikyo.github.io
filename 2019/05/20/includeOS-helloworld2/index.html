@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.2" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.4.2',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一">
+<meta name="keywords" content="C++,includeOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="includeOS 再体验 - Hello World!">
+<meta property="og:url" content="https://lewistian.github.io/2019/05/20/includeOS-helloworld2/index.html">
+<meta property="og:site_name" content="Tian&#39;s Daily Life">
+<meta property="og:description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://lewistian.github.io/images/includeOS.png">
+<meta property="og:updated_time" content="2019-05-20T13:20:42.563Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="includeOS 再体验 - Hello World!">
+<meta name="twitter:description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一">
+<meta name="twitter:image" content="https://lewistian.github.io/images/includeOS.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://lewistian.github.io/2019/05/20/includeOS-helloworld2/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>includeOS 再体验 - Hello World! | Tian's Daily Life</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tian's Daily Life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Everything that kills me makes me feel alive.</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-netease">
+    <a href="/netease" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-music"></i> <br>netease</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-c++">
+    <a href="/categories/C/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-file-code-o"></i> <br>c++</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-python">
+    <a href="/categories/Python/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-codepen"></i> <br>python</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-javascript">
+    <a href="/categories/JavaScript/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-code"></i> <br>javascript</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lewistian.github.io/2019/05/20/includeOS-helloworld2/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">includeOS 再体验 - Hello World!
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-20 16:07:36 / Modified: 21:20:42" itemprop="dateCreated datePublished" datetime="2019-05-20T16:07:36+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Unikernel/" itemprop="url" rel="index"><span itemprop="name">Unikernel</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="/images/includeOS.png" rel="gallery_cjvweekv10084lwubmjqda1lc" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/images/includeOS.png" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <p>今天与发上一篇 <a href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a href="https://github.com/includeos/IncludeOS#getting_started" target="_blank" rel="noopener">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a href="https://conan.io/" target="_blank" rel="noopener">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
+<p>当然我没有深究这个东西，简要看了一下文档介绍然后安装之。我卡住并不是因为这个 conan。</p>
+<a id="more"></a>
+<p>首先，服务器上是 CentOS7，并不是我所熟悉一点的 Ubuntu，它的 yum 命令还是和 apt-get 有点区别，当然这个也不是很重要的问题。</p>
+<p>For building IncludeOS services you will need:</p>
+<ul>
+<li>The conan package manager (1.13.1 or newer)</li>
+<li>cmake, make, nasm (x86/x86_64 only)</li>
+<li>clang, or alternatively gcc on linux. Prebuilt packages are available for clang 6.0 and gcc 7.3.</li>
+</ul>
+<p>GitHub 上给出对于 Ubuntu，可能这些依赖几行命令就搞定了:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install python3-pip python3-dev git cmake clang-6.0 gcc nasm make qemu</span><br><span class="line">$ pip3 install setuptools wheel conan psutil jsonschema</span><br><span class="line">$ conan config install https://github.com/includeos/conan_config.git</span><br></pre></td></tr></table></figure>
+<p>但对于 CentOS，前两项依赖也很简单就可以装好，但是最后一个就有点麻烦，服务器上的 gcc 是 4.8，而 clang 则没有。<br>然后 CentOS 也没有 <code>yum install clang-6.0</code> 这个命令。<br>我首先尝试编译 gcc7.3，在上周一宣告失败，在之后两天我则尝试编译 clang6.0，结果可想而知。<br>期间还搜了好多资料，如：</p>
+<ul>
+<li><a href="https://cloud.tencent.com/developer/article/1365651" target="_blank" rel="noopener">centos7 升级GCC版本到7.3.0</a></li>
+<li><a href="https://pastebin.com/41HNxHrk" target="_blank" rel="noopener">llvm install</a></li>
+<li><a href="https://developers.redhat.com/blog/2019/03/05/yum-install-gcc-8-clang-6/" target="_blank" rel="noopener">How to install GCC 8 and Clang/LLVM 6 on Red Hat Enterprise Linux 7</a></li>
+<li><a href="https://www.centos.org/forums/viewtopic.php?t=70149#p294734" target="_blank" rel="noopener">Is llvm-toolset-6.0 available for CentOS 7?</a></li>
+<li><a href="https://www.cnblogs.com/BinBinStory/p/7499527.html" target="_blank" rel="noopener">CentOS 7 编译安装clang+llvm</a></li>
+<li><a href="https://www.cnblogs.com/leo001/articles/10605052.html" target="_blank" rel="noopener">centos7.0-gcc-8.0编译安装llvm及clang7.0</a></li>
+<li><a href="https://blog.csdn.net/tidehc/article/details/86718264" target="_blank" rel="noopener">Centos7 安装LLVM+Clang 6.0</a><br>…</li>
+</ul>
+<p>上面都是我收藏过的，没有收藏的则更多。</p>
+<p>所以总而言之，搭环境是真的烦 🙃</p>
+<p>===<br>上面是上周前三天的事，下面事今天下午的事。</p>
+<p>之后得知可以通过安装 devtoolset-7 来使用 gcc7。</p>
+<p>然后这个过程也是很艰辛 (也学到一点东西，不要随便使用 <code>sudo rm -rf ...</code> 🙃</p>
+<p>使用下面命令来安装 devtoolset-7</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install centos-release-scl</span><br><span class="line">$ sudo yum install devtoolset-7</span><br><span class="line">$ <span class="built_in">source</span> /opt/rh/devtoolset-7/<span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<p>后来我手贱直接 rm 了 /opt/rh 这个目录，之后再安装就没有 <code>/opt/rh/devtoolset-7/enable</code> 这个文件了…</p>
+<p>然后又 <a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;ei=mF_iXKn9IpeqoASUrJSgBg&amp;q=warning%3A+%2Fopt%2Frh%2Fdevtoolset-7%2F%2Fenable+scriptlet+does+not+exist%21&amp;oq=warning%3A+%2Fopt%2Frh%2Fdevtoolset-7%2F%2Fenable+scriptlet+does+not+exist%21&amp;gs_l=psy-ab.12..0i30.58891.58891..59801...0.0..0.136.136.0j1......0....2j1..gws-wiz.P5nxTu-0Xgo" target="_blank" rel="noopener">google</a> 了一堆。</p>
+<p>通过这个 <a href="https://unix.stackexchange.com/questions/410293/enable-scriptlet-does-not-exist" target="_blank" rel="noopener">Enable Scriptlet Does Not Exist</a> 得知还得装个东西，装完之后结果还是没有？我！fo！了！</p>
+<p><img src="/images/memes/0002.jpg" alt="0002.jpg" title="我 fo 了"></p>
+<p>后来突然奇想，是不是先卸载一波然后重新装？竟然还真成功了 hhhh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ yum remove devtoolset-7</span><br><span class="line">$ yum remove devtoolset-7-runtime</span><br><span class="line">$ yum install devtoolset-7*</span><br></pre></td></tr></table></figure>
+<p>之后在 /opt/rh/ 目录下发现装了好几个 *toolset-7 (devtoolset-7  go-toolset-7  llvm-toolset-7  rust-toolset-7)，不管了，反正有 devtoolset-7/enable 就行 233</p>
+<p>source 一波之后就可以通过命令 <code>gcc -v</code>  查看 gcc 的版本是 7.3.1，看到这里我感觉可能会出问题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node6-centos7 build]$ conan profile list</span><br><span class="line">apple-clang-10-macos-toolchain</span><br><span class="line">clang-6.0-linux-x86</span><br><span class="line">clang-6.0-linux-x86-toolchain</span><br><span class="line">clang-6.0-linux-x86_64</span><br><span class="line">clang-6.0-linux-x86_64-toolchain</span><br><span class="line">clang-6.0-macos-x86_64</span><br><span class="line">default</span><br><span class="line">gcc-7.3.0-linux-aarch64</span><br><span class="line">gcc-7.3.0-linux-aarch64-toolchain</span><br><span class="line">gcc-7.3.0-linux-x86_64</span><br><span class="line">gcc-7.3.0-linux-x86_64-toolchain</span><br><span class="line">gcc-8.2.0-linux-aarch64</span><br><span class="line">gcc-8.2.0-linux-aarch64-toolchain</span><br></pre></td></tr></table></figure>
+<p>可以看到支持的版本是 7.3.0/8.2.0，而 conan 貌似对版本抠得很严 (？存疑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/includeos/hello_world.git</span><br><span class="line">$ mkdir your_build_dir &amp;&amp; <span class="built_in">cd</span> <span class="string">"<span class="variable">$_</span>"</span></span><br><span class="line">$ conan install ../hello_world -pr &lt;your_conan_profile&gt;</span><br><span class="line">$ <span class="built_in">source</span> activate.sh</span><br><span class="line">$ cmake ../hello_world</span><br><span class="line">$ cmake --build .</span><br><span class="line">$ boot hello</span><br></pre></td></tr></table></figure>
+<p>直接复制粘贴命令(your_build_dir 文件夹名字都没改 233)，将 &lt;your_conan_profile&gt; 改为 gcc-7.3.0-linux-x86_64，果然报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Missing prebuilt package <span class="keyword">for</span> <span class="string">'libcxxabi/7.0.1@includeos/stable'</span></span><br><span class="line">Try to build it from sources with <span class="string">"--build libcxxabi"</span></span><br><span class="line">Or <span class="built_in">read</span> http://docs.conan.io/en/latest/faq/troubleshooting.html<span class="comment">#error-missing-prebuilt-package</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/memes/0003.jpg" alt="0003.jpg" title="哦豁 完蛋"></p>
+<p>按照网站上给出的方法，将命令改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conan install ../hello_world -pr gcc-7.3.0-linux-x86_64 --build missing</span><br></pre></td></tr></table></figure>
+<p>结果又报错 :)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">libcxxabi/7.0.1@includeos/stable: Calling build()</span><br><span class="line">CMake Error at CMakeLists.txt:7 (cmake_minimum_required):</span><br><span class="line">  CMake 3.4.3 or higher is required.  You are running version 3.3.2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- Configuring incomplete, errors occurred!</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: </span><br><span class="line">libcxxabi/7.0.1@includeos/stable: ERROR: Package <span class="string">'9bfdcfa2bb925892ecf42e2a018a3f3529826676'</span> build failed</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: WARN: Build folder /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676</span><br><span class="line">ERROR: libcxxabi/7.0.1@includeos/stable: Error <span class="keyword">in</span> build() method, line 69</span><br><span class="line">        cmake = self._configure_cmake()</span><br><span class="line"><span class="keyword">while</span> calling <span class="string">'_configure_cmake'</span>, line 65</span><br><span class="line">        cmake.configure(source_folder=<span class="built_in">source</span>)</span><br><span class="line">        ConanException: Error 256 <span class="keyword">while</span> executing <span class="built_in">cd</span> <span class="string">'/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676'</span> &amp;&amp; cmake -G <span class="string">"Unix Makefiles"</span> -DCMAKE_BUILD_TYPE=<span class="string">"Release"</span> -DCONAN_EXPORTED=<span class="string">"1"</span> -DCONAN_IN_LOCAL_CACHE=<span class="string">"ON"</span> -DCONAN_COMPILER=<span class="string">"gcc"</span> -DCONAN_COMPILER_VERSION=<span class="string">"7"</span> -DCONAN_CXX_FLAGS=<span class="string">"-m64"</span> -DCONAN_SHARED_LINKER_FLAGS=<span class="string">"-m64"</span> -DCONAN_C_FLAGS=<span class="string">"-m64"</span> -DCONAN_LIBCXX=<span class="string">"libstdc++11"</span> -DBUILD_SHARED_LIBS=<span class="string">"OFF"</span> -DCMAKE_INSTALL_PREFIX=<span class="string">"/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/package/9bfdcfa2bb925892ecf42e2a018a3f3529826676"</span> -DCMAKE_INSTALL_BINDIR=<span class="string">"bin"</span> -DCMAKE_INSTALL_SBINDIR=<span class="string">"bin"</span> -DCMAKE_INSTALL_LIBEXECDIR=<span class="string">"bin"</span> -DCMAKE_INSTALL_LIBDIR=<span class="string">"lib"</span> -DCMAKE_INSTALL_INCLUDEDIR=<span class="string">"include"</span> -DCMAKE_INSTALL_OLDINCLUDEDIR=<span class="string">"include"</span> -DCMAKE_INSTALL_DATAROOTDIR=<span class="string">"share"</span> -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=<span class="string">"ON"</span> -DLIBCXXABI_LIBCXX_INCLUDES=<span class="string">"/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/source/libcxx/include"</span> -DLIBCXXABI_USE_LLVM_UNWINDER=<span class="string">"True"</span> -DLIBCXXABI_ENABLE_SHARED=<span class="string">"False"</span> -DLIBCXXABI_ENABLE_STATIC=<span class="string">"True"</span> -DLIBCXXABI_ENABLE_STATIC_UNWINDER=<span class="string">"True"</span> -DLLVM_PATH=<span class="string">"/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/source/llvm"</span> -Wno-dev <span class="string">'/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/source/libcxxabi'</span></span><br></pre></td></tr></table></figure>
+<p>看上去是 cmake 的问题，这个问题不大，我上周编译 gcc7.3 的时候已经装了高版本的 cmake3 (3.13.4) 问题是怎么把在调用 cmake 的时候改成 cmake3。</p>
+<p><img src="/images/memes/0004.jpg" alt="0004.jpg" title="不是说问题不大的么"></p>
+<p>我直接 cd 到 <code>/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676</code> 目录下使用 cmake3 进行编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cmake3 .</span><br></pre></td></tr></table></figure>
+<p>然后切换回 your_build_dir 目录重新运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ conan install ../hello_world -pr gcc-7.3.0-linux-x86_64 --build missing</span><br></pre></td></tr></table></figure>
+<p>结果还是报错 : )</p>
+<p>之后我将对应的配置文件改了下，在 [env] 下面添加了一行 <code>cmake=cmake3</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.conan/profiles/gcc-7.3.0-linux-x86_64</span><br><span class="line">$ conan install ../hello_world -pr gcc-7.3.0-linux-x86_64 --build libcxxabi</span><br></pre></td></tr></table></figure>
+<p>然后好像 libcxxabi 编译成功了，但是又有库却失，我还是老老实实加 <code>--build missing</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">musl/1.1.18@includeos/stable: WARN: Can<span class="string">'t find a '</span>musl/1.1.18@includeos/stable<span class="string">' package for the specified settings, options and dependencies:</span></span><br><span class="line"><span class="string">- Settings: arch=x86_64, arch_build=x86_64, build_type=Release, compiler=gcc, compiler.libcxx=libstdc++11, compiler.version=7</span></span><br><span class="line"><span class="string">- Options: </span></span><br><span class="line"><span class="string">- Dependencies: </span></span><br><span class="line"><span class="string">- Package ID: 814c55266c97e8ac35915be388bafaa950f8088a</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ERROR: Missing prebuilt package for '</span>musl/1.1.18@includeos/stable<span class="string">'</span></span><br><span class="line"><span class="string">Try to build it from sources with "--build musl"</span></span><br><span class="line"><span class="string">Or read "http://docs.conan.io/en/latest/faq/troubleshooting.html#error-missing-prebuilt-package"</span></span><br></pre></td></tr></table></figure>
+<p>结果又给我报 cmake 版本问题？<br>我仔细看了下上面的问题，发现并不是编译成功了，而是 libcxxabi 依赖 musl。但是 –build musl 又会报缺 libcxxabi/7.0.1@includeos/stable？你们俩咋回事？？？相互依赖？有毒吧==</p>
+<p>然后我看了下 <code>~/.conan/data/libcxxabi/7.0.1/includeos/stable/export/conanfile.py</code> 文件，这个就是 conan 编译 libcxxabi 的脚本 (我猜的)，看到第 46 行 <code>cmake=CMake(self)</code> 可以推测这个地方拿到了 cmake 的路径 (大概</p>
+<p>然后查看 <code>/usr/local/python3/lib/python3.7/site-packages/conans/client/build/cmake.py</code> 可以看到可以传入 cmake_program 来指定 cmake3 的路径。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CMake</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, conanfile, generator=None, cmake_system_name=True,</span></span></span><br><span class="line"><span class="function"><span class="params">                 parallel=True, build_type=None, toolset=None, make_program=None,</span></span></span><br><span class="line"><span class="function"><span class="params">                 set_cmake_flags=False, msbuild_verbosity=None, cmake_program=None,</span></span></span><br><span class="line"><span class="function"><span class="params">                 generator_platform=None)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :param conanfile: Conanfile instance</span></span><br><span class="line"><span class="string">        :param generator: Generator name to use or none to autodetect</span></span><br><span class="line"><span class="string">        :param cmake_system_name: False to not use CMAKE_SYSTEM_NAME variable,</span></span><br><span class="line"><span class="string">               True for auto-detect or directly a string with the system name</span></span><br><span class="line"><span class="string">        :param parallel: Try to build with multiple cores if available</span></span><br><span class="line"><span class="string">        :param build_type: Overrides default build type coming from settings</span></span><br><span class="line"><span class="string">        :param toolset: Toolset name to use (such as llvm-vs2014) or none for default one,</span></span><br><span class="line"><span class="string">                applies only to certain generators (e.g. Visual Studio)</span></span><br><span class="line"><span class="string">        :param set_cmake_flags: whether or not to set CMake flags like CMAKE_CXX_FLAGS,</span></span><br><span class="line"><span class="string">                CMAKE_C_FLAGS, etc. it's vital to set for certain projects</span></span><br><span class="line"><span class="string">                (e.g. using CMAKE_SIZEOF_VOID_P or CMAKE_LIBRARY_ARCHITECTURE)</span></span><br><span class="line"><span class="string">        :param msbuild_verbosity: verbosity level for MSBuild (in case of Visual Studio generator)</span></span><br><span class="line"><span class="string">        :param cmake_program: Path to the custom cmake executable</span></span><br><span class="line"><span class="string">        :param generator_platform: Generator platform name or none to autodetect (-A cmake option)</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> isinstance(conanfile, ConanFile):</span><br><span class="line">            <span class="keyword">raise</span> ConanException(<span class="string">"First argument of CMake() has to be ConanFile. Use CMake(self)"</span>)</span><br><span class="line"></span><br><span class="line">        self._conanfile = conanfile</span><br><span class="line">        self._settings = conanfile.settings</span><br><span class="line">        self._build_type = build_type <span class="keyword">or</span> conanfile.settings.get_safe(<span class="string">"build_type"</span>)</span><br><span class="line">        self._cmake_program = os.getenv(<span class="string">"CONAN_CMAKE_PROGRAM"</span>) <span class="keyword">or</span> cmake_program <span class="keyword">or</span> <span class="string">"cmake"</span></span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+<p>那就加上呗，然后再继续 –build missing，又双叒叕出错了 😭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">libcxxabi/7.0.1@includeos/stable: Calling build()</span><br><span class="line">CMake Error at /usr/share/cmake3/Modules/CMakeDetermineCXXCompiler.cmake:47 (message):</span><br><span class="line">  Could not find compiler set in environment variable CXX:</span><br><span class="line"></span><br><span class="line">  /usr/bin/g++-7.</span><br><span class="line"></span><br><span class="line">Call Stack (most recent call first):</span><br><span class="line">  CMakeLists.txt:21 (project)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage</span><br><span class="line">CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage</span><br><span class="line">-- Configuring incomplete, errors occurred!</span><br><span class="line">See also &quot;/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676/CMakeFiles/CMakeOutput.log&quot;.</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: </span><br><span class="line">libcxxabi/7.0.1@includeos/stable: ERROR: Package &apos;9bfdcfa2bb925892ecf42e2a018a3f3529826676&apos; build failed</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: WARN: Build folder /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676</span><br><span class="line">ERROR: libcxxabi/7.0.1@includeos/stable: Error in build() method, line 69</span><br><span class="line">        cmake = self._configure_cmake()</span><br><span class="line">while calling &apos;_configure_cmake&apos;, line 65</span><br><span class="line">        cmake.configure(source_folder=source)</span><br><span class="line">        ConanException: Error 256 while executing cd &apos;/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676&apos; &amp;&amp; /usr/bin/cmake3 -G &quot;Unix Makefiles&quot; -DCMAKE_BUILD_TYPE=&quot;Release&quot; -DCONAN_EXPORTED=&quot;1&quot; -DCONAN_IN_LOCAL_CACHE=&quot;ON&quot; -DCONAN_COMPILER=&quot;gcc&quot; -DCONAN_COMPILER_VERSION=&quot;7&quot; -DCONAN_CXX_FLAGS=&quot;-m64&quot; -DCONAN_SHARED_LINKER_FLAGS=&quot;-m64&quot; -DCONAN_C_FLAGS=&quot;-m64&quot; -DCONAN_LIBCXX=&quot;libstdc++11&quot; -DBUILD_SHARED_LIBS=&quot;OFF&quot; -DCMAKE_INSTALL_PREFIX=&quot;/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/package/9bfdcfa2bb925892ecf42e2a018a3f3529826676&quot; -DCMAKE_INSTALL_BINDIR=&quot;bin&quot; -DCMAKE_INSTALL_SBINDIR=&quot;bin&quot; -DCMAKE_INSTALL_LIBEXECDIR=&quot;bin&quot; -DCMAKE_INSTALL_LIBDIR=&quot;lib&quot; -DCMAKE_INSTALL_INCLUDEDIR=&quot;include&quot; -DCMAKE_INSTALL_OLDINCLUDEDIR=&quot;include&quot; -DCMAKE_INSTALL_DATAROOTDIR=&quot;share&quot; -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=&quot;ON&quot; -DLIBCXXABI_LIBCXX_INCLUDES=&quot;/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/source/libcxx/include&quot; -DLIBCXXABI_USE_LLVM_UNWINDER=&quot;True&quot; -DLIBCXXABI_ENABLE_SHARED=&quot;False&quot; -DLIBCXXABI_ENABLE_STATIC=&quot;True&quot; -DLIBCXXABI_ENABLE_STATIC_UNWINDER=&quot;True&quot; -DLLVM_PATH=&quot;/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/source/llvm&quot; -Wno-dev &apos;/home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/source/libcxxabi&apos;</span><br></pre></td></tr></table></figure>
+<p>ojbk，是因为设定的 CXX 环境变量有问题，查看一下 source 后的 gcc 路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node6-centos7 your_build_dir]$ which gcc</span><br><span class="line">/opt/rh/devtoolset-7/root/usr/bin/gcc</span><br></pre></td></tr></table></figure>
+<p>行 ⑧，我改就是了，把 <code>~/.conan/profiles/gcc-7.3.0-linux-x86_64</code> 中的 CC 和 CXX 的路径都改成对应的 <code>/opt/rh/devtoolset-7/root/usr/bin/xxx</code></p>
+<p>再运行之，终于看到 build 的信息了！！！！</p>
+<p><img src="/images/memes/0005.jpg" alt="0005.jpg" title="我的天呐"></p>
+<p>我不管，我要记录下来，这 ™ 是我今天一下午的成果啊！！！！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br></pre></td><td class="code"><pre><span class="line">libcxxabi/7.0.1@includeos/stable: Calling build()</span><br><span class="line">-- The CXX compiler identification is GNU 7.3.1</span><br><span class="line">-- The C compiler identification is GNU 7.3.1</span><br><span class="line">-- Check for working CXX compiler: /opt/rh/devtoolset-7/root/usr/bin/g++</span><br><span class="line">-- Check for working CXX compiler: /opt/rh/devtoolset-7/root/usr/bin/g++ -- works</span><br><span class="line">-- Detecting CXX compiler ABI info</span><br><span class="line">-- Detecting CXX compiler ABI info - done</span><br><span class="line">-- Detecting CXX compile features</span><br><span class="line">-- Detecting CXX compile features - done</span><br><span class="line">-- Check for working C compiler: /opt/rh/devtoolset-7/root/usr/bin/gcc</span><br><span class="line">-- Check for working C compiler: /opt/rh/devtoolset-7/root/usr/bin/gcc -- works</span><br><span class="line">-- Detecting C compiler ABI info</span><br><span class="line">-- Detecting C compiler ABI info - done</span><br><span class="line">-- Detecting C compile features</span><br><span class="line">-- Detecting C compile features - done</span><br><span class="line">-- Configuring for standalone build.</span><br><span class="line">-- Linker detection: GNU ld</span><br><span class="line">-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG</span><br><span class="line">-- Performing Test SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG - Success</span><br><span class="line">-- Performing Test C_SUPPORTS_WERROR_DATE_TIME</span><br><span class="line">-- Performing Test C_SUPPORTS_WERROR_DATE_TIME - Success</span><br><span class="line">-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME</span><br><span class="line">-- Performing Test CXX_SUPPORTS_WERROR_DATE_TIME - Success</span><br><span class="line">-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW</span><br><span class="line">-- Performing Test C_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed</span><br><span class="line">-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW</span><br><span class="line">-- Performing Test CXX_SUPPORTS_WERROR_UNGUARDED_AVAILABILITY_NEW - Failed</span><br><span class="line">-- Performing Test CXX_SUPPORTS_CXX11</span><br><span class="line">-- Performing Test CXX_SUPPORTS_CXX11 - Success</span><br><span class="line">-- Performing Test C_SUPPORTS_FNO_FUNCTION_SECTIONS</span><br><span class="line">-- Performing Test C_SUPPORTS_FNO_FUNCTION_SECTIONS - Success</span><br><span class="line">-- Performing Test C_SUPPORTS_FFUNCTION_SECTIONS</span><br><span class="line">-- Performing Test C_SUPPORTS_FFUNCTION_SECTIONS - Success</span><br><span class="line">-- Performing Test CXX_SUPPORTS_FFUNCTION_SECTIONS</span><br><span class="line">-- Performing Test CXX_SUPPORTS_FFUNCTION_SECTIONS - Success</span><br><span class="line">-- Performing Test C_SUPPORTS_FDATA_SECTIONS</span><br><span class="line">-- Performing Test C_SUPPORTS_FDATA_SECTIONS - Success</span><br><span class="line">-- Performing Test CXX_SUPPORTS_FDATA_SECTIONS</span><br><span class="line">-- Performing Test CXX_SUPPORTS_FDATA_SECTIONS - Success</span><br><span class="line">-- Looking for fopen in c</span><br><span class="line">-- Looking for fopen in c - found</span><br><span class="line">-- Looking for __gcc_personality_v0 in gcc_s</span><br><span class="line">-- Looking for __gcc_personality_v0 in gcc_s - found</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NODEFAULTLIBS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NODEFAULTLIBS_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_FUNWIND_TABLES</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_FUNWIND_TABLES - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_EXCEPTIONS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_EXCEPTIONS_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_RTTI_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_RTTI_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_FSTRICT_ALIASING_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_FSTRICT_ALIASING_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NOSTDINCXX_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NOSTDINCXX_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WALL_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WALL_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_W_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_W_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNUSED_FUNCTION_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNUSED_FUNCTION_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNUSED_VARIABLE_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNUSED_VARIABLE_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNUSED_PARAMETER_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNUSED_PARAMETER_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSTRICT_ALIASING_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSTRICT_ALIASING_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSTRICT_OVERFLOW_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSTRICT_OVERFLOW_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WWRITE_STRINGS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WWRITE_STRINGS_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WCHAR_SUBSCRIPTS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WCHAR_SUBSCRIPTS_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WMISMATCHED_TAGS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WMISMATCHED_TAGS_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WMISSING_BRACES_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WMISSING_BRACES_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSHORTEN_64_TO_32_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSHORTEN_64_TO_32_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSIGN_CONVERSION_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSIGN_CONVERSION_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSIGN_COMPARE_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSIGN_COMPARE_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSHADOW_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WSHADOW_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WCONVERSION_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WCONVERSION_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WNEWLINE_EOF_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WNEWLINE_EOF_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNDEF_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WUNDEF_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_PEDANTIC_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_PEDANTIC_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WERROR_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WERROR_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WNO_ERROR_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WNO_ERROR_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WX_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_WX_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_WX_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_WX_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_EHSC_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_EHSC_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_EHS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_EHS_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_EHA_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_EHA_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_GR_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_HAS_NO_GR_FLAG - Failed</span><br><span class="line">-- Looking for dladdr in dl</span><br><span class="line">-- Looking for dladdr in dl - found</span><br><span class="line">-- Looking for pthread_once in pthread</span><br><span class="line">-- Looking for pthread_once in pthread - found</span><br><span class="line">-- Looking for __cxa_thread_atexit_impl in c</span><br><span class="line">-- Looking for __cxa_thread_atexit_impl in c - not found</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WERROR_EQ_RETURN_TYPE_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WERROR_EQ_RETURN_TYPE_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_W_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_W_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WALL_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WALL_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WCHAR_SUBSCRIPTS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WCHAR_SUBSCRIPTS_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WCONVERSION_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WCONVERSION_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WMISMATCHED_TAGS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WMISMATCHED_TAGS_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WMISSING_BRACES_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WMISSING_BRACES_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WNEWLINE_EOF_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WNEWLINE_EOF_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNUSED_FUNCTION_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNUSED_FUNCTION_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSHADOW_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSHADOW_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSHORTEN_64_TO_32_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSHORTEN_64_TO_32_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSIGN_COMPARE_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSIGN_COMPARE_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSIGN_CONVERSION_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSIGN_CONVERSION_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSTRICT_ALIASING_EQ_2_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSTRICT_ALIASING_EQ_2_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSTRICT_OVERFLOW_EQ_4_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WSTRICT_OVERFLOW_EQ_4_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNUSED_PARAMETER_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNUSED_PARAMETER_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNUSED_VARIABLE_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNUSED_VARIABLE_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WWRITE_STRINGS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WWRITE_STRINGS_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNDEF_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WUNDEF_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WNO_ERROR_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WNO_ERROR_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WX_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_WX_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_PEDANTIC_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_PEDANTIC_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_FSTRICT_ALIASING_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_FSTRICT_ALIASING_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_EHSC_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_EHSC_FLAG - Failed</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_FUNWIND_TABLES_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_FUNWIND_TABLES_FLAG - Success</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_NODEFAULTLIBS_FLAG</span><br><span class="line">-- Performing Test LIBCXXABI_SUPPORTS_NODEFAULTLIBS_FLAG - Success</span><br><span class="line">CMake Warning at CMakeLists.txt:476 (message):</span><br><span class="line">  The libc++abi tests aren&apos;t valid when libc++abi is built standalone (i.e.</span><br><span class="line">  outside of llvm/projects/libcxxabi ) and is built without a shared library.</span><br><span class="line">  Either build a shared library, build libc++abi at the same time as you</span><br><span class="line">  build libc++, or do without testing.  No check target will be available!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- Configuring done</span><br><span class="line">-- Generating done</span><br><span class="line">CMake Warning:</span><br><span class="line">  Manually-specified variables were not used by the project:</span><br><span class="line"></span><br><span class="line">    CMAKE_EXPORT_NO_PACKAGE_REGISTRY</span><br><span class="line">    CMAKE_INSTALL_BINDIR</span><br><span class="line">    CMAKE_INSTALL_DATAROOTDIR</span><br><span class="line">    CMAKE_INSTALL_INCLUDEDIR</span><br><span class="line">    CMAKE_INSTALL_LIBDIR</span><br><span class="line">    CMAKE_INSTALL_LIBEXECDIR</span><br><span class="line">    CMAKE_INSTALL_OLDINCLUDEDIR</span><br><span class="line">    CMAKE_INSTALL_SBINDIR</span><br><span class="line">    CONAN_COMPILER</span><br><span class="line">    CONAN_COMPILER_VERSION</span><br><span class="line">    CONAN_CXX_FLAGS</span><br><span class="line">    CONAN_C_FLAGS</span><br><span class="line">    CONAN_EXPORTED</span><br><span class="line">    CONAN_IN_LOCAL_CACHE</span><br><span class="line">    CONAN_LIBCXX</span><br><span class="line">    CONAN_SHARED_LINKER_FLAGS</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- Build files have been written to: /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676</span><br><span class="line">Scanning dependencies of target cxxabi_objects</span><br><span class="line">[  5%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_aux_runtime.cpp.o</span><br><span class="line">[ 10%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_default_handlers.cpp.o</span><br><span class="line">[ 15%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_demangle.cpp.o</span><br><span class="line">[ 20%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_unexpected.cpp.o</span><br><span class="line">[ 25%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_exception_storage.cpp.o</span><br><span class="line">[ 30%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_guard.cpp.o</span><br><span class="line">[ 35%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_handlers.cpp.o</span><br><span class="line">[ 40%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_vector.cpp.o</span><br><span class="line">[ 45%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/stdlib_exception.cpp.o</span><br><span class="line">[ 50%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_virtual.cpp.o</span><br><span class="line">[ 55%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/stdlib_stdexcept.cpp.o</span><br><span class="line">[ 60%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/fallback_malloc.cpp.o</span><br><span class="line">[ 65%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/stdlib_typeinfo.cpp.o</span><br><span class="line">[ 70%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/abort_message.cpp.o</span><br><span class="line">[ 75%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/private_typeinfo.cpp.o</span><br><span class="line">[ 80%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/stdlib_new_delete.cpp.o</span><br><span class="line">[ 85%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_exception.cpp.o</span><br><span class="line">[ 90%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_personality.cpp.o</span><br><span class="line">[ 95%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_thread_atexit.cpp.o</span><br><span class="line">[ 95%] Built target cxxabi_objects</span><br><span class="line">Scanning dependencies of target cxxabi_static</span><br><span class="line">[100%] Linking CXX static library ../lib/libc++abi.a</span><br><span class="line">[100%] Built target cxxabi_static</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Package &apos;9bfdcfa2bb925892ecf42e2a018a3f3529826676&apos; built</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Build folder /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Generated conaninfo.txt</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Generated conanbuildinfo.txt</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Generating the package</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Package folder /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/package/9bfdcfa2bb925892ecf42e2a018a3f3529826676</span><br><span class="line">libcxxabi/7.0.1@includeos/stable: Calling package()</span><br><span class="line">-- Configuring for standalone build.</span><br><span class="line">-- Linker detection: GNU ld</span><br><span class="line">CMake Warning at CMakeLists.txt:476 (message):</span><br><span class="line">  The libc++abi tests aren&apos;t valid when libc++abi is built standalone (i.e.</span><br><span class="line">  outside of llvm/projects/libcxxabi ) and is built without a shared library.</span><br><span class="line">  Either build a shared library, build libc++abi at the same time as you</span><br><span class="line">  build libc++, or do without testing.  No check target will be available!</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- Configuring done</span><br><span class="line">-- Generating done</span><br><span class="line">-- Build files have been written to: /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/build/9bfdcfa2bb925892ecf42e2a018a3f3529826676</span><br><span class="line">[ 95%] Built target cxxabi_objects</span><br><span class="line">[100%] Built target cxxabi_static</span><br><span class="line">Install the project...</span><br><span class="line">-- Install configuration: &quot;Release&quot;</span><br><span class="line">-- Installing: /home/chtian/.conan/data/libcxxabi/7.0.1/includeos/stable/package/9bfdcfa2bb925892ecf42e2a018a3f3529826676/lib/libc++abi.a</span><br></pre></td></tr></table></figure>
+<p>后面还有编译 musl 的信息，就不贴了 😂</p>
+<p>再之后，又下载了 libcxx-7.0.1，之后同样也要编译</p>
+<p>然后…然后…就又出现了一堆红字…</p>
+<p><img src="/images/memes/0006.jpg" alt="0006.jpg" title="lay 了"></p>
+<p>看了下信息，编译 libcxx 出错了，同样是 cmake 的版本问题，这次试了下在配置文件里面把 <code>CONAN_CMAKE_PROGRAM</code> 环境变量加上了，直接在上次修改的地方将 <code>cmake=cmake3</code> 改为 <code>CONAN_CMAKE_PROGRAM=cmake3</code></p>
+<p>继续 build…</p>
+<p>然后在 <code>botan/2.8.0@includeos/stable: Configuring sources in /home/chtian/.conan/data/botan/2.8.0/includeos/stable/source</code> 卡了 10 分钟…</p>
+<p><img src="/images/memes/0007.jpg" alt="0007.jpg" title="你还要我怎样..."></p>
+<p>强制结束之后重新 build，继续卡住…</p>
+<p>原来是因为包太大了 233</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">botan/2.8.0@includeos/stable: WARN: This can take a while for big packages</span><br><span class="line">botan/2.8.0@includeos/stable: Configuring sources in /home/chtian/.conan/data/botan/2.8.0/includeos/stable/source</span><br><span class="line">ERROR: botan/2.8.0@includeos/stable: Error in source() method, line 26</span><br><span class="line">        repo.clone(&quot;https://github.com/randombit/botan.git&quot;,branch=str(self.version))</span><br><span class="line">        CalledProcessError: Command &apos;git clone &quot;https://github.com/randombit/botan.git&quot; . --branch 2.8.0 &apos; returned non-zero exit status 128.</span><br></pre></td></tr></table></figure>
+<p>最后大概 Configuring 了一个多小时….</p>
+<p>21：05</p>
+<p>开始了另一个 <code>openssl/1.1.1@includeos/stable: Configuring sources in /home/chtian/.conan/data/openssl/1.1.1/includeos/stable/source</code></p>
+<p>21:18</p>
+<p>半刻钟过去了，估计也会要一个多小时，于是直接放后台执行了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(conan install ../hello_world -pr gcc-7.3.0-linux-x86_64 --build missing &amp;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Lewis Tian wechat" style="width: 200px; max-width: 100%;">
+    <div>subscribe to my blog by scanning my public wechat account</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>thanks for your donation!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Lewis Tian WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Lewis Tian Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Lewis Tian</li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://lewistian.github.io/2019/05/20/includeOS-helloworld2/" title="includeOS 再体验 - Hello World!">https://lewistian.github.io/2019/05/20/includeOS-helloworld2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> unless stating additionally.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C++</a>
+          
+            <a href="/tags/includeOS/" rel="tag"># includeOS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/13/centos7-sudo-cmd/" rel="next" title="sudo pip3 " command="" not="" found"="" in="" centos7"="">
+                <i class="fa fa-chevron-left"></i> sudo pip3 "command not found" in centos7
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150" alt="Lewis Tian">
+            
+              <p class="site-author-name" itemprop="name">Lewis Tian</p>
+              <p class="site-description motion-element" itemprop="description">There is no destination for pursuit of knowledge in the finite lifetime.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">63</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/LewisTian" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/5792879398" target="_blank" title="Weibo"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:chtian@hust.edu.cn" target="_blank" title="Email"><i class="fa fa-fw fa-envelope"></i>Email</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.zhihu.com/people/qing-shen-bu-shou-luv" target="_blank" title="Zhihu"><i class="fa fa-fw fa-globe"></i>Zhihu</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/lewistian" target="_blank" title="CSDN"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.instagram.com/kommkatze/" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> &copy; 2017 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.2</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css">
+        <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitment({
+            <!-- id: window.location.pathname,-->
+            id: '1558339656000',
+            owner: 'LewisTian',
+            repo: 'LewisTian.github.io',
+            
+            oauth: {
+            
+            
+                client_secret: '751817fda009fa4f99de4c3f11db8619a4c6037c',
+            
+                client_id: '098e4bb457b3bde7a945'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('Copy')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
+
+  <script type="text/javascript" src="/js/src/click-animation.js"></script>
+  <script type="text/javascript" src="/js/src/one.js"></script> 
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

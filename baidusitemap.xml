@@ -3,6 +3,28 @@
 
     
   <url>
+    <loc>https://lewistian.github.io/2019/05/20/includeOS-helloworld2/</loc>
+    <lastmod>2019-05-20T13:20:42.563Z</lastmod>
+    <data>
+        <display>
+        <title>includeOS 再体验 - Hello World!</title>
+        <pubTime>2019-05-20T08:07:36.000Z</pubTime>
+        
+        <tag>C++ </tag>
+         
+        <tag>includeOS </tag>
+         
+         
+           
+             
+              <breadCrumb title="Unikernel" url="https://lewistian.github.io/categories/Unikernel/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lewistian.github.io/2019/05/13/centos7-sudo-cmd/</loc>
     <lastmod>2019-05-13T07:04:21.796Z</lastmod>
     <data>
@@ -564,9 +586,9 @@
         
         <tag>Python </tag>
          
-        <tag>blog </tag>
-         
         <tag>PyQt5 </tag>
+         
+        <tag>blog </tag>
          
          
            
