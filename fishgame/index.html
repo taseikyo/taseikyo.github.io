@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh_Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>fish game</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1 {
+			padding-top: 20px;
+        }
+
+        div {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        div #btn {
+            display: block;
+            margin:10px auto;
+            width: 150px;
+            padding: 15px;
+            background-color: #8f7a66;
+            font-family: Arial;
+            font-size: 20px;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        div #btn:hover {
+            background-color: #9f8b77;
+            cursor: pointer;
+        }
+        div p {
+            font-family: Arial;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        #grid-container {
+            width: 800px;
+            margin:0 auto;
+            background-color: #bbada0;
+        }
+        audio {
+        	display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    	<h1>大鱼吃小鱼游戏</h1>
+        <button id="btn" onclick="main()">New Game</button>
+        <p>控制：w/a/s/d | score: <span id="score">0</span></p>
+        <audio controls="controls" loop="loop">
+          <source src="sound/Chocolate Matthew.aac"/>
+        Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div id="grid-container">
+        <canvas id = "canvas" width = "800" height = "528"></canvas>
+    </div>
+</body>
+<script>
+    var log = console.log.bind(log)
+
+    var sound = document.querySelector("audio")
+
+    var imageFromPath = function(path) {
+        var img = new Image();
+        img.src = path
+        return img
+    }
+
+    var Shark = function(path, shark_x = 100, shark_y = 100, shark_speed = 5) {
+        var o = {
+            image: imageFromPath(path),
+            x: shark_x,
+            y: shark_y,
+            speed: shark_speed,
+            alive: true
+        }
+        o.moveLeft = function() {
+            o.x -= 5
+            if (o.x + o.image.width < 0) {
+                o.alive = false
+            }
+        }
+        o.moveRight = function() {
+            o.x += 5
+            if (o.x > 800) {
+                o.alive = false
+            }
+        }
+        o.resurrection = function() {
+            o.alive = true
+            o.speed += 0.2
+        }
+        return o
+    }
+
+    var Fish = function() {
+        var o = {
+            image: imageFromPath("img/fish.png"),
+            x: 250,
+            y: 450,
+            speed: 5,
+            alive: true
+        }
+        o.moveLeft = function() {
+            o.x -= o.speed
+            if (o.x< 0) {
+                o.x = 0
+            }
+        }
+        o.moveRight = function() {
+            o.x += o.speed
+            if (o.x  + o.image.width > 800) {
+                o.x = 800 - o.image.width 
+            }
+        }
+        o.moveUp = function() {
+            o.y -= o.speed
+            if (o.y< 0) {
+                o.y = 0
+            }
+        }
+        o.moveDown= function() {
+            o.y += o.speed
+            if (o.y  + o.image.height > 528) {
+                o.y = 528 - o.image.height 
+            }
+        }
+        o.growup = function() {
+            o.speed += 1
+            if (o.speed > 15) {
+                o.speed = 15
+            }
+        }
+        o.collide = function(shark) {
+           if(shark.x > o.x + o.image.width || o.x > shark.x + shark.image.width || shark.y > o.y + o.image.height || o.y > shark.y + shark.image.height){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return o
+    }
+
+    var GameOver = function(canvas, background, loop) {
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.drawImage(background, 0, 0)
+        ctx.fillStyle = "red";
+        ctx.font="50px Verdana";
+        ctx.fillText("Game Over", canvas.width/3, canvas.height/2);
+        clearInterval(loop)
+
+        if (!sound.paused) {
+            sound.pause();
+        }
+
+        return
+    }
+
+    var main = function() {
+    	if (sound.paused) {
+            sound.play();
+        }
+
+        var canvas = document.querySelector("#canvas")
+        var ctx = canvas.getContext("2d")
+        var background = imageFromPath("img/background.jpg")
+        //总分
+        var total = 0
+        var score = document.querySelector("#score")
+        score.innerHTML = total
+        
+        document.querySelector("#btn").disabled = true
+        
+        var sharks = []
+
+        for (var i = 0; i < 5; i++) {
+            sharks[i] = Shark("img/"+i+".png")
+            sharks[i].x = Math.random()*400 + canvas.width + i*50
+            sharks[i].y = i*100
+            sharks[i].speed = Math.random()*10
+        }
+
+        var fish = Fish()
+
+        var leftPressed = false
+        var rightPressed = false
+        var upPressed = false
+        var downPressed = false
+
+
+        window.addEventListener("keydown", function(event) {
+            var k = event.key
+            if (k == 'a') {
+                leftPressed = true
+            }else if(k == 'd'){
+                rightPressed = true
+            }else if(k == 'w'){
+                upPressed = true
+            }else if(k == 's'){
+                downPressed = true
+            }
+
+        })
+
+        window.addEventListener("keyup", function(event) {
+            var k = event.key
+            if (k == 'a') {
+                leftPressed = false
+            }else if(k == 'd'){
+                rightPressed = false
+            }else if(k == 'w'){
+                upPressed = false
+            }else if(k == 's'){
+                downPressed = false
+            }
+        })
+
+        var loop = setInterval(function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.drawImage(background, 0, 0)
+
+            if (leftPressed) {
+                fish.moveLeft()
+            }else if(rightPressed){
+                fish.moveRight()
+            }else if(upPressed){
+                fish.moveUp()
+            }else if(downPressed){
+                fish.moveDown()
+            }
+
+            ctx.drawImage(fish.image, fish.x, fish.y)
+            
+            for (var i = sharks.length - 1; i >= 0; i--) {
+                if (sharks[i].alive) {
+                    sharks[i].moveLeft()
+                    ctx.drawImage(sharks[i].image, sharks[i].x, sharks[i].y);
+                    if (!fish.collide(sharks[i])) {
+                        document.querySelector("#btn").disabled = false
+                        GameOver(canvas, background, loop)
+                        return
+                    } 
+                }else {
+                    total++
+                    score.innerHTML = total + ""
+                    fish.growup()
+                    sharks[i].x = Math.random()*200 + canvas.width
+                    sharks[i].y = Math.random()*200+(i+1)*50
+                    sharks[i].resurrection()
+                }
+            }
+
+        }, 1000/30)
+    }
+ 
+</script>
+</html>

@@ -1,0 +1,121 @@
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+#container {
+    width: 55%;
+    margin: 0 auto;
+    min-width: 560px;
+}
+
+#container > h2 {
+    text-align: center;
+}
+
+#player {
+    position: fixed;
+    top:100px; 
+    left: auto; 
+    right: auto;  
+    bottom: auto; 
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.card > a {
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+a.program {
+    display: inline-block;
+    color: #cc0000;
+    cursor: pointer;
+}
+
+.card > .count >.category{
+    color: #cc0000;
+    border: 1px solid #999;
+    border-color: #cc0000;
+    padding: 0 6px;    
+}
+
+.card > .play-btn {
+    float: right;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #c20c0c;
+    border-color: #c20c0c;
+}
+
+.card > .count  > p {
+    display: inline-block;
+    margin: 5px 20px 0px 0px;
+}
+
+/*翻页*/
+
+.pager {
+    padding-left: 0;
+    margin: 5px 0;
+    text-align: center;
+    list-style: none;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    /* display: list-item; */
+    display: inline-block;
+    vertical-align: center;
+    text-align: -webkit-match-parent;
+}
+
+.pager li>a {
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+/* .previous>a {
+    float: left;
+} */
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
