@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[平凡的一天]]></title>
+    <url>%2F2019%2F07%2F12%2F0x028.a-normal-day-in-Wuhan%2F</url>
+    <content type="text"><![CDATA[2019/7/12，武汉，小雨，22/30°C 想了好久，结果还是想不到一个很好的标题，至于为什么要记录这一天，因为今天初次尝试了一些项目，比如第一次密室逃脱、第一次去猫🐱咖、第一次去酒馆。 最后思来想去还是直接取名“平凡的一天”吧。 上午将近12点，昭来找我们玩，包子去南大门接他，希则先一步去世界城看中午吃啥去了。这期间也搞了个乌龙，包子他让我下去，说好南三碰头，结果他的意思是“南三门”，而我理解的是“南三楼”233 后来在世界城和希碰面，说起来我们几个互相也好久没见了，寒暄了一会儿，之后挑了个五楼一家店恰饭，恰完差不多两点了，他们说想试一下密室逃脱，其实我们四个人都没玩过，最后挑了个比较“温馨”的一个类型（其实是照顾我了，毕竟第一次不敢玩太猛的） 初尝试密室逃脱那家店比较偏，在某栋楼的五楼，也找了好久吧，开始玩差不多两点五十了。 主题名为“晴天”，讲的是一对青梅竹马的故事，男主李雷，女主韩梅梅（…），一共大概有 5 关的样子，前几关其实还好，不算太难，应该都能过，但是最后一关我们失败了（…菜啊），结束的时候我们时间也到了（就给一个小时的时间，时间到了没过关也算失败） 第一次玩密室逃脱，给我的感觉还不错，主要是这个主题的原因吧，做做小游戏，解解谜（虽然最后一关脑子不够用，完全想不出来），总体来说还是比较轻松的，难怪老板说适合新手😂，希说之后要来试一下刺激主题的🌚我（…） 出来之后，昭说带我们去打桌球，完全就是他的个人秀了，吊打我们三个😂，我们仨玩了一个小时左右就累了，坐在沙发上看他一个人玩 233 大概五点半左右就出来了，进入到我最期待的项目：猫咖。 第一次去猫咖这个猫咖也很偏，那个地方我去过几次了，从来没注意有个猫咖。 这个猫咖给我感觉一般吧，猫不是很多，而且大部分都在睡觉，一方面是我们去的时间不太对，就一个木偶比较活跃，在猫咖里面到处晃悠。 不过那的草莓莫吉托很赞，虽然是我第一次喝，但是一下子就爱上了👀 晚一点猫们差不多醒了，好几只在猫咖里面晃悠，还有幸目睹了两只猫掐架 233 离开猫咖八点多了，最后一个项目：酒馆。 第一次去酒馆胡桃里酒馆，位置很好，就在地铁出站口。 我们的座位很不错，正对着上面的台子，背后是一个屏幕，可以扫二维码发些东西上墙，若是想常驻上面可以氪金，貌似是停多久就多少软妹币。 第一次去酒馆，感觉还行，菜不错，挺合我胃口的（酒就不说了🤔）。刚进门的时候里面正在唱陈雪凝的《你的酒馆对我打了烊》，瞬间就有那么点感觉了 233。 最后到学校 10 点半以后了，总的来说这一天玩得挺开心的，尝试了一些之前没尝试的项目，惊喜抑或略微失望，总归是体验了一番。 人生短短数十载，还是要勇于尝试新的东西，不然岂不是枉来人世走一遭？（雾 以上，2019/07/12 平凡的一天。]]></content>
+      <categories>
+        <category>essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>daily</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win10 terminal 初体验&美化]]></title>
     <url>%2F2019%2F07%2F09%2F0x027.win10-terminal%2F</url>
     <content type="text"><![CDATA[从 win10 terminal 的消息出来就想试试了，然而系统版本过低导致无法使用一直很气，上周将自己笔记本重装了，得到的版本是 1503 😂 然后升级了好久仍然只是到了 1809 (win+r =&gt; winver)，最后下了 win10 易升强行升到 1903，赶紧从应用商店下了 terminal 来试试。 第一眼其实不咋滴，感觉就是将 cmd 和 powershell 合并了，但是我好歹折腾这么久不能干看着啊，还是上手体验了一波。 还是有些地方很不习惯，比如 复制，在 cmder 中是 ctrl+shift+c，在 terminal 中是右键选中文字再如 清除当前命令行，cmder 中是 ctrl+u，在 terminal 中是 esc；为此我还特意去提了个 issue 233 根据那个回复我开始了美化之旅。 首先是修改背景图片，添加下列代码到 profile.json 中 profiles，另外需要将 useAcrylic 设置为 false 123&quot;backgroundImage&quot; : &quot;ms-appdata:///roaming/img-2c0d8472d3cb10f8b9d90d1fffa424bd.jpg&quot;,&quot;backgroundImageOpacity&quot; : 0.8,&quot;backgroundImageStretchMode&quot; : &quot;fill&quot;, 但是改了以后看不太清命令了，将字颜色改为纯白色，还是不太行。玩了一会还是把背景相关设置注释掉了 :D 之后安装了 oh-my-posh，大概是 oh-my-zsh for Power Shell，主要步骤如下： 安装 posh-git 1Install-Module posh-git -Scope CurrentUser 安装 oh-my-posh 1Install-Module oh-my-posh -Scope CurrentUser 导入 oh-my-posh 如果提示导入出错，改用管理员权限打开 terminal 1Import-Module oh-my-posh 安装字体与设置主题 当你导入 oh-my-posh 之后，可能会有乱码，所以需要换字体，推荐 Microsoft YaHei Mono，它是微软雅黑和 Consolas 的混搭。 输入 theme 命令会列出所有主题，可以使用 Set-Theme theme 来修改主题。 修改配置文件 仅上面的步骤确实是生效了，但是当你下次重启 terminal 的时候，又得重新导入模块，所以需要修改配置文件。 输入 $PROFILE 会输出配置文件的路径，然后编辑该文件，写入如下命令，每次启动就自动导入和设置主题了。 12Import-Module oh-my-poshSet-Theme tehrob terminal 完整的配置文件 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218219220221222223224225226227228229230231232233234235236237238239240241242243244245246247248249250251252253254255256257258259260261262263264265266267268269270271272273274275276277278279280281282283284285286287288289290291292293294295296297298299300301302303304305306307308309310311312313314315316317318319320321322323324325326327328329330331332333334335336337338339340341342343344345346347348349350351352353354355356357358359360361362363364365366367368369370371372373&#123; "globals" : &#123; "alwaysShowTabs" : true, "defaultProfile" : "&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;", "initialCols" : 120, "initialRows" : 30, "keybindings" : [ &#123; "command" : "closeTab", "keys" : [ "ctrl+w" ] &#125;, &#123; "command" : "newTab", "keys" : [ "ctrl+t" ] &#125;, &#123; "command" : "newTabProfile0", "keys" : [ "ctrl+shift+1" ] &#125;, &#123; "command" : "newTabProfile1", "keys" : [ "ctrl+shift+2" ] &#125;, &#123; "command" : "newTabProfile2", "keys" : [ "ctrl+shift+3" ] &#125;, &#123; "command" : "newTabProfile3", "keys" : [ "ctrl+shift+4" ] &#125;, &#123; "command" : "newTabProfile4", "keys" : [ "ctrl+shift+5" ] &#125;, &#123; "command" : "newTabProfile5", "keys" : [ "ctrl+shift+6" ] &#125;, &#123; "command" : "newTabProfile6", "keys" : [ "ctrl+shift+7" ] &#125;, &#123; "command" : "newTabProfile7", "keys" : [ "ctrl+shift+8" ] &#125;, &#123; "command" : "newTabProfile8", "keys" : [ "ctrl+shift+9" ] &#125;, &#123; "command" : "nextTab", "keys" : [ "ctrl+tab" ] &#125;, &#123; "command" : "openSettings", "keys" : [ "ctrl+," ] &#125;, &#123; "command" : "prevTab", "keys" : [ "ctrl+shift+tab" ] &#125;, &#123; "command" : "scrollDown", "keys" : [ "ctrl+shift+down" ] &#125;, &#123; "command" : "scrollDownPage", "keys" : [ "ctrl+shift+pgdn" ] &#125;, &#123; "command" : "scrollUp", "keys" : [ "ctrl+shift+up" ] &#125;, &#123; "command" : "scrollUpPage", "keys" : [ "ctrl+shift+pgup" ] &#125;, &#123; "command" : "switchToTab0", "keys" : [ "alt+1" ] &#125;, &#123; "command" : "switchToTab1", "keys" : [ "alt+2" ] &#125;, &#123; "command" : "switchToTab2", "keys" : [ "alt+3" ] &#125;, &#123; "command" : "switchToTab3", "keys" : [ "alt+4" ] &#125;, &#123; "command" : "switchToTab4", "keys" : [ "alt+5" ] &#125;, &#123; "command" : "switchToTab5", "keys" : [ "alt+6" ] &#125;, &#123; "command" : "switchToTab6", "keys" : [ "alt+7" ] &#125;, &#123; "command" : "switchToTab7", "keys" : [ "alt+8" ] &#125;, &#123; "command" : "switchToTab8", "keys" : [ "alt+9" ] &#125; ], "requestedTheme" : "system", "showTabsInTitlebar" : true, "showTerminalTitleInTitlebar" : true &#125;, "profiles" : [ &#123; "acrylicOpacity" : 0.5, "background" : "#012456", // "backgroundImage" : "ms-appdata:///roaming/img-2c0d8472d3cb10f8b9d90d1fffa424bd.jpg", // "backgroundImageOpacity" : 0.80000001192092896, // "backgroundImageStretchMode" : "fill", "closeOnExit" : true, "colorScheme" : "Campbell", "commandline" : "powershell.exe", "cursorColor" : "#FFFFFF", "cursorShape" : "bar", // "fontFace" : "Consolas", "fontFace" : "Microsoft Yahei Mono", "fontSize" : 10, "guid" : "&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;", "historySize" : 9001, "icon" : "ms-appx:///ProfileIcons/&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;.png", "name" : "Windows PowerShell", "padding" : "5, 5, 5, 5", "snapOnInput" : true, // "startingDirectory" : "%USERPROFILE%", "useAcrylic" : true &#125;, &#123; "acrylicOpacity" : 0.75, "closeOnExit" : true, "colorScheme" : "Campbell", "commandline" : "cmd.exe", "cursorColor" : "#FFFFFF", "cursorShape" : "bar", "fontFace" : "Consolas", "fontSize" : 10, "guid" : "&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;", "historySize" : 9001, "icon" : "ms-appx:///ProfileIcons/&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;.png", "name" : "cmd", "padding" : "0, 0, 0, 0", "snapOnInput" : true, "startingDirectory" : "%USERPROFILE%", "useAcrylic" : true &#125;, &#123; "acrylicOpacity" : 0.5, "closeOnExit" : true, "colorScheme" : "Campbell", "commandline" : "wsl.exe -d Ubuntu", "cursorColor" : "#FFFFFF", "cursorShape" : "bar", "fontFace" : "Consolas", "fontSize" : 10, "guid" : "&#123;2c4de342-38b7-51cf-b940-2309a097f518&#125;", "historySize" : 9001, "icon" : "ms-appx:///ProfileIcons/&#123;9acb9455-ca41-5af7-950f-6bca1bc9722f&#125;.png", "name" : "Ubuntu", "padding" : "0, 0, 0, 0", "snapOnInput" : true, "useAcrylic" : false &#125; ], "schemes" : [ &#123; "background" : "#0C0C0C", "black" : "#0C0C0C", "blue" : "#0037DA", "brightBlack" : "#767676", "brightBlue" : "#3B78FF", "brightCyan" : "#61D6D6", "brightGreen" : "#16C60C", "brightPurple" : "#B4009E", "brightRed" : "#E74856", "brightWhite" : "#F2F2F2", "brightYellow" : "#F9F1A5", "cyan" : "#3A96DD", "foreground" : "#FFFFFF", "green" : "#13A10E", "name" : "Campbell", "purple" : "#881798", "red" : "#C50F1F", "white" : "#CCCCCC", "yellow" : "#C19C00" &#125;, &#123; "background" : "#282C34", "black" : "#282C34", "blue" : "#61AFEF", "brightBlack" : "#5A6374", "brightBlue" : "#61AFEF", "brightCyan" : "#56B6C2", "brightGreen" : "#98C379", "brightPurple" : "#C678DD", "brightRed" : "#E06C75", "brightWhite" : "#DCDFE4", "brightYellow" : "#E5C07B", "cyan" : "#56B6C2", "foreground" : "#DCDFE4", "green" : "#98C379", "name" : "One Half Dark", "purple" : "#C678DD", "red" : "#E06C75", "white" : "#DCDFE4", "yellow" : "#E5C07B" &#125;, &#123; "background" : "#FAFAFA", "black" : "#383A42", "blue" : "#0184BC", "brightBlack" : "#4F525D", "brightBlue" : "#61AFEF", "brightCyan" : "#56B5C1", "brightGreen" : "#98C379", "brightPurple" : "#C577DD", "brightRed" : "#DF6C75", "brightWhite" : "#FFFFFF", "brightYellow" : "#E4C07A", "cyan" : "#0997B3", "foreground" : "#383A42", "green" : "#50A14F", "name" : "One Half Light", "purple" : "#A626A4", "red" : "#E45649", "white" : "#FAFAFA", "yellow" : "#C18301" &#125;, &#123; "background" : "#002B36", "black" : "#073642", "blue" : "#268BD2", "brightBlack" : "#002B36", "brightBlue" : "#839496", "brightCyan" : "#93A1A1", "brightGreen" : "#586E75", "brightPurple" : "#6C71C4", "brightRed" : "#CB4B16", "brightWhite" : "#FDF6E3", "brightYellow" : "#657B83", "cyan" : "#2AA198", "foreground" : "#839496", "green" : "#859900", "name" : "Solarized Dark", "purple" : "#D33682", "red" : "#DC322F", "white" : "#EEE8D5", "yellow" : "#B58900" &#125;, &#123; "background" : "#FDF6E3", "black" : "#073642", "blue" : "#268BD2", "brightBlack" : "#002B36", "brightBlue" : "#839496", "brightCyan" : "#93A1A1", "brightGreen" : "#586E75", "brightPurple" : "#6C71C4", "brightRed" : "#CB4B16", "brightWhite" : "#FDF6E3", "brightYellow" : "#657B83", "cyan" : "#2AA198", "foreground" : "#657B83", "green" : "#859900", "name" : "Solarized Light", "purple" : "#D33682", "red" : "#DC322F", "white" : "#EEE8D5", "yellow" : "#B58900" &#125; ]&#125; 参考链接： Windows Terminal Microsoft Store Preview Release 将美化进行到底，把 PowerShell 做成 oh-my-zsh 的样子 - walterlv 自定义 Windows PowerShell 和 cmd 的字体]]></content>
@@ -147,8 +159,8 @@
         <category>essay</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>JavaScript</tag>
+        <tag>Python</tag>
         <tag>codewars</tag>
       </tags>
   </entry>
@@ -247,8 +259,8 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>FileReader</tag>
         <tag>d3</tag>
+        <tag>FileReader</tag>
       </tags>
   </entry>
   <entry>
@@ -460,12 +472,12 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>JavaScript</tag>
         <tag>Python</tag>
         <tag>Crawler</tag>
         <tag>Tieba</tag>
         <tag>Big-Data</tag>
         <tag>ECharts</tag>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -476,10 +488,10 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>JavaScript</tag>
         <tag>Python</tag>
         <tag>Crawler</tag>
         <tag>ECharts</tag>
-        <tag>JavaScript</tag>
         <tag>RAM</tag>
         <tag>JD</tag>
       </tags>
@@ -507,8 +519,8 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>d3</tag>
         <tag>Topology</tag>
+        <tag>d3</tag>
       </tags>
   </entry>
   <entry>
