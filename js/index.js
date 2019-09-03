@@ -116,5 +116,5 @@ $(function() {
         cxt.restore();
     };
 
-    $('#currentYear').text(new Date().getFullYear());
+    $('#currentYear').text("© 2017" + " - " + new Date().getFullYear() + " Lewis Tian");
 });
