@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[【译】堆和栈的区别]]></title>
+    <url>%2Fblog%2F2019%2F09%2F08%2F0x02A.diff-stack-heap%2F</url>
+    <content type="text"><![CDATA[因为经常有人问堆和栈的区别，就简单地知道栈向下增长；堆向上增长。在栈上创建的变量不需要自己释放；而在堆上创建的变量需要手动释放，否则会造成内存泄漏问题。 然后今天看到这篇文章详细写了堆和栈的区别，然后就简单翻译了一下，贴在下面了 :0 原文链接：https://www.programmerinterview.com/data-structures/difference-between-stack-and-heap/ 堆和栈的区别栈和堆之间的区别可能会让许多人感到困惑。所以，我们准备了一些关于栈和堆的问题，我们觉得这些问题会对理解它们之间的区别有帮助。 堆和栈存储在哪里？它们都存在内存（RAM）中。 线程如何与堆栈交互？堆和栈如何在多线程中工作？在多线程程序中，每个线程都有自己的 栈。但是，所有线程将共享一个 堆。由于不同的线程共享堆，因此就存在多个线程同时访问一块内存的问题，所以就需要编程者来谨慎管理多线程的内存访问。 对象可以存储在栈上（而不是堆上）吗？答案是肯定的，如果不使用 new 运算符在函数内创建对象，那么创建的对象就在栈上。假设我们有一个名为 Member 的 C++ 类，我们要为其创建一个对象。比如在 somefunction() 函数中我们需要这个对象。 在栈上创建对象的代码12345678910void somefunction() &#123;/* create an object "m" of class Member this will be put on the stack since the "new" keyword is not used, and we are creating the object inside a function*/ Member m;&#125; //the object "m" is destroyed once the function ends 一旦函数运行结束，对象 m 就会被销毁掉，m 对应在栈上的内存也会被回收。 在堆上创建对象的代码123456789101112131415void somefunction() &#123;/* create an object "m" of class Member this will be put on the heap since the "new" keyword is used, and we are creating the object inside a function*/ Member* m = new Member( ) ; /* the object "m" must be deleted otherwise a memory leak occurs */ delete m; &#125; 在上面的代码中，m 是使用 new 创建的。这意味着将在堆上创建 m 。由于 m 是使用 new 创建的，必须手动 delete m 对象，否则将导致内存泄漏问题。 堆栈的大小能增长吗？栈被设置为固定大小，不能超过它的固定大小（尽管有些语言有允许这样做的扩展）。因此，如果栈上没有足够的空间来处理分配给它的内存，就会发生栈溢出（stack overflow）。栈溢出通常发生在调用许多嵌套函数或者无限递归调用时。 如果当前堆的大小太小而无法提供新内存时，操作系统可以向堆中添加更多内存（If the current size of the heap is too small to accommodate new memory, then more memory can be added to the heap by the operating system.）。这是堆和栈之间的最大区别之一。 堆栈是如何实现的？它们的实现取决于语言、编译器和运行时，堆栈实现的小细节总是不同的，这取决于所使用的语言和编译器。但是，从大局来看，不同语言中的堆栈都是用来完成相同的事情。 堆栈哪个更快？栈比堆快得多。这是因为在栈上分配内存就像向上移动栈指针一样简单。 堆栈上的内存如何 deallocated当变量超出作用域时，栈上的数据将自动 deallocated。 但是，在 C 和 C ++ 等语言中，程序员必须使用 free，delete 或 delete [] 之类的内置关键字手动删除存储在堆上的数据。 Java 和 .NET 等其他语言使用垃圾收集来自动从堆中删除内存，而程序员不必做任何事情。 堆栈会出什么问题？如果栈内存不足，会导致栈溢出问题，并可能导致程序崩掉。堆可能存在碎片问题，当堆上的可用内存不连续（或断开连接）时会出现碎片问题，因为已使用的内存块位于未使用的内存块之间。当碎片问题很严重时，分配新内存可能会失败，因为即使有足够的内存用于所需的分配，但是这些内存并不是连续的。 我应该使用栈还是堆？对于刚开始编程的人来说，使用栈可能更好，因为它比堆更简单。因为栈很小，所以当确切知道需要多少内存时，或者数据非常小时，可以使用栈。当需要大量内存，或者不确定需要多少内存（例如使用动态数组）时，最好使用堆。]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>memory</tag>
+        <tag>stack</tag>
+        <tag>heap</tag>
+        <tag>memory-management</tag>
+        <tag>dynamic-memory-allocation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[将博客部署到子目录下]]></title>
     <url>%2Fblog%2F2019%2F09%2F03%2F0x029.deploy-blog-to-subdirectory%2F</url>
     <content type="text"><![CDATA[由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。 不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你 username.github.io 仓的根目录，所以需要手动将生成的 public 目录复制到你 username.github.io/bolg 目录下。 但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io/images/xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io/blog/images/xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了： 手动替换地址 找到对应的 js 文件，将正文中的地址替换掉 或者想网上说的，再开一个库，将文件部署到这个库，但是我不想专门开个库，麻烦。 对应的 js 有好多，hexo-generator-xxx 不知道哪个是… 最后还是自己修改图片地址…反正用 python 批量替换也挺快的 hhh，然后还得换掉自定义的 js 文件的路径，同时自定义的 js 中使用到的图片路径也得换，反正也不多，挺快的。]]></content>
@@ -46,7 +61,7 @@
       <tags>
         <tag>win10</tag>
         <tag>onenote</tag>
-        <tag>organization&#39;s policies</tag>
+        <tag>organization&#39;s-policies</tag>
         <tag>bug</tag>
       </tags>
   </entry>
@@ -58,7 +73,7 @@
         <category>Unikernel</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>c++</tag>
         <tag>includeOS</tag>
       </tags>
   </entry>
@@ -82,7 +97,7 @@
         <category>essay</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
+        <tag>windows</tag>
         <tag>win10</tag>
         <tag>software</tag>
       </tags>
@@ -95,7 +110,7 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>python</tag>
         <tag>map</tag>
         <tag>any</tag>
         <tag>all</tag>
@@ -109,7 +124,7 @@
         <category>Unikernel</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>c++</tag>
         <tag>includeOS</tag>
       </tags>
   </entry>
@@ -124,7 +139,7 @@
         <tag>blog</tag>
         <tag>meeting</tag>
         <tag>unikernel</tag>
-        <tag>huge page</tag>
+        <tag>huge-page</tag>
       </tags>
   </entry>
   <entry>
@@ -135,9 +150,9 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Crawler</tag>
-        <tag>MAD</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>mad</tag>
       </tags>
   </entry>
   <entry>
@@ -148,7 +163,7 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>python</tag>
         <tag>codewars</tag>
       </tags>
   </entry>
@@ -160,7 +175,7 @@
         <category>essay</category>
       </categories>
       <tags>
-        <tag>Python - bilibili - JavaScript - CSS</tag>
+        <tag>python - bilibili - javascript - css</tag>
       </tags>
   </entry>
   <entry>
@@ -171,8 +186,8 @@
         <category>essay</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-        <tag>Python</tag>
+        <tag>javascript</tag>
+        <tag>python</tag>
         <tag>codewars</tag>
       </tags>
   </entry>
@@ -207,8 +222,8 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>Linear Algebra</tag>
-        <tag>MIT</tag>
+        <tag>linear-algebra</tag>
+        <tag>mit</tag>
         <tag>18.06</tag>
       </tags>
   </entry>
@@ -220,8 +235,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>PyQt5</tag>
+        <tag>python</tag>
+        <tag>pyqt5</tag>
         <tag>bilibili</tag>
       </tags>
   </entry>
@@ -244,7 +259,7 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>python</tag>
         <tag>an-exercise-per-day</tag>
       </tags>
   </entry>
@@ -270,9 +285,9 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
+        <tag>javascript</tag>
         <tag>d3</tag>
-        <tag>FileReader</tag>
+        <tag>fileReader</tag>
       </tags>
   </entry>
   <entry>
@@ -342,9 +357,9 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>python</tag>
         <tag>blog</tag>
-        <tag>Python</tag>
-        <tag>PyQt5</tag>
+        <tag>pytt5</tag>
       </tags>
   </entry>
   <entry>
@@ -355,7 +370,7 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
+        <tag>windows</tag>
         <tag>right-click</tag>
         <tag>menu</tag>
       </tags>
@@ -380,7 +395,7 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>SPEC CPU2006</tag>
+        <tag>spec-cpu2006</tag>
         <tag>command</tag>
       </tags>
   </entry>
@@ -392,10 +407,10 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>SPEC CPU2006</tag>
-        <tag>MPKI</tag>
-        <tag>RBL</tag>
-        <tag>BLP</tag>
+        <tag>spec-cpu2006</tag>
+        <tag>mpki</tag>
+        <tag>rbl</tag>
+        <tag>blp</tag>
       </tags>
   </entry>
   <entry>
@@ -406,7 +421,7 @@
         <category>Study</category>
       </categories>
       <tags>
-        <tag>SPEC CPU2006</tag>
+        <tag>spec-cpu2006</tag>
         <tag>command</tag>
       </tags>
   </entry>
@@ -418,8 +433,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>Linux</tag>
+        <tag>c++</tag>
+        <tag>linux</tag>
         <tag>bost</tag>
       </tags>
   </entry>
@@ -456,10 +471,10 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Crawler</tag>
-        <tag>Netease-Cloud</tag>
-        <tag>Netease-Radio</tag>
+        <tag>netease-nloud</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>netease-radio</tag>
       </tags>
   </entry>
   <entry>
@@ -470,9 +485,9 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Crawler</tag>
-        <tag>Zhihu</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>zhihu</tag>
         <tag>ajax</tag>
       </tags>
   </entry>
@@ -484,12 +499,11 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-        <tag>Python</tag>
-        <tag>Crawler</tag>
-        <tag>ECharts</tag>
-        <tag>Tieba</tag>
-        <tag>Big-Data</tag>
+        <tag>javascript</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>tieba</tag>
+        <tag>echarts</tag>
       </tags>
   </entry>
   <entry>
@@ -500,12 +514,12 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-        <tag>Python</tag>
-        <tag>Crawler</tag>
-        <tag>RAM</tag>
-        <tag>JD</tag>
-        <tag>ECharts</tag>
+        <tag>javascript</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>echarts</tag>
+        <tag>ram</tag>
+        <tag>jingdong</tag>
       </tags>
   </entry>
   <entry>
@@ -516,10 +530,10 @@
         <category>C++</category>
       </categories>
       <tags>
-        <tag>C++</tag>
-        <tag>QT</tag>
+        <tag>c++</tag>
+        <tag>qt</tag>
         <tag>lyric</tag>
-        <tag>Netease-Cloud</tag>
+        <tag>netease-nloud</tag>
       </tags>
   </entry>
   <entry>
@@ -530,8 +544,8 @@
         <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>JavaScript</tag>
-        <tag>Topology</tag>
+        <tag>javascript</tag>
+        <tag>topology</tag>
         <tag>d3</tag>
       </tags>
   </entry>
@@ -540,7 +554,7 @@
     <url>%2Fblog%2F2017%2F07%2F26%2F0x001.hello-world%2F</url>
     <content type="text"><![CDATA[捣鼓了一下午，从 1 点半左右就开始安装 node.js 到现在把本地搜索弄好，终于基本上把目前想到的一些基础东西都给实现了，一路上看了不少教程。想说的是本地搜索，这个玩意儿弄了好久，最后在 Algolia 注册之后，准备使用 Algolia 的搜索功能，看教程上说得在Theme的配置文件中开搜索功能，然后在下面看到大大的 local_search:enable: false。。。突然想给自己一巴掌是怎么回事儿，之前也上下翻看过这个文件，当时却没有发现，我可能是瞎了吧。]]></content>
       <categories>
-        <category>essay</category>
+        <category>Essay</category>
       </categories>
       <tags>
         <tag>blog</tag>

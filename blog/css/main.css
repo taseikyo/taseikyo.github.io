@@ -2010,7 +2010,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #38914e;
+  background: #ff712a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3315,5 +3315,5 @@ ul.breadcrumb li+li:last-child {
   pointer-events: none;
 }
 body {
-  background: url("/images/74578367_p0.jpg");
+  background: url("/blog/images/74578367_p0.jpg");
 }
