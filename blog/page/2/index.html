@@ -374,6 +374,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/05/13/0x024.centos7-sudo-cmd/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/05/13/0x024.centos7-sudo-cmd/" itemprop="url">
+                  sudo pip3 "command not found" in centos7
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-13 13:06:27" itemprop="dateCreated datePublished" datetime="2019-05-13T13:06:27+08:00">2019-05-13</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <div style="float: right; margin-left: 10px;margin-top: 0px;"><br>    <img src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?"><br></div>
+
+<p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3/pip3 都是可以跑的。</p>
+<p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ sudo pip3</span><br><span class="line">sudo: pip3: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
+<p>有人说“出于安全原因，sudo 不依赖 $PATH。有一个 secure_path 选项 /etc/sudoers，指定 PATH 是 sudo 将用于定位二进制文件。”</p>
+<p>相关问答:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/32020594/sudo-pip-command-not-found-in-centos" target="_blank" rel="noopener">sudo: pip: command not found in CentOS</a></li>
+<li><a href="https://cloud.tencent.com/developer/ask/34025" target="_blank" rel="noopener">在CentOS中找不到sudo：pip：命令？</a></li>
+<li><a href="https://unix.stackexchange.com/questions/169251/root-shell-sees-pip-but-sudo-pip-command-not-found" target="_blank" rel="noopener">Root shell sees pip but sudo pip “command not found”</a></li>
+</ul>
+<p>我看了下 secure_path 的路径 <code>Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ whereis pip3</span><br><span class="line">pip3: /usr/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3.7</span><br></pre></td></tr></table></figure>
+<p>pip3 已经在 <code>/usr/bin</code> 目录下了，就很奇怪，不知道为什么就是找不到…</p>
+<p>将 <code>/usr/local/bin/</code> 加到 secure_path 或许可以，但我用的是另一个方法: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 ~]$ sudo `<span class="built_in">which</span> pip3` </span><br><span class="line"></span><br><span class="line">Usage:   </span><br><span class="line">  pip3 &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/05/10/0x023.good-things-recommended-win-softwares/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -802,7 +971,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/includeOS.png" rel="gallery_ck1km48h8003l1kubh7md26ov" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/includeOS.png" rel="gallery_ck1r929ra002kasubqovixtlh" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/includeOS.png" itemprop="contentUrl">
               </a>
             
@@ -1532,7 +1701,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/author-bili-pendant.png" rel="gallery_ck1km48g5003a1kubcurzs275" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/author-bili-pendant.png" rel="gallery_ck1r929qs0027asubw1jdckuh" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -1562,180 +1731,6 @@
         
       
     </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/01/25/0x01D.first2codewars/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/01/25/0x01D.first2codewars/" itemprop="url">
-                  codewars 初体验 XD
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-01-25 16:48:33" itemprop="dateCreated datePublished" datetime="2019-01-25T16:48:33+08:00">2019-01-25</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/first2codewars.png" rel="gallery_ck1km48ge003f1kubwsbos2r4" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/blog/images/first2codewars.png" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          
-            <p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
-<blockquote>
-<p>@GloomyGhost: 有这时间还不如刷codewar</p>
-</blockquote>
-<p>然后就有点好奇了，就今天下午注册试了下，感觉还挺有趣的，其实呢，codewars 和其他如 leetcode 刷题网站类似，但它也有自己一些独特之处（虽然我也没怎么刷过 leetcode）。</p>
-<p>首先你注册之后等级是 8 级，等级越高数字越低，是不是一下子就有刷题提升段位的冲动了呢（滑稽<br>然后还有就是，如果你没有做过（train）题是没办法看别人的解题方法的 0w0<br>另外好像和你段位差太多的题你是没办法点进去的（等级打击），因为我到了 7 级不能做 4 级的题 233</p>
-<p>其他的应该基本上都差不多，哦对了还有 codewars 可以选择自己擅长的语言，在做题的时候也可以换语言（如果可以换的话）<br>但是等级是和对应语言绑定的，也就是说就算你 Python 刷到 2级，但你想换成 JavaScript 还是得从 8 级慢慢刷~</p>
-
-          
-        
-      
-    </div>
 
     
 
@@ -1818,7 +1813,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2016,7 +2011,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">78</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">80</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

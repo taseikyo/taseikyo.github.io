@@ -3,6 +3,45 @@
   
     
     <entry>
+      <title><![CDATA[ubuntu1804 静态 ip 配置问题]]></title>
+      <url>/blog/2019/10/15/0x02C.ubuntu1804-static-ip/</url>
+      <content type="html"><![CDATA[<p><img src="/blog/images/photo-1570937937487-125575170d69.jpg" alt="autumn" title="Photo by Nong Vang on Unsplash"></p>
+<p>对于 Ubuntu18.04，他的 IP 配置跟之前的版本不太一样，是从 17.10 开始启用 netplan，所以配置文件的位置改了。</p>
+<p>现在的配置文件为 <code>/etc/netplan/xxx.yaml</code>，配置静态 IP 需要手动修改其内容，也不复杂，该文件是一个 YAML 格式的配置文件。</p>
+<p>下面是一个桌面版的配置文件。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Let NetworkManager manage all devices on this system</span></span><br><span class="line"><span class="attr">network:</span></span><br><span class="line"><span class="attr">  version:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">  renderer:</span> <span class="string">NetworkManager</span></span><br><span class="line"><span class="attr">  ethernets:</span></span><br><span class="line"><span class="attr">    enp1:</span> <span class="comment"># 网卡名称</span></span><br><span class="line"><span class="attr">      dhcp4:</span> <span class="literal">no</span> <span class="comment"># 禁用 dhcp4</span></span><br><span class="line"><span class="attr">      dhcp6:</span> <span class="literal">no</span> <span class="comment"># 禁用 dhcp6</span></span><br><span class="line"><span class="attr">      addresses:</span> <span class="string">[1.1.1.1/24]</span> <span class="comment"># IP及掩码</span></span><br><span class="line"><span class="attr">      gateway4:</span> <span class="number">1.1</span><span class="number">.1</span><span class="number">.1</span> <span class="comment"># 网关</span></span><br><span class="line"><span class="attr">      nameservers:</span></span><br><span class="line"><span class="attr">        addresses:</span> <span class="string">[8.8.8.8,</span> <span class="number">1.1</span><span class="number">.1</span><span class="number">.1</span><span class="string">]</span> <span class="comment"># DNS</span></span><br></pre></td></tr></table></figure>
+<p>配置好了然后输入 <code>sudo netplan apply</code>，按理说就起作用了。</p>
+<p>但是昨晚我配置好 IP 的服务器还是有问题，仍然不能直接用 IP 连接，输入 <code>ifconfig -a</code> 命令也能看到对应网卡的 IP 配置完成了，就很奇怪。</p>
+<p>我在看到网上教程中没有 renderer 那一项，于是将其注释掉，然后 XShell 就卡住了=w=，然后去机房，将注释去掉再 <code>sudo netplan apply</code>，很诡异的事情发生了，apply 之后就可以用 IP 只连了。我缓缓打出一个 ❓</p>
+<p>晚上服务器重启之后又不行了，今天早上我又去机房看，还配置对应网卡的路由，结果还是不行。然后想到昨天那个方法，先把 renderer 注释，然后再去掉，再 apply，果然就好了。。。</p>
+<p>所以我还是不懂这个到底是为什么。。。</p>
+<p><img src="/blog/images/small-confuse.jpg" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Study </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> ubuntu-1804 </tag>
+            
+            <tag> ip </tag>
+            
+            <tag> static-ip </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[在服务器上装 Ubuntu1804 遇到的一些问题]]></title>
       <url>/blog/2019/10/10/0x02B.problems-of-installing-ubuntu1804-on-server/</url>
       <content type="html"><![CDATA[<p>由于 OSv 官方只主动地维护 Ubuntu 和 Federal，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
@@ -811,9 +850,9 @@
         
         <tags>
             
-            <tag> python </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> python </tag>
             
             <tag> codewars </tag>
             
@@ -1110,9 +1149,9 @@
         
         <tags>
             
-            <tag> win10 </tag>
-            
             <tag> no-voice </tag>
+            
+            <tag> win10 </tag>
             
         </tags>
         
@@ -1255,9 +1294,9 @@
         
         <tags>
             
-            <tag> no-voice </tag>
-            
             <tag> microphone </tag>
+            
+            <tag> no-voice </tag>
             
             <tag> daily </tag>
             
@@ -1818,11 +1857,11 @@ cpuid
         
         <tags>
             
-            <tag> c++ </tag>
-            
             <tag> linux </tag>
             
             <tag> bost </tag>
+            
+            <tag> c++ </tag>
             
         </tags>
         
@@ -1891,11 +1930,11 @@ cpuid
         
         <tags>
             
-            <tag> netease-nloud </tag>
-            
             <tag> python </tag>
             
             <tag> crawler </tag>
+            
+            <tag> netease-nloud </tag>
             
             <tag> netease-radio </tag>
             
@@ -1945,6 +1984,8 @@ cpuid
         
         <tags>
             
+            <tag> javascript </tag>
+            
             <tag> python </tag>
             
             <tag> crawler </tag>
@@ -1952,8 +1993,6 @@ cpuid
             <tag> tieba </tag>
             
             <tag> echarts </tag>
-            
-            <tag> javascript </tag>
             
         </tags>
         
@@ -1974,13 +2013,13 @@ cpuid
         
         <tags>
             
+            <tag> javascript </tag>
+            
             <tag> python </tag>
             
             <tag> crawler </tag>
             
             <tag> echarts </tag>
-            
-            <tag> javascript </tag>
             
             <tag> ram </tag>
             
@@ -2006,13 +2045,13 @@ cpuid
         
         <tags>
             
+            <tag> netease-nloud </tag>
+            
             <tag> c++ </tag>
             
             <tag> qt </tag>
             
             <tag> lyric </tag>
-            
-            <tag> netease-nloud </tag>
             
         </tags>
         

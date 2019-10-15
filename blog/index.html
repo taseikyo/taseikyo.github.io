@@ -374,6 +374,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/10/15/0x02C.ubuntu1804-static-ip/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/10/15/0x02C.ubuntu1804-static-ip/" itemprop="url">
+                  ubuntu1804 静态 ip 配置问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-10-15 10:36:49" itemprop="dateCreated datePublished" datetime="2019-10-15T10:36:49+08:00">2019-10-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/blog/images/photo-1570937937487-125575170d69.jpg" alt="autumn" title="Photo by Nong Vang on Unsplash"></p>
+<p>对于 Ubuntu18.04，他的 IP 配置跟之前的版本不太一样，是从 17.10 开始启用 netplan，所以配置文件的位置改了。</p>
+<p>现在的配置文件为 <code>/etc/netplan/xxx.yaml</code>，配置静态 IP 需要手动修改其内容，也不复杂，该文件是一个 YAML 格式的配置文件。</p>
+<p>下面是一个桌面版的配置文件。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Let NetworkManager manage all devices on this system</span></span><br><span class="line"><span class="attr">network:</span></span><br><span class="line"><span class="attr">  version:</span> <span class="number">2</span></span><br><span class="line"><span class="attr">  renderer:</span> <span class="string">NetworkManager</span></span><br><span class="line"><span class="attr">  ethernets:</span></span><br><span class="line"><span class="attr">    enp1:</span> <span class="comment"># 网卡名称</span></span><br><span class="line"><span class="attr">      dhcp4:</span> <span class="literal">no</span> <span class="comment"># 禁用 dhcp4</span></span><br><span class="line"><span class="attr">      dhcp6:</span> <span class="literal">no</span> <span class="comment"># 禁用 dhcp6</span></span><br><span class="line"><span class="attr">      addresses:</span> <span class="string">[1.1.1.1/24]</span> <span class="comment"># IP及掩码</span></span><br><span class="line"><span class="attr">      gateway4:</span> <span class="number">1.1</span><span class="number">.1</span><span class="number">.1</span> <span class="comment"># 网关</span></span><br><span class="line"><span class="attr">      nameservers:</span></span><br><span class="line"><span class="attr">        addresses:</span> <span class="string">[8.8.8.8,</span> <span class="number">1.1</span><span class="number">.1</span><span class="number">.1</span><span class="string">]</span> <span class="comment"># DNS</span></span><br></pre></td></tr></table></figure>
+<p>配置好了然后输入 <code>sudo netplan apply</code>，按理说就起作用了。</p>
+<p>但是昨晚我配置好 IP 的服务器还是有问题，仍然不能直接用 IP 连接，输入 <code>ifconfig -a</code> 命令也能看到对应网卡的 IP 配置完成了，就很奇怪。</p>
+<p>我在看到网上教程中没有 renderer 那一项，于是将其注释掉，然后 XShell 就卡住了=w=，然后去机房，将注释去掉再 <code>sudo netplan apply</code>，很诡异的事情发生了，apply 之后就可以用 IP 只连了。我缓缓打出一个 ❓</p>
+<p>晚上服务器重启之后又不行了，今天早上我又去机房看，还配置对应网卡的路由，结果还是不行。然后想到昨天那个方法，先把 renderer 注释，然后再去掉，再 apply，果然就好了。。。</p>
+<p>所以我还是不懂这个到底是为什么。。。</p>
+<p><img src="/blog/images/small-confuse.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/10/10/0x02B.problems-of-installing-ubuntu1804-on-server/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -973,7 +1137,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/190712/wx20190713-1135@鸦青.png" rel="gallery_ck1km48hi003t1kubn529zeb2" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/190712/wx20190713-1135@鸦青.png" rel="gallery_ck1r929rj0034asubb85lmtcl" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/190712/wx20190713-1135@鸦青.png" itemprop="contentUrl">
               </a>
             
@@ -1151,7 +1315,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/0x027.001.png" rel="gallery_ck1km49ep008h1kubmm9nfjl0" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/0x027.001.png" rel="gallery_ck1r929xb009dasubt0g0plrm" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/0x027.001.png" itemprop="contentUrl">
               </a>
             
@@ -1486,7 +1650,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/includeOS.png" rel="gallery_ck1km4drl008s1kubgpteo806" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/includeOS.png" rel="gallery_ck1r92aa0009oasubiox1l74y" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/includeOS.png" itemprop="contentUrl">
               </a>
             
@@ -1510,175 +1674,6 @@
             </div>
          
           <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/05/13/0x024.centos7-sudo-cmd/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/05/13/0x024.centos7-sudo-cmd/" itemprop="url">
-                  sudo pip3 "command not found" in centos7
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-13 13:06:27" itemprop="dateCreated datePublished" datetime="2019-05-13T13:06:27+08:00">2019-05-13</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <div style="float: right; margin-left: 10px;margin-top: 0px;"><br>    <img src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?"><br></div>
-
-<p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3/pip3 都是可以跑的。</p>
-<p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ sudo pip3</span><br><span class="line">sudo: pip3: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
-<p>有人说“出于安全原因，sudo 不依赖 $PATH。有一个 secure_path 选项 /etc/sudoers，指定 PATH 是 sudo 将用于定位二进制文件。”</p>
-<p>相关问答:</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/32020594/sudo-pip-command-not-found-in-centos" target="_blank" rel="noopener">sudo: pip: command not found in CentOS</a></li>
-<li><a href="https://cloud.tencent.com/developer/ask/34025" target="_blank" rel="noopener">在CentOS中找不到sudo：pip：命令？</a></li>
-<li><a href="https://unix.stackexchange.com/questions/169251/root-shell-sees-pip-but-sudo-pip-command-not-found" target="_blank" rel="noopener">Root shell sees pip but sudo pip “command not found”</a></li>
-</ul>
-<p>我看了下 secure_path 的路径 <code>Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ whereis pip3</span><br><span class="line">pip3: /usr/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3.7</span><br></pre></td></tr></table></figure>
-<p>pip3 已经在 <code>/usr/bin</code> 目录下了，就很奇怪，不知道为什么就是找不到…</p>
-<p>将 <code>/usr/local/bin/</code> 加到 secure_path 或许可以，但我用的是另一个方法: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 ~]$ sudo `<span class="built_in">which</span> pip3` </span><br><span class="line"></span><br><span class="line">Usage:   </span><br><span class="line">  pip3 &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-          
         
       
     </div>
@@ -1764,7 +1759,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">46</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1962,7 +1957,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">78</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">80</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
