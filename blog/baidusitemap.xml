@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2019/10/25/0x02D.win10-network-error/</loc>
+    <lastmod>2019-10-25T14:02:06.377Z</lastmod>
+    <data>
+        <display>
+        <title>win10 "请确认系统网络配置是否完整"</title>
+        <pubTime>2019-10-25T13:39:38.000Z</pubTime>
+        
+        <tag>windows - win10 - network </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2019/10/15/0x02C.ubuntu1804-static-ip/</loc>
     <lastmod>2019-10-15T02:57:02.894Z</lastmod>
     <data>
@@ -304,9 +324,9 @@
         <title>codewars 初体验 XD</title>
         <pubTime>2019-01-25T08:48:33.000Z</pubTime>
         
-        <tag>javascript </tag>
-         
         <tag>python </tag>
+         
+        <tag>javascript </tag>
          
         <tag>codewars </tag>
          
@@ -540,11 +560,11 @@
         <title>Linux编译和安装boost库</title>
         <pubTime>2018-03-14T06:12:56.000Z</pubTime>
         
+        <tag>c++ </tag>
+         
         <tag>linux </tag>
          
         <tag>bost </tag>
-         
-        <tag>c++ </tag>
          
          
            
@@ -616,8 +636,6 @@
         <title>华中科技大学贴吧牛人排行榜数据分析</title>
         <pubTime>2017-10-14T14:25:15.000Z</pubTime>
         
-        <tag>javascript </tag>
-         
         <tag>python </tag>
          
         <tag>crawler </tag>
@@ -625,6 +643,8 @@
         <tag>tieba </tag>
          
         <tag>echarts </tag>
+         
+        <tag>javascript </tag>
          
          
            
@@ -644,13 +664,13 @@
         <title>Python爬取京东内存条数据并作简单分析</title>
         <pubTime>2017-10-10T10:17:56.000Z</pubTime>
         
-        <tag>javascript </tag>
-         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
         <tag>echarts </tag>
+         
+        <tag>javascript </tag>
          
         <tag>ram </tag>
          
@@ -674,13 +694,13 @@
         <title>网易云歌词下载器</title>
         <pubTime>2017-08-25T10:50:05.000Z</pubTime>
         
-        <tag>netease-nloud </tag>
-         
         <tag>c++ </tag>
          
         <tag>qt </tag>
          
         <tag>lyric </tag>
+         
+        <tag>netease-nloud </tag>
          
          
            
