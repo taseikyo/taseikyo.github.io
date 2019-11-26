@@ -246,6 +246,45 @@
             
         </li>
     
+        <li class="chapter " data-level="1.1.12" data-path="201906W3.html">
+            
+                <a href="201906W3.html">
+            
+                    
+                    201906W3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="201906W4.html">
+            
+                <a href="201906W4.html">
+            
+                    
+                    201906W4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="201907W1.html">
+            
+                <a href="201907W1.html">
+            
+                    
+                    201907W1
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -299,8 +338,8 @@
                                 <h1 id="weekly-7">Weekly #7</h1>
 <blockquote>
 <p>@Date    : 2019-05-12 21:30:00</p>
-<p>@Author  : Lewis Tian (chtian@hust.edu.cn)</p>
-<p>@Link    : <a href="https://lewistian.github.io" target="_blank">https://lewistian.github.io</a></p>
+<p>@Author  : Lewis Tian (taseikyo@gmail.com)</p>
+<p>@Link    : <a href="https://taseikyo.github.io" target="_blank">https://taseikyo.github.io</a></p>
 <p>@Range   : 2019/05/13 - 2019/05/19</p>
 </blockquote>
 <p><a href="https://unsplash.com/photos/pA0Vqg1Y8tg" target="_blank"><img src="../images/alfred-twj-1531529-unsplash.jpg" alt="Weekly #7"></a>
@@ -338,11 +377,11 @@ Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]
 <h4 id="solution">Solution</h4>
 <p>Brute Force.</p>
 <ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/algorithm/201905W2/728.SelfDividingNumbers.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201905W2/728.SelfDividingNumbers.py" target="_blank">Python</a></li>
 </ul>
 <h3 id="561-array-partition-i">561. Array Partition I</h3>
 <p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
-<p>Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), <a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.</p>
+<p>Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), <a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.</p>
 <p>Example 1:</p>
 <pre><code>Input: [1,4,3,2]
 
@@ -354,21 +393,21 @@ Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
 <li>All the integers in the array will be in the range of [-10000, 10000].</li>
 </ul>
 <h4 id="solution">Solution</h4>
-<p>Sort the arr first and sum the even-index (0, 2, 4<a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>.) item.</p>
+<p>Sort the arr first and sum the even-index (0, 2, 4<a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>.) item.</p>
 <p>It&apos;s strange that <code>return sum([sorted(nums)[i] for i in range(0, len(nums), 2)])</code> got <code>Time Limit Exceeded</code> error. But the following one was accepted and faster than 99.61%.</p>
 <pre><code class="lang-python">arr = sorted(nums)
 <span class="hljs-keyword">return</span> sum([arr[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, len(nums), <span class="hljs-number">2</span>)])
 </code></pre>
 <ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/algorithm/201905W2/561.ArrayPartitionI.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201905W2/561.ArrayPartitionI.py" target="_blank">Python</a></li>
 </ul>
 <h3 id="852-peak-index-in-a-mountain-array">852. Peak Index in a Mountain Array</h3>
 <p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
 <p>Let&apos;s call an array A a mountain if the following properties hold:</p>
 <ul>
 <li>A.length &gt;= 3</li>
-<li>There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; <a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>. A[i-1] &lt; A[i] &gt; A[i+1] &gt; <a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>. &gt; A[A.length - 1]</li>
-<li>Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; <a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>. A[i-1] &lt; A[i] &gt; A[i+1] &gt; <a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>. &gt; A[A.length - 1].</li>
+<li>There exists some 0 &lt; i &lt; A.length - 1 such that A[0] &lt; A[1] &lt; <a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>. A[i-1] &lt; A[i] &gt; A[i+1] &gt; <a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>. &gt; A[A.length - 1]</li>
+<li>Given an array that is definitely a mountain, return any i such that A[0] &lt; A[1] &lt; <a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>. A[i-1] &lt; A[i] &gt; A[i+1] &gt; <a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>. &gt; A[A.length - 1].</li>
 </ul>
 <p>Example 1:</p>
 <pre><code>Input: [0,1,0]
@@ -385,7 +424,7 @@ Output: 1
 <h4 id="solution">Solution</h4>
 <p>Just Linear Scan or Binary Search.</p>
 <ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/algorithm/201905W2/852.PeakIndexinaMountainArray.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201905W2/852.PeakIndexinaMountainArray.py" target="_blank">Python</a></li>
 </ul>
 <h3 id="509-fibonacci-number">509. Fibonacci Number</h3>
 <p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
@@ -413,7 +452,7 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 <li>0 &#x2264; N &#x2264; 30.</li>
 </ul>
 <h4 id="solution">Solution</h4>
-<p>I thought sol.1 should be faster than sol.2; at lease sol.1 should consume less space<a href="https://github.com/LewisTian/arts/blob/master" target="_blank">https://github.com/LewisTian/arts/blob/master</a>.</p>
+<p>I thought sol.1 should be faster than sol.2; at lease sol.1 should consume less space<a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>.</p>
 <pre><code># sol.1
 def fib(self, N: int) -&gt; int:
     &apos;&apos;&apos;48 ms    13.3 MB&apos;&apos;&apos;
@@ -433,7 +472,7 @@ def fib(self, N: int) -&gt; int:
         tab[x] = tab[x-1] + tab[x-2]
     return tab[N]
 </code></pre><ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/algorithm/201905W2/509.FibonacciNumber.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201905W2/509.FibonacciNumber.py" target="_blank">Python</a></li>
 </ul>
 <h3 id="961-n-repeated-element-in-size-2n-array">961. N-Repeated Element in Size 2N Array</h3>
 <p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
@@ -459,7 +498,7 @@ Output: 5
 </ul>
 <h4 id="solution">Solution</h4>
 <ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/algorithm/201905W2/961.N-RepeatedElementinSize2NArray.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201905W2/961.N-RepeatedElementinSize2NArray.py" target="_blank">Python</a></li>
 </ul>
 <h3 id="912-sort-an-array">912. Sort an Array</h3>
 <p><img src="https://img.shields.io/badge/Difficulty-Medium-orange.svg" alt="Medium"></p>
@@ -480,18 +519,18 @@ Output: [0,0,1,1,2,5]
 <h4 id="solution">Solution</h4>
 <p><em>quick sort</em> is a great sorting method. I find an <strong>infinite loop problem</strong> (see tip #2).</p>
 <ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/algorithm/201905W2/912.SortanArray.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201905W2/912.SortanArray.py" target="_blank">Python</a></li>
 </ul>
 <h2 id="review">review</h2>
 <ul>
 <li><a href="https://bincrafters.github.io/2018/07/14/What-Is-Conan/" target="_blank">What is Conan? - Bincrafters - gitpage</a></li>
-<li><a href="https://github.com/LewisTian/arts/blob/master/review/What_is_Conan-Bincrafters-gitpage.md" target="_blank">[Markdown] What is Conan? - Bincrafters - gitpage</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/review/What_is_Conan-Bincrafters-gitpage.md" target="_blank">[Markdown] What is Conan? - Bincrafters - gitpage</a></li>
 </ul>
 <p>The author introduces <code>Conan</code> to us, which is a package manager. Maybe it&apos;s similar to <code>npm</code> in nodejs and <code>pip</code> in Python.</p>
 <h2 id="tip">tip</h2>
 <ul>
-<li><a href="https://github.com/LewisTian/arts/blob/master/tip/go_struct_anonymous_fields.go" target="_blank">Go Struct Anonymous Fields</a></li>
-<li><a href="https://github.com/LewisTian/arts/blob/master/tip/python_quick_sort_infinite_loop.py" target="_blank">Quick Sort Infinite Loop Problem</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/tip/go_struct_anonymous_fields.go" target="_blank">Go Struct Anonymous Fields</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/tip/python_quick_sort_infinite_loop.py" target="_blank">Quick Sort Infinite Loop Problem</a></li>
 </ul>
 <h2 id="share">share</h2>
 <p>[TACO&apos;19] Supporting Superpages and Lightweight Page Migration in Hybrid Memory Systems</p>
@@ -543,7 +582,7 @@ Output: [0,0,1,1,2,5]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"201905W2","level":"1.1.7","depth":2,"next":{"title":"201905W3","level":"1.1.8","depth":2,"path":"doc/201905W3.md","ref":"doc/201905W3.md","articles":[]},"previous":{"title":"201905W1","level":"1.1.6","depth":2,"path":"doc/201905W1.md","ref":"doc/201905W1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/201905W2.md","mtime":"2019-06-14T07:32:32.303Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-14T07:32:34.919Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"201905W2","level":"1.1.7","depth":2,"next":{"title":"201905W3","level":"1.1.8","depth":2,"path":"doc/201905W3.md","ref":"doc/201905W3.md","articles":[]},"previous":{"title":"201905W1","level":"1.1.6","depth":2,"path":"doc/201905W1.md","ref":"doc/201905W1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/201905W2.md","mtime":"2019-11-26T02:15:35.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T02:15:36.456Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

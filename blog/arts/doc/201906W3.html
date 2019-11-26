@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>201906W2 · GitBook</title>
+        <title>201906W3 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="201906W3.html" />
+    <link rel="next" href="201906W4.html" />
     
     
-    <link rel="prev" href="201906W1.html" />
+    <link rel="prev" href="201906W2.html" />
     
 
     </head>
@@ -233,7 +233,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.11" data-path="201906W2.html">
+        <li class="chapter " data-level="1.1.11" data-path="201906W2.html">
             
                 <a href="201906W2.html">
             
@@ -246,7 +246,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.12" data-path="201906W3.html">
+        <li class="chapter active" data-level="1.1.12" data-path="201906W3.html">
             
                 <a href="201906W3.html">
             
@@ -320,7 +320,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >201906W2</a>
+        <a href=".." >201906W3</a>
     </h1>
 </div>
 
@@ -335,21 +335,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="weekly-11">Weekly #11</h1>
+                                <h1 id="weekly-12">Weekly #12</h1>
 <blockquote>
-<p>@Date    : 2019-06-10 09:11:00</p>
+<p>@Date    : 2019-06-17 09:06:45</p>
 <p>@Author  : Lewis Tian (taseikyo@gmail.com)</p>
 <p>@Link    : <a href="https://taseikyo.github.io" target="_blank">https://taseikyo.github.io</a></p>
-<p>@Range   : 2019/06/10 - 2019/06/16</p>
+<p>@Range   : 2019/06/17 - 2019/06/23</p>
 </blockquote>
-<p><a href="https://unsplash.com/photos/Ej-ghNvm3kU" target="_blank"><img src="../images/pavel-brodsky-1663476-unsplash.jpg" alt="Weekly #11"></a>
-Photo by Pavel Brodsky on Unsplash</p>
+<p><a href="https://unsplash.com/photos/G35D9jK1Bf0" target="_blank"><img src="../images/edceee-78881-unsplash.jpg" alt="Weekly #12"></a>
+Photo by &#x715C;&#x7FD4; &#x8096; on Unsplash</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#algorithm">algorithm</a><ul>
-<li><a href="#347-top-k-frequent-elements">347. Top K Frequent Elements</a></li>
-<li><a href="#448-find-all-numbers-disappeared-in-an-array">448. Find All Numbers Disappeared in an Array</a></li>
-<li><a href="#538-convert-bst-to-greater-tree">538. Convert BST to Greater Tree</a></li>
+<li><a href="#283-move-zeroes">283. Move Zeroes</a></li>
+<li><a href="#237-delete-node-in-a-linked-list">237. Delete Node in a Linked List</a></li>
+<li><a href="#242-valid-anagram">242. Valid Anagram</a></li>
 </ul>
 </li>
 <li><a href="#review">review</a></li>
@@ -357,82 +357,85 @@ Photo by Pavel Brodsky on Unsplash</p>
 <li><a href="#share">share</a></li>
 </ul>
 <h2 id="algorithm">algorithm</h2>
-<h3 id="347-top-k-frequent-elements">347. Top K Frequent Elements</h3>
-<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange.svg" alt="Medium"></p>
-<p>Given a non-empty array of integers, return the k most frequent elements.</p>
-<pre><code>Example 1:
-
-Input: nums = [1,1,1,2,2,3], k = 2
-Output: [1,2]
-Example 2:
-
-Input: nums = [1], k = 1
-Output: [1]
+<h3 id="283-move-zeroes">283. Move Zeroes</h3>
+<p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
+<p>Given an array nums, write a function to move all 0&apos;s to the end of it while maintaining the relative order of the non-zero elements.</p>
+<p>Example:</p>
+<pre><code>Input: [0,1,0,3,12]
+Output: [1,3,12,0,0]
 </code></pre><p>Note:</p>
 <ul>
-<li>You may assume k is always valid, 1 &#x2264; k &#x2264; number of unique elements.</li>
-<li>Your algorithm&apos;s time complexity must be better than O(n log n), where n is the array&apos;s size.</li>
+<li>You must do this in-place without making a copy of the array.</li>
+<li>Minimize the total number of operations.</li>
 </ul>
 <h4 id="solution">solution</h4>
-<p>I think using Python is just cheating. Just one line<a href="https://github.com/taseikyo/arts/blob/master" target="_blank">https://github.com/taseikyo/arts/blob/master</a>.</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">topKFrequent</span><span class="hljs-params">(self, nums: List[int], k: int)</span> -&gt; List[int]:</span>
-    <span class="hljs-keyword">return</span> [key <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> Counter(nums).most_common(k)]
-</code></pre>
 <ul>
-<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W2/347.TopKFrequentElements.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W3/283.MoveZeroes.py" target="_blank">python</a></li>
 </ul>
-<h3 id="448-find-all-numbers-disappeared-in-an-array">448. Find All Numbers Disappeared in an Array</h3>
+<h3 id="237-delete-node-in-a-linked-list">237. Delete Node in a Linked List</h3>
 <p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
-<p>Given an array of integers where 1 &#x2264; a[i] &#x2264; n (n = size of array), some elements appear twice and others appear once.</p>
-<p>Find all the elements of [1, n] inclusive that do not appear in this array.</p>
-<p>Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.</p>
-<p>Example:</p>
-<pre><code>Input:
-[4,3,2,7,8,2,3,1]
+<p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.</p>
+<p>Given linked list -- head = [4,5,1,9], which looks like following:</p>
+<p><img src="https://github.com/taseikyo/arts/blob/master/images/237_example.png" alt=""></p>
+<pre><code>Example 1:
 
-Output:
-[5,6]
-</code></pre><h4 id="solution">solution</h4>
-<p>One line Python cheating</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">findDisappearedNumbers</span><span class="hljs-params">(self, nums: List[int])</span> -&gt; List[int]:</span>
-        <span class="hljs-keyword">return</span> list((set(range(<span class="hljs-number">1</span>, len(nums) + <span class="hljs-number">1</span>))) - (set(nums)))
-</code></pre>
+Input: head = [4,5,1,9], node = 5
+Output: [4,1,9]
+Explanation: You are given the second node with value 5, the linked list should become 4 -&gt; 1 -&gt; 9 after calling your function.
+Example 2:
+
+Input: head = [4,5,1,9], node = 1
+Output: [4,5,9]
+Explanation: You are given the third node with value 1, the linked list should become 4 -&gt; 5 -&gt; 9 after calling your function.
+</code></pre><p>Note:</p>
 <ul>
-<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W2/448.FindAllNumbersDisappearedinanArray.py" target="_blank">Python</a></li>
+<li>The linked list will have at least two elements.</li>
+<li>All of the nodes&apos; values will be unique.</li>
+<li>The given node will not be the tail and it will always be a valid node of the linked list.</li>
+<li>Do not return anything from your function.</li>
 </ul>
-<h3 id="538-convert-bst-to-greater-tree">538. Convert BST to Greater Tree</h3>
-<p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
-<p>Given a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus sum of all keys greater than the original key in BST.</p>
-<p>Example:</p>
-<pre><code>Input: The root of a Binary Search Tree like this:
-              5
-            /   \
-           2     13
-
-Output: The root of a Greater Tree like this:
-             18
-            /   \
-          20     13
-</code></pre><h4 id="solution">solution</h4>
-<p>preorder (right child node first) traversal</p>
+<h4 id="solution">solution</h4>
 <ul>
-<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W2/538.ConvertBSTtoGreaterTree.py" target="_blank">Python</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W3/237.DeleteNodeinaLinkedList.c" target="_blank">C</a></li>
+</ul>
+<h3 id="242-valid-anagram">242. Valid Anagram</h3>
+<p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
+<p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
+<pre><code>Example 1:
+
+Input: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
+Output: true
+Example 2:
+
+Input: s = &quot;rat&quot;, t = &quot;car&quot;
+Output: false
+</code></pre><p>Note:</p>
+<ul>
+<li>You may assume the string contains only lowercase alphabets.</li>
+</ul>
+<p>Follow up:</p>
+<ul>
+<li>What if the inputs contain unicode characters? How would you adapt your solution to such case?</li>
+</ul>
+<h4 id="solution">solution</h4>
+<ul>
+<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W3/242.ValidAnagram.c" target="_blank">C</a></li>
 </ul>
 <h2 id="review">review</h2>
 <ul>
-<li><a href="http://www.renyujie.net/articles/article_ca_x86_5.php" target="_blank">Paging in x86 and x64 - renyujie</a></li>
+<li><a href="https://dzone.com/articles/3-most-important-patterns-for-building-microservic" target="_blank">Three Important Patterns for Building Microservices - Saurabh Dashora - DZone</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/review/Three-Important-Patterns-for-Building-Microservices-Saurabh-Dashora-DZone.md" target="_blank">[markdown] Three Important Patterns for Building Microservices - Saurabh Dashora - DZone</a></li>
 </ul>
-<p>This article describes several paging mechanisms in x86 and x64.</p>
+<p>This article talks about three important patterns that can help people create microservices.</p>
 <h2 id="tip">tip</h2>
 <ul>
-<li><a href="https://github.com/taseikyo/arts/blob/master/tip/c_rdtsc_instruction.c" target="_blank">count program run time using the RDTSC instruction</a></li>
+<li><a href="https://github.com/taseikyo/arts/blob/master/tip/python_simple_tuple_replace_if_else.py" target="_blank">Python tuple replace if-else block</a></li>
 </ul>
 <h2 id="share">share</h2>
 <ul>
-<li>A Virtual Machine Introspection Triggering Mechanism Based on VMFUNC</li>
+<li><a href="https://www.hanbaoying.com/2017/03/20/Virtio-Balloon.html" target="_blank">[Chinese] Virtio-Balloon Ultra Detailed Analysis</a></li>
 </ul>
-<p>I found this paper when I googled <code>VMFUNC</code> keyword.</p>
-<p>This paper proposes a VMFUNC based VM introspection mechanism, which avoids the system pause and minimizes the overhead of VM exits.</p>
+<p>This article provides an in-depth introduction to <em>Virtio-Balloon</em>.</p>
 
                                 
                                 </section>
@@ -460,12 +463,12 @@ Output: The root of a Greater Tree like this:
 
             
                 
-                <a href="201906W1.html" class="navigation navigation-prev " aria-label="Previous page: 201906W1">
+                <a href="201906W2.html" class="navigation navigation-prev " aria-label="Previous page: 201906W2">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="201906W3.html" class="navigation navigation-next " aria-label="Next page: 201906W3">
+                <a href="201906W4.html" class="navigation navigation-next " aria-label="Next page: 201906W4">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -476,7 +479,7 @@ Output: The root of a Greater Tree like this:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"201906W2","level":"1.1.11","depth":2,"next":{"title":"201906W3","level":"1.1.12","depth":2,"path":"doc/201906W3.md","ref":"doc/201906W3.md","articles":[]},"previous":{"title":"201906W1","level":"1.1.10","depth":2,"path":"doc/201906W1.md","ref":"doc/201906W1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/201906W2.md","mtime":"2019-11-26T02:15:35.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T02:15:36.456Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"201906W3","level":"1.1.12","depth":2,"next":{"title":"201906W4","level":"1.1.13","depth":2,"path":"doc/201906W4.md","ref":"doc/201906W4.md","articles":[]},"previous":{"title":"201906W2","level":"1.1.11","depth":2,"path":"doc/201906W2.md","ref":"doc/201906W2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/201906W3.md","mtime":"2019-11-26T02:15:35.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-26T02:15:36.456Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
