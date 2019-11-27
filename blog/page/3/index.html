@@ -374,6 +374,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/02/16/0x01F.codewars-190216/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/02/16/0x01F.codewars-190216/" itemprop="url">
+                  codewars-190216
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-16 16:27:24" itemprop="dateCreated datePublished" datetime="2019-02-16T16:27:24+08:00">2019-02-16</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
+<p>原题如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Write a simple parser that will parse and run Deadfish.</span><br><span class="line"></span><br><span class="line">Deadfish has 4 commands, each 1 character long:</span><br><span class="line"></span><br><span class="line">i increments the value (initially 0)</span><br><span class="line">d decrements the value</span><br><span class="line">s squares the value</span><br><span class="line">o outputs the value into the return array</span><br><span class="line">Invalid characters should be ignored.</span><br><span class="line"></span><br><span class="line">parse(&quot;iiisdoso&quot;)  ==&gt;  [8, 64]</span><br></pre></td></tr></table></figure></p>
+<p>我的解法就很直白，大部分人基本上都是这样做的，虽然也想过有没有其他的解法，但是没想出来 233<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">	init = <span class="number">0</span></span><br><span class="line">	out = []</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">		<span class="keyword">if</span> i == <span class="string">'i'</span>: init += <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'d'</span>: init -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'s'</span>: init *= init</span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'o'</span>: out.append(init)</span><br><span class="line">	<span class="keyword">return</span> out</span><br></pre></td></tr></table></figure></p>
+<p>提交之后看到有个人是下面这样的解法，惊了，突然感觉 get 到了某种小技巧（但是不记下来可能过段时间就忘了<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">    action = &#123;<span class="string">'i'</span>: <span class="keyword">lambda</span> v, r: v + <span class="number">1</span>,</span><br><span class="line">              <span class="string">'d'</span>: <span class="keyword">lambda</span> v, r: v - <span class="number">1</span>,</span><br><span class="line">              <span class="string">'s'</span>: <span class="keyword">lambda</span> v, r: v * v,</span><br><span class="line">              <span class="string">'o'</span>: <span class="keyword">lambda</span> v, r: r.append(v) <span class="keyword">or</span> v&#125;</span><br><span class="line">    v, r = <span class="number">0</span>, []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> data:</span><br><span class="line">        v = action[a](v, r) <span class="keyword">if</span> a <span class="keyword">in</span> action <span class="keyword">else</span> v</span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/02/15/0x01E.bili-pendant/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -474,7 +631,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/author-bili-pendant.png" rel="gallery_ck267gecw005fikub0f8u3f07" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/author-bili-pendant.png" rel="gallery_ck3h2h4450031s8ubh6dxokeo" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -652,7 +809,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/first2codewars.png" rel="gallery_ck267gect005cikubfmvfrdo7" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/first2codewars.png" rel="gallery_ck3h2h4490038s8ubzz7c6v9p" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -826,7 +983,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/summary_1812.png" rel="gallery_ck267gecx005gikubiaau6j9v" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/summary_1812.png" rel="gallery_ck3h2h4470036s8ub899vi6zg" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/summary_1812.png" itemprop="contentUrl">
               </a>
             
@@ -1000,7 +1157,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/WTMD-no-fuck.jpg" rel="gallery_ck267gecs005aikub2pgk10tv" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/WTMD-no-fuck.jpg" rel="gallery_ck3h2h443002zs8ubwhg2t07x" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/WTMD-no-fuck.jpg" itemprop="contentUrl">
               </a>
             
@@ -1174,7 +1331,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/18.06-Linear-Algebra.jpg" rel="gallery_ck267gecy005iikub3czw56zb" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/18.06-Linear-Algebra.jpg" rel="gallery_ck3h2h44d003gs8ubuiw5ts3r" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/18.06-Linear-Algebra.jpg" itemprop="contentUrl">
               </a>
             
@@ -1342,7 +1499,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/bili-box.png" rel="gallery_ck267gebb001xikub2qi7cnr4" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/bili-box.png" rel="gallery_ck3h2h441002us8ubsw7vwqdu" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/bili-box.png" itemprop="contentUrl">
               </a>
             
@@ -1516,7 +1673,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/summary_1811.png" rel="gallery_ck267geb8001qikuby1yjc4r7" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/summary_1811.png" rel="gallery_ck3h2h43x002ns8ub194i7p5n" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/summary_1811.png" itemprop="contentUrl">
               </a>
             
@@ -1539,162 +1696,6 @@
             </div>
          
           <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2018/11/27/0x017.exercise-181127/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/11/27/0x017.exercise-181127/" itemprop="url">
-                  每日一题-181127
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-11-27 17:10:02" itemprop="dateCreated datePublished" datetime="2018-11-27T17:10:02+08:00">2018-11-27</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>要求如下：<br>编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。<br>-1<sup>1</sup> + 2<sup>2</sup> - 3<sup>3</sup> + 4<sup>1</sup> - 5<sup>2</sup> + 6<sup>3</sup> -7<sup>1</sup> + 8<sup>2</sup> - 9<sup>3</sup> +10<sup>1</sup> …</p>
-<p>我的解法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> sum((<span class="number">-1</span>)**i*i**((i<span class="number">-1</span>)%<span class="number">3</span>+<span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>))</span><br></pre></td></tr></table></figure></p>
-<p>近来用 Python 解题更喜欢 one line 的方式了（装x【并不</p>
-
-          
         
       
     </div>
@@ -1780,7 +1781,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">47</span>
+                    <span class="site-state-item-count">48</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1984,7 +1985,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">81</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">86</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

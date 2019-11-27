@@ -3,8 +3,38 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2019/11/27/0x02E.Python3.8-DLL-load-failed-while-importing-win32api/</loc>
+    <lastmod>2019-11-27T09:09:35.717Z</lastmod>
+    <data>
+        <display>
+        <title>ImportError DLL load failed while importing win32api 找不到指定的模块。</title>
+        <pubTime>2019-11-27T08:58:16.000Z</pubTime>
+        
+        <tag>python </tag>
+         
+        <tag>python3.8 </tag>
+         
+        <tag>win32api </tag>
+         
+        <tag>pywin32 </tag>
+         
+        <tag>DLL </tag>
+         
+        <tag>ImportError </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2019/10/25/0x02D.win10-network-error/</loc>
-    <lastmod>2019-10-25T14:02:06.377Z</lastmod>
+    <lastmod>2019-11-27T08:59:07.851Z</lastmod>
     <data>
         <display>
         <title>win10 "请确认系统网络配置是否完整"</title>
@@ -442,9 +472,9 @@
         <title>PyQt5 多语言支持</title>
         <pubTime>2018-07-16T03:37:48.000Z</pubTime>
         
-        <tag>blog </tag>
-         
         <tag>python </tag>
+         
+        <tag>blog </tag>
          
         <tag>pytt5 </tag>
          
@@ -560,11 +590,11 @@
         <title>Linux编译和安装boost库</title>
         <pubTime>2018-03-14T06:12:56.000Z</pubTime>
         
-        <tag>c++ </tag>
-         
         <tag>linux </tag>
          
         <tag>bost </tag>
+         
+        <tag>c++ </tag>
          
          
            
@@ -696,11 +726,11 @@
         
         <tag>c++ </tag>
          
+        <tag>netease-nloud </tag>
+         
         <tag>qt </tag>
          
         <tag>lyric </tag>
-         
-        <tag>netease-nloud </tag>
          
          
            

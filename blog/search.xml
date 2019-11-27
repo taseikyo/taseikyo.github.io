@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ImportError DLL load failed while importing win32api 找不到指定的模块。]]></title>
+    <url>%2Fblog%2F2019%2F11%2F27%2F0x02E.Python3.8-DLL-load-failed-while-importing-win32api%2F</url>
+    <content type="text"><![CDATA[今天在使用 jupyter notebook 时遇到很多问题，由于我上周把 Python3.7 给卸载了，更新为 3.8，然后就出现了很多问题，第一个就是 Jupyter Notebook with Python 3.8 - NotImplementedError，在 StackOverflow 上找到答案，以为就解决了，结果启动之后，在网页新建一个 Python 3 的笔记之后，右上角出现一个红色的按钮，点开看是错误信息，ImportError: DLL load failed while importing win32api: 找不到指定的模块。，然后也在 StackOverflow 上找到答案了，结果不太对，还是会报错，最后用百度搜到一个 CSDN 的博客，按照上面的说法，把 Lib\site-packages\pywin32_system32\* 目录下的两个 DLL 复制到 C:\Windows\System32 就好了，或者复制到 Lib\site-packages\win32 也行。]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>python3.8</tag>
+        <tag>win32api</tag>
+        <tag>pywin32</tag>
+        <tag>DLL</tag>
+        <tag>ImportError</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win10 "请确认系统网络配置是否完整"]]></title>
     <url>%2Fblog%2F2019%2F10%2F25%2F0x02D.win10-network-error%2F</url>
     <content type="text"><![CDATA[前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。 今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。 到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。 中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx” 用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 netsh winsock reset 然后重启就好了，绝了。]]></content>
@@ -397,8 +413,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>blog</tag>
         <tag>python</tag>
+        <tag>blog</tag>
         <tag>pytt5</tag>
       </tags>
   </entry>
@@ -473,9 +489,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>c++</tag>
         <tag>linux</tag>
         <tag>bost</tag>
+        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
@@ -571,9 +587,9 @@
       </categories>
       <tags>
         <tag>c++</tag>
+        <tag>netease-nloud</tag>
         <tag>qt</tag>
         <tag>lyric</tag>
-        <tag>netease-nloud</tag>
       </tags>
   </entry>
   <entry>
