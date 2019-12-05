@@ -3,6 +3,32 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2019/12/05/0x02F.vscode-remote-server-find-code-definition/</loc>
+    <lastmod>2019-12-05T08:13:07.537Z</lastmod>
+    <data>
+        <display>
+        <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
+        <pubTime>2019-12-05T08:05:44.000Z</pubTime>
+        
+        <tag>vscode </tag>
+         
+        <tag>server </tag>
+         
+        <tag>code </tag>
+         
+        <tag>definition </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2019/11/27/0x02E.Python3.8-DLL-load-failed-while-importing-win32api/</loc>
     <lastmod>2019-11-27T09:09:35.717Z</lastmod>
     <data>
@@ -590,11 +616,11 @@
         <title>Linux编译和安装boost库</title>
         <pubTime>2018-03-14T06:12:56.000Z</pubTime>
         
+        <tag>c++ </tag>
+         
         <tag>linux </tag>
          
         <tag>bost </tag>
-         
-        <tag>c++ </tag>
          
          
            
@@ -670,11 +696,11 @@
          
         <tag>crawler </tag>
          
-        <tag>tieba </tag>
-         
         <tag>echarts </tag>
          
         <tag>javascript </tag>
+         
+        <tag>tieba </tag>
          
          
            
@@ -698,13 +724,13 @@
          
         <tag>crawler </tag>
          
-        <tag>echarts </tag>
-         
-        <tag>javascript </tag>
-         
         <tag>ram </tag>
          
         <tag>jingdong </tag>
+         
+        <tag>echarts </tag>
+         
+        <tag>javascript </tag>
          
          
            
@@ -724,9 +750,9 @@
         <title>网易云歌词下载器</title>
         <pubTime>2017-08-25T10:50:05.000Z</pubTime>
         
-        <tag>c++ </tag>
-         
         <tag>netease-nloud </tag>
+         
+        <tag>c++ </tag>
          
         <tag>qt </tag>
          
