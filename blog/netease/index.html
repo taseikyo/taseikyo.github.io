@@ -16,7 +16,7 @@
 <body>
     <div id="container">
         <div id="update-time" class="card">
-            <h3>最近一次更新: 2017/4/9 by <a href="https://github.com/LewisTian" target="_blank" style="text-decoration: none;color: #c20c0c;">Tich</a>.</h3>
+            <h3>最近一次更新: 2017/4/9 by <a href="https://github.com/taseikyo" target="_blank" style="text-decoration: none;color: #c20c0c;">Tich</a>.</h3>
         </div>
         <div id="app">
             <template v-for="item in items">
@@ -64,7 +64,7 @@
         },
         methods: {
             getData: function() {
-                this.$http.get("https://lewistian.github.io/netease/json/" + page + ".json").then(function(res) {
+                this.$http.get("https://taseikyo.github.io/blog/netease/json/" + page + ".json").then(function(res) {
                     // console.log(res);
                     for (var i = 0, len = res.body.length; i < len; i++) {
                         //获取每个元素

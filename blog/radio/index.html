@@ -13,7 +13,7 @@
     <div id="container">
         <h2>୧(๑•̀⌄•́๑)૭✧ 喵喵喵先生电台</h2>
         <div class="card" style="padding: 5px 0px 5px 30px;">
-            <h4>最近一次更新: 2018/1/7 by <a href="https://github.com/LewisTian" target="_blank" style="text-decoration: none;color: #c20c0c;">Tich</a>.</h4>
+            <h4>最近一次更新: 2018/1/7 by <a href="https://github.com/taseikyo" target="_blank" style="text-decoration: none;color: #c20c0c;">Tich</a>.</h4>
         </div>
         <div id="app">
             <template v-for="item in items">
@@ -67,7 +67,7 @@
         },
         methods: {
             getData: function() {
-                this.$http.get("https://lewistian.github.io/radio/json/" + page + ".json").then(function(res) {
+                this.$http.get("https://taseikyo.github.io/blog/radio/json/" + page + ".json").then(function(res) {
                     // console.log(res);
                     for (var i = 0, len = res.body.length; i < len; i++) {
                         //获取每个元素
@@ -104,7 +104,7 @@
                 return;
             }
             if (parseInt(path) == 2){
-                window.location.href="https://lewistian.github.io/radio/";
+                window.location.href="https://taseikyo.github.io/blog/radio/";
             }
             else{
                 path = (window.location.href).replace(/[1-9][0-9]*/g, parseInt(path)-1); 
@@ -114,7 +114,7 @@
         }
         else if(num == -2){//下一页
             if (!path){
-                window.location.href="https://lewistian.github.io/radio/?2";
+                window.location.href="https://taseikyo.github.io/blog/radio/?2";
             }
             else if(parseInt(path) == 15){
                 return;
@@ -126,10 +126,10 @@
         }
         else{//跳到指定页
             if (num == 1) {
-                window.location.href="https://lewistian.github.io/radio";
+                window.location.href="https://taseikyo.github.io/radio";
             }
             else{
-                window.location.href = "https://lewistian.github.io/radio/?"+num;
+                window.location.href = "https://taseikyo.github.io/blog/radio/?"+num;
             }
         }
     }
