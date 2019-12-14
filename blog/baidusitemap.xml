@@ -3,6 +3,30 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2018/07/16/0x00F.pyqt-mutilanguage/</loc>
+    <lastmod>2019-12-14T07:21:46.790Z</lastmod>
+    <data>
+        <display>
+        <title>PyQt5 多语言支持</title>
+        <pubTime>2018-07-16T03:37:48.000Z</pubTime>
+        
+        <tag>python </tag>
+         
+        <tag>blog </tag>
+         
+        <tag>pytt5 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://taseikyo.github.io/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2019/12/05/0x02F.vscode-remote-server-find-code-definition/</loc>
     <lastmod>2019-12-05T08:13:07.537Z</lastmod>
     <data>
@@ -484,30 +508,6 @@
            
              
               <breadCrumb title="JavaScript" url="https://taseikyo.github.io/categories/JavaScript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://taseikyo.github.io/2018/07/16/0x00F.pyqt-mutilanguage/</loc>
-    <lastmod>2019-09-08T12:40:36.376Z</lastmod>
-    <data>
-        <display>
-        <title>PyQt5 多语言支持</title>
-        <pubTime>2018-07-16T03:37:48.000Z</pubTime>
-        
-        <tag>python </tag>
-         
-        <tag>blog </tag>
-         
-        <tag>pytt5 </tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="https://taseikyo.github.io/categories/Python/"/>
           
         </display>
     </data>
