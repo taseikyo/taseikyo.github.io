@@ -3,6 +3,30 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2019/12/18/0x030.set-default-boot-kernel/</loc>
+    <lastmod>2019-12-18T09:56:56.141Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 设置默认启动内核版本</title>
+        <pubTime>2019-12-18T09:34:53.000Z</pubTime>
+        
+        <tag>linux </tag>
+         
+        <tag>kernel </tag>
+         
+        <tag>boot </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2018/07/16/0x00F.pyqt-mutilanguage/</loc>
     <lastmod>2019-12-14T07:21:46.790Z</lastmod>
     <data>
@@ -140,11 +164,11 @@
         
         <tag>linux </tag>
          
+        <tag>server </tag>
+         
         <tag>ubuntu </tag>
          
         <tag>ubuntu-1804 </tag>
-         
-        <tag>server </tag>
          
          
            
@@ -404,9 +428,9 @@
         <title>codewars 初体验 XD</title>
         <pubTime>2019-01-25T08:48:33.000Z</pubTime>
         
-        <tag>python </tag>
-         
         <tag>javascript </tag>
+         
+        <tag>python </tag>
          
         <tag>codewars </tag>
          
@@ -692,15 +716,15 @@
         <title>华中科技大学贴吧牛人排行榜数据分析</title>
         <pubTime>2017-10-14T14:25:15.000Z</pubTime>
         
+        <tag>javascript </tag>
+         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
-        <tag>echarts </tag>
-         
-        <tag>javascript </tag>
-         
         <tag>tieba </tag>
+         
+        <tag>echarts </tag>
          
          
            
@@ -720,17 +744,17 @@
         <title>Python爬取京东内存条数据并作简单分析</title>
         <pubTime>2017-10-10T10:17:56.000Z</pubTime>
         
+        <tag>javascript </tag>
+         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
+        <tag>echarts </tag>
+         
         <tag>ram </tag>
          
         <tag>jingdong </tag>
-         
-        <tag>echarts </tag>
-         
-        <tag>javascript </tag>
          
          
            
@@ -750,13 +774,13 @@
         <title>网易云歌词下载器</title>
         <pubTime>2017-08-25T10:50:05.000Z</pubTime>
         
-        <tag>netease-nloud </tag>
-         
         <tag>c++ </tag>
          
         <tag>qt </tag>
          
         <tag>lyric </tag>
+         
+        <tag>netease-nloud </tag>
          
          
            
