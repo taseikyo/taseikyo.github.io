@@ -3,6 +3,28 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2019/12/24/0x031.taseikyo-2019-hust/</loc>
+    <lastmod>2019-12-24T01:30:58.333Z</lastmod>
+    <data>
+        <display>
+        <title>“大数据” | 我到底在华科吃了些啥</title>
+        <pubTime>2019-12-24T01:24:50.000Z</pubTime>
+        
+        <tag>blog </tag>
+         
+        <tag>hust </tag>
+         
+         
+           
+             
+              <breadCrumb title="Essay" url="https://taseikyo.github.io/categories/Essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2019/12/18/0x030.set-default-boot-kernel/</loc>
     <lastmod>2019-12-18T09:56:56.141Z</lastmod>
     <data>
@@ -34,9 +56,9 @@
         <title>PyQt5 多语言支持</title>
         <pubTime>2018-07-16T03:37:48.000Z</pubTime>
         
-        <tag>python </tag>
-         
         <tag>blog </tag>
+         
+        <tag>python </tag>
          
         <tag>pytt5 </tag>
          
@@ -58,9 +80,9 @@
         <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
         <pubTime>2019-12-05T08:05:44.000Z</pubTime>
         
-        <tag>vscode </tag>
-         
         <tag>server </tag>
+         
+        <tag>vscode </tag>
          
         <tag>code </tag>
          
@@ -164,11 +186,11 @@
         
         <tag>linux </tag>
          
-        <tag>server </tag>
-         
         <tag>ubuntu </tag>
          
         <tag>ubuntu-1804 </tag>
+         
+        <tag>server </tag>
          
          
            
@@ -428,9 +450,9 @@
         <title>codewars 初体验 XD</title>
         <pubTime>2019-01-25T08:48:33.000Z</pubTime>
         
-        <tag>javascript </tag>
-         
         <tag>python </tag>
+         
+        <tag>javascript </tag>
          
         <tag>codewars </tag>
          
@@ -664,11 +686,11 @@
         <title>网易云电台</title>
         <pubTime>2017-12-05T07:06:09.000Z</pubTime>
         
+        <tag>netease-nloud </tag>
+         
         <tag>python </tag>
          
         <tag>crawler </tag>
-         
-        <tag>netease-nloud </tag>
          
         <tag>netease-radio </tag>
          
@@ -716,15 +738,15 @@
         <title>华中科技大学贴吧牛人排行榜数据分析</title>
         <pubTime>2017-10-14T14:25:15.000Z</pubTime>
         
-        <tag>javascript </tag>
-         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
-        <tag>tieba </tag>
-         
         <tag>echarts </tag>
+         
+        <tag>javascript </tag>
+         
+        <tag>tieba </tag>
          
          
            
@@ -744,17 +766,17 @@
         <title>Python爬取京东内存条数据并作简单分析</title>
         <pubTime>2017-10-10T10:17:56.000Z</pubTime>
         
-        <tag>javascript </tag>
-         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
-        <tag>echarts </tag>
-         
         <tag>ram </tag>
          
         <tag>jingdong </tag>
+         
+        <tag>echarts </tag>
+         
+        <tag>javascript </tag>
          
          
            
