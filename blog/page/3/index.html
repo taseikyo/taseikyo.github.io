@@ -374,6 +374,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/04/08/0x022.python3-map/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/04/08/0x022.python3-map/" itemprop="url">
+                  Python3 中的 map 问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-08 11:29:29" itemprop="dateCreated datePublished" datetime="2019-04-08T11:29:29+08:00">2019-04-08</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
+<p>在最近的 <a href="https://github.com/LewisTian/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
+<p>部分 <a href="https://github.com/LewisTian/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
+<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
+<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
+<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="keyword">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="keyword">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="keyword">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
+<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
+</ul>
+<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
+<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2019/03/20/0x021.includeOS-helloworld/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -474,7 +642,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/includeOS.png" rel="gallery_ck4j6u81m003z9oubvuuny4yz" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/includeOS.png" rel="gallery_ck4koa5yr003rucubps0exscf" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/includeOS.png" itemprop="contentUrl">
               </a>
             
@@ -1204,7 +1372,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/author-bili-pendant.png" rel="gallery_ck4j6u81j003r9oub9athsw5m" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/author-bili-pendant.png" rel="gallery_ck4koa5yg0033ucubg2ot3m1n" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/author-bili-pendant.png" itemprop="contentUrl">
               </a>
             
@@ -1382,7 +1550,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/first2codewars.png" rel="gallery_ck4j6u81l003x9oubxr4m4yct" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/first2codewars.png" rel="gallery_ck4koa5yj0039ucubdjna3b0t" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/first2codewars.png" itemprop="contentUrl">
               </a>
             
@@ -1556,7 +1724,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/summary_1812.png" rel="gallery_ck4j6u81g003k9oub3vxl6jw4" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/blog/images/summary_1812.png" rel="gallery_ck4koa5yl003bucubmrjkfcqf" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/blog/images/summary_1812.png" itemprop="contentUrl">
               </a>
             
@@ -1582,180 +1750,6 @@
         
       
     </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2018/12/17/0x01B.spell-problem-disaster/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/12/17/0x01B.spell-problem-disaster/" itemprop="url">
-                  单词拼写错误导致的"灾难"
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-12-17 17:34:35" itemprop="dateCreated datePublished" datetime="2018-12-17T17:34:35+08:00">2018-12-17</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/blog/images/WTMD-no-fuck.jpg" rel="gallery_ck4j6u81d003d9oubbj2lvd3i" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/blog/images/WTMD-no-fuck.jpg" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <p>本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/2018/12/17/0x01B.spell-problem-disaster/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </p></div>
 
     
 
@@ -1838,7 +1832,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">51</span>
+                    <span class="site-state-item-count">52</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2064,7 +2058,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">92</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">94</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

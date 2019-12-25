@@ -3,6 +3,30 @@
 
     
   <url>
+    <loc>https://taseikyo.github.io/2019/12/25/win10-single-sound-channel/</loc>
+    <lastmod>2019-12-25T02:21:47.673Z</lastmod>
+    <data>
+        <display>
+        <title>win10 下将如何将单声道变成双声道</title>
+        <pubTime>2019-12-25T02:17:33.000Z</pubTime>
+        
+        <tag>win10 </tag>
+         
+        <tag>mono </tag>
+         
+        <tag>sound </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://taseikyo.github.io/2019/12/24/0x031.taseikyo-2019-hust/</loc>
     <lastmod>2019-12-24T01:30:58.333Z</lastmod>
     <data>
@@ -56,9 +80,9 @@
         <title>PyQt5 多语言支持</title>
         <pubTime>2018-07-16T03:37:48.000Z</pubTime>
         
-        <tag>blog </tag>
-         
         <tag>python </tag>
+         
+        <tag>blog </tag>
          
         <tag>pytt5 </tag>
          
@@ -686,11 +710,11 @@
         <title>网易云电台</title>
         <pubTime>2017-12-05T07:06:09.000Z</pubTime>
         
-        <tag>netease-nloud </tag>
-         
         <tag>python </tag>
          
         <tag>crawler </tag>
+         
+        <tag>netease-nloud </tag>
          
         <tag>netease-radio </tag>
          
@@ -796,13 +820,13 @@
         <title>网易云歌词下载器</title>
         <pubTime>2017-08-25T10:50:05.000Z</pubTime>
         
+        <tag>netease-nloud </tag>
+         
         <tag>c++ </tag>
          
         <tag>qt </tag>
          
         <tag>lyric </tag>
-         
-        <tag>netease-nloud </tag>
          
          
            

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[win10 下将如何将单声道变成双声道]]></title>
+    <url>%2Fblog%2F2019%2F12%2F25%2Fwin10-single-sound-channel%2F</url>
+    <content type="text"><![CDATA[打开设置，然后进行如下选择： 设置-&gt;轻松使用-&gt;其他选项-&gt;单声道音频 之后看只有单声道的视频就变成双声道，比如看哔哩哔哩的 MIT 线性代数视频。 问题是选择之后再听那种 3D 环绕音乐就没有那种效果，这时关掉就行了。]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>mono</tag>
+        <tag>sound</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[“大数据” | 我到底在华科吃了些啥]]></title>
     <url>%2Fblog%2F2019%2F12%2F24%2F0x031.taseikyo-2019-hust%2F</url>
     <content type="text"><![CDATA[起因今天在东一一楼烧腊窗口恰饭，我点的是鸡排饭，然后我没说要啥汁，那个姐姐（感觉叫阿姨不太对:0）直接说：番茄是吧。我：？，我挺疑惑的，然后在她把饭递给我的时候问了句：你知道的？她：经常吃啊（笑）。 想了下好像也没有经常吃吧，虽然之前高中也有过类似的经历，那是因为吃拉面不要香菜、热干面不要葱、炒面炒粉不要葱，然后天天吃就被老板记住了。 很有趣的一次是吃热干面，老板没抬头看，就调好葱姜蒜芝麻酱准备递给我，然后看到我，说：哎呀，你不要葱，这碗给后面的同学，重新给你下一碗 2333。 扯远了，因为挺好奇的，于是就打算把今年这一年的吃饭记录都爬下来康康，我这一年都吃的是啥？ 数据获取从 校园卡服务平台 可以查到流水，开始我以为所谓的“导出所有”是把所有记录导出，结果跟“导出当前页流水”是一样的。 所以直接用 Python 写了个爬虫直接把今年（2019）所有月份数据都爬下来，去掉多余的信息，仅保存 时间、价格、食堂 这三项数据，然后存为 CSV 文件。 过程： 结果： 数据分析所以这一年到底吃了啥？下面就见分晓！ 首先将这些 csv 文件合并，使用 pandas 库很简单，下面就是： 1234def merge_all_files(): files = glob.glob("csv/*.csv") df = pd.concat([pd.read_csv(file) for file in files]) df.to_csv("csv/2019.csv", index=False, encoding='utf-8-sig') 截止到今天，每个月使用一卡通的消费次数（包括超市和自动售卖机）： 1&#123;1: 95, 2: 50, 3: 142, 4: 121, 5: 131, 6: 111, 7: 104, 8: 138, 9: 150, 10: 102, 11: 125, 12: 104&#125; 各个食堂窗口的食用情况（指的是刷卡次数，吃个晚饭可能会刷几次卡）TOP10 12345678910集贤楼食堂红案: 249集贤楼蒸菜净荤组: 123东一二楼特色菜品: 108集贤楼食堂商店: 99东一二楼华科速7: 84东一一楼蒸点稀食: 81东一二楼湘味小钵: 70东一一楼烧腊饭: 68东一二楼大众菜（一）: 66集贤楼食堂煎烙: 65 各个食堂的食用情况 1&#123;'东一': 581, '集贤楼': 575, '自助售货机': 9, '西一': 139, '百品屋': 8, '集锦园': 4, '校园网': 6, '图书馆': 1, '东学超市': 3, '东三': 27, '紫荆园': 4, '百景': 12, '喻园': 4&#125;]]></content>
@@ -452,8 +465,8 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>blog</tag>
         <tag>python</tag>
+        <tag>blog</tag>
         <tag>pytt5</tag>
       </tags>
   </entry>
@@ -566,9 +579,9 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>netease-nloud</tag>
         <tag>python</tag>
         <tag>crawler</tag>
+        <tag>netease-nloud</tag>
         <tag>netease-radio</tag>
       </tags>
   </entry>
@@ -625,10 +638,10 @@
         <category>C++</category>
       </categories>
       <tags>
+        <tag>netease-nloud</tag>
         <tag>c++</tag>
         <tag>qt</tag>
         <tag>lyric</tag>
-        <tag>netease-nloud</tag>
       </tags>
   </entry>
   <entry>
