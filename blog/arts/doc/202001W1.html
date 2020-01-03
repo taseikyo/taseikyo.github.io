@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>201906W1 · GitBook</title>
+        <title>202001W1 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="201906W2.html" />
     
-    
-    <link rel="prev" href="201905W4.html" />
+    <link rel="prev" href="201912W4.html" />
     
 
     </head>
@@ -220,7 +218,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.10" data-path="201906W1.html">
+        <li class="chapter " data-level="1.1.10" data-path="201906W1.html">
             
                 <a href="201906W1.html">
             
@@ -311,7 +309,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.17" data-path="202001W1.html">
+        <li class="chapter active" data-level="1.1.17" data-path="202001W1.html">
             
                 <a href="202001W1.html">
             
@@ -359,7 +357,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >201906W1</a>
+        <a href=".." >202001W1</a>
     </h1>
 </div>
 
@@ -374,71 +372,108 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="weekly-10">Weekly #10</h1>
+                                <h1 id="weekly-17">Weekly #17</h1>
 <blockquote>
-<p>@Date    : 2019-06-03 09:06:37</p>
+<p>@Date    : 2019-12-29 11:17:16</p>
 <p>@Author  : Lewis Tian (taseikyo@gmail.com)</p>
-<p>@Link    : <a href="https://taseikyo.github.io" target="_blank">https://taseikyo.github.io</a></p>
-<p>@Range   : 2019/06/03 - 2019/06/09</p>
+<p>@Link    : github.com/taseikyo</p>
+<p>@Range   : 2019-12-29 - 2020-01-04</p>
 </blockquote>
-<p><a href="https://unsplash.com/photos/jtTqIwvGiUg" target="_blank"><img src="../images/stefan-spassov-100276-unsplash.jpg" alt="Weekly #10"></a>
-Photo by Stefan Spassov on Unsplash</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li><a href="#algorithm">algorithm</a><ul>
-<li><a href="#1002-find-common-characters">1002. Find Common Characters</a></li>
-</ul>
-</li>
 <li><a href="#review">review</a></li>
 <li><a href="#tip">tip</a></li>
 <li><a href="#share">share</a></li>
 </ul>
-<h2 id="algorithm">algorithm</h2>
-<h3 id="1002-find-common-characters">1002. Find Common Characters</h3>
-<p><img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen.svg" alt="Easy"></p>
-<p>Given an array A of strings made only from lowercase letters, return a list of all characters that show up in all strings within the list (including duplicates).  For example, if a character occurs 3 times in all strings but not 4 times, you need to include that character three times in the final answer.</p>
-<p>You may return the answer in any order.</p>
-<pre><code>Example 1:
-
-Input: [&quot;bella&quot;,&quot;label&quot;,&quot;roller&quot;]
-Output: [&quot;e&quot;,&quot;l&quot;,&quot;l&quot;]
-Example 2:
-
-Input: [&quot;cool&quot;,&quot;lock&quot;,&quot;cook&quot;]
-Output: [&quot;c&quot;,&quot;o&quot;]
-</code></pre><p>Note:</p>
-<ul>
-<li>1 &lt;= A.length &lt;= 100</li>
-<li>1 &lt;= A[i].length &lt;= 100</li>
-<li>A[i][j] is a lowercase letter</li>
-</ul>
-<h4 id="solution">solution</h4>
-<p>Easy in Python, just one line.</p>
-<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span>
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">commonChars</span><span class="hljs-params">(self, A: List[str])</span> -&gt; List[str]:</span>
-        <span class="hljs-string">&apos;&apos;&apos;40 ms 99.38%    13.4 MB&apos;&apos;&apos;</span>
-        <span class="hljs-keyword">return</span> [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> reduce(and_, [set(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> A]) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(min(k.count(i) <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> A))]
-</code></pre>
-<ul>
-<li><a href="https://github.com/taseikyo/arts/blob/master/algorithm/201906W1/1002.FindCommonCharacters.py" target="_blank">Python</a></li>
-</ul>
 <h2 id="review">review</h2>
-<ul>
-<li><a href="https://dzone.com/articles/run-axon-server-on-kubernetes-or-virtual-machines" target="_blank">Run Axon Server on Kubernetes or Virtual Machines? - Greg Woods - dzone</a></li>
-<li><a href="https://github.com/taseikyo/arts/blob/master/review/Run_Axon_Server_on_Kubernetes_or_Virtual_Machines-GregWoods-dzone.md" target="_blank">[Markdown] Run Axon Server on Kubernetes or Virtual Machines? - Greg Woods - dzone</a></li>
-</ul>
-<p>This article discusses the issue of &quot;Running Axon Server on Kubernetes or virtual machines.&quot;</p>
-<p>Each method has several advantages and disadvantages, but I think it&apos;s better to use virtual machines.</p>
+<ol>
+<li><a href="https://blog.mindlessness.life/2019/11/17/the-language-agnostic-all-purpose-incredible-makefile.html" target="_blank">The Language Agnostic, All-Purpose, Incredible, Makefile</a></li>
+</ol>
+<p>This post teaches you how to write a <em>Makefile</em>.</p>
+<p>how to pass arguments to makefile:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Makefile:</span>
+schedule_flight_to_krakow:
+    <span class="hljs-built_in">echo</span> $(krakow_date) &gt; schedule_flight_to_krakow
+</code></pre>
+<pre><code class="lang-bash">$ make schedule_flight_to_krakow krakow_date=01/01/2020
+$ cat schedule_flight_to_krakow
+01/01/2020
+</code></pre>
+<blockquote>
+<p>It is essential to not attempt to define all of the commands up front. Updating and refining the Makefile is part of the development workflow itself; things change, and so does the Makefile over time. Because the Makefile is general and flexible, these changes are usually quite simple to implement. </p>
+</blockquote>
+<p>YES!</p>
+<ol>
+<li><a href="http://gromnitsky.users.sourceforge.net/articles/notes-for-new-make-users/" target="_blank">[Further Reading (not completed yet)] Notes for new Make users</a></li>
+</ol>
 <h2 id="tip">tip</h2>
-<ul>
-<li><a href="https://blog.csdn.net/zhaqiwen/article/details/7904515" target="_blank">[Chinese] link</a></li>
-</ul>
-<p>This article discusses the problem of &apos;an array of length 0 in C&apos;.</p>
+<ol>
+<li>How to use gitbook</li>
+</ol>
+<p>Here is a <a href="http://gitbook.zhangjikai.com/structure.html" target="_blank">simple intro</a> and <a href="https://www.cnblogs.com/mingyue5826/p/10307051.html" target="_blank">book.json config</a>.</p>
+<p>The follow is a simple GitBook structure. <em>book.json</em> is like a config file, including <em>title</em>, <em>author</em>, <em>plugins</em> etc.</p>
+<pre><code>.
+&#x251C;&#x2500;&#x2500; book.json
+&#x251C;&#x2500;&#x2500; README.md
+&#x251C;&#x2500;&#x2500; SUMMARY.md
+&#x251C;&#x2500;&#x2500; chapter-1/
+|   &#x251C;&#x2500;&#x2500; README.md
+|   &#x2514;&#x2500;&#x2500; something.md
+&#x2514;&#x2500;&#x2500; chapter-2/
+    &#x251C;&#x2500;&#x2500; README.md
+    &#x2514;&#x2500;&#x2500; something.md
+</code></pre><p>To <a href="https://blog.csdn.net/vincentuva/article/details/84782629" target="_blank">install plugins</a>, you need to put the plugins into  the <em>plugins</em> field of the <em>book.json</em> file and then run <code>gitbook install</code> cmd.</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;Gitbook Use&quot;</span>,
+    <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;Lewis Tian&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;My daily tasks desc.&quot;</span>,
+    <span class="hljs-string">&quot;language&quot;</span>: <span class="hljs-string">&quot;en&quot;</span>,
+    <span class="hljs-string">&quot;links&quot;</span>: {
+        <span class="hljs-string">&quot;sidebar&quot;</span>: {
+            <span class="hljs-string">&quot;Home&quot;</span>: <span class="hljs-string">&quot;https://github.com/taseikyo&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;mathjax&quot;</span>,
+        <span class="hljs-string">&quot;splitter&quot;</span>,
+        <span class="hljs-string">&quot;github-buttons&quot;</span>,
+        <span class="hljs-string">&quot;copy-code-button&quot;</span>,
+        <span class="hljs-string">&quot;-search&quot;</span>,
+        <span class="hljs-string">&quot;search-plus&quot;</span>,
+        <span class="hljs-string">&quot;expandable-chapters-small&quot;</span>,
+        <span class="hljs-string">&quot;anchor-navigation-ex&quot;</span>,
+        <span class="hljs-string">&quot;code&quot;</span>,
+        <span class="hljs-string">&quot;advanced-emoji&quot;</span>
+    ]
+}
+</code></pre>
+<ol>
+<li><a href="https://stackoverflow.com/questions/7698231/python-pil-draw-multiline-text-on-image/7698300#7698300" target="_blank">[Python] PIL draw multiline text on image</a></li>
+</ol>
+<p>Suppose the <em>text</em> is what we want to draw on the image. Use <a href="https://docs.python.org/2/library/textwrap.html#textwrap.wrap" target="_blank">textwrap.wrap</a> to split the <em>text</em> into a list of lines, the maximum width of which is specified by <em>width</em>.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> textwrap
+
+lines = textwrap.wrap(text, width=<span class="hljs-number">40</span>)
+y_text = h
+<span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:
+    width, height = font.getsize(line)
+    draw.text(((w - width)/<span class="hljs-number">2</span>, y_text), line, font=font, fill=FOREGROUND)
+    y_text += height
+</code></pre>
 <h2 id="share">share</h2>
-<ul>
-<li><a href="https://www.cnblogs.com/alantu2018/p/9177356.html" target="_blank">[Chinese] understanding the Linux memory allocation</a></li>
-</ul>
-<p>This article introduces the memory allocation and management of Linux and is worth reading.</p>
+<ol>
+<li><a href="https://phys.org/news/2019-09-oak-trees-southern-cities-natural.html" target="_blank">Oak trees in Southern U.S. cities are natural urban air filters</a></li>
+</ol>
+<p>Researchers at the University of North Texas have found that two oak tree species, post oak and live oak, that are widespread across the U.S. South remove black carbon from the urban atmosphere.</p>
+<p>The results, published in the journal Environmental Science &amp; Technology, show that post oak trees capture approximately twice as much black carbon as live oak trees.</p>
+<p>The findings may offer a natural way to improve climate and air quality.</p>
+<ol>
+<li><p>Exokernel: An Operating System Architecture for Application-Level Resource Management</p>
+</li>
+<li><p><a href="http://www.cs.cornell.edu/Info/Courses/Spring-97/CS614/exo.html" target="_blank">http://www.cs.cornell.edu/Info/Courses/Spring-97/CS614/exo.html</a></p>
+</li>
+</ol>
+<p><img src="https://github.com/taseikyo/arts/blob/master/images/exokernel_structure.gif" alt="exokernel" title="The Structure of Exokernel-based systems"></p>
 
                                 
                                 </section>
@@ -466,14 +501,10 @@ Output: [&quot;c&quot;,&quot;o&quot;]
 
             
                 
-                <a href="201905W4.html" class="navigation navigation-prev " aria-label="Previous page: 201905W4">
+                <a href="201912W4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 201912W4">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="201906W2.html" class="navigation navigation-next " aria-label="Next page: 201906W2">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -482,7 +513,7 @@ Output: [&quot;c&quot;,&quot;o&quot;]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"201906W1","level":"1.1.10","depth":2,"next":{"title":"201906W2","level":"1.1.11","depth":2,"path":"doc/201906W2.md","ref":"doc/201906W2.md","articles":[]},"previous":{"title":"201905W4","level":"1.1.9","depth":2,"path":"doc/201905W4.md","ref":"doc/201905W4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/201906W1.md","mtime":"2020-01-03T02:46:16.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-03T02:46:17.856Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"202001W1","level":"1.1.17","depth":2,"previous":{"title":"201912W4","level":"1.1.16","depth":2,"path":"doc/201912W4.md","ref":"doc/201912W4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/202001W1.md","mtime":"2020-01-03T02:46:16.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-03T02:46:17.856Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
