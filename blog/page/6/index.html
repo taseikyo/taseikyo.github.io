@@ -374,6 +374,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2018/05/03/0x00C.omnetpp-ini-open-error/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/05/03/0x00C.omnetpp-ini-open-error/" itemprop="url">
+                  solve omnetpp run error
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-03 15:51:59" itemprop="dateCreated datePublished" datetime="2018-05-03T15:51:59+08:00">2018-05-03</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
+<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2018/04/13/0x00B.MPKI-RBL-BLP-SPEC/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -812,7 +967,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" rel="gallery_ck4koa5xm001hucubbkiiqbl8" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" rel="gallery_ck524czrx000gj0ub170c45n9" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" itemprop="contentUrl">
               </a>
             
@@ -1495,160 +1650,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/blog/2017/10/14/0x005.HUST-RANk/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2017/10/14/0x005.HUST-RANk/" itemprop="url">
-                  华中科技大学贴吧牛人排行榜数据分析
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-10-14 22:25:15" itemprop="dateCreated datePublished" datetime="2017-10-14T22:25:15+08:00">2017-10-14</time>
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/LewisTian/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1698,7 +1699,7 @@
                 
                   <a href="/blog/archives/">
                 
-                    <span class="site-state-item-count">52</span>
+                    <span class="site-state-item-count">53</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1928,7 +1929,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">94</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">97</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1982,7 +1989,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright"> &copy; 2017 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright"> &copy; 2017 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

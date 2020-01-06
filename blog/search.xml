@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Xshell 无法连接服务器]]></title>
+    <url>%2Fblog%2F2020%2F01%2F06%2F0x033.xshell-cannot-connet-ubuntu-server%2F</url>
+    <content type="text"><![CDATA[上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。 最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>xshell</tag>
+        <tag>ubuntu</tag>
+        <tag>ubuntu1804</tag>
+        <tag>ping</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win10 下将如何将单声道变成双声道]]></title>
-    <url>%2Fblog%2F2019%2F12%2F25%2Fwin10-single-sound-channel%2F</url>
+    <url>%2Fblog%2F2019%2F12%2F25%2F0x032.win10-single-sound-channel%2F</url>
     <content type="text"><![CDATA[打开设置，然后进行如下选择： 设置-&gt;轻松使用-&gt;其他选项-&gt;单声道音频 之后看只有单声道的视频就变成双声道，比如看哔哩哔哩的 MIT 线性代数视频。 问题是选择之后再听那种 3D 环绕音乐就没有那种效果，这时关掉就行了。]]></content>
       <categories>
         <category>Study</category>
@@ -294,8 +308,8 @@
         <category>essay</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>javascript</tag>
+        <tag>python</tag>
         <tag>codewars</tag>
       </tags>
   </entry>
@@ -607,11 +621,11 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>javascript</tag>
         <tag>python</tag>
         <tag>crawler</tag>
-        <tag>echarts</tag>
-        <tag>javascript</tag>
         <tag>tieba</tag>
+        <tag>echarts</tag>
       </tags>
   </entry>
   <entry>
@@ -622,12 +636,12 @@
         <category>Python</category>
       </categories>
       <tags>
+        <tag>javascript</tag>
         <tag>python</tag>
         <tag>crawler</tag>
+        <tag>echarts</tag>
         <tag>ram</tag>
         <tag>jingdong</tag>
-        <tag>echarts</tag>
-        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>

@@ -3,7 +3,33 @@
 
     
   <url>
-    <loc>https://taseikyo.github.io/2019/12/25/win10-single-sound-channel/</loc>
+    <loc>https://taseikyo.github.io/2020/01/06/0x033.xshell-cannot-connet-ubuntu-server/</loc>
+    <lastmod>2020-01-06T07:23:43.359Z</lastmod>
+    <data>
+        <display>
+        <title>Xshell 无法连接服务器</title>
+        <pubTime>2020-01-06T07:18:30.000Z</pubTime>
+        
+        <tag>xshell </tag>
+         
+        <tag>ubuntu </tag>
+         
+        <tag>ubuntu1804 </tag>
+         
+        <tag>ping </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://taseikyo.github.io/2019/12/25/0x032.win10-single-sound-channel/</loc>
     <lastmod>2019-12-25T02:21:47.673Z</lastmod>
     <data>
         <display>
@@ -474,9 +500,9 @@
         <title>codewars 初体验 XD</title>
         <pubTime>2019-01-25T08:48:33.000Z</pubTime>
         
-        <tag>python </tag>
-         
         <tag>javascript </tag>
+         
+        <tag>python </tag>
          
         <tag>codewars </tag>
          
@@ -762,15 +788,15 @@
         <title>华中科技大学贴吧牛人排行榜数据分析</title>
         <pubTime>2017-10-14T14:25:15.000Z</pubTime>
         
+        <tag>javascript </tag>
+         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
-        <tag>echarts </tag>
-         
-        <tag>javascript </tag>
-         
         <tag>tieba </tag>
+         
+        <tag>echarts </tag>
          
          
            
@@ -790,17 +816,17 @@
         <title>Python爬取京东内存条数据并作简单分析</title>
         <pubTime>2017-10-10T10:17:56.000Z</pubTime>
         
+        <tag>javascript </tag>
+         
         <tag>python </tag>
          
         <tag>crawler </tag>
          
+        <tag>echarts </tag>
+         
         <tag>ram </tag>
          
         <tag>jingdong </tag>
-         
-        <tag>echarts </tag>
-         
-        <tag>javascript </tag>
          
          
            
