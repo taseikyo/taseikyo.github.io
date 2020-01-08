@@ -3,7 +3,57 @@
 
     
   <url>
-    <loc>https://taseikyo.github.io/2019/12/25/win10-single-sound-channel/</loc>
+    <loc>https://taseikyo.github.io/2020/01/08/0x034.vscode-connect-remote-server-via-jump-server/</loc>
+    <lastmod>2020-01-08T10:43:10.709Z</lastmod>
+    <data>
+        <display>
+        <title>VS Code 通过跳板机连接服务器</title>
+        <pubTime>2020-01-08T10:30:28.000Z</pubTime>
+        
+        <tag>linux </tag>
+         
+        <tag>vscode </tag>
+         
+        <tag>ssh </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://taseikyo.github.io/2020/01/06/0x033.xshell-cannot-connet-ubuntu-server/</loc>
+    <lastmod>2020-01-06T07:23:43.359Z</lastmod>
+    <data>
+        <display>
+        <title>Xshell 无法连接服务器</title>
+        <pubTime>2020-01-06T07:18:30.000Z</pubTime>
+        
+        <tag>xshell </tag>
+         
+        <tag>ubuntu </tag>
+         
+        <tag>ubuntu1804 </tag>
+         
+        <tag>ping </tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="https://taseikyo.github.io/categories/Study/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://taseikyo.github.io/2019/12/25/0x032.win10-single-sound-channel/</loc>
     <lastmod>2019-12-25T02:21:47.673Z</lastmod>
     <data>
         <display>
@@ -104,9 +154,9 @@
         <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
         <pubTime>2019-12-05T08:05:44.000Z</pubTime>
         
-        <tag>server </tag>
-         
         <tag>vscode </tag>
+         
+        <tag>server </tag>
          
         <tag>code </tag>
          
@@ -766,11 +816,11 @@
          
         <tag>crawler </tag>
          
+        <tag>tieba </tag>
+         
         <tag>echarts </tag>
          
         <tag>javascript </tag>
-         
-        <tag>tieba </tag>
          
          
            
@@ -794,13 +844,13 @@
          
         <tag>crawler </tag>
          
-        <tag>ram </tag>
-         
-        <tag>jingdong </tag>
-         
         <tag>echarts </tag>
          
         <tag>javascript </tag>
+         
+        <tag>ram </tag>
+         
+        <tag>jingdong </tag>
          
          
            
@@ -820,13 +870,13 @@
         <title>网易云歌词下载器</title>
         <pubTime>2017-08-25T10:50:05.000Z</pubTime>
         
-        <tag>netease-nloud </tag>
-         
         <tag>c++ </tag>
          
         <tag>qt </tag>
          
         <tag>lyric </tag>
+         
+        <tag>netease-nloud </tag>
          
          
            
@@ -974,9 +1024,9 @@
         <title>win10台式机(插入耳机)没有声音</title>
         <pubTime>2018-11-01T11:32:27.000Z</pubTime>
         
-        <tag>no-voice </tag>
-         
         <tag>win10 </tag>
+         
+        <tag>no-voice </tag>
          
          
            
@@ -1170,9 +1220,9 @@
         <title>win10笔记本麦克风没声音</title>
         <pubTime>2018-10-20T15:46:48.000Z</pubTime>
         
-        <tag>microphone </tag>
-         
         <tag>no-voice </tag>
+         
+        <tag>microphone </tag>
          
         <tag>daily </tag>
          
