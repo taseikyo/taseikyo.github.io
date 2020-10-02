@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>RAM-JD</title>
+    <script src="https://cdn.bootcss.com/echarts/3.7.2/echarts.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/non-responsive.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #main{
+            width: 960px;
+            text-align: center;
+            margin: 0px auto;
+        }
+        .chart{
+            width: 800px;
+            height:600px;
+            margin: 0px auto;
+        }
+        iframe{
+            margin-top: 10px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://github.com/LewisTian/RAM-JD" target="_blank">RAM-JD</a>
+        </div>
+        <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
+        <div id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="https://lewistian.github.io/">Home</a></li>
+            <li><a href="https://github.com/LewisTian/RAM-JD" target="_blank">About</a></li>
+            <li><a href="Mailto:taseikyo@gmail.com">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <iframe src="https://ghbtns.com/github-btn.html?user=LewisTian&repo=RAM-JD&type=star&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="50px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=LewisTian&repo=RAM-JD&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="50px" ></iframe>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div id="main">
+        <div><h1>京东内存条数据分析</h1></div>
+        <hr >
+        <div id="shop_title"><h2>各店铺所占比例</h2></div>
+        <div id="shop"  class="chart"></div>
+        <div id="ram_title"><h2>不同容量内存条所占比例</h2></div>
+        <div id="ram"  class="chart"></div>
+        <div id="price_title"><h2>内存条价格区间</h2></div>
+        <div id="price"  class="chart"></div>
+    </div>
+</body>
+<script type="text/javascript">
+    var shop = echarts.init(document.getElementById('shop'));
+    var ram = echarts.init(document.getElementById('ram'));
+    var price = echarts.init(document.getElementById('price'));
+    var o1 = {
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            type: 'scroll',
+            orient: 'vertical',
+            right: 5,
+            top: 20,
+            bottom: 20,
+            data: ['鼎信电脑办公专营店','联想400配件专卖店','瑞福德数码专营店','千诚致远专营店','悦智数码专营店','纽科旗舰店','森麦数码专卖店','简麦创想旗舰店','金士顿官方旗舰店','绿速通存储专营店','PC-home存储专营店','飞腾数码专营店','信维电子专营店','JUHOR数码专营店','宇瞻数码旗舰店','美商海盗船官方旗舰店','存储先锋旗舰店','佳运汇通生活家电专营店','格雷福斯存储专营店','珑京DIY专营店','美商海盗船专卖店','十铨官方旗舰店','山田电器海外购专营店','余新电脑装机配件专营店','谷美配件专营店','威刚官方旗舰店','特科芯存储旗舰店','新创云电脑旗舰店','金泰克官方旗舰店','光威自营旗舰店','英睿达官方旗舰店','北京鑫锐驰电脑配件专营店','奥都数码专营店','全何存储官方旗舰店','AXONUS电子海外专营店','华志硕电脑专营店','美商海盗船电竞专卖店','贝尔(上海）NUC专营店','西部数码IT专营店','KLEVV内存旗舰店','创见旗舰店','亚州龙ANUCELL旗舰店','蔚洋电脑专营店','子希DIY电脑','芝奇官方旗舰店']
+        },
+        series : [
+            {
+                name: '笔记本内存条',
+                type: 'pie',
+                radius : '50%',
+                center: ['45%', '60%'],
+                data: [
+                    {value:725,name:'鼎信电脑办公专营店'},
+                    {value:539,name:'联想400配件专卖店'},
+                    {value:248,name:'瑞福德数码专营店'},
+                    {value:233,name:'千诚致远专营店'},
+                    {value:88,name:'悦智数码专营店'},
+                    {value:80,name:'纽科旗舰店'},
+                    {value:72,name:'森麦数码专卖店'},
+                    {value:53,name:'简麦创想旗舰店'},
+                    {value:49,name:'金士顿官方旗舰店'},
+                    {value:33,name:'绿速通存储专营店'},
+                    {value:30,name:'PC-home存储专营店'},
+                    {value:29,name:'飞腾数码专营店'},
+                    {value:22,name:'信维电子专营店'},
+                    {value:21,name:'JUHOR数码专营店'},
+                    {value:21,name:'宇瞻数码旗舰店'},
+                    {value:19,name:'美商海盗船官方旗舰店'},
+                    {value:19,name:'存储先锋旗舰店'},
+                    {value:16,name:'佳运汇通生活家电专营店'},
+                    {value:16,name:'格雷福斯存储专营店'},
+                    {value:12,name:'珑京DIY专营店'},
+                    {value:12,name:'美商海盗船专卖店'},
+                    {value:11,name:'十铨官方旗舰店'},
+                    {value:10,name:'山田电器海外购专营店'},
+                    {value:10,name:'余新电脑装机配件专营店'},
+                    {value:9,name:'谷美配件专营店'},
+                    {value:8,name:'威刚官方旗舰店'},
+                    {value:7,name:'特科芯存储旗舰店'},
+                    {value:6,name:'新创云电脑旗舰店'},
+                    {value:6,name:'金泰克官方旗舰店'},
+                    {value:6,name:'光威自营旗舰店'},
+                    {value:6,name:'英睿达官方旗舰店'},
+                    {value:5,name:'北京鑫锐驰电脑配件专营店'},
+                    {value:5,name:'奥都数码专营店'},
+                    {value:5,name:'全何存储官方旗舰店'},
+                    {value:5,name:'AXONUS电子海外专营店'},
+                    {value:5,name:'华志硕电脑专营店'},
+                    {value:4,name:'美商海盗船电竞专卖店'},
+                    {value:3,name:'贝尔(上海）NUC专营店'},
+                    {value:3,name:'西部数码IT专营店'},
+                    {value:2,name:'KLEVV内存旗舰店'},
+                    {value:2,name:'创见旗舰店'},
+                    {value:2,name:'亚州龙ANUCELL旗舰店'},
+                    {value:1,name:'蔚洋电脑专营店'},
+                    {value:1,name:'子希DIY电脑'},
+                    {value:1,name:'芝奇官方旗舰店'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    var o2 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            data: ['8G','4G','2G','16G','32G','1G','512M']
+        },
+        series: [
+            {
+                name: '数量',
+                type: 'bar',
+                data: [1170, 1154, 307, 191, 27, 20, 4]
+            }
+        ]
+    };
+
+    var o3 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '5%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['400','600','700','300','200','1000','100','500','800','1100','1300','1200','1400','900','1500','6000','1600','3200','3000','2900','2400','2500','5000','2800','2700','2200']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'数量',
+                type:'line',
+                stack: '总量',
+                data:[699,470,433,193,144,142,84,78,48,37,23,21,15,14,11,10,9,8,5,5,4,2,2,1,1,1]
+            }
+        ]
+    };
+    shop.setOption(o1);
+    ram.setOption(o2);
+    price.setOption(o3);
+</script>
+</html>

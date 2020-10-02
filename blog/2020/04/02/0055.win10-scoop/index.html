@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言今天逛 GitHub 看到 FluentTerminal，想到最近用 Windows Terminal 各种不舒服，如启动贼慢，历史记录没有。在 WT 没出来之前一直用的 Cmder，它里面带了很多 Linux 中的命令（grep，find，rm，vi，vim etc.），后来为了尝鲜 WT 放弃了 Cmder，现在又想重新回到 Cmder 的怀抱了 2333。 扯远了，安装 FluentTe">
+<meta name="keywords" content="windows,win10,scoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Windows&#x2F;Scoop】Scoop 的安装使用">
+<meta property="og:url" content="https://taseikyo.github.io/2020/04/02/0055.win10-scoop/index.html">
+<meta property="og:site_name" content="Tian&#39;s Daily Life">
+<meta property="og:description" content="前言今天逛 GitHub 看到 FluentTerminal，想到最近用 Windows Terminal 各种不舒服，如启动贼慢，历史记录没有。在 WT 没出来之前一直用的 Cmder，它里面带了很多 Linux 中的命令（grep，find，rm，vi，vim etc.），后来为了尝鲜 WT 放弃了 Cmder，现在又想重新回到 Cmder 的怀抱了 2333。 扯远了，安装 FluentTe">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-02T07:27:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【Windows&#x2F;Scoop】Scoop 的安装使用">
+<meta name="twitter:description" content="前言今天逛 GitHub 看到 FluentTerminal，想到最近用 Windows Terminal 各种不舒服，如启动贼慢，历史记录没有。在 WT 没出来之前一直用的 Cmder，它里面带了很多 Linux 中的命令（grep，find，rm，vi，vim etc.），后来为了尝鲜 WT 放弃了 Cmder，现在又想重新回到 Cmder 的怀抱了 2333。 扯远了，安装 FluentTe">
+
+<link rel="canonical" href="https://taseikyo.github.io/2020/04/02/0055.win10-scoop/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>【Windows/Scoop】Scoop 的安装使用 | Tian's Daily Life</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tian's Daily Life</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Everything that kills me makes me feel alive.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-netease">
+
+    <a href="/blog/netease" rel="section"><i class="fa fa-fw fa-music"></i>netease</a>
+
+  </li>
+        <li class="menu-item menu-item-c++">
+
+    <a href="/blog/categories/C/" rel="section"><i class="fa fa-fw fa-file-code-o"></i>c++</a>
+
+  </li>
+        <li class="menu-item menu-item-python">
+
+    <a href="/blog/categories/Python/" rel="section"><i class="fa fa-fw fa-codepen"></i>python</a>
+
+  </li>
+        <li class="menu-item menu-item-javascript">
+
+    <a href="/blog/categories/JavaScript/" rel="section"><i class="fa fa-fw fa-code"></i>javascript</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/04/02/0055.win10-scoop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Windows/Scoop】Scoop 的安装使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-02 14:25:40" itemprop="dateCreated datePublished" datetime="2020-04-02T14:25:40+08:00">2020-04-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天逛 GitHub 看到 <a href="https://github.com/felixse/FluentTerminal" target="_blank" rel="noopener">FluentTerminal</a>，想到最近用 <a href="https://github.com/microsoft/terminal" target="_blank" rel="noopener">Windows Terminal</a> 各种不舒服，如启动贼慢，历史记录没有。在 WT 没出来之前一直用的 <a href="https://cmder.net/" target="_blank" rel="noopener">Cmder</a>，它里面带了很多 Linux 中的命令（grep，find，rm，vi，vim etc.），后来为了尝鲜 WT 放弃了 Cmder，现在又想重新回到 Cmder 的怀抱了 2333。</p>
+<p>扯远了，安装 FluentTerminal 有几种方式，其中有一种就是用 <a href="https://scoop.sh/" target="_blank" rel="noopener">Scoop</a> 来安装，之前在实验室电脑上安装过，默认安装位置和安装应用都在 C 盘，强迫症表示很难受，搜了一下其实可以自定义安装位置和应用安装位置的，每次都要搜，索性这次记录下来。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Scoop 是什么，简单来说，Scoop 是 Windows 下的一款包管理器，类似于 Ubuntu 中的 apt，centOS 中的 yum，有了 Scoop 很多软件可以不用去找它的安装包而是可以直接 <code>scoop install xxx</code> 搞定，当然 Scoop 也并非所有软件都支持，你可以先用 <code>scoop search xxx</code> 搜一下，看是否能找到，如果有就可以直接安装，如果没有，那很抱歉，只能自行去找安装包。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先检查 Scoop 所需环境是否满足，见其 GitHub <a href="https://github.com/lukesampson/scoop#requirementsRequirements" target="_blank" rel="noopener">Requirements</a></p>
+<ul>
+<li>Windows 7 SP1+ / Windows Server 2008+</li>
+<li><a href="https://aka.ms/wmf5download" target="_blank" rel="noopener">PowerShell 5 +</a></li>
+<li><a href="https://www.microsoft.com/net/download" target="_blank" rel="noopener">.NET Framework 4.5 +</a></li>
+</ul>
+<p>如果满足下面就可以安装了。</p>
+<ol>
+<li>自定义安装位置</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置环境变量</span></span><br><span class="line"><span class="variable">$env</span>:SCOOP=<span class="string">'D:\Programs\scoop'</span></span><br><span class="line">[Environment]::SetEnvironmentVariable(<span class="string">'SCOOP'</span>, <span class="variable">$env</span>:SCOOP, <span class="string">'User'</span>)</span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">iwr -useb get.scoop.sh | iex</span><br></pre></td></tr></table></figure>
+<p>测试是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">taseikyo :: D:\Programs\scoop » scoop <span class="built_in">help</span></span><br><span class="line">Usage: scoop &lt;<span class="built_in">command</span>&gt; [&lt;args&gt;]</span><br><span class="line"></span><br><span class="line">Some useful commands are:</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span>       Manage scoop aliases</span><br><span class="line">bucket      Manage Scoop buckets</span><br><span class="line">cache       Show or clear the download cache</span><br><span class="line">checkup     Check <span class="keyword">for</span> potential problems</span><br><span class="line">cleanup     Cleanup apps by removing old versions</span><br><span class="line">config      Get or <span class="built_in">set</span> configuration values</span><br><span class="line">create      Create a custom app manifest</span><br><span class="line">depends     List dependencies <span class="keyword">for</span> an app</span><br><span class="line"><span class="built_in">export</span>      Exports (an importable) list of installed apps</span><br><span class="line"><span class="built_in">help</span>        Show <span class="built_in">help</span> <span class="keyword">for</span> a <span class="built_in">command</span></span><br><span class="line">hold        Hold an app to <span class="built_in">disable</span> updates</span><br><span class="line">home        Opens the app homepage</span><br><span class="line">info        Display information about an app</span><br><span class="line">install     Install apps</span><br><span class="line">list        List installed apps</span><br><span class="line">prefix      Returns the path to the specified app</span><br><span class="line">reset       Reset an app to resolve conflicts</span><br><span class="line">search      Search available apps</span><br><span class="line">status      Show status and check <span class="keyword">for</span> new app versions</span><br><span class="line">unhold      Unhold an app to <span class="built_in">enable</span> updates</span><br><span class="line">uninstall   Uninstall an app</span><br><span class="line">update      Update apps, or Scoop itself</span><br><span class="line">virustotal  Look <span class="keyword">for</span> app<span class="string">'s hash on virustotal.com</span></span><br><span class="line"><span class="string">which       Locate a shim/executable (similar to '</span><span class="built_in">which</span><span class="string">' on Linux)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Type '</span>scoop <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;<span class="string">' to get help for a specific command.</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>自定义应用全局安装位置</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置环境变量（需要管理员权限）</span></span><br><span class="line"><span class="variable">$env</span>:SCOOP_GLOBAL=<span class="string">'D:\Programs\scoop'</span></span><br><span class="line">[Environment]::SetEnvironmentVariable(<span class="string">'SCOOP_GLOBAL'</span>, <span class="variable">$env</span>:SCOOP_GLOBAL, <span class="string">'Machine'</span>)</span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line">scoop install -g sudo</span><br><span class="line">sudo scoop install -g 7zip curl grep</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/blog/images/wechatpay.jpg" alt="Lewis Tian WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/blog/images/alipay.jpg" alt="Lewis Tian Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/blog/images/wechat-qcode.jpg">
+            <span class="icon">
+              <i class="fa fa-wechat"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/windows/" rel="tag"># windows</a>
+              <a href="/blog/tags/win10/" rel="tag"># win10</a>
+              <a href="/blog/tags/scoop/" rel="tag"># scoop</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2020/03/16/0054.ubuntu-zsh-autojump-autosuggestions/" rel="prev" title="Ubuntu 安装 oh-my-zsh、autojump 和 autosuggestions">
+      <i class="fa fa-chevron-left"></i> Ubuntu 安装 oh-my-zsh、autojump 和 autosuggestions
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2020/05/28/0056.git-push-input-username-and-passwd/" rel="next" title="git push 每次都要输入用户名密码的问题">
+      git push 每次都要输入用户名密码的问题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lewis Tian"
+      src="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+  <p class="site-author-name" itemprop="name">Lewis Tian</p>
+  <div class="site-description" itemprop="description">There is no destination for pursuit of knowledge in the finite lifetime.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script type="text/javascript" src="/blog/js/click-animation.js"></script>
+  <script type="text/javascript" src="/blog/js/one.js"></script> 
+  </style>
+<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
