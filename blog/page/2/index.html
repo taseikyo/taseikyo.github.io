@@ -210,6 +210,175 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/03/16/0054.ubuntu-zsh-autojump-autosuggestions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/03/16/0054.ubuntu-zsh-autojump-autosuggestions/" class="post-title-link" itemprop="url">Ubuntu 安装 oh-my-zsh、autojump 和 autosuggestions</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-16 16:57:03" itemprop="dateCreated datePublished" datetime="2020-03-16T16:57:03+08:00">2020-03-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>每次重装系统都会重新百度怎么安装 <em>oh-my-zsh</em> 索性记录下来</p>
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh</span><br></pre></td></tr></table></figure>
+<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></span><br></pre></td></tr></table></figure>
+<p>替换自己默认的 bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure>
+<p>“taseikyo:x:1000:1000::/home/taseikyo:/bin/bash” → “taseikyo:x:1000:1000::/home/taseikyo:/bin/zsh”</p>
+<p>修改主题</p>
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh/wiki/Themes</a></li>
+</ul>
+<p>上面连接中给了很多主题，但是我习惯了 agnoster</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>修改 “ZSH_THEME” 为 “agnoster”</p>
+<p>退出重新登录就好了</p>
+<h2 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h2><p>当你习惯了 autojump 操作之后，没了它就会觉得十分别扭</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install autojump</span><br></pre></td></tr></table></figure>
+<p>在 zsh 的配置文件中加上 <code>. /usr/share/autojump/autojump.sh</code></p>
+<p>最后 <code>source ~/.zshrc</code> 大功告成！</p>
+<p>哦对了，记得把 <code>alias gs=&quot;git status&quot;</code> 也写入配置文件。</p>
+<h2 id="autosuggestions"><a href="#autosuggestions" class="headerlink" title="autosuggestions"></a>autosuggestions</h2><p>自动补全命令的功能也是必不可少的。</p>
+<ol>
+<li>将该插件到 <code>.oh-my-zsh</code> 的插件目录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/zsh-users/zsh-autosuggestions <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>启用该插件</li>
+</ol>
+<p>编辑配置文件，找到 “plugins=(git)” 并修改为 “plugins=(git zsh-autosuggestions)”<br>然后 source 配置文件即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/03/09/0053.vmware-ubuntu1910-no-network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/03/09/0053.vmware-ubuntu1910-no-network/" class="post-title-link" itemprop="url">VMware 安装 Ubuntu1910 虚拟机无法上网</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-09 12:44:13" itemprop="dateCreated datePublished" datetime="2020-03-09T12:44:13+08:00">2020-03-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>参考下面文章：</p>
+<ul>
+<li><a href="http://www.udaxia.com/wtjd/13861.html" target="_blank" rel="noopener">http://www.udaxia.com/wtjd/13861.html</a></li>
+</ul>
+<p>上面文章中给出了 4 种方法，其实我就试了两种，起作用的是最后一种。</p>
+<p>第二种是修改虚拟机属性，将 “硬件” “网络适配器” 改为 “NAT模式（N）：用于共享主机的IP地址”，当然这种办法没用，因为本来默认就是这个选项。</p>
+<p>最后一种是打开 “编辑” “虚拟网络编辑器”，直接恢复默认设置，在这个操作之前需要关闭虚拟机，之后会有卸载然后重新安装网络服务的过程，完成之后打开虚拟机，使用 ping 命令测试：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tian@hust:~/桌面$ ping baidu.com</span><br><span class="line">PING baidu.com (39.156.69.79) 56(84) bytes of data.</span><br><span class="line">64 bytes from 39.156.69.79 (39.156.69.79): icmp_seq=2 ttl=128 time=37.3 ms</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>打开火狐，输入 baidu.com 网页正常打开 👍</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -483,29 +652,14 @@
 <p>想了下好像也没有经常吃吧，虽然之前高中也有过类似的经历，那是因为吃拉面不要香菜、热干面不要葱、炒面炒粉不要葱，然后天天吃就被老板记住了。</p>
 <p>很有趣的一次是吃热干面，老板没抬头看，就调好葱姜蒜芝麻酱准备递给我，然后看到我，说：哎呀，你不要葱，这碗给后面的同学，重新给你下一碗 2333。</p>
 <p>扯远了，因为挺好奇的，于是就打算把今年这一年的吃饭记录都爬下来康康，我这一年都吃的是啥？</p>
-<h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><p>从 <a href="http://ecard.hust.edu.cn/Default.aspx" target="_blank" rel="noopener">校园卡服务平台</a> 可以查到流水，开始我以为所谓的“导出所有”是把所有记录导出，结果跟“导出当前页流水”是一样的。</p>
-<p>所以直接用 Python 写了个爬虫直接把今年（2019）所有月份数据都爬下来，去掉多余的信息，仅保存 <em>时间</em>、<em>价格</em>、<em>食堂</em> 这三项数据，然后存为 CSV 文件。</p>
-<ul>
-<li>过程：</li>
-</ul>
-<p><img data-src="/blog/images/ecard/record.gif" alt title="数据获取过程"></p>
-<ul>
-<li>结果：</li>
-</ul>
-<p><img data-src="/blog/images/ecard/TIM20191223152311.png" alt title="得到的数据"></p>
-<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p>所以这一年到底吃了啥？下面就见分晓！</p>
-<p>首先将这些 csv 文件合并，使用 <code>pandas</code> 库很简单，下面就是：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_all_files</span><span class="params">()</span>:</span></span><br><span class="line">    files = glob.glob(<span class="string">"csv/*.csv"</span>)</span><br><span class="line">    df = pd.concat([pd.read_csv(file) <span class="keyword">for</span> file <span class="keyword">in</span> files])</span><br><span class="line">    df.to_csv(<span class="string">"csv/2019.csv"</span>, index=<span class="literal">False</span>, encoding=<span class="string">'utf-8-sig'</span>)</span><br></pre></td></tr></table></figure>
-<p>截止到今天，每个月使用一卡通的消费次数（包括超市和自动售卖机）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;1: 95, 2: 50, 3: 142, 4: 121, 5: 131, 6: 111, 7: 104, 8: 138, 9: 150, 10: 102, 11: 125, 12: 104&#125;</span><br></pre></td></tr></table></figure>
-<p><img data-src="/blog/images/ecard/consume_times.png" alt title="每个月消费次数"></p>
-<p>各个食堂窗口的食用情况（指的是刷卡次数，吃个晚饭可能会刷几次卡）TOP10</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">集贤楼食堂红案: 249</span><br><span class="line">集贤楼蒸菜净荤组: 123</span><br><span class="line">东一二楼特色菜品: 108</span><br><span class="line">集贤楼食堂商店: 99</span><br><span class="line">东一二楼华科速7: 84</span><br><span class="line">东一一楼蒸点稀食: 81</span><br><span class="line">东一二楼湘味小钵: 70</span><br><span class="line">东一一楼烧腊饭: 68</span><br><span class="line">东一二楼大众菜（一）: 66</span><br><span class="line">集贤楼食堂煎烙: 65</span><br></pre></td></tr></table></figure>
-<p><img data-src="/blog/images/ecard/hall_times.png" alt title="各食堂窗口消费次数"></p>
-<p>各个食堂的食用情况</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">'东一'</span>: 581, <span class="string">'集贤楼'</span>: 575, <span class="string">'自助售货机'</span>: 9, <span class="string">'西一'</span>: 139, <span class="string">'百品屋'</span>: 8, <span class="string">'集锦园'</span>: 4, <span class="string">'校园网'</span>: 6, <span class="string">'图书馆'</span>: 1, <span class="string">'东学超市'</span>: 3, <span class="string">'东三'</span>: 27, <span class="string">'紫荆园'</span>: 4, <span class="string">'百景'</span>: 12, <span class="string">'喻园'</span>: 4&#125;</span><br></pre></td></tr></table></figure>
-<p><img data-src="/blog/images/ecard/halltimes.png" alt title="各食堂消费次数"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2019/12/24/0049.taseikyo-2019-hust/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -556,7 +710,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
 
@@ -571,10 +725,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="https://images.unsplash.com/photo-1550143387-52fa147f9c65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1348&q=50" itemprop="contentUrl">
-        </div>
-          <p>b.s. 今天武汉下雪了。</p>
+          <p><img data-src="https://images.unsplash.com/photo-1550143387-52fa147f9c65?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1348&amp;q=50" alt title="Photo by Xu haojie on Unsplash"></p>
+<p>b.s. 今天武汉下雪了。</p>
 <p>由于实验室服务器上不是一个人在用，所以一个节点会编译了多种版本的内核，默认启动好像是自带的版本，然后今天就遇到这个问题。</p>
 <p>我需要的是 4.10.2 自己编译的版本，但是同学重启之后就变成默认的 5.0.37 了，所以就搜了一下，怎么让默认启动就是 4.10.2。</p>
 <p>其实方法也挺简单的：</p>
@@ -667,154 +819,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/0x02F.1565323224_198145.png" itemprop="contentUrl">
-        </div>
-          <p>主要原因是远程连接时，本地安装的插件并没有在远程安装，所以只需要在远程安装即可。</p>
+          <p><img data-src="/blog/images/0x02F.1565323224_198145.png" alt title="无法跳转函数定义"></p>
+<p>主要原因是远程连接时，本地安装的插件并没有在远程安装，所以只需要在远程安装即可。</p>
 <p><img data-src="/blog/images/0x02F.20191205160719.png" alt title="本地与远程都安装上 C/C++ 插件"></p>
 <p>如上图，在远程和本地都安装上 C/C++ 这个插件就可以使用了，实际效果图：</p>
 <p><img data-src="/blog/images/0x02F.20191205160953.png" alt title="使用效果"></p>
 <p>参考：<a href="https://blog.csdn.net/qq_27727147/article/details/101203360" target="_blank" rel="noopener">https://blog.csdn.net/qq_27727147/article/details/101203360</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/" class="post-title-link" itemprop="url">ImportError DLL load failed while importing win32api 找不到指定的模块</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-11-27 16:58:16" itemprop="dateCreated datePublished" datetime="2019-11-27T16:58:16+08:00">2019-11-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天在使用 jupyter notebook 时遇到很多问题，由于我上周把 Python3.7 给卸载了，更新为 3.8，然后就出现了很多问题，第一个就是 <a href="https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror" target="_blank" rel="noopener">Jupyter Notebook with Python 3.8 - NotImplementedError</a>，在 StackOverflow 上找到答案，以为就解决了，结果启动之后，在网页新建一个 Python 3 的笔记之后，右上角出现一个红色的按钮，点开看是错误信息，<code>ImportError: DLL load failed while importing win32api: 找不到指定的模块。</code>，然后也在 <a href="https://stackoverflow.com/questions/58612306/how-to-fix-importerror-dll-load-failed-while-importing-win32api" target="_blank" rel="noopener">StackOverflow</a> 上找到答案了，结果不太对，还是会报错，最后用百度搜到一个 <a href="https://blog.csdn.net/mtt_sky/article/details/50445938" target="_blank" rel="noopener">CSDN</a> 的博客，按照上面的说法，把 <code>Lib\site-packages\pywin32_system32\*</code> 目录下的两个 DLL 复制到 <code>C:\Windows\System32</code> 就好了，或者复制到 <code>Lib\site-packages\win32</code> 也行。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/25/0045.win10-network-error/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/10/25/0045.win10-network-error/" class="post-title-link" itemprop="url">win10 "请确认系统网络配置是否完整"</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-10-25 21:39:38" itemprop="dateCreated datePublished" datetime="2019-10-25T21:39:38+08:00">2019-10-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
-<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
-<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
-<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
-<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
-<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
-<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
 
       
     </div>
@@ -901,7 +911,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -914,7 +924,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-count">148</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

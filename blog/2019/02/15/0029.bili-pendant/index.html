@@ -23,20 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下自">
-<meta name="keywords" content="python - bilibili - javascript - css - pendant - avatar">
+  <meta name="description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下">
+<meta name="keywords" content="javascript,python,bilibili,css,pendant,avatar">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为博客头像添加哔哩哔哩挂件">
 <meta property="og:url" content="https://taseikyo.github.io/2019/02/15/0029.bili-pendant/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下自">
+<meta property="og:description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://taseikyo.github.io/images/author-bili-pendant.png">
-<meta property="og:updated_time" content="2020-09-30T01:36:47.523Z">
+<meta property="og:updated_time" content="2020-10-07T09:04:51.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为博客头像添加哔哩哔哩挂件">
-<meta name="twitter:description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下自">
-<meta name="twitter:image" content="https://taseikyo.github.io/images/author-bili-pendant.png">
+<meta name="twitter:description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下">
 
 <link rel="canonical" href="https://taseikyo.github.io/2019/02/15/0029.bili-pendant/">
 
@@ -261,10 +259,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/author-bili-pendant.png" itemprop="contentUrl">
-        </div>
-        <p>之前在做 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/taseikyo/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
+        <p><img data-src="/blog/images/author-bili-pendant.png" alt></p>
+<p>之前在做 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/taseikyo/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
 <p>昨天晚上参考该作者的 <a href="https://github.com/lewky/hexo-theme-beep" target="_blank" rel="noopener">hexo-theme-beep</a> 主题，修改了一下自定义的 js 和 css 文件，然后将挂件加到了我自己的博客头像上。</p>
 <p>和原作者稍有不同，我的是直接点击一次就改变头像，而且会显示挂件名称，每次都随机加载图片而不是按顺序。 </p>
 <p>实际效果可以点击我博客头像来感受一下~</p>
@@ -324,7 +320,12 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/python-bilibili-javascript-css-pendant-avatar/" rel="tag"># python - bilibili - javascript - css - pendant - avatar</a>
+              <a href="/blog/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/blog/tags/python/" rel="tag"># python</a>
+              <a href="/blog/tags/bilibili/" rel="tag"># bilibili</a>
+              <a href="/blog/tags/css/" rel="tag"># css</a>
+              <a href="/blog/tags/pendant/" rel="tag"># pendant</a>
+              <a href="/blog/tags/avatar/" rel="tag"># avatar</a>
           </div>
 
         
@@ -413,7 +414,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -426,7 +427,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-count">148</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

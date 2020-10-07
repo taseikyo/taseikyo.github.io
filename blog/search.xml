@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>donate</title>
-    <url>/blog/2018/01/01/donate/</url>
-    <content><![CDATA[<p>thanks for your donation.</p>
-<div align="center"><br>    <img data-src="/blog/images/alipay.jpg" width="300" alt="alipay"><br>    <img data-src="/blog/images/wechatpay.jpg" width="300" alt="wechatpay"><br></div>]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>donate</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第一篇博客</title>
     <url>/blog/2017/07/26/0000.hello-world/</url>
     <content><![CDATA[<p>捣鼓了一下午，从 1 点半左右就开始安装 node.js 到现在把本地搜索弄好，终于基本上把目前想到的一些基础东西都给实现了，一路上看了不少教程。<br>想说的是本地搜索，这个玩意儿弄了好久，最后在 Algolia 注册之后，准备使用 Algolia 的搜索功能，看教程上说得在Theme的配置文件中开搜索功能，然后在下面看到大大的 <code>local_search:enable: false</code>。。。<br><img data-src="http://img.itlun.cn/uploads/allimg/170521/1-1F521112312.jpg" alt><br><a id="more"></a><br>突然想给自己一巴掌是怎么回事儿，之前也上下翻看过这个文件，当时却没有发现，我可能是瞎了吧。</p>
@@ -23,55 +10,6 @@
       </categories>
       <tags>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python爬取京东内存条数据并作简单分析</title>
-    <url>/blog/2017/10/10/0003.ram-jd/</url>
-    <content><![CDATA[<p>在京东搜索内存条，然后根据销量排序，排序之后数据少了很多，写爬虫将其全部爬下，并存到 MySQL 数据库中，一共 2460 条数据，更详细的介绍见 <a href="https://github.com/taseikyo/RAM-JD" target="_blank" rel="noopener">RAM-JD</a>，可视化见 <a href="https://lewistian.github.io/RAM-JD" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/08/59da21bd58882.png" alt="Data" title="Data"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>python</tag>
-        <tag>crawler</tag>
-        <tag>ram</tag>
-        <tag>jingdong</tag>
-        <tag>echarts</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>华中科技大学贴吧牛人排行榜数据分析</title>
-    <url>/blog/2017/10/14/0004.hust-rank/</url>
-    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>python</tag>
-        <tag>crawler</tag>
-        <tag>echarts</tag>
-        <tag>tieba</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网易云歌词下载器</title>
-    <url>/blog/2017/08/25/0002.cloud-music-lyric/</url>
-    <content><![CDATA[<p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。<br>首先知道网易云获取歌词的 API 是 <code>http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1</code> 中间 {id} 换成歌曲的 id 即可。<br>于是就很简单了，用一个 <code>QLineEdit</code> 来输入歌曲的 id，然后 <code>QNetworkAccessManager</code> 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。</p>
-<h3 id="下载链接-https-github-com-taseikyo-NeteaseLyric-releases"><a href="#下载链接-https-github-com-taseikyo-NeteaseLyric-releases" class="headerlink" title="下载链接: https://github.com/taseikyo/NeteaseLyric/releases"></a>下载链接: <a href="https://github.com/taseikyo/NeteaseLyric/releases" target="_blank" rel="noopener">https://github.com/taseikyo/NeteaseLyric/releases</a></h3><p>程序界面如下：<br><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-084637bccfd7b7b99cab75da37305f72_b.png" alt="interface" title="程序界面"><br><a id="more"></a><br>输入歌曲 id 或者完整的链接，点击 <code>get</code> 按钮，或者敲击回车，然后就可以获取歌曲名、歌手、歌词信息。<br>你可以隐藏时间轴和翻译。<br><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-1f66b0f451e28a6fe0740eb186d13f56_b.png" alt="hide" title="隐藏时间轴和翻译"><br>保存歌词快捷键是 <code>Ctrl+S</code>。<br><img data-src="https://images.weserv.nl/?url=pic4.zhimg.com/v2-bae6f4ff7a822b43c6d8cb34f3bb1e77_b.png" alt="save" title="保存歌词"></p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>qt</tag>
-        <tag>lyric</tag>
-        <tag>netease-cloud</tag>
       </tags>
   </entry>
   <entry>
@@ -90,6 +28,55 @@
         <tag>topology</tag>
         <tag>d3</tag>
         <tag>internship</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>华中科技大学贴吧牛人排行榜数据分析</title>
+    <url>/blog/2017/10/14/0004.hust-rank/</url>
+    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>tieba</tag>
+        <tag>echarts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python爬取京东内存条数据并作简单分析</title>
+    <url>/blog/2017/10/10/0003.ram-jd/</url>
+    <content><![CDATA[<p>在京东搜索内存条，然后根据销量排序，排序之后数据少了很多，写爬虫将其全部爬下，并存到 MySQL 数据库中，一共 2460 条数据，更详细的介绍见 <a href="https://github.com/taseikyo/RAM-JD" target="_blank" rel="noopener">RAM-JD</a>，可视化见 <a href="https://lewistian.github.io/RAM-JD" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/08/59da21bd58882.png" alt="Data" title="Data"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>echarts</tag>
+        <tag>ram</tag>
+        <tag>jingdong</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网易云歌词下载器</title>
+    <url>/blog/2017/08/25/0002.cloud-music-lyric/</url>
+    <content><![CDATA[<p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。<br>首先知道网易云获取歌词的 API 是 <code>http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1</code> 中间 {id} 换成歌曲的 id 即可。<br>于是就很简单了，用一个 <code>QLineEdit</code> 来输入歌曲的 id，然后 <code>QNetworkAccessManager</code> 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。</p>
+<h3 id="下载链接-https-github-com-taseikyo-NeteaseLyric-releases"><a href="#下载链接-https-github-com-taseikyo-NeteaseLyric-releases" class="headerlink" title="下载链接: https://github.com/taseikyo/NeteaseLyric/releases"></a>下载链接: <a href="https://github.com/taseikyo/NeteaseLyric/releases" target="_blank" rel="noopener">https://github.com/taseikyo/NeteaseLyric/releases</a></h3><p>程序界面如下：<br><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-084637bccfd7b7b99cab75da37305f72_b.png" alt="interface" title="程序界面"><br><a id="more"></a><br>输入歌曲 id 或者完整的链接，点击 <code>get</code> 按钮，或者敲击回车，然后就可以获取歌曲名、歌手、歌词信息。<br>你可以隐藏时间轴和翻译。<br><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-1f66b0f451e28a6fe0740eb186d13f56_b.png" alt="hide" title="隐藏时间轴和翻译"><br>保存歌词快捷键是 <code>Ctrl+S</code>。<br><img data-src="https://images.weserv.nl/?url=pic4.zhimg.com/v2-bae6f4ff7a822b43c6d8cb34f3bb1e77_b.png" alt="save" title="保存歌词"></p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>qt</tag>
+        <tag>lyric</tag>
+        <tag>netease-cloud</tag>
       </tags>
   </entry>
   <entry>
@@ -116,9 +103,9 @@
         <category>Python</category>
       </categories>
       <tags>
-        <tag>netease-cloud</tag>
         <tag>python</tag>
         <tag>crawler</tag>
+        <tag>netease-cloud</tag>
         <tag>netease-radio</tag>
       </tags>
   </entry>
@@ -217,6 +204,21 @@
 <li><p>auto_print.sh</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
 </ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>spec-cpu2006</tag>
+        <tag>command</tag>
+        <tag>spec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>solve omnetpp run error</title>
+    <url>/blog/2018/05/03/0011.omnetpp-ini-open-error/</url>
+    <content><![CDATA[<p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
+<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
 ]]></content>
       <categories>
         <category>Study</category>
@@ -418,18 +420,49 @@
       </tags>
   </entry>
   <entry>
-    <title>solve omnetpp run error</title>
-    <url>/blog/2018/05/03/0011.omnetpp-ini-open-error/</url>
-    <content><![CDATA[<p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
-<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
+    <title>PyQt5 多语言支持</title>
+    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
+    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
+<ol>
+<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
+</li>
+<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
+<ol start="4">
+<li>源码<a id="more"></a>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
+
+</li>
+</ol>
+<p>点击英文：</p>
+<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
+
+
+<ul>
+<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>Study</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>spec-cpu2006</tag>
-        <tag>command</tag>
-        <tag>spec</tag>
+        <tag>blog</tag>
+        <tag>python</tag>
+        <tag>pytt5</tag>
+        <tag>pyqt</tag>
+        <tag>i18n</tag>
+        <tag>language</tag>
       </tags>
   </entry>
   <entry>
@@ -584,92 +617,10 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>PyQt5 多语言支持</title>
-    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
-    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
-<ol>
-<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
-</li>
-<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
-<ol start="4">
-<li>源码<a id="more"></a>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
-
-</li>
-</ol>
-<p>点击英文：</p>
-<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
-
-
-<ul>
-<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>python</tag>
-        <tag>pytt5</tag>
-        <tag>pyqt</tag>
-        <tag>i18n</tag>
-        <tag>language</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10笔记本麦克风没声音</title>
-    <url>/blog/2018/10/20/0016.microphone-no-voice/</url>
-    <content><![CDATA[<p>记得去年跟别人玩&lt;荒野行动&gt;的时候还能语音的，今年暑假跟同学玩饥荒和 L4D2  讨论组语音，我可以听到他们的声音，他们却听不到我的声音很难受，搜了一些方法都不管用，最后没办法只能用手机跟他们语音。<br>今天玩&lt;无限法则&gt;，对面有人先说话了，然后我按 U 想说，结果没声音（名字后面没有小喇叭），那个唯一说话的老哥看到没人回应也不说话了，于是整场沉默…<br>再晚点和 B 站科技区的几个 UP 玩游戏（L4D2）还是没声音，我卸载了麦克风驱动，去官网重新下，安装之后还是不行，很绝望，又去搜了一些方法，什么用驱动精灵更新啊、禁用立体声混音设备啊，都不行，最后找到一个方法才管用。</p>
-<a id="more"></a>
-<blockquote>
-<p>设置 - 隐私中，选择麦克风选项，然后这里我们允许应用使用我的麦克风打开。</p>
-</blockquote>
-<p><img data-src="/blog/images/no-voice.png" alt="microphone no voice" title="允许应用访问我的麦克风"></p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>microphone</tag>
-        <tag>no-voice</tag>
-        <tag>daily</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何显示已经隐藏的 chrome 扩展</title>
-    <url>/blog/2018/10/31/0018.chrome-exts-hide2show/</url>
-    <content><![CDATA[<p><center>当你安装的 chrome 扩展太多之后，你会把常用的、没有右键功能的一些扩展隐藏起来，那么如何将隐藏的扩展显示出来？</center><br><a id="more"></a></p>
-<p>我知道的有两种方法：</p>
-<ol>
-<li>点击 chrome 关闭按钮 (❌) 下方的三个竖点，在下拉菜单中可以看到我们已经隐藏的扩展程序。直接右击想要显示的扩展，可以看到有“从工具栏中显示”选项，点击即可显示出来。<br><img data-src="/blog/images/chrome-3dots.png" alt="chrome-3dots.png" title="点击三个竖点隐藏扩展就出现辣"></li>
-<li>将鼠标放到 chrome 地址栏最右边，待它变成左右双向箭头图标的时候向右拖动，隐藏的扩展就出现了。<br><img data-src="/blog/images/chrome-search-input.png" alt="chrome-search-input" title="向右拖动地址栏扩展也出现辣"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>chrome</tag>
-        <tag>chrome-extension</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Tich·十月总结/2018</title>
     <url>/blog/2018/10/30/0017.summary-1810/</url>
-    <content><![CDATA[<p>这个月听了个学术论坛，然后去杭州参加了 cncc 2018，想着是总结就都列进去了。<br>下面是 2018 年十月的总结。</p>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1810.png" alt></p>
+<p>这个月听了个学术论坛，然后去杭州参加了 cncc 2018，想着是总结就都列进去了。<br>下面是 2018 年十月的总结。</p>
 <a id="more"></a>
 <h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>姑且完成了每个月两本书的小目标。。。</p>
 <ol>
@@ -748,6 +699,43 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>win10笔记本麦克风没声音</title>
+    <url>/blog/2018/10/20/0016.microphone-no-voice/</url>
+    <content><![CDATA[<p>记得去年跟别人玩&lt;荒野行动&gt;的时候还能语音的，今年暑假跟同学玩饥荒和 L4D2  讨论组语音，我可以听到他们的声音，他们却听不到我的声音很难受，搜了一些方法都不管用，最后没办法只能用手机跟他们语音。<br>今天玩&lt;无限法则&gt;，对面有人先说话了，然后我按 U 想说，结果没声音（名字后面没有小喇叭），那个唯一说话的老哥看到没人回应也不说话了，于是整场沉默…<br>再晚点和 B 站科技区的几个 UP 玩游戏（L4D2）还是没声音，我卸载了麦克风驱动，去官网重新下，安装之后还是不行，很绝望，又去搜了一些方法，什么用驱动精灵更新啊、禁用立体声混音设备啊，都不行，最后找到一个方法才管用。</p>
+<a id="more"></a>
+<blockquote>
+<p>设置 - 隐私中，选择麦克风选项，然后这里我们允许应用使用我的麦克风打开。</p>
+</blockquote>
+<p><img data-src="/blog/images/no-voice.png" alt="microphone no voice" title="允许应用访问我的麦克风"></p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>microphone</tag>
+        <tag>no-voice</tag>
+        <tag>daily</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何显示已经隐藏的 chrome 扩展</title>
+    <url>/blog/2018/10/31/0018.chrome-exts-hide2show/</url>
+    <content><![CDATA[<p><center>当你安装的 chrome 扩展太多之后，你会把常用的、没有右键功能的一些扩展隐藏起来，那么如何将隐藏的扩展显示出来？</center><br><a id="more"></a></p>
+<p>我知道的有两种方法：</p>
+<ol>
+<li>点击 chrome 关闭按钮 (❌) 下方的三个竖点，在下拉菜单中可以看到我们已经隐藏的扩展程序。直接右击想要显示的扩展，可以看到有“从工具栏中显示”选项，点击即可显示出来。<br><img data-src="/blog/images/chrome-3dots.png" alt="chrome-3dots.png" title="点击三个竖点隐藏扩展就出现辣"></li>
+<li>将鼠标放到 chrome 地址栏最右边，待它变成左右双向箭头图标的时候向右拖动，隐藏的扩展就出现了。<br><img data-src="/blog/images/chrome-search-input.png" alt="chrome-search-input" title="向右拖动地址栏扩展也出现辣"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>chrome</tag>
+        <tag>chrome-extension</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>win10台式机(插入耳机)没有声音</title>
     <url>/blog/2018/11/01/0019.pc-win-no-voice/</url>
     <content><![CDATA[<p>今天实验室发新机器了，重装了 win10 之后，开机-网易云音乐-耳机-没有声音？不听歌还怎么玩，开始以为是驱动的问题，装好之后还是没有声音，就一直提示未插入扬声器或耳机，然而我明明插耳机了好吧。<br>于是乎上网找了许多方法，最后找到一个靠谱的方法。<br><a id="more"></a></p>
@@ -813,6 +801,23 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>嗶哩嗶哩工具箱</title>
+    <url>/blog/2018/12/09/0024.bili-box/</url>
+    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
+<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
+<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
+<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pyqt5</tag>
+        <tag>bilibili</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Tich·十一月总结/2018</title>
     <url>/blog/2018/11/30/0023.summary-1811/</url>
     <content><![CDATA[<p>不知不觉又摸鱼一个月了:3<br>下面是 2018 年十一月的总结。</p>
@@ -868,20 +873,44 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>嗶哩嗶哩工具箱</title>
-    <url>/blog/2018/12/09/0024.bili-box/</url>
-    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
-<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
-<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
-<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
+    <title>MIT 18.06 Linear Algebra, Spring 2005</title>
+    <url>/blog/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</url>
+    <content><![CDATA[<p><img data-src="/blog//images/18.06-Linear-Algebra.jpg" alt></p>
+<p>2018/12/10 16:15 完结撒花！！！<br>因为听矩阵论听不懂而跑去看 <a href="https://www.youtube.com/watch?v=ZK3O402wf1c&amp;list=PLE7DDD91010BC51F8" target="_blank" rel="noopener">MIT 线性代数公开课</a> 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。<br>吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。<br>本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_<br><img data-src="/blog/images/18.06-Linear-Algebra-note.jpg" alt title="Linear Algebra Notes"></p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Study</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>pyqt5</tag>
-        <tag>bilibili</tag>
+        <tag>linear-algebra</tag>
+        <tag>mit</tag>
+        <tag>18.06</tag>
+        <tag>open-course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tich·十二月总结/2018</title>
+    <url>/blog/2018/12/30/0027.summary-1812/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1812.png" alt></p>
+<p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
+<a id="more"></a>
+<h3 id="1-看的论文"><a href="#1-看的论文" class="headerlink" title="1. 看的论文"></a>1. 看的论文</h3><ol>
+<li>Unikernels: Library Operating Systems for the Cloud<br>主要内容是介绍了 Mirage 这个 unikernel</li>
+</ol>
+<h3 id="2-写的几行代码"><a href="#2-写的几行代码" class="headerlink" title="2. 写的几行代码"></a>2. 写的几行代码</h3><ol>
+<li><a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a><br>用来下载哔哩哔哩视频/图片/收藏。</li>
+</ol>
+<p>以上。</p>
+<p>十二月的总结大概就是这些，下个月要继续加油才是。</p>
+<p><img data-src="/blog/images/summary_1812.png" alt="summary for 2018/12 by Tich." title="summary for 2018/12 by Tich."></p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>summary</tag>
+        <tag>person</tag>
       </tags>
   </entry>
   <entry>
@@ -919,48 +948,10 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>MIT 18.06 Linear Algebra, Spring 2005</title>
-    <url>/blog/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</url>
-    <content><![CDATA[<p>2018/12/10 16:15 完结撒花！！！<br>因为听矩阵论听不懂而跑去看 <a href="https://www.youtube.com/watch?v=ZK3O402wf1c&amp;list=PLE7DDD91010BC51F8" target="_blank" rel="noopener">MIT 线性代数公开课</a> 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。<br>吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。<br>本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_<br><img data-src="/blog/images/18.06-Linear-Algebra-note.jpg" alt title="Linear Algebra Notes"></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>linear-algebra</tag>
-        <tag>mit</tag>
-        <tag>18.06</tag>
-        <tag>opencourse</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tich·十二月总结/2018</title>
-    <url>/blog/2018/12/30/0027.summary-1812/</url>
-    <content><![CDATA[<p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
-<a id="more"></a>
-<h3 id="1-看的论文"><a href="#1-看的论文" class="headerlink" title="1. 看的论文"></a>1. 看的论文</h3><ol>
-<li>Unikernels: Library Operating Systems for the Cloud<br>主要内容是介绍了 Mirage 这个 unikernel</li>
-</ol>
-<h3 id="2-写的几行代码"><a href="#2-写的几行代码" class="headerlink" title="2. 写的几行代码"></a>2. 写的几行代码</h3><ol>
-<li><a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a><br>用来下载哔哩哔哩视频/图片/收藏。</li>
-</ol>
-<p>以上。</p>
-<p>十二月的总结大概就是这些，下个月要继续加油才是。</p>
-<p><img data-src="/blog/images/summary_1812.png" alt="summary for 2018/12 by Tich." title="summary for 2018/12 by Tich."></p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>summary</tag>
-        <tag>person</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>codewars 初体验 XD</title>
     <url>/blog/2019/01/25/0028.first2codewars/</url>
-    <content><![CDATA[<p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
+    <content><![CDATA[<p><img data-src="/blog/images/first2codewars.png" alt></p>
+<p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
 <blockquote>
 <p>@GloomyGhost: 有这时间还不如刷codewar</p>
 </blockquote>
@@ -981,7 +972,8 @@ cpuid
   <entry>
     <title>为博客头像添加哔哩哔哩挂件</title>
     <url>/blog/2019/02/15/0029.bili-pendant/</url>
-    <content><![CDATA[<p>之前在做 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/taseikyo/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
+    <content><![CDATA[<p><img data-src="/blog/images/author-bili-pendant.png" alt></p>
+<p>之前在做 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/taseikyo/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
 <p>昨天晚上参考该作者的 <a href="https://github.com/lewky/hexo-theme-beep" target="_blank" rel="noopener">hexo-theme-beep</a> 主题，修改了一下自定义的 js 和 css 文件，然后将挂件加到了我自己的博客头像上。</p>
 <p>和原作者稍有不同，我的是直接点击一次就改变头像，而且会显示挂件名称，每次都随机加载图片而不是按顺序。 </p>
 <p>实际效果可以点击我博客头像来感受一下~</p>
@@ -998,24 +990,12 @@ cpuid
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>python - bilibili - javascript - css - pendant - avatar</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>codewars-190216</title>
-    <url>/blog/2019/02/16/0030.codewars-190216/</url>
-    <content><![CDATA[<p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
-<p>原题如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Write a simple parser that will parse and run Deadfish.</span><br><span class="line"></span><br><span class="line">Deadfish has 4 commands, each 1 character long:</span><br><span class="line"></span><br><span class="line">i increments the value (initially 0)</span><br><span class="line">d decrements the value</span><br><span class="line">s squares the value</span><br><span class="line">o outputs the value into the return array</span><br><span class="line">Invalid characters should be ignored.</span><br><span class="line"></span><br><span class="line">parse(&quot;iiisdoso&quot;)  ==&gt;  [8, 64]</span><br></pre></td></tr></table></figure></p>
-<p>我的解法就很直白，大部分人基本上都是这样做的，虽然也想过有没有其他的解法，但是没想出来 233<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">	init = <span class="number">0</span></span><br><span class="line">	out = []</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">		<span class="keyword">if</span> i == <span class="string">'i'</span>: init += <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'d'</span>: init -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'s'</span>: init *= init</span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'o'</span>: out.append(init)</span><br><span class="line">	<span class="keyword">return</span> out</span><br></pre></td></tr></table></figure></p>
-<p>提交之后看到有个人是下面这样的解法，惊了，突然感觉 get 到了某种小技巧（但是不记下来可能过段时间就忘了<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">    action = &#123;<span class="string">'i'</span>: <span class="keyword">lambda</span> v, r: v + <span class="number">1</span>,</span><br><span class="line">              <span class="string">'d'</span>: <span class="keyword">lambda</span> v, r: v - <span class="number">1</span>,</span><br><span class="line">              <span class="string">'s'</span>: <span class="keyword">lambda</span> v, r: v * v,</span><br><span class="line">              <span class="string">'o'</span>: <span class="keyword">lambda</span> v, r: r.append(v) <span class="keyword">or</span> v&#125;</span><br><span class="line">    v, r = <span class="number">0</span>, []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> data:</span><br><span class="line">        v = action[a](v, r) <span class="keyword">if</span> a <span class="keyword">in</span> action <span class="keyword">else</span> v</span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
+        <tag>javascript</tag>
         <tag>python</tag>
-        <tag>codewars</tag>
-        <tag>oj</tag>
+        <tag>bilibili</tag>
+        <tag>css</tag>
+        <tag>pendant</tag>
+        <tag>avatar</tag>
       </tags>
   </entry>
   <entry>
@@ -1026,6 +1006,7 @@ cpuid
 <li>具体代码见 <a href="https://github.com/taseikyo/Crawler#bilibili" target="_blank" rel="noopener">LewisTian/Crawler</a></li>
 <li>数据及词云的材料 <a href="https://github.com/taseikyo/Crawler/bilibili/bili-mad.7z" target="_blank" rel="noopener">bili-mad.7z</a></li>
 </ul>
+<a id="more"></a>
 <h4 id="投稿数的变化如图所示："><a href="#投稿数的变化如图所示：" class="headerlink" title="投稿数的变化如图所示："></a>投稿数的变化如图所示：</h4><p><img data-src="/blog/images/bili-mad-year-data.png" alt="投稿数" title="投稿数"></p>
 <h4 id="播放量前十的-MAD-如下（去除播放量为–的稿件）："><a href="#播放量前十的-MAD-如下（去除播放量为–的稿件）：" class="headerlink" title="播放量前十的 MAD 如下（去除播放量为–的稿件）："></a>播放量前十的 MAD 如下（去除播放量为–的稿件）：</h4><table>
 <thead>
@@ -1105,7 +1086,8 @@ cpuid
   <entry>
     <title>includeOS 初体验 - Hello World!</title>
     <url>/blog/2019/03/20/0032.includeos-helloworld/</url>
-    <content><![CDATA[<p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
+    <content><![CDATA[<p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
+<p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
 <p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
 <h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
 <p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
@@ -1160,9 +1142,39 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>Python3 中的 map 问题</title>
+    <url>/blog/2019/04/08/0034.python3-map/</url>
+    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
+<p>在最近的 <a href="https://github.com/taseikyo/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
+<p>部分 <a href="https://github.com/taseikyo/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
+<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
+<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
+<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="literal">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
+<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
+</ul>
+<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
+<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>map</tag>
+        <tag>any</tag>
+        <tag>all</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>好物推荐之 windows 软件</title>
     <url>/blog/2019/05/10/0035.good-things-recommended-win-softwares/</url>
-    <content><![CDATA[<p>记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。<br>目的是为了以后换了电脑/笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。<br>本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。<br><img data-src="/blog/images/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
+    <content><![CDATA[<p>记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。<br>目的是为了以后换了电脑/笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。<br>本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。</p>
+<p><img data-src="/blog/images/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
 <a id="more"></a>
 <h3 id="2345-看图王-绿色版"><a href="#2345-看图王-绿色版" class="headerlink" title="2345 看图王(绿色版)"></a>2345 看图王(绿色版)</h3><p>为什么要加个绿色版，因为其实这个看图王真的很好用，但是广告很恶心。<br>我之前是用美图看看来着，其实也不错，但是好久没更新，有种年久失修的感觉，UI 很丑。<br><img data-src="/blog/images/good-things/2345pic.png" alt="2345pic" title="2345pic - 网图"></p>
 <h3 id="Adobe-全家桶"><a href="#Adobe-全家桶" class="headerlink" title="Adobe 全家桶"></a>Adobe 全家桶</h3><p>这个就不多介绍了 hhh<br><img data-src="/blog/images/good-things/adobe.png" alt="adobe" title="adobe - 网图"></p>
@@ -1197,32 +1209,20 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>Python3 中的 map 问题</title>
-    <url>/blog/2019/04/08/0034.python3-map/</url>
-    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
-<p>在最近的 <a href="https://github.com/taseikyo/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
-<p>部分 <a href="https://github.com/taseikyo/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
-<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
-<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
-<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="literal">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
-<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
-</ul>
-<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
-<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
+    <title>codewars-190216</title>
+    <url>/blog/2019/02/16/0030.codewars-190216/</url>
+    <content><![CDATA[<p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
+<p>原题如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Write a simple parser that will parse and run Deadfish.</span><br><span class="line"></span><br><span class="line">Deadfish has 4 commands, each 1 character long:</span><br><span class="line"></span><br><span class="line">i increments the value (initially 0)</span><br><span class="line">d decrements the value</span><br><span class="line">s squares the value</span><br><span class="line">o outputs the value into the return array</span><br><span class="line">Invalid characters should be ignored.</span><br><span class="line"></span><br><span class="line">parse(&quot;iiisdoso&quot;)  ==&gt;  [8, 64]</span><br></pre></td></tr></table></figure></p>
+<p>我的解法就很直白，大部分人基本上都是这样做的，虽然也想过有没有其他的解法，但是没想出来 233<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">	init = <span class="number">0</span></span><br><span class="line">	out = []</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">		<span class="keyword">if</span> i == <span class="string">'i'</span>: init += <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'d'</span>: init -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'s'</span>: init *= init</span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'o'</span>: out.append(init)</span><br><span class="line">	<span class="keyword">return</span> out</span><br></pre></td></tr></table></figure></p>
+<p>提交之后看到有个人是下面这样的解法，惊了，突然感觉 get 到了某种小技巧（但是不记下来可能过段时间就忘了<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">    action = &#123;<span class="string">'i'</span>: <span class="keyword">lambda</span> v, r: v + <span class="number">1</span>,</span><br><span class="line">              <span class="string">'d'</span>: <span class="keyword">lambda</span> v, r: v - <span class="number">1</span>,</span><br><span class="line">              <span class="string">'s'</span>: <span class="keyword">lambda</span> v, r: v * v,</span><br><span class="line">              <span class="string">'o'</span>: <span class="keyword">lambda</span> v, r: r.append(v) <span class="keyword">or</span> v&#125;</span><br><span class="line">    v, r = <span class="number">0</span>, []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> data:</span><br><span class="line">        v = action[a](v, r) <span class="keyword">if</span> a <span class="keyword">in</span> action <span class="keyword">else</span> v</span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Study</category>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>map</tag>
-        <tag>any</tag>
-        <tag>all</tag>
+        <tag>codewars</tag>
+        <tag>oj</tag>
       </tags>
   </entry>
   <entry>
@@ -1281,7 +1281,8 @@ cpuid
   <entry>
     <title>win10 terminal 初体验&amp;美化</title>
     <url>/blog/2019/07/09/0039.win10-terminal/</url>
-    <content><![CDATA[<p>从 win10 terminal 的消息出来就想试试了，然而系统版本过低导致无法使用一直很气，上周将自己笔记本重装了，得到的版本是 1503 😂 然后升级了好久仍然只是到了 1809 (win+r =&gt; winver)，最后下了 win10 易升强行升到 1903，赶紧从应用商店下了 terminal 来试试。</p>
+    <content><![CDATA[<p><img data-src="/blog/images/0x027.001.png" alt title="windows-terminal"></p>
+<p>从 win10 terminal 的消息出来就想试试了，然而系统版本过低导致无法使用一直很气，上周将自己笔记本重装了，得到的版本是 1503 😂 然后升级了好久仍然只是到了 1809 (win+r =&gt; winver)，最后下了 win10 易升强行升到 1903，赶紧从应用商店下了 terminal 来试试。</p>
 <a id="more"></a>
 <p>第一眼其实不咋滴，感觉就是将 cmd 和 powershell 合并了，但是我好歹折腾这么久不能干看着啊，还是上手体验了一波。</p>
 <p><img data-src="/blog/images/0x027.002.png" alt title="第一眼这样子"></p>
@@ -1333,37 +1334,13 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>将博客部署到子目录下</title>
-    <url>/blog/2019/09/03/0041.deploy-blog-to-subdirectory/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
-<p>由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。</p>
-<p>不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你 username.github.io 仓的根目录，所以需要手动将生成的 public 目录复制到你 username.github.io/bolg 目录下。</p>
-<p>但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io/images/xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io/blog/images/xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了：</p>
-<ol>
-<li>手动替换地址</li>
-<li>找到对应的 js 文件，将正文中的地址替换掉</li>
-</ol>
-<p>或者想网上说的，再开一个库，将文件部署到这个库，但是我不想专门开个库，麻烦。</p>
-<p>对应的 js 有好多，hexo-generator-xxx 不知道哪个是…</p>
-<p>最后还是自己修改图片地址…反正用 python 批量替换也挺快的 hhh，然后还得换掉自定义的 js 文件的路径，同时自定义的 js 中使用到的图片路径也得换，反正也不多，挺快的。</p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>daily</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>平凡的一天</title>
     <url>/blog/2019/07/12/0040.a-normal-day-in-wuhan/</url>
-    <content><![CDATA[<p>2019/7/12，武汉，小雨，22/30°C</p>
-<hr>
-
+    <content><![CDATA[<p><img data-src="/blog/images/190712/wx20190713-1135@鸦青.png" alt title="平凡的一天"></p>
+<p>2019/7/12，武汉，小雨，22/30°C</p>
+<a id="more"></a>
 <p>想了好久，结果还是想不到一个很好的标题，至于为什么要记录这一天，因为今天初次尝试了一些项目，比如第一次密室逃脱、第一次去猫🐱咖、第一次去酒馆。</p>
 <p>最后思来想去还是直接取名“平凡的一天”吧。</p>
-<a id="more"></a>
 <p>上午将近12点，昭来找我们玩，包子去南大门接他，希则先一步去世界城看中午吃啥去了。这期间也搞了个乌龙，包子他让我下去，说好南三碰头，结果他的意思是“南三门”，而我理解的是“南三楼”233</p>
 <p>后来在世界城和希碰面，说起来我们几个互相也好久没见了，寒暄了一会儿，之后挑了个五楼一家店恰饭，恰完差不多两点了，他们说想试一下密室逃脱，其实我们四个人都没玩过，最后挑了个比较“温馨”的一个类型（其实是照顾我了，毕竟第一次不敢玩太猛的）</p>
 <p><img data-src="https://github.com/taseikyo/bili-box/raw/master/images/cry.png" alt title="1551"></p>
@@ -1394,6 +1371,29 @@ cpuid
       <tags>
         <tag>blog</tag>
         <tag>person</tag>
+        <tag>daily</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>将博客部署到子目录下</title>
+    <url>/blog/2019/09/03/0041.deploy-blog-to-subdirectory/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
+<p>由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。</p>
+<p>不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你 username.github.io 仓的根目录，所以需要手动将生成的 public 目录复制到你 username.github.io/bolg 目录下。</p>
+<p>但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io/images/xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io/blog/images/xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了：</p>
+<ol>
+<li>手动替换地址</li>
+<li>找到对应的 js 文件，将正文中的地址替换掉</li>
+</ol>
+<p>或者想网上说的，再开一个库，将文件部署到这个库，但是我不想专门开个库，麻烦。</p>
+<p>对应的 js 有好多，hexo-generator-xxx 不知道哪个是…</p>
+<p>最后还是自己修改图片地址…反正用 python 批量替换也挺快的 hhh，然后还得换掉自定义的 js 文件的路径，同时自定义的 js 中使用到的图片路径也得换，反正也不多，挺快的。</p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
         <tag>daily</tag>
       </tags>
   </entry>
@@ -1472,7 +1472,10 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>windows - win10 - windows10 - network</tag>
+        <tag>windows</tag>
+        <tag>windows10</tag>
+        <tag>win10</tag>
+        <tag>network</tag>
       </tags>
   </entry>
   <entry>
@@ -1497,10 +1500,32 @@ cpuid
         <tag>linux</tag>
         <tag>ubuntu</tag>
         <tag>ubuntu1804</tag>
+        <tag>network</tag>
         <tag>ip</tag>
         <tag>static-ip</tag>
         <tag>netplan</tag>
-        <tag>network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
+    <url>/blog/2019/12/05/0047.vscode-remote-server-find-code-definition/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/0x02F.1565323224_198145.png" alt title="无法跳转函数定义"></p>
+<p>主要原因是远程连接时，本地安装的插件并没有在远程安装，所以只需要在远程安装即可。</p>
+<p><img data-src="/blog/images/0x02F.20191205160719.png" alt title="本地与远程都安装上 C/C++ 插件"></p>
+<p>如上图，在远程和本地都安装上 C/C++ 这个插件就可以使用了，实际效果图：</p>
+<p><img data-src="/blog/images/0x02F.20191205160953.png" alt title="使用效果"></p>
+<p>参考：<a href="https://blog.csdn.net/qq_27727147/article/details/101203360" target="_blank" rel="noopener">https://blog.csdn.net/qq_27727147/article/details/101203360</a></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>cpp</tag>
+        <tag>server</tag>
+        <tag>vscode</tag>
+        <tag>code</tag>
+        <tag>definition</tag>
+        <tag>remote-server</tag>
       </tags>
   </entry>
   <entry>
@@ -1522,65 +1547,10 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
-    <url>/blog/2019/12/05/0047.vscode-remote-server-find-code-definition/</url>
-    <content><![CDATA[<p>主要原因是远程连接时，本地安装的插件并没有在远程安装，所以只需要在远程安装即可。</p>
-<p><img data-src="/blog/images/0x02F.20191205160719.png" alt title="本地与远程都安装上 C/C++ 插件"></p>
-<p>如上图，在远程和本地都安装上 C/C++ 这个插件就可以使用了，实际效果图：</p>
-<p><img data-src="/blog/images/0x02F.20191205160953.png" alt title="使用效果"></p>
-<p>参考：<a href="https://blog.csdn.net/qq_27727147/article/details/101203360" target="_blank" rel="noopener">https://blog.csdn.net/qq_27727147/article/details/101203360</a></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>cpp</tag>
-        <tag>vscode</tag>
-        <tag>server</tag>
-        <tag>code</tag>
-        <tag>definition</tag>
-        <tag>remote-server</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10 下将如何将单声道变成双声道</title>
-    <url>/blog/2019/12/25/0050.win10-single-sound-channel/</url>
-    <content><![CDATA[<p>打开设置，然后进行如下选择：</p>
-<p>设置-&gt;轻松使用-&gt;其他选项-&gt;单声道音频</p>
-<p>之后看只有单声道的视频就变成双声道，比如看哔哩哔哩的 MIT 线性代数视频。</p>
-<p>问题是选择之后再听那种 3D 环绕音乐就没有那种效果，这时关掉就行了。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>win10</tag>
-        <tag>mono</tag>
-        <tag>sound</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xshell 无法连接服务器</title>
-    <url>/blog/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</url>
-    <content><![CDATA[<p>上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。</p>
-<p>最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-        <tag>ubuntu1804</tag>
-        <tag>server</tag>
-        <tag>xshell</tag>
-        <tag>ping</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu 设置默认启动内核版本</title>
     <url>/blog/2019/12/18/0048.set-default-boot-kernel/</url>
-    <content><![CDATA[<p>b.s. 今天武汉下雪了。</p>
+    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1550143387-52fa147f9c65?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1348&amp;q=50" alt title="Photo by Xu haojie on Unsplash"></p>
+<p>b.s. 今天武汉下雪了。</p>
 <p>由于实验室服务器上不是一个人在用，所以一个节点会编译了多种版本的内核，默认启动好像是自带的版本，然后今天就遇到这个问题。</p>
 <p>我需要的是 4.10.2 自己编译的版本，但是同学重启之后就变成默认的 5.0.37 了，所以就搜了一下，怎么让默认启动就是 4.10.2。</p>
 <p>其实方法也挺简单的：</p>
@@ -1609,10 +1579,11 @@ cpuid
 </ul>
 ]]></content>
       <categories>
-        <category>Study</category>
+        <category>Linux</category>
       </categories>
       <tags>
         <tag>linux</tag>
+        <tag>ubuntu</tag>
         <tag>kernel</tag>
         <tag>boot</tag>
       </tags>
@@ -1624,6 +1595,7 @@ cpuid
 <p>想了下好像也没有经常吃吧，虽然之前高中也有过类似的经历，那是因为吃拉面不要香菜、热干面不要葱、炒面炒粉不要葱，然后天天吃就被老板记住了。</p>
 <p>很有趣的一次是吃热干面，老板没抬头看，就调好葱姜蒜芝麻酱准备递给我，然后看到我，说：哎呀，你不要葱，这碗给后面的同学，重新给你下一碗 2333。</p>
 <p>扯远了，因为挺好奇的，于是就打算把今年这一年的吃饭记录都爬下来康康，我这一年都吃的是啥？</p>
+<a id="more"></a>
 <h2 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h2><p>从 <a href="http://ecard.hust.edu.cn/Default.aspx" target="_blank" rel="noopener">校园卡服务平台</a> 可以查到流水，开始我以为所谓的“导出所有”是把所有记录导出，结果跟“导出当前页流水”是一样的。</p>
 <p>所以直接用 Python 写了个爬虫直接把今年（2019）所有月份数据都爬下来，去掉多余的信息，仅保存 <em>时间</em>、<em>价格</em>、<em>食堂</em> 这三项数据，然后存为 CSV 文件。</p>
 <ul>
@@ -1658,26 +1630,38 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>VMware 安装 Ubuntu1910 虚拟机无法上网</title>
-    <url>/blog/2020/03/09/0053.vmware-ubuntu1910-no-network/</url>
-    <content><![CDATA[<p>参考下面文章：</p>
-<ul>
-<li><a href="http://www.udaxia.com/wtjd/13861.html" target="_blank" rel="noopener">http://www.udaxia.com/wtjd/13861.html</a></li>
-</ul>
-<p>上面文章中给出了 4 种方法，其实我就试了两种，起作用的是最后一种。</p>
-<p>第二种是修改虚拟机属性，将 “硬件” “网络适配器” 改为 “NAT模式（N）：用于共享主机的IP地址”，当然这种办法没用，因为本来默认就是这个选项。</p>
-<p>最后一种是打开 “编辑” “虚拟网络编辑器”，直接恢复默认设置，在这个操作之前需要关闭虚拟机，之后会有卸载然后重新安装网络服务的过程，完成之后打开虚拟机，使用 ping 命令测试：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tian@hust:~/桌面$ ping baidu.com</span><br><span class="line">PING baidu.com (39.156.69.79) 56(84) bytes of data.</span><br><span class="line">64 bytes from 39.156.69.79 (39.156.69.79): icmp_seq=2 ttl=128 time=37.3 ms</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<p>打开火狐，输入 baidu.com 网页正常打开 👍</p>
+    <title>Xshell 无法连接服务器</title>
+    <url>/blog/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</url>
+    <content><![CDATA[<p>上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。</p>
+<p>最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。</p>
 ]]></content>
       <categories>
         <category>Study</category>
       </categories>
       <tags>
         <tag>ubuntu</tag>
-        <tag>network</tag>
-        <tag>ubuntu1910</tag>
-        <tag>vmware</tag>
+        <tag>ubuntu1804</tag>
+        <tag>server</tag>
+        <tag>xshell</tag>
+        <tag>ping</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10 下将如何将单声道变成双声道</title>
+    <url>/blog/2019/12/25/0050.win10-single-sound-channel/</url>
+    <content><![CDATA[<p>打开设置，然后进行如下选择：</p>
+<p>设置-&gt;轻松使用-&gt;其他选项-&gt;单声道音频</p>
+<p>之后看只有单声道的视频就变成双声道，比如看哔哩哔哩的 MIT 线性代数视频。</p>
+<p>问题是选择之后再听那种 3D 环绕音乐就没有那种效果，这时关掉就行了。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>win10</tag>
+        <tag>mono</tag>
+        <tag>sound</tag>
       </tags>
   </entry>
   <entry>
@@ -1709,6 +1693,29 @@ cpuid
         <tag>linux</tag>
         <tag>vscode</tag>
         <tag>ssh - server - remote</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VMware 安装 Ubuntu1910 虚拟机无法上网</title>
+    <url>/blog/2020/03/09/0053.vmware-ubuntu1910-no-network/</url>
+    <content><![CDATA[<p>参考下面文章：</p>
+<ul>
+<li><a href="http://www.udaxia.com/wtjd/13861.html" target="_blank" rel="noopener">http://www.udaxia.com/wtjd/13861.html</a></li>
+</ul>
+<p>上面文章中给出了 4 种方法，其实我就试了两种，起作用的是最后一种。</p>
+<p>第二种是修改虚拟机属性，将 “硬件” “网络适配器” 改为 “NAT模式（N）：用于共享主机的IP地址”，当然这种办法没用，因为本来默认就是这个选项。</p>
+<p>最后一种是打开 “编辑” “虚拟网络编辑器”，直接恢复默认设置，在这个操作之前需要关闭虚拟机，之后会有卸载然后重新安装网络服务的过程，完成之后打开虚拟机，使用 ping 命令测试：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tian@hust:~/桌面$ ping baidu.com</span><br><span class="line">PING baidu.com (39.156.69.79) 56(84) bytes of data.</span><br><span class="line">64 bytes from 39.156.69.79 (39.156.69.79): icmp_seq=2 ttl=128 time=37.3 ms</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>打开火狐，输入 baidu.com 网页正常打开 👍</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>network</tag>
+        <tag>ubuntu1910</tag>
+        <tag>vmware</tag>
       </tags>
   </entry>
   <entry>
@@ -1876,9 +1883,160 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>向 TheAlgorithms/Python 贡献代码须知</title>
+    <url>/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</url>
+    <content><![CDATA[<p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
+<ul>
+<li>fork 到自己的仓库</li>
+<li>git clone 到本地</li>
+<li>上游建立连接<ul>
+<li><code>git remote add upstream 开源项目地址</code></li>
+</ul>
+</li>
+<li>创建开发分支（非必须）<ul>
+<li><code>git checkout -b dev</code></li>
+</ul>
+</li>
+<li>修改提交代码<ul>
+<li><code>git status git</code></li>
+<li><code>add . git commit -m ...</code></li>
+<li><code>git push origin branch</code></li>
+</ul>
+</li>
+<li>同步代码三部曲<ul>
+<li><code>git fetch upstream</code></li>
+<li><code>git rebase upstream/master</code></li>
+<li><code>git push origin master</code></li>
+</ul>
+</li>
+<li>提交pr<br>  去自己 github 仓库对应 fork 的项目下 new pull request</li>
+</ul>
+<p>另外由于每个开源项目都有自己的要求，比如 TheAlgorithms/Python 提交 pr 都会进行各种格式检查，所以先本地 check 一下就可以避免出现格式语法错而得重新 commit 的浪费时间问题，下面是一个维护者提出的步骤：</p>
+<ul>
+<li><a href="https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650" target="_blank" rel="noopener">https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">black &lt;filename&gt;</span><br><span class="line">isort &lt;filename&gt;</span><br><span class="line">flake8 --ignore=E203,W503 --max-complexity=25 --max-line-length=88 --statistics --count &lt;filename&gt;</span><br><span class="line">mypy --ignore-missing-imports &lt;filename&gt;</span><br><span class="line">pytest --doctest-modules &lt;filename&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>github</tag>
+        <tag>contribution</tag>
+        <tag>algorithm</tag>
+        <tag>open-source</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决 Ubuntu18.04 的 dpkg warning files list file for package &#39;XXXXXXX&#39; missing, assuming package has no files currently installed bug</title>
+    <url>/blog/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt title="Photo by Tim Gouw on Unsplash"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道是谁动了服务器，导致环境不对了，gcc/g++ 使用报错，找不到头文件，以及每次使用 apt 都会输出标题的 warning，后来在粘贴到 txt 文档发现有多达 180 个 warning，真的服气，找了很多方案都没用，比如删除 <code>/var/lib/dpkg/info</code> 然后自动生成，可能对那个博主有用，但是对我无效，最后这个：<a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">Ubuntu 18.04中的Dpkg警告解决方案，简单而粗糙</a> 有用，稍微修改整理了下，于是有了这篇博客。</p>
+<a id="more"></a>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>他博客里面写需要新建三个文件，其实只需要两个文件，因为最后一个 Shell 脚本是自动生成的。</p>
+<h3 id="错误信息的文档"><a href="#错误信息的文档" class="headerlink" title="错误信息的文档"></a>错误信息的文档</h3><p>第一个就是包含 warning 的文本文档，我将其命名为 dpkg_warning.txt，然后将所有信息复制到这个文本中，大概如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dpkg: 警告: 无法找到软件包 libc++abi1:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 vdpau-driver-all:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 libgsasl7:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 libpgm-5.2-0:amd64 </span><br><span class="line">...</span><br><span class="line">dpkg: 警告: 无法找到软件包 libnppial9.1:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br></pre></td></tr></table></figure>
+<h3 id="用于生成-Shell-的-Python-脚本"><a href="#用于生成-Shell-的-Python-脚本" class="headerlink" title="用于生成 Shell 的 Python 脚本"></a>用于生成 Shell 的 Python 脚本</h3><p>这个 Python 脚本的主要作用就是从上面的 txt 文档中提取出软件名，然后生成一条对应的重装命令，并写入 Shell 脚本，这个脚本我也做了修改，我去掉了软件名后面挂的 amd64，原博客是没去的，​但是好像没影响。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Date    : 2020-10-06 15:00:41</span></span><br><span class="line"><span class="comment"># @Author  : Lewis Tian (taseikyo@gmail.com)</span></span><br><span class="line"><span class="comment"># @Link    : github.com/taseikyo</span></span><br><span class="line"><span class="comment"># @Version : python3.8</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">遇到这个问题，找了很多都没解决</span></span><br><span class="line"><span class="string">这个链接似乎有效</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- https://www.pythonf.cn/read/105362</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    pat = re.compile(<span class="string">"dpkg: 警告: 无法找到软件包 (.+) "</span>)</span><br><span class="line">    miss_pkgs = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> open(<span class="string">"dpkg_warning.txt"</span>, encoding=<span class="string">"utf-8"</span>):</span><br><span class="line">        pkg = re.match(pat, line)</span><br><span class="line">        <span class="keyword">if</span> pkg:</span><br><span class="line">            miss_pkgs.append(pkg.group(<span class="number">1</span>).split(<span class="string">":"</span>)[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"fix.sh"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(<span class="string">"#!/bin/bash\n\n"</span>)</span><br><span class="line">        <span class="keyword">for</span> mpkp <span class="keyword">in</span> miss_pkgs:</span><br><span class="line">            f.write(<span class="string">f"sudo apt-get -y install --reinstall <span class="subst">&#123;mpkp&#125;</span>\n"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h3 id="执行-Shell-脚本"><a href="#执行-Shell-脚本" class="headerlink" title="执行 Shell 脚本"></a>执行 Shell 脚本</h3><p>从上面的 Python 脚本中可以看到，最后的 Shell 脚本为 fix.sh，我们将其传到服务器上，由于是在 Windows 上写的文件，放到 Linux 上会由于换行存在问题，用 vim 打开，输入命令将换行转成 Linux 的格式。最后给脚本加上可执行的权限，最后运行即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim fix.sh</span><br><span class="line"><span class="comment"># :set fileformat=unix</span></span><br><span class="line"><span class="comment"># :wq</span></span><br><span class="line">sudo chmod +x fix.sh</span><br><span class="line">./fix.sh</span><br></pre></td></tr></table></figure>
+<p>在执行过程中可以看到 warning 仍然存在，但是个数在不断减少，当执行到最后一条命令时，不出意外 warning 应该没了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">https://www.pythonf.cn/read/105362</a></li>
+<li><a href="https://fitzeng.org/2017/11/04/linuxDpkgBug/" target="_blank" rel="noopener">https://fitzeng.org/2017/11/04/linuxDpkgBug/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>ubuntu1804</tag>
+        <tag>dkpg</tag>
+        <tag>apt</tag>
+        <tag>apt-get</tag>
+        <tag>linux - warning - bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>有用的 bash alias</title>
+    <url>/blog/2020/10/07/0062-useful-bash-alias/</url>
+    <content><![CDATA[<p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 就行了</p>
+<a id="more"></a>
+<h2 id="Change-Directories"><a href="#Change-Directories" class="headerlink" title="Change Directories"></a>Change Directories</h2><ul>
+<li>alias ..=”cd ..”</li>
+<li>alias …=”cd ../..”</li>
+<li>alias ….=”cd ../../..”</li>
+<li>alias …..=”cd ../../../..”</li>
+<li><p>alias ……=”cd ../../../../..”</p>
+</li>
+<li><p>alias 2=”cd ..”</p>
+</li>
+<li>alias 3=”cd ../..”</li>
+<li>alias 4=”cd ../../..”</li>
+<li>alias 5=”cd ../../../..”</li>
+<li>alias 6=”cd ../../../../..”</li>
+</ul>
+<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><ul>
+<li>alias gs=”git status”</li>
+<li>alias gl=”git log –pretty=format:”%C(auto)%h %Cred%an(%ad) %C(auto)%s%d” –graph –date=short”</li>
+</ul>
+<h2 id="History-commands"><a href="#History-commands" class="headerlink" title="History commands"></a>History commands</h2><ul>
+<li>alias h=”history”</li>
+<li>alias h1=”history 10”</li>
+<li>alias h2=”history 20”</li>
+<li>alias h3=”history 30”</li>
+</ul>
+<h2 id="List-commands"><a href="#List-commands" class="headerlink" title="List commands"></a>List commands</h2><ul>
+<li>alias l.=”ls -d .* –color=auto”</li>
+<li>alias ls=”ls –color=auto”</li>
+<li>alias ll=”ls -la”</li>
+<li>alias l=ll</li>
+</ul>
+<h2 id="Install-amp-Update-utilties"><a href="#Install-amp-Update-utilties" class="headerlink" title="Install &amp; Update utilties"></a>Install &amp; Update utilties</h2><ul>
+<li>alias sai=”sudo apt install “</li>
+<li>alias sai=”sudo apt-get install “</li>
+<li>alias sau=”sudo apt update”</li>
+<li>alias sau=”sudo apt-get update”</li>
+<li>alias update=”sudo apt update”</li>
+</ul>
+<h2 id="Get-details-of-a-process"><a href="#Get-details-of-a-process" class="headerlink" title="Get details of a process"></a>Get details of a process</h2><ul>
+<li>alias paux=”ps aux | grep “</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>bash</tag>
+        <tag>alias</tag>
+        <tag>shell</tag>
+        <tag>bashrc</tag>
+        <tag>bash-profile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>donate</title>
+    <url>/blog/2018/01/01/donate/</url>
+    <content><![CDATA[<p>thanks for your donation.</p>
+<div align="center"><br>    <img data-src="/blog/images/alipay.jpg" width="300" alt="alipay"><br>    <img data-src="/blog/images/wechatpay.jpg" width="300" alt="wechatpay"><br></div>]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>donate</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>includeOS 再体验 - Bye World!</title>
     <url>/blog/2019/05/20/0037.includeos-helloworld2/</url>
-    <content><![CDATA[<p>今天与发上一篇 <a href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/" target="_blank" rel="noopener">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a href="https://github.com/includeos/IncludeOS#getting_started" target="_blank" rel="noopener">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a href="https://conan.io/" target="_blank" rel="noopener">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
+    <content><![CDATA[<p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
+<p>今天与发上一篇 <a href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/" target="_blank" rel="noopener">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a href="https://github.com/includeos/IncludeOS#getting_started" target="_blank" rel="noopener">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a href="https://conan.io/" target="_blank" rel="noopener">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
 <p>当然我没有深究这个东西，简要看了一下文档介绍然后安装之。我卡住并不是因为这个 conan。</p>
 <a id="more"></a>
 <p>首先，服务器上是 CentOS7，并不是我所熟悉一点的 Ubuntu，它的 yum 命令还是和 apt-get 有点区别，当然这个也不是很重要的问题。</p>
@@ -2031,50 +2189,6 @@ cpuid
         <tag>cpp</tag>
         <tag>includeos</tag>
         <tag>unikernel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>向 TheAlgorithms/Python 贡献代码须知</title>
-    <url>/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</url>
-    <content><![CDATA[<p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
-<ul>
-<li>fork 到自己的仓库</li>
-<li>git clone 到本地</li>
-<li>上游建立连接<ul>
-<li><code>git remote add upstream 开源项目地址</code></li>
-</ul>
-</li>
-<li>创建开发分支（非必须）<ul>
-<li><code>git checkout -b dev</code></li>
-</ul>
-</li>
-<li>修改提交代码<ul>
-<li><code>git status git</code></li>
-<li><code>add . git commit -m ...</code></li>
-<li><code>git push origin branch</code></li>
-</ul>
-</li>
-<li>同步代码三部曲<ul>
-<li><code>git fetch upstream</code></li>
-<li><code>git rebase upstream/master</code></li>
-<li><code>git push origin master</code></li>
-</ul>
-</li>
-<li>提交pr<br>  去自己 github 仓库对应 fork 的项目下 new pull request</li>
-</ul>
-<p>另外由于每个开源项目都有自己的要求，比如 TheAlgorithms/Python 提交 pr 都会进行各种格式检查，所以先本地 check 一下就可以避免出现格式语法错而得重新 commit 的浪费时间问题，下面是一个维护者提出的步骤：</p>
-<ul>
-<li><a href="https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650" target="_blank" rel="noopener">https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650</a></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">black &lt;filename&gt;</span><br><span class="line">isort &lt;filename&gt;</span><br><span class="line">flake8 --ignore=E203,W503 --max-complexity=25 --max-line-length=88 --statistics --count &lt;filename&gt;</span><br><span class="line">mypy --ignore-missing-imports &lt;filename&gt;</span><br><span class="line">pytest --doctest-modules &lt;filename&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>github</tag>
-        <tag>contribution</tag>
-        <tag>algorithm</tag>
       </tags>
   </entry>
 </search>

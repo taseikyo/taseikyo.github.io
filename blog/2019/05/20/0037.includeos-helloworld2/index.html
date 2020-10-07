@@ -23,20 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一">
+  <meta name="description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是">
 <meta name="keywords" content="cpp,includeos,unikernel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="includeOS 再体验 - Bye World!">
 <meta property="og:url" content="https://taseikyo.github.io/2019/05/20/0037.includeos-helloworld2/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一">
+<meta property="og:description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://taseikyo.github.io/images/includeOS.png">
-<meta property="og:updated_time" content="2020-09-30T01:43:28.665Z">
+<meta property="og:updated_time" content="2020-10-07T09:02:18.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="includeOS 再体验 - Bye World!">
-<meta name="twitter:description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一">
-<meta name="twitter:image" content="https://taseikyo.github.io/images/includeOS.png">
+<meta name="twitter:description" content="今天与发上一篇 includeOS 初体验 - Hello World! 正好相隔两个月，再次提及却是没那么轻松。之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。一个最主要的原因在于 IncludeOS 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 conan 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是">
 
 <link rel="canonical" href="https://taseikyo.github.io/2019/05/20/0037.includeos-helloworld2/">
 
@@ -261,10 +259,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/includeOS.png" itemprop="contentUrl">
-        </div>
-        <p>今天与发上一篇 <a href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/" target="_blank" rel="noopener">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a href="https://github.com/includeos/IncludeOS#getting_started" target="_blank" rel="noopener">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a href="https://conan.io/" target="_blank" rel="noopener">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
+        <p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
+<p>今天与发上一篇 <a href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/" target="_blank" rel="noopener">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a href="https://github.com/includeos/IncludeOS#getting_started" target="_blank" rel="noopener">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a href="https://conan.io/" target="_blank" rel="noopener">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
 <p>当然我没有深究这个东西，简要看了一下文档介绍然后安装之。我卡住并不是因为这个 conan。</p>
 <a id="more"></a>
 <p>首先，服务器上是 CentOS7，并不是我所熟悉一点的 Ubuntu，它的 yum 命令还是和 apt-get 有点区别，当然这个也不是很重要的问题。</p>
@@ -548,7 +544,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -561,7 +557,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-count">148</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

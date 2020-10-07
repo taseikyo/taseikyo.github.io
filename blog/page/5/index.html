@@ -210,6 +210,155 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/02/16/0030.codewars-190216/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/02/16/0030.codewars-190216/" class="post-title-link" itemprop="url">codewars-190216</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-02-16 16:27:24" itemprop="dateCreated datePublished" datetime="2019-02-16T16:27:24+08:00">2019-02-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
+<p>原题如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Write a simple parser that will parse and run Deadfish.</span><br><span class="line"></span><br><span class="line">Deadfish has 4 commands, each 1 character long:</span><br><span class="line"></span><br><span class="line">i increments the value (initially 0)</span><br><span class="line">d decrements the value</span><br><span class="line">s squares the value</span><br><span class="line">o outputs the value into the return array</span><br><span class="line">Invalid characters should be ignored.</span><br><span class="line"></span><br><span class="line">parse(&quot;iiisdoso&quot;)  ==&gt;  [8, 64]</span><br></pre></td></tr></table></figure></p>
+<p>我的解法就很直白，大部分人基本上都是这样做的，虽然也想过有没有其他的解法，但是没想出来 233<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">	init = <span class="number">0</span></span><br><span class="line">	out = []</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">		<span class="keyword">if</span> i == <span class="string">'i'</span>: init += <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'d'</span>: init -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'s'</span>: init *= init</span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'o'</span>: out.append(init)</span><br><span class="line">	<span class="keyword">return</span> out</span><br></pre></td></tr></table></figure></p>
+<p>提交之后看到有个人是下面这样的解法，惊了，突然感觉 get 到了某种小技巧（但是不记下来可能过段时间就忘了<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">    action = &#123;<span class="string">'i'</span>: <span class="keyword">lambda</span> v, r: v + <span class="number">1</span>,</span><br><span class="line">              <span class="string">'d'</span>: <span class="keyword">lambda</span> v, r: v - <span class="number">1</span>,</span><br><span class="line">              <span class="string">'s'</span>: <span class="keyword">lambda</span> v, r: v * v,</span><br><span class="line">              <span class="string">'o'</span>: <span class="keyword">lambda</span> v, r: r.append(v) <span class="keyword">or</span> v&#125;</span><br><span class="line">    v, r = <span class="number">0</span>, []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> data:</span><br><span class="line">        v = action[a](v, r) <span class="keyword">if</span> a <span class="keyword">in</span> action <span class="keyword">else</span> v</span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/02/15/0029.bili-pendant/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/02/15/0029.bili-pendant/" class="post-title-link" itemprop="url">为博客头像添加哔哩哔哩挂件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-02-15 21:01:09" itemprop="dateCreated datePublished" datetime="2019-02-15T21:01:09+08:00">2019-02-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Essay/" itemprop="url" rel="index"><span itemprop="name">Essay</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/author-bili-pendant.png" alt></p>
+<p>之前在做 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/taseikyo/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
+<p>昨天晚上参考该作者的 <a href="https://github.com/lewky/hexo-theme-beep" target="_blank" rel="noopener">hexo-theme-beep</a> 主题，修改了一下自定义的 js 和 css 文件，然后将挂件加到了我自己的博客头像上。</p>
+<p>和原作者稍有不同，我的是直接点击一次就改变头像，而且会显示挂件名称，每次都随机加载图片而不是按顺序。 </p>
+<p>实际效果可以点击我博客头像来感受一下~</p>
+<p>具体修改如下所示<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2019/02/15/0029.bili-pendant/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/01/25/0028.first2codewars/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -257,10 +406,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/first2codewars.png" itemprop="contentUrl">
-        </div>
-          <p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
+          <p><img data-src="/blog/images/first2codewars.png" alt></p>
+<p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
 <blockquote>
 <p>@GloomyGhost: 有这时间还不如刷codewar</p>
 </blockquote>
@@ -333,10 +480,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/summary_1812.png" itemprop="contentUrl">
-        </div>
-          <p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
+          <p><img data-src="/blog/images/summary_1812.png" alt></p>
+<p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/blog/2018/12/30/0027.summary-1812/#more" rel="contents">
@@ -487,10 +632,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/18.06-Linear-Algebra.jpg" itemprop="contentUrl">
-        </div>
-          <p>2018/12/10 16:15 完结撒花！！！<br>因为听矩阵论听不懂而跑去看 <a href="https://www.youtube.com/watch?v=ZK3O402wf1c&amp;list=PLE7DDD91010BC51F8" target="_blank" rel="noopener">MIT 线性代数公开课</a> 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。<br>吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。<br>本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_<br><img data-src="/blog/images/18.06-Linear-Algebra-note.jpg" alt title="Linear Algebra Notes"></p>
+          <p><img data-src="/blog//images/18.06-Linear-Algebra.jpg" alt></p>
+<p>2018/12/10 16:15 完结撒花！！！<br>因为听矩阵论听不懂而跑去看 <a href="https://www.youtube.com/watch?v=ZK3O402wf1c&amp;list=PLE7DDD91010BC51F8" target="_blank" rel="noopener">MIT 线性代数公开课</a> 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。<br>吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。<br>本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_<br><img data-src="/blog/images/18.06-Linear-Algebra-note.jpg" alt title="Linear Algebra Notes"></p>
 
       
     </div>
@@ -660,146 +803,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2018/11/27/0022.exercise-181127/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2018/11/27/0022.exercise-181127/" class="post-title-link" itemprop="url">每日一题-181127</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-11-27 17:10:02" itemprop="dateCreated datePublished" datetime="2018-11-27T17:10:02+08:00">2018-11-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>要求如下：<br>编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。<br>-1<sup>1</sup> + 2<sup>2</sup> - 3<sup>3</sup> + 4<sup>1</sup> - 5<sup>2</sup> + 6<sup>3</sup> -7<sup>1</sup> + 8<sup>2</sup> - 9<sup>3</sup> +10<sup>1</sup> …</p>
-<p>我的解法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> sum((<span class="number">-1</span>)**i*i**((i<span class="number">-1</span>)%<span class="number">3</span>+<span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>))</span><br></pre></td></tr></table></figure></p>
-<p>近来用 Python 解题更喜欢 one line 的方式了（装x【并不</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/" class="post-title-link" itemprop="url">sizeof(数组名)和sizeof(指针)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-11-23 16:21:49" itemprop="dateCreated datePublished" datetime="2018-11-23T16:21:49+08:00">2018-11-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/c-pointer.jpg" itemprop="contentUrl">
-        </div>
-          <p>今天做了一道题，感觉很有趣，题目是下面这样的<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str_arg[<span class="number">100</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">char</span> str[]=<span class="string">"Hello"</span>;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(str));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="built_in">strlen</span>(str));</span><br><span class="line">    <span class="keyword">char</span>*p=str;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(p));</span><br><span class="line">    Func(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span></span><br></pre></td></tr></table></figure></p>
-<p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）<br><img data-src="/blog/images/c-pointer-result.png" alt="result" title="运行结果"><br>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -871,7 +874,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -884,7 +887,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">137</span>
+        <span class="site-state-item-count">148</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
