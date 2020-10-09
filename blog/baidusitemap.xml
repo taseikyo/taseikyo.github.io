@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://taseikyo.github.io/blog/2018/11/01/0019.pc-win-no-voice/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2018/11/30/0023.summary-1811/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2018/03/14/0008.linux-boost/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2018/10/01/0015.summary-1809/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2017/08/07/0001.topology/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2019/02/28/0033.meeting-190227/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2019/03/20/0032.includeos-helloworld/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2019/09/08/0042.diff-stack-heap/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/06/09/0057.xinkeniang-qingfeng/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/09/0063centos-ubuntu-command-diff/</loc>
+    <lastmod>2020-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/07/0062.useful-bash-alias/</loc>
+    <lastmod>2020-10-07</lastmod>
+  </url>
+  <url>
     <loc>https://taseikyo.github.io/blog/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</loc>
     <lastmod>2020-10-07</lastmod>
   </url>
@@ -22,10 +78,6 @@
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2019/02/23/0031.mad-review/</loc>
-    <lastmod>2020-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2019/03/20/0032.includeos-helloworld/</loc>
     <lastmod>2020-10-07</lastmod>
   </url>
   <url>
@@ -61,23 +113,11 @@
     <lastmod>2020-10-07</lastmod>
   </url>
   <url>
-    <loc>https://taseikyo.github.io/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
-    <lastmod>2020-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/07/0062-useful-bash-alias/</loc>
-    <lastmod>2020-10-07</lastmod>
-  </url>
-  <url>
     <loc>https://taseikyo.github.io/blog/2019/10/25/0045.win10-network-error/</loc>
     <lastmod>2020-10-07</lastmod>
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2018/01/01/donate/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2019/02/28/0033.meeting-190227/</loc>
     <lastmod>2020-09-30</lastmod>
   </url>
   <url>
@@ -105,23 +145,7 @@
     <lastmod>2020-09-30</lastmod>
   </url>
   <url>
-    <loc>https://taseikyo.github.io/blog/2018/11/30/0023.summary-1811/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
     <loc>https://taseikyo.github.io/blog/2018/10/20/0016.microphone-no-voice/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2018/10/01/0015.summary-1809/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2018/03/14/0008.linux-boost/</loc>
     <lastmod>2020-09-30</lastmod>
   </url>
   <url>
@@ -134,14 +158,6 @@
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2018/07/11/0013.windows-right-click-slow/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2017/08/07/0001.topology/</loc>
     <lastmod>2020-09-30</lastmod>
   </url>
   <url>
@@ -185,10 +201,6 @@
     <lastmod>2020-08-26</lastmod>
   </url>
   <url>
-    <loc>https://taseikyo.github.io/blog/2018/11/01/0019.pc-win-no-voice/</loc>
-    <lastmod>2020-08-26</lastmod>
-  </url>
-  <url>
     <loc>https://taseikyo.github.io/blog/2018/10/31/0018.chrome-exts-hide2show/</loc>
     <lastmod>2020-08-26</lastmod>
   </url>
@@ -201,15 +213,7 @@
     <lastmod>2020-08-25</lastmod>
   </url>
   <url>
-    <loc>https://taseikyo.github.io/blog/2020/06/09/0057.xinkeniang-qingfeng/</loc>
-    <lastmod>2020-06-09</lastmod>
-  </url>
-  <url>
     <loc>https://taseikyo.github.io/blog/2020/05/28/0056.git-push-input-username-and-passwd/</loc>
-    <lastmod>2020-05-28</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2017/10/14/0004.hust-rank/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>
   <url>
@@ -218,6 +222,10 @@
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2017/08/25/0002.cloud-music-lyric/</loc>
+    <lastmod>2020-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2017/10/14/0004.hust-rank/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>
   <url>
@@ -239,10 +247,6 @@
   <url>
     <loc>https://taseikyo.github.io/blog/2020/03/09/0053.vmware-ubuntu1910-no-network/</loc>
     <lastmod>2020-03-09</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2019/09/08/0042.diff-stack-heap/</loc>
-    <lastmod>2019-09-08</lastmod>
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2018/11/27/0022.exercise-181127/</loc>

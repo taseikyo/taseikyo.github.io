@@ -210,6 +210,81 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/07/09/0039.win10-terminal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/07/09/0039.win10-terminal/" class="post-title-link" itemprop="url">win10 terminal 初体验&美化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-09 12:21:38" itemprop="dateCreated datePublished" datetime="2019-07-09T12:21:38+08:00">2019-07-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/0x027.001.png" alt title="windows-terminal"></p>
+<p>从 win10 terminal 的消息出来就想试试了，然而系统版本过低导致无法使用一直很气，上周将自己笔记本重装了，得到的版本是 1503 😂 然后升级了好久仍然只是到了 1809 (win+r =&gt; winver)，最后下了 win10 易升强行升到 1903，赶紧从应用商店下了 terminal 来试试。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2019/07/09/0039.win10-terminal/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/31/0038.onenote-open-link-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -648,21 +723,14 @@
           <p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
 <p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
 <p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
-<h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
-<p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
-<p><strong>20190406 更新</strong><br>有个地方忘记写了，少了这一步可能会导致安装出问题。<br>自己也是装了两遍才成功。下面分析是我 <strong>瞎分析的</strong> 233，不知道究竟是不是这样。<br>因为在安装过程中有请求 root 权限，导致用户改变了，所以 root 的环境变量也得变，下面是我添加的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=/home/tian/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
-<h3 id="安装-includeOS"><a href="#安装-includeOS" class="headerlink" title="安装 includeOS"></a>安装 includeOS</h3><p>直接运行下面命令即可<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/hioa-cs/IncludeOS</span><br><span class="line">$ <span class="built_in">cd</span> IncludeOS</span><br><span class="line">$ ./install.sh</span><br></pre></td></tr></table></figure></p>
-<p>install.sh 脚本帮你做了如下工作：</p>
-<ol>
-<li>安装了一些必要的依赖： curl make clang-5.0 nasm bridge-utils qemu</li>
-<li>用 CMake 编译 IncludeOS (将所有东西安装在 $INCLUDEOS_PREFIX/includeos ，如果在开始没有做自定义安装位置那一步则默认安装在 /usr/local 目录下)</li>
-</ol>
-<h3 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h3><p><code>$ ./test.sh</code><br>这样貌似就成功了叭_(:△」∠)_<br><img data-src="/blog/images/includeOS-test.sh.png" alt="test.sh" title="run test.sh"><br><img data-src="/blog/images/includeOS-links.png" alt="includeOS-links" title="links -dump 10.0.0.42"></p>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>终于到了这一步！(´ｰ∀ｰ`)<br>将 seed/service 目录复制一份，然后在 Service 类中实现 Service::start 函数即可（我发现里面已经有了 Hello world 2333<br>然后更新 CMakeLists.txt 来指定项目的名称<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cp -r seed/service ~/includeos_hellowrold</span><br><span class="line">$ <span class="built_in">cd</span> ~/includeos_hellowrold</span><br><span class="line">$ subl service.cpp</span><br><span class="line">$ mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ boot HelloWrold</span><br></pre></td></tr></table></figure></p>
-<p>正如上面所说，该 service.cpp 文件中其实已经输出了想要的 Hello world，所以我就加了一些额外的话。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Service::start</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __GNUG__</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Built by g++ "</span> __VERSION__ <span class="string">"\n"</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello world! --LewisTian\n"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Congratulations! Your first IncludeOS program runs successfully!\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后改了 CMakeLists.txt 中的服务名与生成文件名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Human-readable name of your service</span><br><span class="line">set(SERVICE_NAME &quot;IncludeOS HelloWrold&quot;)</span><br><span class="line"></span><br><span class="line"># Name of your service binary</span><br><span class="line">set(BINARY       &quot;HelloWrold&quot;)</span><br></pre></td></tr></table></figure></p>
-<p>一颗赛艇！最后使用命令 <code>boot HelloWrold</code> 运行你写的 IncludeOS HelloWrold<br>运行结果：<br><img data-src="/blog/images/includeOS-HelloWorld.png" alt="includeOS-HelloWorld" title="boot HelloWrold"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2019/03/20/0032.includeos-helloworld/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -728,93 +796,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。<br>毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）</p>
-<ul>
-<li>搜索 unikernel 关键词结果只有 <strong>5</strong> 条<div align="center"><br>  <img data-src="/blog/images/cnki-unikernel-result.png" title="知网搜索 unikernel 关键词结果"><br></div></li>
-<li>搜索 unikernel 内存管理关键词则没有😂<br><div align="center"><br>  <img data-src="/blog/images/cnki-unikernel-mm-result.png" title="知网搜索 unikernel 内存管理关键词结果"><br></div><br>然后老师又要求每个研一的同学说说自己的想法，没办法我只能借鉴之前看的一般异构内存管理的方法。<br>我就大概有三点想法：</li>
-</ul>
-<ol>
-<li>若是能知道启动的 unikernel 的读写比例，则可以相应给其分配不同比例的内存<br> 然后学长说这一点这是不可能的，因为你无法决定数据到底放在 DRAM 还是 NVM。</li>
-<li>自己添加一个库/模块，其作用是当 unikernel 处于 idle 状态/内存利用率不高的时候将空闲内存返还给 hypervisor，然后当其内存不够的时候再向 hypervisor 申请<br> 听完之后学长立马就说，这不是那个 ballooning 吗？（我沉默了一会，因为这就是借鉴它的思想）然后我反驳道：这个技术没被用到 unikernel 上啊。</li>
-<li>开始的时候初始化一个较大内存池，由 hypervisor 管理，结合上面一点来使用。</li>
-</ol>
-<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：<br><img data-src="/blog/images/yangmi-kuxiao.jpg"></p>
-<p>最后老师还是给我了一个思路：“大页”（就我理解大概就是比传统 4k 更大的页面吧233）<br>瞬间感觉得救了吧，至少有了一个方向，之前完全是两眼一抹黑，看的论文基本都是讲 unikernel 安全的。</p>
-<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。<br><img data-src="/blog/images/dog-lay.jpg" title="差不多是条废狗了。"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/02/23/0031.mad-review/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/02/23/0031.mad-review/" class="post-title-link" itemprop="url">补MAD计划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-02-23 19:46:43" itemprop="dateCreated datePublished" datetime="2019-02-23T19:46:43+08:00">2019-02-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。</p>
-<ul>
-<li>具体代码见 <a href="https://github.com/taseikyo/Crawler#bilibili" target="_blank" rel="noopener">LewisTian/Crawler</a></li>
-<li>数据及词云的材料 <a href="https://github.com/taseikyo/Crawler/bilibili/bili-mad.7z" target="_blank" rel="noopener">bili-mad.7z</a></li>
-</ul>
+          <p>昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。</p>
+<p>毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/2019/02/23/0031.mad-review/#more" rel="contents">
+              <a class="btn" href="/blog/2019/02/28/0033.meeting-190227/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -837,7 +823,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/blog/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/8/">8</a><a class="extend next" rel="next" href="/blog/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/blog/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/blog/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/9/">9</a><a class="extend next" rel="next" href="/blog/page/5/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -905,7 +891,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -918,7 +904,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

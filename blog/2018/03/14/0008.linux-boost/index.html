@@ -31,12 +31,10 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="由于毕业设计要求需要安装 SHMA 然后依赖有许多库 而 boot 就是其中之一… 以下是我编译安装 boost 的步骤">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg">
-<meta property="og:updated_time" content="2020-09-30T01:41:19.313Z">
+<meta property="og:updated_time" content="2020-10-09T02:02:44.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 编译和安装 boost 库">
 <meta name="twitter:description" content="由于毕业设计要求需要安装 SHMA 然后依赖有许多库 而 boot 就是其中之一… 以下是我编译安装 boost 的步骤">
-<meta name="twitter:image" content="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg">
 
 <link rel="canonical" href="https://taseikyo.github.io/2018/03/14/0008.linux-boost/">
 
@@ -261,12 +259,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="http://img.itlun.cn/uploads/allimg/180215/1-1P215195925.jpg" itemprop="contentUrl">
-        </div>
-        <p>由于毕业设计要求需要安装 <a href="https://github.com/cyjseagull/SHMA" target="_blank" rel="noopener">SHMA</a> 然后依赖有许多库</p>
+        <p><img data-src="/blog/images/1-1P215195925.jpg" alt></p>
+<p>由于毕业设计要求需要安装 <a href="https://github.com/cyjseagull/SHMA" target="_blank" rel="noopener">SHMA</a> 然后依赖有许多库</p>
 <p>而 boot 就是其中之一…</p>
-<p>以下是我编译安装 boost 的步骤<br><a id="more"></a></p>
+<p>以下是我编译安装 boost 的步骤</p>
+<a id="more"></a>
 <h3 id="1-下载boost安装包并解压缩"><a href="#1-下载boost安装包并解压缩" class="headerlink" title="1. 下载boost安装包并解压缩"></a>1. 下载boost安装包并解压缩</h3><p>到 <a href="http://www.boost.org/" target="_blank" rel="noopener">http://www.boost.org/</a> 下载 boost 的安装包，我的版本是 1.66</p>
 <h3 id="2-设置编译器和所选库"><a href="#2-设置编译器和所选库" class="headerlink" title="2. 设置编译器和所选库"></a>2. 设置编译器和所选库</h3><p>先进入解压缩后的目录：</p>
 <p><code>cd boost_1_66_0</code></p>
@@ -283,7 +280,8 @@
 <p>最后需要注意，如果安装后想马上使用 boost 库进行编译，还需要执行一下这个命令：</p>
 <p><code>sudo ldconfig</code></p>
 <p>更新一下系统的动态链接库</p>
-<h3 id="5-boost-使用测试"><a href="#5-boost-使用测试" class="headerlink" title="5. boost 使用测试"></a>5. boost 使用测试</h3><p>以 <code>boost_thread</code> 为例，测试代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;boost/thread/thread.hpp&gt; //包含boost头文件</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">volatile bool isRuning = true;</span><br><span class="line"></span><br><span class="line">void func1()</span><br><span class="line">&#123;</span><br><span class="line">    static int cnt1 = 0;</span><br><span class="line">    while(isRuning)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;func1:&quot; &lt;&lt; cnt1++ &lt;&lt; endl;</span><br><span class="line">        sleep(1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void func2()</span><br><span class="line">&#123;</span><br><span class="line">    static int cnt2 = 0;</span><br><span class="line">    while(isRuning)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;\tfunc2:&quot; &lt;&lt; cnt2++ &lt;&lt; endl;</span><br><span class="line">        sleep(2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    boost::thread thread1(&amp;func1);</span><br><span class="line">    boost::thread thread2(&amp;func2);</span><br><span class="line"></span><br><span class="line">    system(&quot;read&quot;);</span><br><span class="line">    isRuning = false;</span><br><span class="line"></span><br><span class="line">    thread2.join();</span><br><span class="line">    thread1.join();</span><br><span class="line">    cout &lt;&lt; &quot;exit&quot; &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-boost-使用测试"><a href="#5-boost-使用测试" class="headerlink" title="5. boost 使用测试"></a>5. boost 使用测试</h3><p>以 <code>boost_thread</code> 为例，测试代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt; //包含boost头文件</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">volatile</span> <span class="keyword">bool</span> isRuning = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"func1:"</span> &lt;&lt; cnt1++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"\tfunc2:"</span> &lt;&lt; cnt2++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        sleep(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">boost::thread <span class="title">thread1</span><span class="params">(&amp;func1)</span></span>;</span><br><span class="line">    <span class="function">boost::thread <span class="title">thread2</span><span class="params">(&amp;func2)</span></span>;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"read"</span>);</span><br><span class="line">    isRuning = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    thread2.join();</span><br><span class="line">    thread1.join();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"exit"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在编译程序时，需要加入对boost_thread库的引用：</p>
 <p><code>g++ main.cpp -g -o main -lboost_thread -lboost_system</code></p>
 
@@ -428,7 +426,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -441,7 +439,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

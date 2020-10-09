@@ -15,7 +15,8 @@
   <entry>
     <title>暑假实习：拓扑图可视化</title>
     <url>/blog/2017/08/07/0001.topology/</url>
-    <content><![CDATA[<h2 id="实习成果展示："><a href="#实习成果展示：" class="headerlink" title="实习成果展示："></a>实习成果展示：</h2><ul>
+    <content><![CDATA[<p><img data-src="/blog/images/59e5e12cca4a7.png" alt></p>
+<h2 id="实习成果展示："><a href="#实习成果展示：" class="headerlink" title="实习成果展示："></a>实习成果展示：</h2><ul>
 <li><a href="https://lewistian.github.io/show/?0.json" target="_blank" rel="noopener">拓扑图可视化</a></li>
 <li><a href="http://suzhouxing.coding.me/Demo/NetworkVisualization.RSA/index.html?0.json" target="_blank" rel="noopener">学长改进版</a></li>
 </ul>
@@ -31,22 +32,6 @@
       </tags>
   </entry>
   <entry>
-    <title>华中科技大学贴吧牛人排行榜数据分析</title>
-    <url>/blog/2017/10/14/0004.hust-rank/</url>
-    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>python</tag>
-        <tag>crawler</tag>
-        <tag>tieba</tag>
-        <tag>echarts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python爬取京东内存条数据并作简单分析</title>
     <url>/blog/2017/10/10/0003.ram-jd/</url>
     <content><![CDATA[<p>在京东搜索内存条，然后根据销量排序，排序之后数据少了很多，写爬虫将其全部爬下，并存到 MySQL 数据库中，一共 2460 条数据，更详细的介绍见 <a href="https://github.com/taseikyo/RAM-JD" target="_blank" rel="noopener">RAM-JD</a>，可视化见 <a href="https://lewistian.github.io/RAM-JD" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/08/59da21bd58882.png" alt="Data" title="Data"></p>
@@ -58,9 +43,9 @@
         <tag>javascript</tag>
         <tag>python</tag>
         <tag>crawler</tag>
-        <tag>echarts</tag>
         <tag>ram</tag>
         <tag>jingdong</tag>
+        <tag>echarts</tag>
       </tags>
   </entry>
   <entry>
@@ -110,6 +95,22 @@
       </tags>
   </entry>
   <entry>
+    <title>华中科技大学贴吧牛人排行榜数据分析</title>
+    <url>/blog/2017/10/14/0004.hust-rank/</url>
+    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>echarts</tag>
+        <tag>tieba</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网易云热评</title>
     <url>/blog/2017/12/13/0007.netease-hot-comments/</url>
     <content><![CDATA[<p>这篇博客写的有些晚了，东西是今年 3、4 月份做出来并且展示的，motivation 是当时杭州(?)地铁里面的热评，感觉很不错于是就有了这个网站。<br>但是当时并没有搭建这个博客，所以今天补写，基本想法是爬取网易云的热评，这里取巧了，有个歌单搜集了一些破万的单曲，所以爬热评比爬电台简单得多，不用每个页面去爬，但是也有另一个影响就是可能有遗漏的数据。<br>热评入口：<a href="https://lewistian.github.io/netease" target="_blank" rel="noopener">网易云热评</a></p>
@@ -127,9 +128,11 @@
   <entry>
     <title>Linux 编译和安装 boost 库</title>
     <url>/blog/2018/03/14/0008.linux-boost/</url>
-    <content><![CDATA[<p>由于毕业设计要求需要安装 <a href="https://github.com/cyjseagull/SHMA" target="_blank" rel="noopener">SHMA</a> 然后依赖有许多库</p>
+    <content><![CDATA[<p><img data-src="/blog/images/1-1P215195925.jpg" alt></p>
+<p>由于毕业设计要求需要安装 <a href="https://github.com/cyjseagull/SHMA" target="_blank" rel="noopener">SHMA</a> 然后依赖有许多库</p>
 <p>而 boot 就是其中之一…</p>
-<p>以下是我编译安装 boost 的步骤<br><a id="more"></a></p>
+<p>以下是我编译安装 boost 的步骤</p>
+<a id="more"></a>
 <h3 id="1-下载boost安装包并解压缩"><a href="#1-下载boost安装包并解压缩" class="headerlink" title="1. 下载boost安装包并解压缩"></a>1. 下载boost安装包并解压缩</h3><p>到 <a href="http://www.boost.org/" target="_blank" rel="noopener">http://www.boost.org/</a> 下载 boost 的安装包，我的版本是 1.66</p>
 <h3 id="2-设置编译器和所选库"><a href="#2-设置编译器和所选库" class="headerlink" title="2. 设置编译器和所选库"></a>2. 设置编译器和所选库</h3><p>先进入解压缩后的目录：</p>
 <p><code>cd boost_1_66_0</code></p>
@@ -146,7 +149,8 @@
 <p>最后需要注意，如果安装后想马上使用 boost 库进行编译，还需要执行一下这个命令：</p>
 <p><code>sudo ldconfig</code></p>
 <p>更新一下系统的动态链接库</p>
-<h3 id="5-boost-使用测试"><a href="#5-boost-使用测试" class="headerlink" title="5. boost 使用测试"></a>5. boost 使用测试</h3><p>以 <code>boost_thread</code> 为例，测试代码如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;boost/thread/thread.hpp&gt; //包含boost头文件</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">volatile bool isRuning = true;</span><br><span class="line"></span><br><span class="line">void func1()</span><br><span class="line">&#123;</span><br><span class="line">    static int cnt1 = 0;</span><br><span class="line">    while(isRuning)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;func1:&quot; &lt;&lt; cnt1++ &lt;&lt; endl;</span><br><span class="line">        sleep(1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void func2()</span><br><span class="line">&#123;</span><br><span class="line">    static int cnt2 = 0;</span><br><span class="line">    while(isRuning)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;\tfunc2:&quot; &lt;&lt; cnt2++ &lt;&lt; endl;</span><br><span class="line">        sleep(2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    boost::thread thread1(&amp;func1);</span><br><span class="line">    boost::thread thread2(&amp;func2);</span><br><span class="line"></span><br><span class="line">    system(&quot;read&quot;);</span><br><span class="line">    isRuning = false;</span><br><span class="line"></span><br><span class="line">    thread2.join();</span><br><span class="line">    thread1.join();</span><br><span class="line">    cout &lt;&lt; &quot;exit&quot; &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-boost-使用测试"><a href="#5-boost-使用测试" class="headerlink" title="5. boost 使用测试"></a>5. boost 使用测试</h3><p>以 <code>boost_thread</code> 为例，测试代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt; //包含boost头文件</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">volatile</span> <span class="keyword">bool</span> isRuning = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"func1:"</span> &lt;&lt; cnt1++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"\tfunc2:"</span> &lt;&lt; cnt2++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        sleep(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">boost::thread <span class="title">thread1</span><span class="params">(&amp;func1)</span></span>;</span><br><span class="line">    <span class="function">boost::thread <span class="title">thread2</span><span class="params">(&amp;func2)</span></span>;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"read"</span>);</span><br><span class="line">    isRuning = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    thread2.join();</span><br><span class="line">    thread1.join();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"exit"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在编译程序时，需要加入对boost_thread库的引用：</p>
 <p><code>g++ main.cpp -g -o main -lboost_thread -lboost_system</code></p>
 ]]></content>
@@ -204,21 +208,6 @@
 <li><p>auto_print.sh</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
 </ul>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>spec-cpu2006</tag>
-        <tag>command</tag>
-        <tag>spec</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>solve omnetpp run error</title>
-    <url>/blog/2018/05/03/0011.omnetpp-ini-open-error/</url>
-    <content><![CDATA[<p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
-<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
 ]]></content>
       <categories>
         <category>Study</category>
@@ -420,67 +409,64 @@
       </tags>
   </entry>
   <entry>
-    <title>PyQt5 多语言支持</title>
-    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
-    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
-<ol>
-<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
-</li>
-<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
-<ol start="4">
-<li>源码<a id="more"></a>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
-
-</li>
-</ol>
-<p>点击英文：</p>
-<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
-
-
-<ul>
-<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>python</tag>
-        <tag>pytt5</tag>
-        <tag>pyqt</tag>
-        <tag>i18n</tag>
-        <tag>language</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10 桌面点右键很慢才出菜单</title>
-    <url>/blog/2018/07/11/0013.windows-right-click-slow/</url>
-    <content><![CDATA[<p>网上找了很多帖子，都说的是注册表的问题，我试了下，发现确实是由于 intel 集成显卡的两个注册表项引起的。解决办法：命令行输入 regedit，打开注册表，进入 HKEY_CLASSES_ROOT\Directory\Background\Shellex\ContextMenuHandlers，删除 ig 开头的两个注册表项，退出即可。</p>
-<p>作者：木鱼<br>链接：<a href="https://www.zhihu.com/question/48817635/answer/112772070" target="_blank" rel="noopener">https://www.zhihu.com/question/48817635/answer/112772070</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+    <title>solve omnetpp run error</title>
+    <url>/blog/2018/05/03/0011.omnetpp-ini-open-error/</url>
+    <content><![CDATA[<p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
+<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
 ]]></content>
       <categories>
         <category>Study</category>
       </categories>
       <tags>
-        <tag>windows</tag>
-        <tag>right-click</tag>
-        <tag>menu</tag>
-        <tag>desktop</tag>
-        <tag>windows10</tag>
-        <tag>win10</tag>
+        <tag>spec-cpu2006</tag>
+        <tag>command</tag>
+        <tag>spec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tich·九月总结/2018</title>
+    <url>/blog/2018/10/01/0015.summary-1809/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1809.png" alt></p>
+<p>为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。<br>主要内容也就是对上个月的工作简单做个回顾总结。<br>下面是 2018 年九月的总结。</p>
+<a id="more"></a>
+<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>『正说大宋十八帝』- 刘亚玲<br>（本来打算是看两本的，结果另一本没看完）<br>书的内容如书名那般，讲述了南北宋的十八位帝王的一生。<br>本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。<br>看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。</p>
+<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
+<li><p>《Learn Python 3 the Hard Way》(pdf)<br>这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。</p>
+</li>
+<li><p>《Cpp Application Development with Code Blocks》(pdf)<br>这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。</p>
+</li>
+<li><p>《Python for Data Analysis》(pdf)<br>介绍如何使用 Python 进行数据分析，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《Xen 虚拟化技术完全解读》<br>介绍 Xen 虚拟化技术的，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《Real World OCaml》<br>OCaml 从入门到入土，<strong>还没看完</strong>。</p>
+</li>
+</ul>
+<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><p>很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy:</p>
+<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><p>这个月主要写了四个主要的东西吧（包括开始但未完成）</p>
+<ol>
+<li><p><a href="https://github.com/taseikyo/danmaku-convertor" target="_blank" rel="noopener">弹幕转换器</a><br>主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。<br>已经实现了腾讯、优酷的弹幕转化<br>下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。</p>
+</li>
+<li><p><a href="https://github.com/taseikyo/autoQA" target="_blank" rel="noopener">autoQA</a><br>主要功能是自动提交 QA。</p>
+</li>
+<li><p>d3 可视化框架<br>可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。<br>已经出了一个 <a href="https://www.bilibili.com/video/av33856779" target="_blank" rel="noopener">视频</a></p>
+</li>
+<li><p><a href="https://github.com/taseikyo/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
+</li>
+<li><p><a href="https://github.com/taseikyo/project-euler" target="_blank" rel="noopener">project-euler</a><br>刷了一些欧拉计划的题。<br>这个欧拉计划还是那个 <a href="https://github.com/csaarg" target="_blank" rel="noopener">计科艺研小组</a> 的一个大佬推荐给我的。</p>
+</li>
+</ol>
+<p>以上。</p>
+<p>九月的总结大概就是这些，下个月要继续加油才是。</p>
+<p><img data-src="/blog/images/summary_1809.png" alt="summary for 2018/9 by Tich." title="summary for 2018/9 by Tich."></p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>summary</tag>
+        <tag>person</tag>
       </tags>
   </entry>
   <entry>
@@ -572,48 +558,22 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>Tich·九月总结/2018</title>
-    <url>/blog/2018/10/01/0015.summary-1809/</url>
-    <content><![CDATA[<p>为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。<br>主要内容也就是对上个月的工作简单做个回顾总结。<br>下面是 2018 年九月的总结。</p>
+    <title>win10笔记本麦克风没声音</title>
+    <url>/blog/2018/10/20/0016.microphone-no-voice/</url>
+    <content><![CDATA[<p>记得去年跟别人玩&lt;荒野行动&gt;的时候还能语音的，今年暑假跟同学玩饥荒和 L4D2  讨论组语音，我可以听到他们的声音，他们却听不到我的声音很难受，搜了一些方法都不管用，最后没办法只能用手机跟他们语音。<br>今天玩&lt;无限法则&gt;，对面有人先说话了，然后我按 U 想说，结果没声音（名字后面没有小喇叭），那个唯一说话的老哥看到没人回应也不说话了，于是整场沉默…<br>再晚点和 B 站科技区的几个 UP 玩游戏（L4D2）还是没声音，我卸载了麦克风驱动，去官网重新下，安装之后还是不行，很绝望，又去搜了一些方法，什么用驱动精灵更新啊、禁用立体声混音设备啊，都不行，最后找到一个方法才管用。</p>
 <a id="more"></a>
-<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>『正说大宋十八帝』- 刘亚玲<br>（本来打算是看两本的，结果另一本没看完）<br>书的内容如书名那般，讲述了南北宋的十八位帝王的一生。<br>本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。<br>看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。</p>
-<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
-<li><p>《Learn Python 3 the Hard Way》(pdf)<br>这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。</p>
-</li>
-<li><p>《Cpp Application Development with Code Blocks》(pdf)<br>这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。</p>
-</li>
-<li><p>《Python for Data Analysis》(pdf)<br>介绍如何使用 Python 进行数据分析，<strong>还没看完</strong>。</p>
-</li>
-<li><p>《Xen 虚拟化技术完全解读》<br>介绍 Xen 虚拟化技术的，<strong>还没看完</strong>。</p>
-</li>
-<li><p>《Real World OCaml》<br>OCaml 从入门到入土，<strong>还没看完</strong>。</p>
-</li>
-</ul>
-<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><p>很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy:</p>
-<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><p>这个月主要写了四个主要的东西吧（包括开始但未完成）</p>
-<ol>
-<li><p><a href="https://github.com/taseikyo/danmaku-convertor" target="_blank" rel="noopener">弹幕转换器</a><br>主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。<br>已经实现了腾讯、优酷的弹幕转化<br>下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。</p>
-</li>
-<li><p><a href="https://github.com/taseikyo/autoQA" target="_blank" rel="noopener">autoQA</a><br>主要功能是自动提交 QA。</p>
-</li>
-<li><p>d3 可视化框架<br>可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。<br>已经出了一个 <a href="https://www.bilibili.com/video/av33856779" target="_blank" rel="noopener">视频</a></p>
-</li>
-<li><p><a href="https://github.com/taseikyo/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
-</li>
-<li><p><a href="https://github.com/taseikyo/project-euler" target="_blank" rel="noopener">project-euler</a><br>刷了一些欧拉计划的题。<br>这个欧拉计划还是那个 <a href="https://github.com/csaarg" target="_blank" rel="noopener">计科艺研小组</a> 的一个大佬推荐给我的。</p>
-</li>
-</ol>
-<p>以上。</p>
-<p>九月的总结大概就是这些，下个月要继续加油才是。</p>
-<p><img data-src="/blog/images/summary_1809.png" alt="summary for 2018/9 by Tich." title="summary for 2018/9 by Tich."></p>
+<blockquote>
+<p>设置 - 隐私中，选择麦克风选项，然后这里我们允许应用使用我的麦克风打开。</p>
+</blockquote>
+<p><img data-src="/blog/images/no-voice.png" alt="microphone no voice" title="允许应用访问我的麦克风"></p>
 ]]></content>
       <categories>
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>blog</tag>
-        <tag>summary</tag>
-        <tag>person</tag>
+        <tag>microphone</tag>
+        <tag>no-voice</tag>
+        <tag>daily</tag>
       </tags>
   </entry>
   <entry>
@@ -699,25 +659,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>win10笔记本麦克风没声音</title>
-    <url>/blog/2018/10/20/0016.microphone-no-voice/</url>
-    <content><![CDATA[<p>记得去年跟别人玩&lt;荒野行动&gt;的时候还能语音的，今年暑假跟同学玩饥荒和 L4D2  讨论组语音，我可以听到他们的声音，他们却听不到我的声音很难受，搜了一些方法都不管用，最后没办法只能用手机跟他们语音。<br>今天玩&lt;无限法则&gt;，对面有人先说话了，然后我按 U 想说，结果没声音（名字后面没有小喇叭），那个唯一说话的老哥看到没人回应也不说话了，于是整场沉默…<br>再晚点和 B 站科技区的几个 UP 玩游戏（L4D2）还是没声音，我卸载了麦克风驱动，去官网重新下，安装之后还是不行，很绝望，又去搜了一些方法，什么用驱动精灵更新啊、禁用立体声混音设备啊，都不行，最后找到一个方法才管用。</p>
-<a id="more"></a>
-<blockquote>
-<p>设置 - 隐私中，选择麦克风选项，然后这里我们允许应用使用我的麦克风打开。</p>
-</blockquote>
-<p><img data-src="/blog/images/no-voice.png" alt="microphone no voice" title="允许应用访问我的麦克风"></p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>microphone</tag>
-        <tag>no-voice</tag>
-        <tag>daily</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何显示已经隐藏的 chrome 扩展</title>
     <url>/blog/2018/10/31/0018.chrome-exts-hide2show/</url>
     <content><![CDATA[<p><center>当你安装的 chrome 扩展太多之后，你会把常用的、没有右键功能的一些扩展隐藏起来，那么如何将隐藏的扩展显示出来？</center><br><a id="more"></a></p>
@@ -736,9 +677,57 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>PyQt5 多语言支持</title>
+    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
+    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
+<ol>
+<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
+</li>
+<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
+<ol start="4">
+<li>源码<a id="more"></a>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
+
+</li>
+</ol>
+<p>点击英文：</p>
+<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
+
+
+<ul>
+<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>python</tag>
+        <tag>pytt5</tag>
+        <tag>pyqt</tag>
+        <tag>i18n</tag>
+        <tag>language</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>win10台式机(插入耳机)没有声音</title>
     <url>/blog/2018/11/01/0019.pc-win-no-voice/</url>
-    <content><![CDATA[<p>今天实验室发新机器了，重装了 win10 之后，开机-网易云音乐-耳机-没有声音？不听歌还怎么玩，开始以为是驱动的问题，装好之后还是没有声音，就一直提示未插入扬声器或耳机，然而我明明插耳机了好吧。<br>于是乎上网找了许多方法，最后找到一个靠谱的方法。<br><a id="more"></a></p>
+    <content><![CDATA[<p><img data-src="/blog/images/181101-no-voice-2.png" alt></p>
+<p>今天实验室发新机器了，重装了 win10 之后，开机-网易云音乐-耳机-没有声音？不听歌还怎么玩，开始以为是驱动的问题，装好之后还是没有声音，就一直提示未插入扬声器或耳机，然而我明明插耳机了好吧。<br>于是乎上网找了许多方法，最后找到一个靠谱的方法。</p>
+<a id="more"></a>
 <ol>
 <li>win+r 打开运行，输入 control 打开控制面板，或者搜索也行，我习惯在运行里面敲。</li>
 <li>找到 ‘硬件与声音’，点进去找到 ‘Realtek 高清晰音频管理器’ (没有的话先装驱动吧)，如下图所示，或者也可能是一个黑色的面板。<br><img data-src="/blog/images/181101-no-voice-3.png" alt="Realtek 高清晰音频管理器" title="Realtek 高清晰音频管理器"></li>
@@ -750,8 +739,46 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>win10</tag>
         <tag>no-voice</tag>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sizeof(数组名)和sizeof(指针)</title>
+    <url>/blog/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/c-pointer.jpg" alt></p>
+<p>今天做了一道题，感觉很有趣，题目是下面这样的</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str_arg[<span class="number">100</span>])</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> str[] = <span class="string">"Hello"</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(str));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="built_in">strlen</span>(str));</span><br><span class="line">    <span class="keyword">char</span>*p = str;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(p));</span><br><span class="line">    Func(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）</p>
+<p><img data-src="/blog/images/c-pointer-result.png" alt="result" title="运行结果"></p>
+<p>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>cpp</tag>
+        <tag>sizeof</tag>
+        <tag>array</tag>
+        <tag>pointer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10 桌面点右键很慢才出菜单</title>
+    <url>/blog/2018/07/11/0013.windows-right-click-slow/</url>
+    <content><![CDATA[<p>网上找了很多帖子，都说的是注册表的问题，我试了下，发现确实是由于 intel 集成显卡的两个注册表项引起的。解决办法：命令行输入 regedit，打开注册表，进入 HKEY_CLASSES_ROOT\Directory\Background\Shellex\ContextMenuHandlers，删除 ig 开头的两个注册表项，退出即可。</p>
+<p>作者：木鱼<br>链接：<a href="https://www.zhihu.com/question/48817635/answer/112772070" target="_blank" rel="noopener">https://www.zhihu.com/question/48817635/answer/112772070</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>windows</tag>
+        <tag>right-click</tag>
+        <tag>menu</tag>
+        <tag>desktop</tag>
+        <tag>windows10</tag>
       </tags>
   </entry>
   <entry>
@@ -770,22 +797,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>sizeof(数组名)和sizeof(指针)</title>
-    <url>/blog/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</url>
-    <content><![CDATA[<p>今天做了一道题，感觉很有趣，题目是下面这样的<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str_arg[<span class="number">100</span>])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">char</span> str[]=<span class="string">"Hello"</span>;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(str));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="built_in">strlen</span>(str));</span><br><span class="line">    <span class="keyword">char</span>*p=str;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(p));</span><br><span class="line">    Func(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span></span><br></pre></td></tr></table></figure></p>
-<p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）<br><img data-src="/blog/images/c-pointer-result.png" alt="result" title="运行结果"><br>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>cpp</tag>
-        <tag>sizeof</tag>
-        <tag>array</tag>
-        <tag>pointer</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>每日一题-181127</title>
     <url>/blog/2018/11/27/0022.exercise-181127/</url>
     <content><![CDATA[<p>要求如下：<br>编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。<br>-1<sup>1</sup> + 2<sup>2</sup> - 3<sup>3</sup> + 4<sup>1</sup> - 5<sup>2</sup> + 6<sup>3</sup> -7<sup>1</sup> + 8<sup>2</sup> - 9<sup>3</sup> +10<sup>1</sup> …</p>
@@ -801,33 +812,19 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>嗶哩嗶哩工具箱</title>
-    <url>/blog/2018/12/09/0024.bili-box/</url>
-    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
-<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
-<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
-<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>pyqt5</tag>
-        <tag>bilibili</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Tich·十一月总结/2018</title>
     <url>/blog/2018/11/30/0023.summary-1811/</url>
-    <content><![CDATA[<p>不知不觉又摸鱼一个月了:3<br>下面是 2018 年十一月的总结。</p>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1811.png" alt></p>
+<p>不知不觉又摸鱼一个月了:3<br>下面是 2018 年十一月的总结。</p>
 <a id="more"></a>
 <h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><ol>
-<li><p>『阿 Q 正传』 - 鲁迅<br>记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。</p>
-</li>
-<li><p>『我们仨』 - 杨绛<br>久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。<br>最后还是没看完，看了一部分看不下去了;3</p>
-</li>
+<li>『阿 Q 正传』 - 鲁迅</li>
 </ol>
+<p>记得之前初高中的时候看过一遍了，然后那天 (11/3) 早上去图书馆找书的时候正好看到了，索性就再借来看一遍。</p>
+<ol start="2">
+<li>『我们仨』 - 杨绛</li>
+</ol>
+<p>久仰大名，在结束的时候看到旁边睡着一本『我们仨』于是果断借来了。<br>最后还是没看完，看了一部分看不下去了;3</p>
 <h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
 <li><p>《Python Graph》(pdf)<br>这本书是介绍如何用 Python 进行画图，主要是使用 matplotlib 库。没看完，感觉还是用的时候直接查相应的函数比较靠谱吧。</p>
 </li>
@@ -861,7 +858,7 @@ cpuid
 </ol>
 <p>以上。</p>
 <p>十一月的总结大概就是这些，下个月要继续加油才是。</p>
-<p><img data-src="/blog/images/summary_1811.png" alt="summary for 2018/11 by Tich." title="summary for 2018/11 by Tich."></p>
+<p><img data-src="/blog/images/summary_1811.png" alt title="summary for 2018/11 by Tich."></p>
 ]]></content>
       <categories>
         <category>Essay</category>
@@ -886,31 +883,6 @@ cpuid
         <tag>mit</tag>
         <tag>18.06</tag>
         <tag>open-course</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tich·十二月总结/2018</title>
-    <url>/blog/2018/12/30/0027.summary-1812/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/summary_1812.png" alt></p>
-<p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
-<a id="more"></a>
-<h3 id="1-看的论文"><a href="#1-看的论文" class="headerlink" title="1. 看的论文"></a>1. 看的论文</h3><ol>
-<li>Unikernels: Library Operating Systems for the Cloud<br>主要内容是介绍了 Mirage 这个 unikernel</li>
-</ol>
-<h3 id="2-写的几行代码"><a href="#2-写的几行代码" class="headerlink" title="2. 写的几行代码"></a>2. 写的几行代码</h3><ol>
-<li><a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a><br>用来下载哔哩哔哩视频/图片/收藏。</li>
-</ol>
-<p>以上。</p>
-<p>十二月的总结大概就是这些，下个月要继续加油才是。</p>
-<p><img data-src="/blog/images/summary_1812.png" alt="summary for 2018/12 by Tich." title="summary for 2018/12 by Tich."></p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>summary</tag>
-        <tag>person</tag>
       </tags>
   </entry>
   <entry>
@@ -945,6 +917,48 @@ cpuid
         <tag>spell-problem</tag>
         <tag>stupid</tag>
         <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>嗶哩嗶哩工具箱</title>
+    <url>/blog/2018/12/09/0024.bili-box/</url>
+    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
+<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
+<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
+<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pyqt5</tag>
+        <tag>bilibili</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tich·十二月总结/2018</title>
+    <url>/blog/2018/12/30/0027.summary-1812/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1812.png" alt></p>
+<p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
+<a id="more"></a>
+<h3 id="1-看的论文"><a href="#1-看的论文" class="headerlink" title="1. 看的论文"></a>1. 看的论文</h3><ol>
+<li>Unikernels: Library Operating Systems for the Cloud<br>主要内容是介绍了 Mirage 这个 unikernel</li>
+</ol>
+<h3 id="2-写的几行代码"><a href="#2-写的几行代码" class="headerlink" title="2. 写的几行代码"></a>2. 写的几行代码</h3><ol>
+<li><a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a><br>用来下载哔哩哔哩视频/图片/收藏。</li>
+</ol>
+<p>以上。</p>
+<p>十二月的总结大概就是这些，下个月要继续加油才是。</p>
+<p><img data-src="/blog/images/summary_1812.png" alt="summary for 2018/12 by Tich." title="summary for 2018/12 by Tich."></p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>summary</tag>
+        <tag>person</tag>
       </tags>
   </entry>
   <entry>
@@ -996,6 +1010,23 @@ cpuid
         <tag>css</tag>
         <tag>pendant</tag>
         <tag>avatar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>codewars-190216</title>
+    <url>/blog/2019/02/16/0030.codewars-190216/</url>
+    <content><![CDATA[<p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
+<p>原题如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Write a simple parser that will parse and run Deadfish.</span><br><span class="line"></span><br><span class="line">Deadfish has 4 commands, each 1 character long:</span><br><span class="line"></span><br><span class="line">i increments the value (initially 0)</span><br><span class="line">d decrements the value</span><br><span class="line">s squares the value</span><br><span class="line">o outputs the value into the return array</span><br><span class="line">Invalid characters should be ignored.</span><br><span class="line"></span><br><span class="line">parse(&quot;iiisdoso&quot;)  ==&gt;  [8, 64]</span><br></pre></td></tr></table></figure></p>
+<p>我的解法就很直白，大部分人基本上都是这样做的，虽然也想过有没有其他的解法，但是没想出来 233<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">	init = <span class="number">0</span></span><br><span class="line">	out = []</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">		<span class="keyword">if</span> i == <span class="string">'i'</span>: init += <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'d'</span>: init -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'s'</span>: init *= init</span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'o'</span>: out.append(init)</span><br><span class="line">	<span class="keyword">return</span> out</span><br></pre></td></tr></table></figure></p>
+<p>提交之后看到有个人是下面这样的解法，惊了，突然感觉 get 到了某种小技巧（但是不记下来可能过段时间就忘了<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">    action = &#123;<span class="string">'i'</span>: <span class="keyword">lambda</span> v, r: v + <span class="number">1</span>,</span><br><span class="line">              <span class="string">'d'</span>: <span class="keyword">lambda</span> v, r: v - <span class="number">1</span>,</span><br><span class="line">              <span class="string">'s'</span>: <span class="keyword">lambda</span> v, r: v * v,</span><br><span class="line">              <span class="string">'o'</span>: <span class="keyword">lambda</span> v, r: r.append(v) <span class="keyword">or</span> v&#125;</span><br><span class="line">    v, r = <span class="number">0</span>, []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> data:</span><br><span class="line">        v = action[a](v, r) <span class="keyword">if</span> a <span class="keyword">in</span> action <span class="keyword">else</span> v</span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>codewars</tag>
+        <tag>oj</tag>
       </tags>
   </entry>
   <entry>
@@ -1084,11 +1115,41 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>Python3 中的 map 问题</title>
+    <url>/blog/2019/04/08/0034.python3-map/</url>
+    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
+<p>在最近的 <a href="https://github.com/taseikyo/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
+<p>部分 <a href="https://github.com/taseikyo/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
+<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
+<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
+<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="literal">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
+<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
+</ul>
+<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
+<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>map</tag>
+        <tag>any</tag>
+        <tag>all</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>includeOS 初体验 - Hello World!</title>
     <url>/blog/2019/03/20/0032.includeos-helloworld/</url>
     <content><![CDATA[<p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
 <p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
 <p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
+<a id="more"></a>
 <h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
 <p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
 <p><strong>20190406 更新</strong><br>有个地方忘记写了，少了这一步可能会导致安装出问题。<br>自己也是装了两遍才成功。下面分析是我 <strong>瞎分析的</strong> 233，不知道究竟是不是这样。<br>因为在安装过程中有请求 root 权限，导致用户改变了，所以 root 的环境变量也得变，下面是我添加的<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=/home/tian/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
@@ -1116,19 +1177,29 @@ cpuid
   <entry>
     <title>2019/02/27 组会小记</title>
     <url>/blog/2019/02/28/0033.meeting-190227/</url>
-    <content><![CDATA[<p>昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。<br>毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）</p>
+    <content><![CDATA[<p>昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。</p>
+<p>毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）</p>
+<a id="more"></a>
 <ul>
-<li>搜索 unikernel 关键词结果只有 <strong>5</strong> 条<div align="center"><br>  <img data-src="/blog/images/cnki-unikernel-result.png" title="知网搜索 unikernel 关键词结果"><br></div></li>
-<li>搜索 unikernel 内存管理关键词则没有😂<br><div align="center"><br>  <img data-src="/blog/images/cnki-unikernel-mm-result.png" title="知网搜索 unikernel 内存管理关键词结果"><br></div><br>然后老师又要求每个研一的同学说说自己的想法，没办法我只能借鉴之前看的一般异构内存管理的方法。<br>我就大概有三点想法：</li>
+<li>搜索 unikernel 关键词结果只有 <strong>5</strong> 条</li>
 </ul>
+<p><img data-src="/blog/images/cnki-unikernel-result.png" alt title="知网搜索 unikernel 关键词结果"></p>
+<ul>
+<li>搜索 unikernel 内存管理关键词则没有😂</li>
+</ul>
+<p><img data-src="/blog/images/cnki-unikernel-mm-result.png" alt title="知网搜索 unikernel 内存管理关键词结果"></p>
+<p>然后老师又要求每个研一的同学说说自己的想法，没办法我只能借鉴之前看的一般异构内存管理的方法。</p>
+<p>我就大概有三点想法：</p>
 <ol>
 <li>若是能知道启动的 unikernel 的读写比例，则可以相应给其分配不同比例的内存<br> 然后学长说这一点这是不可能的，因为你无法决定数据到底放在 DRAM 还是 NVM。</li>
 <li>自己添加一个库/模块，其作用是当 unikernel 处于 idle 状态/内存利用率不高的时候将空闲内存返还给 hypervisor，然后当其内存不够的时候再向 hypervisor 申请<br> 听完之后学长立马就说，这不是那个 ballooning 吗？（我沉默了一会，因为这就是借鉴它的思想）然后我反驳道：这个技术没被用到 unikernel 上啊。</li>
 <li>开始的时候初始化一个较大内存池，由 hypervisor 管理，结合上面一点来使用。</li>
 </ol>
-<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：<br><img data-src="/blog/images/yangmi-kuxiao.jpg"></p>
+<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：</p>
+<p><img data-src="/blog/images/yangmi-kuxiao.jpg" alt></p>
 <p>最后老师还是给我了一个思路：“大页”（就我理解大概就是比传统 4k 更大的页面吧233）<br>瞬间感觉得救了吧，至少有了一个方向，之前完全是两眼一抹黑，看的论文基本都是讲 unikernel 安全的。</p>
-<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。<br><img data-src="/blog/images/dog-lay.jpg" title="差不多是条废狗了。"></p>
+<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。</p>
+<p><img data-src="/blog/images/dog-lay.jpg" alt title="差不多是条废狗了"></p>
 ]]></content>
       <categories>
         <category>Essay</category>
@@ -1139,35 +1210,6 @@ cpuid
         <tag>meeting</tag>
         <tag>huge-page</tag>
         <tag>memory-management</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python3 中的 map 问题</title>
-    <url>/blog/2019/04/08/0034.python3-map/</url>
-    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
-<p>在最近的 <a href="https://github.com/taseikyo/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
-<p>部分 <a href="https://github.com/taseikyo/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
-<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
-<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
-<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="literal">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
-<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
-</ul>
-<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
-<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>map</tag>
-        <tag>any</tag>
-        <tag>all</tag>
       </tags>
   </entry>
   <entry>
@@ -1202,27 +1244,10 @@ cpuid
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>win10</tag>
+        <tag>windows</tag>
         <tag>software</tag>
         <tag>recommend</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>codewars-190216</title>
-    <url>/blog/2019/02/16/0030.codewars-190216/</url>
-    <content><![CDATA[<p>今天在 codewars 遇到一道题，不难，但是看到别人的解法被惊艳到了，故而做此纪录。</p>
-<p>原题如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Write a simple parser that will parse and run Deadfish.</span><br><span class="line"></span><br><span class="line">Deadfish has 4 commands, each 1 character long:</span><br><span class="line"></span><br><span class="line">i increments the value (initially 0)</span><br><span class="line">d decrements the value</span><br><span class="line">s squares the value</span><br><span class="line">o outputs the value into the return array</span><br><span class="line">Invalid characters should be ignored.</span><br><span class="line"></span><br><span class="line">parse(&quot;iiisdoso&quot;)  ==&gt;  [8, 64]</span><br></pre></td></tr></table></figure></p>
-<p>我的解法就很直白，大部分人基本上都是这样做的，虽然也想过有没有其他的解法，但是没想出来 233<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">	init = <span class="number">0</span></span><br><span class="line">	out = []</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">		<span class="keyword">if</span> i == <span class="string">'i'</span>: init += <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'d'</span>: init -= <span class="number">1</span></span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'s'</span>: init *= init</span><br><span class="line">		<span class="keyword">elif</span> i == <span class="string">'o'</span>: out.append(init)</span><br><span class="line">	<span class="keyword">return</span> out</span><br></pre></td></tr></table></figure></p>
-<p>提交之后看到有个人是下面这样的解法，惊了，突然感觉 get 到了某种小技巧（但是不记下来可能过段时间就忘了<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(data)</span>:</span></span><br><span class="line">    action = &#123;<span class="string">'i'</span>: <span class="keyword">lambda</span> v, r: v + <span class="number">1</span>,</span><br><span class="line">              <span class="string">'d'</span>: <span class="keyword">lambda</span> v, r: v - <span class="number">1</span>,</span><br><span class="line">              <span class="string">'s'</span>: <span class="keyword">lambda</span> v, r: v * v,</span><br><span class="line">              <span class="string">'o'</span>: <span class="keyword">lambda</span> v, r: r.append(v) <span class="keyword">or</span> v&#125;</span><br><span class="line">    v, r = <span class="number">0</span>, []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> data:</span><br><span class="line">        v = action[a](v, r) <span class="keyword">if</span> a <span class="keyword">in</span> action <span class="keyword">else</span> v</span><br><span class="line">    <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>codewars</tag>
-        <tag>oj</tag>
       </tags>
   </entry>
   <entry>
@@ -1271,8 +1296,8 @@ cpuid
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>win10</tag>
+        <tag>windows</tag>
         <tag>bug</tag>
         <tag>onenote</tag>
         <tag>organization-policies</tag>
@@ -1403,6 +1428,7 @@ cpuid
     <content><![CDATA[<p>因为经常有人问堆和栈的区别，就简单地知道栈向下增长；堆向上增长。在栈上创建的变量不需要自己释放；而在堆上创建的变量需要手动释放，否则会造成内存泄漏问题。</p>
 <p>然后今天看到这篇文章详细写了堆和栈的区别，然后就简单翻译了一下，贴在下面了 :0</p>
 <p>原文链接：<a href="https://www.programmerinterview.com/data-structures/difference-between-stack-and-heap/" target="_blank" rel="noopener">https://www.programmerinterview.com/data-structures/difference-between-stack-and-heap/</a></p>
+<a id="more"></a>
 <h1 id="堆和栈的区别"><a href="#堆和栈的区别" class="headerlink" title="堆和栈的区别"></a>堆和栈的区别</h1><p>栈和堆之间的区别可能会让许多人感到困惑。所以，我们准备了一些关于栈和堆的问题，我们觉得这些问题会对理解它们之间的区别有帮助。</p>
 <h2 id="堆和栈存储在哪里？"><a href="#堆和栈存储在哪里？" class="headerlink" title="堆和栈存储在哪里？"></a>堆和栈存储在哪里？</h2><p>它们都存在内存（RAM）中。</p>
 <h2 id="线程如何与堆栈交互？堆和栈如何在多线程中工作？"><a href="#线程如何与堆栈交互？堆和栈如何在多线程中工作？" class="headerlink" title="线程如何与堆栈交互？堆和栈如何在多线程中工作？"></a>线程如何与堆栈交互？堆和栈如何在多线程中工作？</h2><p>在多线程程序中，每个线程都有自己的 <strong>栈</strong>。但是，所有线程将共享一个 <strong>堆</strong>。<br>由于不同的线程共享堆，因此就存在多个线程同时访问一块内存的问题，所以就需要编程者来谨慎管理多线程的内存访问。</p>
@@ -1433,7 +1459,7 @@ cpuid
   <entry>
     <title>在服务器上装 Ubuntu1804 遇到的一些问题</title>
     <url>/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/</url>
-    <content><![CDATA[<p>由于 OSv 官方只主动地维护 Ubuntu 和 Federal，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
+    <content><![CDATA[<p>由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
 <p>开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装的时候有问题，于是又换了个软件重新制作启动盘。</p>
 <p>大概叫 Universal-USB-Installer 吧，在下载目录中还有这个软件，但是问题来了，制作完成，再装的过程中到分区那一步，我有点懵逼了，因为有三块盘，不知道怎么分区，于是百度了一下按照某个教程来的，貌似是装好了，结果重启进不了系统…这还是 9 月 20 号的事了，过了几天（大概是 23）段博他们给新的服务器（NVM）换内存条的位置导致读不出来，于是又换了一下。等他们搞完我让段博帮我看一下，后来还是没搞定他建议我重装，还说可以直接装桌面版的，不一定要 server 版。</p>
 <p>后来由于志愿者的事、出差北京的事耽误了一周，直到今天才重新装的。</p>
@@ -1458,27 +1484,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>win10 &quot;请确认系统网络配置是否完整&quot;</title>
-    <url>/blog/2019/10/25/0045.win10-network-error/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
-<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
-<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
-<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
-<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
-<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
-<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>windows10</tag>
-        <tag>win10</tag>
-        <tag>network</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ubuntu1804 静态 ip 配置问题</title>
     <url>/blog/2019/10/15/0044.ubuntu1804-static-ip/</url>
     <content><![CDATA[<p><img data-src="/blog/images/photo-1570937937487-125575170d69.jpg" alt="autumn" title="Photo by Nong Vang on Unsplash"></p>
@@ -1500,10 +1505,49 @@ cpuid
         <tag>linux</tag>
         <tag>ubuntu</tag>
         <tag>ubuntu1804</tag>
-        <tag>network</tag>
         <tag>ip</tag>
         <tag>static-ip</tag>
         <tag>netplan</tag>
+        <tag>network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ImportError DLL load failed while importing win32api 找不到指定的模块</title>
+    <url>/blog/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/</url>
+    <content><![CDATA[<p>今天在使用 jupyter notebook 时遇到很多问题，由于我上周把 Python3.7 给卸载了，更新为 3.8，然后就出现了很多问题，第一个就是 <a href="https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror" target="_blank" rel="noopener">Jupyter Notebook with Python 3.8 - NotImplementedError</a>，在 StackOverflow 上找到答案，以为就解决了，结果启动之后，在网页新建一个 Python 3 的笔记之后，右上角出现一个红色的按钮，点开看是错误信息，<code>ImportError: DLL load failed while importing win32api: 找不到指定的模块。</code>，然后也在 <a href="https://stackoverflow.com/questions/58612306/how-to-fix-importerror-dll-load-failed-while-importing-win32api" target="_blank" rel="noopener">StackOverflow</a> 上找到答案了，结果不太对，还是会报错，最后用百度搜到一个 <a href="https://blog.csdn.net/mtt_sky/article/details/50445938" target="_blank" rel="noopener">CSDN</a> 的博客，按照上面的说法，把 <code>Lib\site-packages\pywin32_system32\*</code> 目录下的两个 DLL 复制到 <code>C:\Windows\System32</code> 就好了，或者复制到 <code>Lib\site-packages\win32</code> 也行。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>bug</tag>
+        <tag>python3.8</tag>
+        <tag>win32api</tag>
+        <tag>pywin32</tag>
+        <tag>dll</tag>
+        <tag>importerror</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10 &quot;请确认系统网络配置是否完整&quot;</title>
+    <url>/blog/2019/10/25/0045.win10-network-error/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
+<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
+<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
+<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
+<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
+<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
+<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>windows</tag>
+        <tag>windows10</tag>
+        <tag>network</tag>
       </tags>
   </entry>
   <entry>
@@ -1526,24 +1570,6 @@ cpuid
         <tag>code</tag>
         <tag>definition</tag>
         <tag>remote-server</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ImportError DLL load failed while importing win32api 找不到指定的模块</title>
-    <url>/blog/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/</url>
-    <content><![CDATA[<p>今天在使用 jupyter notebook 时遇到很多问题，由于我上周把 Python3.7 给卸载了，更新为 3.8，然后就出现了很多问题，第一个就是 <a href="https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror" target="_blank" rel="noopener">Jupyter Notebook with Python 3.8 - NotImplementedError</a>，在 StackOverflow 上找到答案，以为就解决了，结果启动之后，在网页新建一个 Python 3 的笔记之后，右上角出现一个红色的按钮，点开看是错误信息，<code>ImportError: DLL load failed while importing win32api: 找不到指定的模块。</code>，然后也在 <a href="https://stackoverflow.com/questions/58612306/how-to-fix-importerror-dll-load-failed-while-importing-win32api" target="_blank" rel="noopener">StackOverflow</a> 上找到答案了，结果不太对，还是会报错，最后用百度搜到一个 <a href="https://blog.csdn.net/mtt_sky/article/details/50445938" target="_blank" rel="noopener">CSDN</a> 的博客，按照上面的说法，把 <code>Lib\site-packages\pywin32_system32\*</code> 目录下的两个 DLL 复制到 <code>C:\Windows\System32</code> 就好了，或者复制到 <code>Lib\site-packages\win32</code> 也行。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>bug</tag>
-        <tag>python3.8</tag>
-        <tag>win32api</tag>
-        <tag>pywin32</tag>
-        <tag>dll</tag>
-        <tag>importerror</tag>
       </tags>
   </entry>
   <entry>
@@ -1630,23 +1656,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>Xshell 无法连接服务器</title>
-    <url>/blog/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</url>
-    <content><![CDATA[<p>上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。</p>
-<p>最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-        <tag>ubuntu1804</tag>
-        <tag>server</tag>
-        <tag>xshell</tag>
-        <tag>ping</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>win10 下将如何将单声道变成双声道</title>
     <url>/blog/2019/12/25/0050.win10-single-sound-channel/</url>
     <content><![CDATA[<p>打开设置，然后进行如下选择：</p>
@@ -1658,8 +1667,8 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>win10</tag>
+        <tag>windows</tag>
         <tag>mono</tag>
         <tag>sound</tag>
       </tags>
@@ -1693,6 +1702,23 @@ cpuid
         <tag>linux</tag>
         <tag>vscode</tag>
         <tag>ssh - server - remote</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Xshell 无法连接服务器</title>
+    <url>/blog/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</url>
+    <content><![CDATA[<p>上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。</p>
+<p>最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>ubuntu1804</tag>
+        <tag>server</tag>
+        <tag>xshell</tag>
+        <tag>ping</tag>
       </tags>
   </entry>
   <entry>
@@ -1787,8 +1813,8 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>win10</tag>
+        <tag>windows</tag>
         <tag>scoop</tag>
       </tags>
   </entry>
@@ -1816,24 +1842,24 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>新科娘《梦回还》之清风最梦事件</title>
-    <url>/blog/2020/06/09/0057.xinkeniang-qingfeng/</url>
-    <content><![CDATA[<p>事情发生在我投稿的这个 <a href="https://www.bilibili.com/video/BV1fg4y1i7zU" target="_blank" rel="noopener">【新科家族】梦回还</a> 视频，我是在 2020-06-05 下午投稿的（投稿时间定时晚上 10 点），第二天鬼畜调音 UP 主 <a href="https://space.bilibili.com/24275198/" target="_blank" rel="noopener">清风最梦</a> 投稿了他调音版 <a href="https://www.bilibili.com/video/BV1MA411B77M/" target="_blank" rel="noopener">当调音师改造了新科家族的梦回还之后！！！</a> 投稿时间是 2020-06-06 12:00:15，然后我的视频下面有人提到这个，还有人建议说联合他这个视频</p>
-<p><img data-src="/blog/images/TIM20200609225116.png" alt title="评论提到调音版"></p>
-<p>然后我就直接下载并把他的音频替换原版的音频，把视频放到 2p，也可以看到时间大概是 6-7 的下午。然后今天晚上（2020-06-09）突然三个人评论提到说授权的问题，我才意识到出了问题，确实应该要授权，毕竟这是别人辛苦成果，要我我也不高兴，正如下面一个人说到这是做 UP 的基本素质，确实如此。然后我立马删掉了 2p。</p>
-<p><img data-src="/blog/images/TIM20200609225129.png" alt title="授权1"><br><img data-src="/blog/images/TIM20200609225102.png" alt title="授权2"></p>
-<p>并向清风道歉</p>
-<p><img data-src="/blog/images/TIM20200609225732.png" alt title="道歉截图"></p>
-<p>算是吃一堑长一智吧，姑且做个记录，避免再犯。</p>
+    <title>【C++】每日 Bug - int 转 double</title>
+    <url>/blog/2020/08/25/0059.bug-200825-cpp-int2double/</url>
+    <content><![CDATA[<p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
+<p>看下面这个函数，你觉得有没有什么问题？</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">count_avg</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
+<p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
+<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</int></p>
 ]]></content>
       <categories>
-        <category>Essay</category>
+        <category>Study</category>
       </categories>
       <tags>
-        <tag>bilibili</tag>
-        <tag>up</tag>
-        <tag>xinkeniang</tag>
-        <tag>qingfengzuimeng</tag>
+        <tag>cpp</tag>
+        <tag>bug</tag>
+        <tag>int</tag>
+        <tag>double</tag>
       </tags>
   </entry>
   <entry>
@@ -1862,30 +1888,32 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>【C++】每日 Bug - int 转 double</title>
-    <url>/blog/2020/08/25/0059.bug-200825-cpp-int2double/</url>
-    <content><![CDATA[<p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
-<p>看下面这个函数，你觉得有没有什么问题？</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">count_avg</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
-<p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
-<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</int></p>
+    <title>新科娘《梦回还》之清风最梦事件</title>
+    <url>/blog/2020/06/09/0057.xinkeniang-qingfeng/</url>
+    <content><![CDATA[<p>算是吃一堑长一智吧，姑且做个记录，避免再犯。</p>
+<a id="more"></a>
+<p>事情发生在我投稿的这个 <a href="https://www.bilibili.com/video/BV1fg4y1i7zU" target="_blank" rel="noopener">【新科家族】梦回还</a> 视频，我是在 2020-06-05 下午投稿的（投稿时间定时晚上 10 点），第二天鬼畜调音 UP 主 <a href="https://space.bilibili.com/24275198/" target="_blank" rel="noopener">清风最梦</a> 投稿了他调音版 <a href="https://www.bilibili.com/video/BV1MA411B77M/" target="_blank" rel="noopener">当调音师改造了新科家族的梦回还之后！！！</a> 投稿时间是 2020-06-06 12:00:15，然后我的视频下面有人提到这个，还有人建议说联合他这个视频</p>
+<p><img data-src="/blog/images/TIM20200609225116.png" alt title="评论提到调音版"></p>
+<p>然后我就直接下载并把他的音频替换原版的音频，把视频放到 2p，也可以看到时间大概是 6-7 的下午。然后今天晚上（2020-06-09）突然三个人评论提到说授权的问题，我才意识到出了问题，确实应该要授权，毕竟这是别人辛苦成果，要我我也不高兴，正如下面一个人说到这是做 UP 的基本素质，确实如此。然后我立马删掉了 2p。</p>
+<p><img data-src="/blog/images/TIM20200609225129.png" alt title="授权1"><br><img data-src="/blog/images/TIM20200609225102.png" alt title="授权2"></p>
+<p>并向清风道歉</p>
+<p><img data-src="/blog/images/TIM20200609225732.png" alt title="道歉截图"></p>
 ]]></content>
       <categories>
-        <category>Study</category>
+        <category>Essay</category>
       </categories>
       <tags>
-        <tag>cpp</tag>
-        <tag>bug</tag>
-        <tag>int</tag>
-        <tag>double</tag>
+        <tag>bilibili</tag>
+        <tag>up</tag>
+        <tag>xinkeniang</tag>
+        <tag>qingfengzuimeng</tag>
       </tags>
   </entry>
   <entry>
     <title>向 TheAlgorithms/Python 贡献代码须知</title>
     <url>/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</url>
-    <content><![CDATA[<p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
+    <content><![CDATA[<p><img data-src="https://avatars2.githubusercontent.com/u/20487725" alt></p>
+<p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
 <ul>
 <li>fork 到自己的仓库</li>
 <li>git clone 到本地</li>
@@ -1960,50 +1988,51 @@ cpuid
   </entry>
   <entry>
     <title>有用的 bash alias</title>
-    <url>/blog/2020/10/07/0062-useful-bash-alias/</url>
+    <url>/blog/2020/10/07/0062.useful-bash-alias/</url>
     <content><![CDATA[<p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 就行了</p>
+<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 算了</p>
+<p>可能会有换行的问题，用 vim 打开，输入 <code>set ff=unix</code> 命令就行了</p>
 <a id="more"></a>
 <h2 id="Change-Directories"><a href="#Change-Directories" class="headerlink" title="Change Directories"></a>Change Directories</h2><ul>
-<li>alias ..=”cd ..”</li>
-<li>alias …=”cd ../..”</li>
-<li>alias ….=”cd ../../..”</li>
-<li>alias …..=”cd ../../../..”</li>
-<li><p>alias ……=”cd ../../../../..”</p>
+<li>alias ..=’cd ..’</li>
+<li>alias …=’cd ../..’</li>
+<li>alias ….=’cd ../../..’</li>
+<li>alias …..=’cd ../../../..’</li>
+<li><p>alias ……=’cd ../../../../..’</p>
 </li>
-<li><p>alias 2=”cd ..”</p>
+<li><p>alias 2=’cd ..’</p>
 </li>
-<li>alias 3=”cd ../..”</li>
-<li>alias 4=”cd ../../..”</li>
-<li>alias 5=”cd ../../../..”</li>
-<li>alias 6=”cd ../../../../..”</li>
+<li>alias 3=’cd ../..’</li>
+<li>alias 4=’cd ../../..’</li>
+<li>alias 5=’cd ../../../..’</li>
+<li>alias 6=’cd ../../../../..’</li>
 </ul>
 <h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><ul>
-<li>alias gs=”git status”</li>
-<li>alias gl=”git log –pretty=format:”%C(auto)%h %Cred%an(%ad) %C(auto)%s%d” –graph –date=short”</li>
+<li>alias gs=’git status’</li>
+<li>alias gl=’git log –pretty=format:”%C(auto)%h %Cred%an(%ad) %C(auto)%s%d” –graph –date=short’</li>
 </ul>
 <h2 id="History-commands"><a href="#History-commands" class="headerlink" title="History commands"></a>History commands</h2><ul>
-<li>alias h=”history”</li>
-<li>alias h1=”history 10”</li>
-<li>alias h2=”history 20”</li>
-<li>alias h3=”history 30”</li>
+<li>alias h=’history’</li>
+<li>alias h1=’history 10’</li>
+<li>alias h2=’history 20’</li>
+<li>alias h3=’history 30’</li>
 </ul>
 <h2 id="List-commands"><a href="#List-commands" class="headerlink" title="List commands"></a>List commands</h2><ul>
-<li>alias l.=”ls -d .* –color=auto”</li>
-<li>alias ls=”ls –color=auto”</li>
-<li>alias ll=”ls -la”</li>
+<li>alias l.=’ls -d .* –color=auto’</li>
+<li>alias ls=’ls –color=auto’</li>
+<li>alias ll=’ls -la’</li>
 <li>alias l=ll</li>
 </ul>
 <h2 id="Install-amp-Update-utilties"><a href="#Install-amp-Update-utilties" class="headerlink" title="Install &amp; Update utilties"></a>Install &amp; Update utilties</h2><ul>
-<li>alias sai=”sudo apt install “</li>
-<li>alias sai=”sudo apt-get install “</li>
-<li>alias sau=”sudo apt update”</li>
-<li>alias sau=”sudo apt-get update”</li>
-<li>alias update=”sudo apt update”</li>
+<li>alias sai=’sudo apt install ‘</li>
+<li>alias sai=’sudo apt-get install ‘</li>
+<li>alias sau=’sudo apt update’</li>
+<li>alias sau=’sudo apt-get update’</li>
+<li>alias update=’sudo apt update’</li>
 </ul>
 <h2 id="Get-details-of-a-process"><a href="#Get-details-of-a-process" class="headerlink" title="Get details of a process"></a>Get details of a process</h2><ul>
-<li>alias paux=”ps aux | grep “</li>
+<li>alias paux=’ps aux | grep ‘</li>
 </ul>
 ]]></content>
       <categories>
@@ -2017,6 +2046,128 @@ cpuid
         <tag>shell</tag>
         <tag>bashrc</tag>
         <tag>bash-profile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 和 Ubuntu 命令区别列表总结</title>
+    <url>/blog/2020/10/09/0063centos-ubuntu-command-diff/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
+<p>*<em>图片来自 <a href="https://zhuanlan.zhihu.com/p/145812549" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
+<p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a href="https://blog.csdn.net/qq_34857250/article/details/54313804" target="_blank" rel="noopener">原文</a> 是个图片，我将其转成表格了。</p>
+<a id="more"></a>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">软件包后缀</td>
+<td><code>*.rpm</code></td>
+<td><code>*.deb</code></td>
+</tr>
+<tr>
+<td style="text-align:center">软件源配置文件</td>
+<td>/etc/yum.conf</td>
+<td>/etc/apt/sources.list</td>
+</tr>
+</tbody>
+</table>
+<h2 id="服务相关（启动、关闭、重启）"><a href="#服务相关（启动、关闭、重启）" class="headerlink" title="服务相关（启动、关闭、重启）"></a>服务相关（启动、关闭、重启）</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">启动服务</td>
+<td>service httpd start</td>
+<td>/etc/init.d/apache start</td>
+</tr>
+<tr>
+<td style="text-align:center">停止服务</td>
+<td>service httpd stop</td>
+<td>/etc/init.d/apache stop</td>
+</tr>
+<tr>
+<td style="text-align:center">重启服务</td>
+<td>service httpd restart</td>
+<td>/etc/init.d/apache restart</td>
+</tr>
+<tr>
+<td style="text-align:center">随系统启动自动运</td>
+<td>chkconfig httpd on</td>
+<td>update-rc.d apache</td>
+</tr>
+<tr>
+<td style="text-align:center">禁止启动自动运行</td>
+<td>chkconfig httpd off</td>
+<td>update-rc.d apache purge</td>
+</tr>
+</tbody>
+</table>
+<h2 id="系统及软件相关（安装、卸载、更新）"><a href="#系统及软件相关（安装、卸载、更新）" class="headerlink" title="系统及软件相关（安装、卸载、更新）"></a>系统及软件相关（安装、卸载、更新）</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">更新软件包列表</td>
+<td>每次运行 yum 时自动更新</td>
+<td>apt-get update</td>
+</tr>
+<tr>
+<td style="text-align:center">从软件仓库安装软件</td>
+<td>yum install package</td>
+<td>apt-get install package</td>
+</tr>
+<tr>
+<td style="text-align:center">安装已下载的软件包</td>
+<td>yum install pkg.rpm 或 rpm -ivh pkg.rpm</td>
+<td>dpkg -i pkg.deb</td>
+</tr>
+<tr>
+<td style="text-align:center">删除软件包</td>
+<td>yum -e package</td>
+<td>apt-get remove package</td>
+</tr>
+<tr>
+<td style="text-align:center">软件包升级测试</td>
+<td>yum check-update</td>
+<td>apt-get -s update 或 apt-get -s dist-update</td>
+</tr>
+<tr>
+<td style="text-align:center">升级软件包</td>
+<td>yum update 或 rpm-Uvh [args]</td>
+<td>apt-get upgrade</td>
+</tr>
+<tr>
+<td style="text-align:center">升级整个系统</td>
+<td>yum upgrade</td>
+<td>apt-get dist-upgrade</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>command</tag>
+        <tag>ubuntu</tag>
+        <tag>server</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>

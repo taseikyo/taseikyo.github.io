@@ -23,18 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。 自定义安装位置编辑 ~/.bashrc 文件，使用命令 subl ~/.bashrc，在文件尾添加下面代码12export INCLUDEOS_PREFIX=~/includeosexport PATH=$PATH:$INCLUDEOS_PRE">
+  <meta name="description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。">
 <meta name="keywords" content="cpp,includeos,unikernel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="includeOS 初体验 - Hello World!">
 <meta property="og:url" content="https://taseikyo.github.io/2019/03/20/0032.includeos-helloworld/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。 自定义安装位置编辑 ~/.bashrc 文件，使用命令 subl ~/.bashrc，在文件尾添加下面代码12export INCLUDEOS_PREFIX=~/includeosexport PATH=$PATH:$INCLUDEOS_PRE">
+<meta property="og:description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-07T09:03:34.466Z">
+<meta property="og:updated_time" content="2020-10-09T01:57:02.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="includeOS 初体验 - Hello World!">
-<meta name="twitter:description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。 自定义安装位置编辑 ~/.bashrc 文件，使用命令 subl ~/.bashrc，在文件尾添加下面代码12export INCLUDEOS_PREFIX=~/includeosexport PATH=$PATH:$INCLUDEOS_PRE">
+<meta name="twitter:description" content="今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧ 基本是按照 Getting started 来做。">
 
 <link rel="canonical" href="https://taseikyo.github.io/2019/03/20/0032.includeos-helloworld/">
 
@@ -262,6 +262,7 @@
         <p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
 <p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
 <p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
+<a id="more"></a>
 <h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
 <p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
 <p><strong>20190406 更新</strong><br>有个地方忘记写了，少了这一步可能会导致安装出问题。<br>自己也是装了两遍才成功。下面分析是我 <strong>瞎分析的</strong> 233，不知道究竟是不是这样。<br>因为在安装过程中有请求 root 权限，导致用户改变了，所以 root 的环境变量也得变，下面是我添加的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=/home/tian/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
@@ -416,7 +417,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -429,7 +430,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

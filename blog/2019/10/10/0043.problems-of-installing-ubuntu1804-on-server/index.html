@@ -23,18 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="由于 OSv 官方只主动地维护 Ubuntu 和 Federal，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。 开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，">
+  <meta name="description" content="由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。 开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装">
 <meta name="keywords" content="linux,ubuntu,ubuntu1804,server,os,operating-system">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在服务器上装 Ubuntu1804 遇到的一些问题">
 <meta property="og:url" content="https://taseikyo.github.io/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="由于 OSv 官方只主动地维护 Ubuntu 和 Federal，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。 开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，">
+<meta property="og:description" content="由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。 开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-30T01:38:38.961Z">
+<meta property="og:updated_time" content="2020-10-09T01:55:26.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在服务器上装 Ubuntu1804 遇到的一些问题">
-<meta name="twitter:description" content="由于 OSv 官方只主动地维护 Ubuntu 和 Federal，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。 开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，">
+<meta name="twitter:description" content="由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。 开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装">
 
 <link rel="canonical" href="https://taseikyo.github.io/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/">
 
@@ -259,7 +259,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>由于 OSv 官方只主动地维护 Ubuntu 和 Federal，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
+        <p>由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
 <p>开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装的时候有问题，于是又换了个软件重新制作启动盘。</p>
 <p>大概叫 Universal-USB-Installer 吧，在下载目录中还有这个软件，但是问题来了，制作完成，再装的过程中到分区那一步，我有点懵逼了，因为有三块盘，不知道怎么分区，于是百度了一下按照某个教程来的，貌似是装好了，结果重启进不了系统…这还是 9 月 20 号的事了，过了几天（大概是 23）段博他们给新的服务器（NVM）换内存条的位置导致读不出来，于是又换了一下。等他们搞完我让段博帮我看一下，后来还是没搞定他建议我重装，还说可以直接装桌面版的，不一定要 server 版。</p>
 <p>后来由于志愿者的事、出差北京的事耽误了一周，直到今天才重新装的。</p>
@@ -412,7 +412,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -425,7 +425,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

@@ -23,20 +23,20 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一看根本没用。 1234567# .bash_profileif [ -n &quot;$BA">
-<meta name="keywords" content="linux,ubuntu,bash,alias,shell,bashrc,bash-profile">
+  <meta name="description" content="*图片来自 https://zhuanlan.zhihu.com/p/145812549 因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，原文 是个图片，我将其转成表格了。">
+<meta name="keywords" content="linux,command,ubuntu,server,centos">
 <meta property="og:type" content="article">
-<meta property="og:title" content="有用的 bash alias">
-<meta property="og:url" content="https://taseikyo.github.io/2020/10/07/0062-useful-bash-alias/index.html">
+<meta property="og:title" content="CentOS 和 Ubuntu 命令区别列表总结">
+<meta property="og:url" content="https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一看根本没用。 1234567# .bash_profileif [ -n &quot;$BA">
+<meta property="og:description" content="*图片来自 https://zhuanlan.zhihu.com/p/145812549 因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，原文 是个图片，我将其转成表格了。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-07T08:52:53.115Z">
+<meta property="og:updated_time" content="2020-10-09T01:50:01.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有用的 bash alias">
-<meta name="twitter:description" content="当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一看根本没用。 1234567# .bash_profileif [ -n &quot;$BA">
+<meta name="twitter:title" content="CentOS 和 Ubuntu 命令区别列表总结">
+<meta name="twitter:description" content="*图片来自 https://zhuanlan.zhihu.com/p/145812549 因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，原文 是个图片，我将其转成表格了。">
 
-<link rel="canonical" href="https://taseikyo.github.io/2020/10/07/0062-useful-bash-alias/">
+<link rel="canonical" href="https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>有用的 bash alias | Tian's Daily Life</title>
+  <title>CentOS 和 Ubuntu 命令区别列表总结 | Tian's Daily Life</title>
   
 
 
@@ -213,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/07/0062-useful-bash-alias/">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -226,7 +226,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          有用的 bash alias
+          CentOS 和 Ubuntu 命令区别列表总结
         </h1>
 
         <div class="post-meta">
@@ -236,7 +236,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-10-07 16:48:09" itemprop="dateCreated datePublished" datetime="2020-10-07T16:48:09+08:00">2020-10-07</time>
+              <time title="Created: 2020-10-09 09:33:03" itemprop="dateCreated datePublished" datetime="2020-10-09T09:33:03+08:00">2020-10-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,50 +259,113 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 就行了</p>
+        <p><img data-src="/blog/images/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
+<p>*<em>图片来自 <a href="https://zhuanlan.zhihu.com/p/145812549" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
+<p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a href="https://blog.csdn.net/qq_34857250/article/details/54313804" target="_blank" rel="noopener">原文</a> 是个图片，我将其转成表格了。</p>
 <a id="more"></a>
-<h2 id="Change-Directories"><a href="#Change-Directories" class="headerlink" title="Change Directories"></a>Change Directories</h2><ul>
-<li>alias ..=”cd ..”</li>
-<li>alias …=”cd ../..”</li>
-<li>alias ….=”cd ../../..”</li>
-<li>alias …..=”cd ../../../..”</li>
-<li><p>alias ……=”cd ../../../../..”</p>
-</li>
-<li><p>alias 2=”cd ..”</p>
-</li>
-<li>alias 3=”cd ../..”</li>
-<li>alias 4=”cd ../../..”</li>
-<li>alias 5=”cd ../../../..”</li>
-<li>alias 6=”cd ../../../../..”</li>
-</ul>
-<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><ul>
-<li>alias gs=”git status”</li>
-<li>alias gl=”git log –pretty=format:”%C(auto)%h %Cred%an(%ad) %C(auto)%s%d” –graph –date=short”</li>
-</ul>
-<h2 id="History-commands"><a href="#History-commands" class="headerlink" title="History commands"></a>History commands</h2><ul>
-<li>alias h=”history”</li>
-<li>alias h1=”history 10”</li>
-<li>alias h2=”history 20”</li>
-<li>alias h3=”history 30”</li>
-</ul>
-<h2 id="List-commands"><a href="#List-commands" class="headerlink" title="List commands"></a>List commands</h2><ul>
-<li>alias l.=”ls -d .* –color=auto”</li>
-<li>alias ls=”ls –color=auto”</li>
-<li>alias ll=”ls -la”</li>
-<li>alias l=ll</li>
-</ul>
-<h2 id="Install-amp-Update-utilties"><a href="#Install-amp-Update-utilties" class="headerlink" title="Install &amp; Update utilties"></a>Install &amp; Update utilties</h2><ul>
-<li>alias sai=”sudo apt install “</li>
-<li>alias sai=”sudo apt-get install “</li>
-<li>alias sau=”sudo apt update”</li>
-<li>alias sau=”sudo apt-get update”</li>
-<li>alias update=”sudo apt update”</li>
-</ul>
-<h2 id="Get-details-of-a-process"><a href="#Get-details-of-a-process" class="headerlink" title="Get details of a process"></a>Get details of a process</h2><ul>
-<li>alias paux=”ps aux | grep “</li>
-</ul>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">软件包后缀</td>
+<td><code>*.rpm</code></td>
+<td><code>*.deb</code></td>
+</tr>
+<tr>
+<td style="text-align:center">软件源配置文件</td>
+<td>/etc/yum.conf</td>
+<td>/etc/apt/sources.list</td>
+</tr>
+</tbody>
+</table>
+<h2 id="服务相关（启动、关闭、重启）"><a href="#服务相关（启动、关闭、重启）" class="headerlink" title="服务相关（启动、关闭、重启）"></a>服务相关（启动、关闭、重启）</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">启动服务</td>
+<td>service httpd start</td>
+<td>/etc/init.d/apache start</td>
+</tr>
+<tr>
+<td style="text-align:center">停止服务</td>
+<td>service httpd stop</td>
+<td>/etc/init.d/apache stop</td>
+</tr>
+<tr>
+<td style="text-align:center">重启服务</td>
+<td>service httpd restart</td>
+<td>/etc/init.d/apache restart</td>
+</tr>
+<tr>
+<td style="text-align:center">随系统启动自动运</td>
+<td>chkconfig httpd on</td>
+<td>update-rc.d apache</td>
+</tr>
+<tr>
+<td style="text-align:center">禁止启动自动运行</td>
+<td>chkconfig httpd off</td>
+<td>update-rc.d apache purge</td>
+</tr>
+</tbody>
+</table>
+<h2 id="系统及软件相关（安装、卸载、更新）"><a href="#系统及软件相关（安装、卸载、更新）" class="headerlink" title="系统及软件相关（安装、卸载、更新）"></a>系统及软件相关（安装、卸载、更新）</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">更新软件包列表</td>
+<td>每次运行 yum 时自动更新</td>
+<td>apt-get update</td>
+</tr>
+<tr>
+<td style="text-align:center">从软件仓库安装软件</td>
+<td>yum install package</td>
+<td>apt-get install package</td>
+</tr>
+<tr>
+<td style="text-align:center">安装已下载的软件包</td>
+<td>yum install pkg.rpm 或 rpm -ivh pkg.rpm</td>
+<td>dpkg -i pkg.deb</td>
+</tr>
+<tr>
+<td style="text-align:center">删除软件包</td>
+<td>yum -e package</td>
+<td>apt-get remove package</td>
+</tr>
+<tr>
+<td style="text-align:center">软件包升级测试</td>
+<td>yum check-update</td>
+<td>apt-get -s update 或 apt-get -s dist-update</td>
+</tr>
+<tr>
+<td style="text-align:center">升级软件包</td>
+<td>yum update 或 rpm-Uvh [args]</td>
+<td>apt-get upgrade</td>
+</tr>
+<tr>
+<td style="text-align:center">升级整个系统</td>
+<td>yum upgrade</td>
+<td>apt-get dist-upgrade</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
@@ -352,12 +415,10 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/blog/tags/linux/" rel="tag"># linux</a>
+              <a href="/blog/tags/command/" rel="tag"># command</a>
               <a href="/blog/tags/ubuntu/" rel="tag"># ubuntu</a>
-              <a href="/blog/tags/bash/" rel="tag"># bash</a>
-              <a href="/blog/tags/alias/" rel="tag"># alias</a>
-              <a href="/blog/tags/shell/" rel="tag"># shell</a>
-              <a href="/blog/tags/bashrc/" rel="tag"># bashrc</a>
-              <a href="/blog/tags/bash-profile/" rel="tag"># bash-profile</a>
+              <a href="/blog/tags/server/" rel="tag"># server</a>
+              <a href="/blog/tags/centos/" rel="tag"># centos</a>
           </div>
 
         
@@ -366,8 +427,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/" rel="prev" title="解决 Ubuntu18.04 的 dpkg warning files list file for package 'XXXXXXX' missing, assuming package has no files currently installed bug">
-      <i class="fa fa-chevron-left"></i> 解决 Ubuntu18.04 的 dpkg warning files list file for package 'XXXXXXX' missing, assuming package has no files currently installed bug
+    <a href="/blog/2020/10/07/0062.useful-bash-alias/" rel="prev" title="有用的 bash alias">
+      <i class="fa fa-chevron-left"></i> 有用的 bash alias
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -428,7 +489,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Change-Directories"><span class="nav-number">1.</span> <span class="nav-text">Change Directories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-commands"><span class="nav-number">2.</span> <span class="nav-text">Git commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#History-commands"><span class="nav-number">3.</span> <span class="nav-text">History commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List-commands"><span class="nav-number">4.</span> <span class="nav-text">List commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-amp-Update-utilties"><span class="nav-number">5.</span> <span class="nav-text">Install &amp; Update utilties</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-details-of-a-process"><span class="nav-number">6.</span> <span class="nav-text">Get details of a process</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本信息"><span class="nav-number">1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务相关（启动、关闭、重启）"><span class="nav-number">2.</span> <span class="nav-text">服务相关（启动、关闭、重启）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统及软件相关（安装、卸载、更新）"><span class="nav-number">3.</span> <span class="nav-text">系统及软件相关（安装、卸载、更新）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -444,7 +505,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -457,7 +518,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">148</span>
+        <span class="site-state-item-count">149</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
