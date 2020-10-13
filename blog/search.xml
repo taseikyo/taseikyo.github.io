@@ -13,6 +13,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Python爬取京东内存条数据并作简单分析</title>
+    <url>/blog/2017/10/10/0003.ram-jd/</url>
+    <content><![CDATA[<p>在京东搜索内存条，然后根据销量排序，排序之后数据少了很多，写爬虫将其全部爬下，并存到 MySQL 数据库中，一共 2460 条数据，更详细的介绍见 <a href="https://github.com/taseikyo/RAM-JD" target="_blank" rel="noopener">RAM-JD</a>，可视化见 <a href="https://lewistian.github.io/RAM-JD" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/08/59da21bd58882.png" alt="Data" title="Data"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>ram</tag>
+        <tag>jingdong</tag>
+        <tag>echarts</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>暑假实习：拓扑图可视化</title>
     <url>/blog/2017/08/07/0001.topology/</url>
     <content><![CDATA[<p><img data-src="/blog/images/59e5e12cca4a7.png" alt></p>
@@ -32,23 +49,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python爬取京东内存条数据并作简单分析</title>
-    <url>/blog/2017/10/10/0003.ram-jd/</url>
-    <content><![CDATA[<p>在京东搜索内存条，然后根据销量排序，排序之后数据少了很多，写爬虫将其全部爬下，并存到 MySQL 数据库中，一共 2460 条数据，更详细的介绍见 <a href="https://github.com/taseikyo/RAM-JD" target="_blank" rel="noopener">RAM-JD</a>，可视化见 <a href="https://lewistian.github.io/RAM-JD" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/08/59da21bd58882.png" alt="Data" title="Data"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>python</tag>
-        <tag>crawler</tag>
-        <tag>ram</tag>
-        <tag>jingdong</tag>
-        <tag>echarts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网易云歌词下载器</title>
     <url>/blog/2017/08/25/0002.cloud-music-lyric/</url>
     <content><![CDATA[<p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。<br>首先知道网易云获取歌词的 API 是 <code>http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1</code> 中间 {id} 换成歌曲的 id 即可。<br>于是就很简单了，用一个 <code>QLineEdit</code> 来输入歌曲的 id，然后 <code>QNetworkAccessManager</code> 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。</p>
@@ -62,6 +62,22 @@
         <tag>qt</tag>
         <tag>lyric</tag>
         <tag>netease-cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>华中科技大学贴吧牛人排行榜数据分析</title>
+    <url>/blog/2017/10/14/0004.hust-rank/</url>
+    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>echarts</tag>
+        <tag>javascript</tag>
+        <tag>tieba</tag>
       </tags>
   </entry>
   <entry>
@@ -80,37 +96,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网易云电台</title>
-    <url>/blog/2017/12/05/0006.netease-radio/</url>
-    <content><![CDATA[<p>突然就有一个简单的想法，与之前爬网易云热评类似，这次是想着爬取网易云电台，将播放量超过 <code>1w</code> 的节目信息爬取下来，然后展示出来，这也是与热评类似。<br>然而说起来容易做起来难，因为数据实在是太多了，截止到 <code>2017/12/12</code> 也仅仅值爬到 <code>150</code> 条左右的数据，而此时的 <code>program_id</code> 才到 <code>30w</code> ，可是已经有的节目量呢？已经 <code>136700w+</code> 了，感觉仅仅我一个人来爬数据可能还得好久好久。。。<br>电台入口：<a href="https://lewistian.github.io/radio" target="_blank" rel="noopener">୧(๑•̀⌄•́๑)૭✧ 喵喵喵先生电台</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>crawler</tag>
-        <tag>netease-cloud</tag>
-        <tag>netease-radio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>华中科技大学贴吧牛人排行榜数据分析</title>
-    <url>/blog/2017/10/14/0004.hust-rank/</url>
-    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://lewistian.github.io/HUST" target="_blank" rel="noopener">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-        <tag>python</tag>
-        <tag>crawler</tag>
-        <tag>echarts</tag>
-        <tag>tieba</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网易云热评</title>
     <url>/blog/2017/12/13/0007.netease-hot-comments/</url>
     <content><![CDATA[<p>这篇博客写的有些晚了，东西是今年 3、4 月份做出来并且展示的，motivation 是当时杭州(?)地铁里面的热评，感觉很不错于是就有了这个网站。<br>但是当时并没有搭建这个博客，所以今天补写，基本想法是爬取网易云的热评，这里取巧了，有个歌单搜集了一些破万的单曲，所以爬热评比爬电台简单得多，不用每个页面去爬，但是也有另一个影响就是可能有遗漏的数据。<br>热评入口：<a href="https://lewistian.github.io/netease" target="_blank" rel="noopener">网易云热评</a></p>
@@ -123,6 +108,21 @@
         <tag>crawler</tag>
         <tag>netease</tag>
         <tag>hot-comments</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网易云电台</title>
+    <url>/blog/2017/12/05/0006.netease-radio/</url>
+    <content><![CDATA[<p>突然就有一个简单的想法，与之前爬网易云热评类似，这次是想着爬取网易云电台，将播放量超过 <code>1w</code> 的节目信息爬取下来，然后展示出来，这也是与热评类似。<br>然而说起来容易做起来难，因为数据实在是太多了，截止到 <code>2017/12/12</code> 也仅仅值爬到 <code>150</code> 条左右的数据，而此时的 <code>program_id</code> 才到 <code>30w</code> ，可是已经有的节目量呢？已经 <code>136700w+</code> 了，感觉仅仅我一个人来爬数据可能还得好久好久。。。<br>电台入口：<a href="https://lewistian.github.io/radio" target="_blank" rel="noopener">୧(๑•̀⌄•́๑)૭✧ 喵喵喵先生电台</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>netease-cloud</tag>
+        <tag>netease-radio</tag>
       </tags>
   </entry>
   <entry>
@@ -163,59 +163,6 @@
         <tag>cpp</tag>
         <tag>compiler</tag>
         <tag>install</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>提取 SPEC CPU2006 的执行命令</title>
-    <url>/blog/2018/03/22/0009.spec-run-cmd/</url>
-    <content><![CDATA[<h3 id="1-单独运行-SPEC-CPU-Int-Float-测试程序"><a href="#1-单独运行-SPEC-CPU-Int-Float-测试程序" class="headerlink" title="1.单独运行 SPEC CPU Int Float 测试程序"></a>1.单独运行 SPEC CPU Int Float 测试程序</h3><ul>
-<li>参考 <a href="http://www.spec.org/cpu2006/Docs/install-guide-unix.html#exstep6" target="_blank" rel="noopener">官方文档</a></li>
-</ul>
-<p>以 bzip2 为例说明</p>
-<ul>
-<li><p>编译<br>首先进入 SPEC 的安装目录（下面即cpu2006）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /cpu2006/</span><br><span class="line">$ . ./shrc</span><br><span class="line">$ cd config</span><br><span class="line">$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg</span><br><span class="line">$ runspec --config=mytest.cfg --action=build --tune=base bzip2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1 bzip2</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>size 参数共有三个，分别是 test 、train 、ref  </p>
-<a id="more"></a>
-<h3 id="2-提取-SPEC-CPU-Int-Float运行命令"><a href="#2-提取-SPEC-CPU-Int-Float运行命令" class="headerlink" title="2.提取 SPEC CPU Int Float运行命令"></a>2.提取 SPEC CPU Int Float运行命令</h3><ul>
-<li>参考 <a href="https://blog.csdn.net/maray/article/details/6106752" target="_blank" rel="noopener">CSDN</a></li>
-</ul>
-<p>一共有两种方法</p>
-<ol>
-<li>完全动手，彻底消除spec神秘感（我没使用这个方法）</li>
-</ol>
-<p>先利用上述方法运行 bzip2，然后运行下面的命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -ef | grep bzip</span><br></pre></td></tr></table></figure></p>
-<p>可以看到真实的命令行和进程路径，提取出来，依样画葫芦即可。</p>
-<p>对于 bzip2，提取到的命令行类似如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">run_base_test_cpu2006.0000/bzip2_base.cpu2006 input.combined 280</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>使用 SPEC 自带的命令<br>以执行 gcc 例：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd YOUR_SPEC_ROOT/benchspec/CPU2006/403.gcc/run/run_base_ref_cpu2006.0000</span><br><span class="line">#specinvoke -n</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>可以得到如下命令行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 166.i -o 166.s &gt; 166.out 2&gt;&gt; 166.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 200.i -o 200.s &gt; 200.out 2&gt;&gt; 200.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn c-typeck.i -o c-typeck.s &gt; c-typeck.out 2&gt;&gt; c-typeck.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn cp-decl.i -o cp-decl.s &gt; cp-decl.out 2&gt;&gt; cp-decl.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr.i -o expr.s &gt; expr.out 2&gt;&gt; expr.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr2.i -o expr2.s &gt; expr2.out 2&gt;&gt; expr2.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn g23.i -o g23.s &gt; g23.out 2&gt;&gt; g23.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn s04.i -o s04.s &gt; s04.out 2&gt;&gt; s04.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn scilab.i -o scilab.s &gt; scilab.out 2&gt;&gt; scilab.err</span><br></pre></td></tr></table></figure>
-<h3 id="3-我的做法"><a href="#3-我的做法" class="headerlink" title="3. 我的做法"></a>3. 我的做法</h3><p>由于我也是新手，所以也是一个个执行玩然后用 2 中的方法2提取指令</p>
-<p>当然也不是手动输入，写了一个简单的 bash 脚本实现了自动运行所有 benchmark ，然后写了另一个脚本打印运行命令</p>
-<p>以下是部分脚本：</p>
-<ul>
-<li><p>auto_run.sh</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  483</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  998</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  999</span><br><span class="line"></span><br><span class="line">./auto_print.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>auto_print.sh</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>spec-cpu2006</tag>
-        <tag>command</tag>
-        <tag>spec</tag>
       </tags>
   </entry>
   <entry>
@@ -402,10 +349,63 @@
       </categories>
       <tags>
         <tag>spec-cpu2006</tag>
-        <tag>spec</tag>
         <tag>mpki</tag>
         <tag>rbl</tag>
         <tag>blp</tag>
+        <tag>spec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>提取 SPEC CPU2006 的执行命令</title>
+    <url>/blog/2018/03/22/0009.spec-run-cmd/</url>
+    <content><![CDATA[<h3 id="1-单独运行-SPEC-CPU-Int-Float-测试程序"><a href="#1-单独运行-SPEC-CPU-Int-Float-测试程序" class="headerlink" title="1.单独运行 SPEC CPU Int Float 测试程序"></a>1.单独运行 SPEC CPU Int Float 测试程序</h3><ul>
+<li>参考 <a href="http://www.spec.org/cpu2006/Docs/install-guide-unix.html#exstep6" target="_blank" rel="noopener">官方文档</a></li>
+</ul>
+<p>以 bzip2 为例说明</p>
+<ul>
+<li><p>编译<br>首先进入 SPEC 的安装目录（下面即cpu2006）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /cpu2006/</span><br><span class="line">$ . ./shrc</span><br><span class="line">$ cd config</span><br><span class="line">$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg</span><br><span class="line">$ runspec --config=mytest.cfg --action=build --tune=base bzip2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1 bzip2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>size 参数共有三个，分别是 test 、train 、ref  </p>
+<a id="more"></a>
+<h3 id="2-提取-SPEC-CPU-Int-Float运行命令"><a href="#2-提取-SPEC-CPU-Int-Float运行命令" class="headerlink" title="2.提取 SPEC CPU Int Float运行命令"></a>2.提取 SPEC CPU Int Float运行命令</h3><ul>
+<li>参考 <a href="https://blog.csdn.net/maray/article/details/6106752" target="_blank" rel="noopener">CSDN</a></li>
+</ul>
+<p>一共有两种方法</p>
+<ol>
+<li>完全动手，彻底消除spec神秘感（我没使用这个方法）</li>
+</ol>
+<p>先利用上述方法运行 bzip2，然后运行下面的命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -ef | grep bzip</span><br></pre></td></tr></table></figure></p>
+<p>可以看到真实的命令行和进程路径，提取出来，依样画葫芦即可。</p>
+<p>对于 bzip2，提取到的命令行类似如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">run_base_test_cpu2006.0000/bzip2_base.cpu2006 input.combined 280</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>使用 SPEC 自带的命令<br>以执行 gcc 例：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd YOUR_SPEC_ROOT/benchspec/CPU2006/403.gcc/run/run_base_ref_cpu2006.0000</span><br><span class="line">#specinvoke -n</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>可以得到如下命令行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 166.i -o 166.s &gt; 166.out 2&gt;&gt; 166.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 200.i -o 200.s &gt; 200.out 2&gt;&gt; 200.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn c-typeck.i -o c-typeck.s &gt; c-typeck.out 2&gt;&gt; c-typeck.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn cp-decl.i -o cp-decl.s &gt; cp-decl.out 2&gt;&gt; cp-decl.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr.i -o expr.s &gt; expr.out 2&gt;&gt; expr.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr2.i -o expr2.s &gt; expr2.out 2&gt;&gt; expr2.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn g23.i -o g23.s &gt; g23.out 2&gt;&gt; g23.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn s04.i -o s04.s &gt; s04.out 2&gt;&gt; s04.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn scilab.i -o scilab.s &gt; scilab.out 2&gt;&gt; scilab.err</span><br></pre></td></tr></table></figure>
+<h3 id="3-我的做法"><a href="#3-我的做法" class="headerlink" title="3. 我的做法"></a>3. 我的做法</h3><p>由于我也是新手，所以也是一个个执行玩然后用 2 中的方法2提取指令</p>
+<p>当然也不是手动输入，写了一个简单的 bash 脚本实现了自动运行所有 benchmark ，然后写了另一个脚本打印运行命令</p>
+<p>以下是部分脚本：</p>
+<ul>
+<li><p>auto_run.sh</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  483</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  998</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  999</span><br><span class="line"></span><br><span class="line">./auto_print.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto_print.sh</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>spec-cpu2006</tag>
+        <tag>spec</tag>
+        <tag>command</tag>
       </tags>
   </entry>
   <entry>
@@ -419,54 +419,8 @@
       </categories>
       <tags>
         <tag>spec-cpu2006</tag>
-        <tag>command</tag>
         <tag>spec</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tich·九月总结/2018</title>
-    <url>/blog/2018/10/01/0015.summary-1809/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/summary_1809.png" alt></p>
-<p>为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。<br>主要内容也就是对上个月的工作简单做个回顾总结。<br>下面是 2018 年九月的总结。</p>
-<a id="more"></a>
-<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>『正说大宋十八帝』- 刘亚玲<br>（本来打算是看两本的，结果另一本没看完）<br>书的内容如书名那般，讲述了南北宋的十八位帝王的一生。<br>本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。<br>看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。</p>
-<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
-<li><p>《Learn Python 3 the Hard Way》(pdf)<br>这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。</p>
-</li>
-<li><p>《Cpp Application Development with Code Blocks》(pdf)<br>这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。</p>
-</li>
-<li><p>《Python for Data Analysis》(pdf)<br>介绍如何使用 Python 进行数据分析，<strong>还没看完</strong>。</p>
-</li>
-<li><p>《Xen 虚拟化技术完全解读》<br>介绍 Xen 虚拟化技术的，<strong>还没看完</strong>。</p>
-</li>
-<li><p>《Real World OCaml》<br>OCaml 从入门到入土，<strong>还没看完</strong>。</p>
-</li>
-</ul>
-<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><p>很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy:</p>
-<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><p>这个月主要写了四个主要的东西吧（包括开始但未完成）</p>
-<ol>
-<li><p><a href="https://github.com/taseikyo/danmaku-convertor" target="_blank" rel="noopener">弹幕转换器</a><br>主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。<br>已经实现了腾讯、优酷的弹幕转化<br>下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。</p>
-</li>
-<li><p><a href="https://github.com/taseikyo/autoQA" target="_blank" rel="noopener">autoQA</a><br>主要功能是自动提交 QA。</p>
-</li>
-<li><p>d3 可视化框架<br>可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。<br>已经出了一个 <a href="https://www.bilibili.com/video/av33856779" target="_blank" rel="noopener">视频</a></p>
-</li>
-<li><p><a href="https://github.com/taseikyo/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
-</li>
-<li><p><a href="https://github.com/taseikyo/project-euler" target="_blank" rel="noopener">project-euler</a><br>刷了一些欧拉计划的题。<br>这个欧拉计划还是那个 <a href="https://github.com/csaarg" target="_blank" rel="noopener">计科艺研小组</a> 的一个大佬推荐给我的。</p>
-</li>
-</ol>
-<p>以上。</p>
-<p>九月的总结大概就是这些，下个月要继续加油才是。</p>
-<p><img data-src="/blog/images/summary_1809.png" alt="summary for 2018/9 by Tich." title="summary for 2018/9 by Tich."></p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>summary</tag>
-        <tag>person</tag>
+        <tag>command</tag>
       </tags>
   </entry>
   <entry>
@@ -555,6 +509,98 @@ cpuid
       <tags>
         <tag>intel</tag>
         <tag>cpuid</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyQt5 多语言支持</title>
+    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
+    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
+<ol>
+<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
+</li>
+<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
+<ol start="4">
+<li>源码<a id="more"></a>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
+
+</li>
+</ol>
+<p>点击英文：</p>
+<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
+
+
+<ul>
+<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>python</tag>
+        <tag>pytt5</tag>
+        <tag>pyqt</tag>
+        <tag>i18n</tag>
+        <tag>language</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tich·九月总结/2018</title>
+    <url>/blog/2018/10/01/0015.summary-1809/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1809.png" alt></p>
+<p>为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。<br>主要内容也就是对上个月的工作简单做个回顾总结。<br>下面是 2018 年九月的总结。</p>
+<a id="more"></a>
+<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>『正说大宋十八帝』- 刘亚玲<br>（本来打算是看两本的，结果另一本没看完）<br>书的内容如书名那般，讲述了南北宋的十八位帝王的一生。<br>本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。<br>看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。</p>
+<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
+<li><p>《Learn Python 3 the Hard Way》(pdf)<br>这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。</p>
+</li>
+<li><p>《Cpp Application Development with Code Blocks》(pdf)<br>这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。</p>
+</li>
+<li><p>《Python for Data Analysis》(pdf)<br>介绍如何使用 Python 进行数据分析，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《Xen 虚拟化技术完全解读》<br>介绍 Xen 虚拟化技术的，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《Real World OCaml》<br>OCaml 从入门到入土，<strong>还没看完</strong>。</p>
+</li>
+</ul>
+<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><p>很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy:</p>
+<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><p>这个月主要写了四个主要的东西吧（包括开始但未完成）</p>
+<ol>
+<li><p><a href="https://github.com/taseikyo/danmaku-convertor" target="_blank" rel="noopener">弹幕转换器</a><br>主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。<br>已经实现了腾讯、优酷的弹幕转化<br>下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。</p>
+</li>
+<li><p><a href="https://github.com/taseikyo/autoQA" target="_blank" rel="noopener">autoQA</a><br>主要功能是自动提交 QA。</p>
+</li>
+<li><p>d3 可视化框架<br>可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。<br>已经出了一个 <a href="https://www.bilibili.com/video/av33856779" target="_blank" rel="noopener">视频</a></p>
+</li>
+<li><p><a href="https://github.com/taseikyo/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
+</li>
+<li><p><a href="https://github.com/taseikyo/project-euler" target="_blank" rel="noopener">project-euler</a><br>刷了一些欧拉计划的题。<br>这个欧拉计划还是那个 <a href="https://github.com/csaarg" target="_blank" rel="noopener">计科艺研小组</a> 的一个大佬推荐给我的。</p>
+</li>
+</ol>
+<p>以上。</p>
+<p>九月的总结大概就是这些，下个月要继续加油才是。</p>
+<p><img data-src="/blog/images/summary_1809.png" alt="summary for 2018/9 by Tich." title="summary for 2018/9 by Tich."></p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>summary</tag>
+        <tag>person</tag>
       </tags>
   </entry>
   <entry>
@@ -659,6 +705,24 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>win10 桌面点右键很慢才出菜单</title>
+    <url>/blog/2018/07/11/0013.windows-right-click-slow/</url>
+    <content><![CDATA[<p>网上找了很多帖子，都说的是注册表的问题，我试了下，发现确实是由于 intel 集成显卡的两个注册表项引起的。解决办法：命令行输入 regedit，打开注册表，进入 HKEY_CLASSES_ROOT\Directory\Background\Shellex\ContextMenuHandlers，删除 ig 开头的两个注册表项，退出即可。</p>
+<p>作者：木鱼<br>链接：<a href="https://www.zhihu.com/question/48817635/answer/112772070" target="_blank" rel="noopener">https://www.zhihu.com/question/48817635/answer/112772070</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>right-click</tag>
+        <tag>menu</tag>
+        <tag>desktop</tag>
+        <tag>windows10</tag>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何显示已经隐藏的 chrome 扩展</title>
     <url>/blog/2018/10/31/0018.chrome-exts-hide2show/</url>
     <content><![CDATA[<p><center>当你安装的 chrome 扩展太多之后，你会把常用的、没有右键功能的一些扩展隐藏起来，那么如何将隐藏的扩展显示出来？</center><br><a id="more"></a></p>
@@ -674,52 +738,6 @@ cpuid
       <tags>
         <tag>chrome</tag>
         <tag>chrome-extension</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyQt5 多语言支持</title>
-    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
-    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
-<ol>
-<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
-</li>
-<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
-<ol start="4">
-<li>源码<a id="more"></a>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
-
-</li>
-</ol>
-<p>点击英文：</p>
-<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
-
-
-<ul>
-<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>python</tag>
-        <tag>pytt5</tag>
-        <tag>pyqt</tag>
-        <tag>i18n</tag>
-        <tag>language</tag>
       </tags>
   </entry>
   <entry>
@@ -744,6 +762,21 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>每日一题-181127</title>
+    <url>/blog/2018/11/27/0022.exercise-181127/</url>
+    <content><![CDATA[<p>要求如下：<br>编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。<br>-1<sup>1</sup> + 2<sup>2</sup> - 3<sup>3</sup> + 4<sup>1</sup> - 5<sup>2</sup> + 6<sup>3</sup> -7<sup>1</sup> + 8<sup>2</sup> - 9<sup>3</sup> +10<sup>1</sup> …</p>
+<p>我的解法如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> sum((<span class="number">-1</span>)**i*i**((i<span class="number">-1</span>)%<span class="number">3</span>+<span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>))</span><br></pre></td></tr></table></figure></p>
+<p>近来用 Python 解题更喜欢 one line 的方式了（装x【并不</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>an-exercise-per-day</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>sizeof(数组名)和sizeof(指针)</title>
     <url>/blog/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</url>
     <content><![CDATA[<p><img data-src="/blog/images/c-pointer.jpg" alt></p>
@@ -764,24 +797,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>win10 桌面点右键很慢才出菜单</title>
-    <url>/blog/2018/07/11/0013.windows-right-click-slow/</url>
-    <content><![CDATA[<p>网上找了很多帖子，都说的是注册表的问题，我试了下，发现确实是由于 intel 集成显卡的两个注册表项引起的。解决办法：命令行输入 regedit，打开注册表，进入 HKEY_CLASSES_ROOT\Directory\Background\Shellex\ContextMenuHandlers，删除 ig 开头的两个注册表项，退出即可。</p>
-<p>作者：木鱼<br>链接：<a href="https://www.zhihu.com/question/48817635/answer/112772070" target="_blank" rel="noopener">https://www.zhihu.com/question/48817635/answer/112772070</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-        <tag>windows</tag>
-        <tag>right-click</tag>
-        <tag>menu</tag>
-        <tag>desktop</tag>
-        <tag>windows10</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FileReader 的 onload 方法的一个问题</title>
     <url>/blog/2018/11/20/0020.js-filereader-onload/</url>
     <content><![CDATA[<p>今天写可视化的代码，首先要加载 CSV 文件，使用 FileReader 来加载，然后用 d3 来解析 csv，然而出现了一个问题。<br>像下面这样写就会报错，<br><code>Uncaught TypeError: Cannot read property &#39;length&#39; of undefined</code><br>我输出文件长度，发现其值为 0，d3 无法解析所以报错。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let readFile = file =&gt; &#123;</span><br><span class="line">	let r = new FileReader();</span><br><span class="line">	r.readAsText(file, config.encoding);</span><br><span class="line">	r.onload = () =&gt; console.log(d3.csvParse(this.result));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
@@ -794,21 +809,6 @@ cpuid
         <tag>javascript</tag>
         <tag>d3</tag>
         <tag>fileReader</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>每日一题-181127</title>
-    <url>/blog/2018/11/27/0022.exercise-181127/</url>
-    <content><![CDATA[<p>要求如下：<br>编写一个函数，参数为整数 n，按下面方式计算从 1 到 n 的结果，并返回。<br>-1<sup>1</sup> + 2<sup>2</sup> - 3<sup>3</sup> + 4<sup>1</sup> - 5<sup>2</sup> + 6<sup>3</sup> -7<sup>1</sup> + 8<sup>2</sup> - 9<sup>3</sup> +10<sup>1</sup> …</p>
-<p>我的解法如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(n)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> sum((<span class="number">-1</span>)**i*i**((i<span class="number">-1</span>)%<span class="number">3</span>+<span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n+<span class="number">1</span>))</span><br></pre></td></tr></table></figure></p>
-<p>近来用 Python 解题更喜欢 one line 的方式了（装x【并不</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>an-exercise-per-day</tag>
       </tags>
   </entry>
   <entry>
@@ -870,6 +870,23 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>嗶哩嗶哩工具箱</title>
+    <url>/blog/2018/12/09/0024.bili-box/</url>
+    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
+<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
+<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
+<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pyqt5</tag>
+        <tag>bilibili</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MIT 18.06 Linear Algebra, Spring 2005</title>
     <url>/blog/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</url>
     <content><![CDATA[<p><img data-src="/blog//images/18.06-Linear-Algebra.jpg" alt></p>
@@ -920,23 +937,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>嗶哩嗶哩工具箱</title>
-    <url>/blog/2018/12/09/0024.bili-box/</url>
-    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
-<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
-<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
-<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>pyqt5</tag>
-        <tag>bilibili</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Tich·十二月总结/2018</title>
     <url>/blog/2018/12/30/0027.summary-1812/</url>
     <content><![CDATA[<p><img data-src="/blog/images/summary_1812.png" alt></p>
@@ -977,8 +977,8 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
         <tag>python</tag>
+        <tag>javascript</tag>
         <tag>codewars</tag>
         <tag>oj</tag>
       </tags>
@@ -1004,8 +1004,8 @@ cpuid
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
         <tag>python</tag>
+        <tag>javascript</tag>
         <tag>bilibili</tag>
         <tag>css</tag>
         <tag>pendant</tag>
@@ -1115,35 +1115,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>Python3 中的 map 问题</title>
-    <url>/blog/2019/04/08/0034.python3-map/</url>
-    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
-<p>在最近的 <a href="https://github.com/taseikyo/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
-<p>部分 <a href="https://github.com/taseikyo/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
-<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
-<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
-<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="literal">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
-<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
-</ul>
-<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
-<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>map</tag>
-        <tag>any</tag>
-        <tag>all</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>includeOS 初体验 - Hello World!</title>
     <url>/blog/2019/03/20/0032.includeos-helloworld/</url>
     <content><![CDATA[<p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
@@ -1172,6 +1143,35 @@ cpuid
         <tag>cpp</tag>
         <tag>includeos</tag>
         <tag>unikernel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python3 中的 map 问题</title>
+    <url>/blog/2019/04/08/0034.python3-map/</url>
+    <content><![CDATA[<p><img data-src="https://images.unsplash.com/photo-1549267452-df02ae74846a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="柴犬" title="Photo by Ian Matyssik on Unsplash"></p>
+<p>在最近的 <a href="https://github.com/taseikyo/arts" target="_blank" rel="noopener">arts</a> 项目中，由于要自动生成目录用到了 map 函数，因此就发现了这个问题（至于为什么要自己写代码来生成目录，当然是没找到合适的插件了！</p>
+<p>部分 <a href="https://github.com/taseikyo/arts/blob/master/weekly/toc.py" target="_blank" rel="noopener">toc.py</a> 代码如下，主要就是调用了自己写的一个 toc 函数，想法也很明显，若是有多个文件，则依次为其生成目录，否则就是一个默认的文件。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">		filename = sys.argv[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		filename = [<span class="string">'201903W4.md'</span>]</span><br><span class="line">	map(toc, filename)</span><br></pre></td></tr></table></figure>
+<p>然后问题来了，预期效果并没有出现，打了 [toc] 标记的位置并没有出现目录，因为印象中 map 函数就是对传入的数组/可迭代对象，作用于传入的函数。<br>查了一下才知道，在 Python3 中，map 返回的是一个 <code>&lt;map object at 0xXXXXXXXX&gt;</code> 的对象，并没有执行。</p>
+<p>最简单的方法是直接套一个 list 函数，即 <code>list(map(toc, filename))</code>，好像到这里就解决了问题。</p>
+<p>然后今天又看到一对 Python3 的内置函数：any &amp; all，其定义如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> all elements of the iterable are true (<span class="keyword">or</span> <span class="keyword">if</span> the iterable <span class="keyword">is</span> empty). Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">any(iterable)</span><br><span class="line"></span><br><span class="line">Return <span class="literal">True</span> <span class="keyword">if</span> any element of the iterable <span class="keyword">is</span> true. If the iterable <span class="keyword">is</span> empty, <span class="keyword">return</span> <span class="literal">False</span>. Equivalent to:</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">any</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对于 all 函数，当 iterable 中所有元素都为 True 时（或者 iterable 为空），返回 True。</li>
+<li>对于 any 函数，当 iterable 中有元素为 True 时，则返回 True。如果当 iterable 为空时，返回 False。</li>
+</ul>
+<p>而在 Python3 中，函数没有返回值的时就是 False，而我的 toc 函数正是没有返回值的，相当于可以一直循环完，因此就可以使用 <code>any(map(toc, filename))</code> 解决问题。</p>
+<p>另外如果传入的函数具有返回值，而且只要有一个函数执行的返回值为 True 的时候，any 就返回了，也就执行不完整了。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>map</tag>
+        <tag>any</tag>
+        <tag>all</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,8 +1244,8 @@ cpuid
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>win10</tag>
         <tag>windows</tag>
+        <tag>win10</tag>
         <tag>software</tag>
         <tag>recommend</tag>
       </tags>
@@ -1296,11 +1296,52 @@ cpuid
         <category>Essay</category>
       </categories>
       <tags>
-        <tag>win10</tag>
         <tag>windows</tag>
+        <tag>win10</tag>
         <tag>bug</tag>
         <tag>onenote</tag>
         <tag>organization-policies</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>平凡的一天</title>
+    <url>/blog/2019/07/12/0040.a-normal-day-in-wuhan/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/190712/wx20190713-1135@鸦青.png" alt title="平凡的一天"></p>
+<p>2019/7/12，武汉，小雨，22/30°C</p>
+<a id="more"></a>
+<p>想了好久，结果还是想不到一个很好的标题，至于为什么要记录这一天，因为今天初次尝试了一些项目，比如第一次密室逃脱、第一次去猫🐱咖、第一次去酒馆。</p>
+<p>最后思来想去还是直接取名“平凡的一天”吧。</p>
+<p>上午将近12点，昭来找我们玩，包子去南大门接他，希则先一步去世界城看中午吃啥去了。这期间也搞了个乌龙，包子他让我下去，说好南三碰头，结果他的意思是“南三门”，而我理解的是“南三楼”233</p>
+<p>后来在世界城和希碰面，说起来我们几个互相也好久没见了，寒暄了一会儿，之后挑了个五楼一家店恰饭，恰完差不多两点了，他们说想试一下密室逃脱，其实我们四个人都没玩过，最后挑了个比较“温馨”的一个类型（其实是照顾我了，毕竟第一次不敢玩太猛的）</p>
+<p><img data-src="https://github.com/taseikyo/bili-box/raw/master/images/cry.png" alt title="1551"></p>
+<h3 id="初尝试密室逃脱"><a href="#初尝试密室逃脱" class="headerlink" title="初尝试密室逃脱"></a>初尝试密室逃脱</h3><p>那家店比较偏，在某栋楼的五楼，也找了好久吧，开始玩差不多两点五十了。</p>
+<p><img data-src="/blog/images/190712/IMG_20190712_143827.jpg" alt title="晴 天"></p>
+<p>主题名为“晴天”，讲的是一对青梅竹马的故事，男主李雷，女主韩梅梅（…），一共大概有 5 关的样子，前几关其实还好，不算太难，应该都能过，但是最后一关我们失败了（…菜啊），结束的时候我们时间也到了（就给一个小时的时间，时间到了没过关也算失败）</p>
+<p>第一次玩密室逃脱，给我的感觉还不错，主要是这个主题的原因吧，做做小游戏，解解谜（虽然最后一关脑子不够用，完全想不出来），总体来说还是比较轻松的，难怪老板说适合新手😂，希说之后要来试一下刺激主题的🌚我（…）</p>
+<p>出来之后，昭说带我们去打桌球，完全就是他的个人秀了，吊打我们三个😂，我们仨玩了一个小时左右就累了，坐在沙发上看他一个人玩 233</p>
+<p>大概五点半左右就出来了，进入到我最期待的项目：猫咖。</p>
+<h3 id="第一次去猫咖"><a href="#第一次去猫咖" class="headerlink" title="第一次去猫咖"></a>第一次去猫咖</h3><p>这个猫咖也很偏，那个地方我去过几次了，从来没注意有个猫咖。</p>
+<p><img data-src="/blog/images/190712/IMG_20190712_181449.jpg" alt title="感到鸭梨"></p>
+<p>这个猫咖给我感觉一般吧，猫不是很多，而且大部分都在睡觉，一方面是我们去的时间不太对，就一个木偶比较活跃，在猫咖里面到处晃悠。</p>
+<p>不过那的草莓莫吉托很赞，虽然是我第一次喝，但是一下子就爱上了👀</p>
+<p>晚一点猫们差不多醒了，好几只在猫咖里面晃悠，还有幸目睹了两只猫掐架 233</p>
+<p>离开猫咖八点多了，最后一个项目：酒馆。</p>
+<h3 id="第一次去酒馆"><a href="#第一次去酒馆" class="headerlink" title="第一次去酒馆"></a>第一次去酒馆</h3><p>胡桃里酒馆，位置很好，就在地铁出站口。</p>
+<p><img data-src="/blog/images/190712/IMG_20190712_204941.jpg" alt title="好嗨哦"></p>
+<p>我们的座位很不错，正对着上面的台子，背后是一个屏幕，可以扫二维码发些东西上墙，若是想常驻上面可以氪金，貌似是停多久就多少软妹币。</p>
+<p>第一次去酒馆，感觉还行，菜不错，挺合我胃口的（酒就不说了🤔）。刚进门的时候里面正在唱陈雪凝的《你的酒馆对我打了烊》，瞬间就有那么点感觉了 233。</p>
+<p>最后到学校 10 点半以后了，总的来说这一天玩得挺开心的，尝试了一些之前没尝试的项目，惊喜抑或略微失望，总归是体验了一番。</p>
+<p>人生短短数十载，还是要勇于尝试新的东西，不然岂不是枉来人世走一遭？（雾</p>
+<p>以上，2019/07/12 平凡的一天。</p>
+<p><img data-src="/blog/images/190712/wx20190713-1135@鸦青.png" alt title="平凡的一天"></p>
+]]></content>
+      <categories>
+        <category>Essay</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>person</tag>
+        <tag>daily</tag>
       </tags>
   </entry>
   <entry>
@@ -1359,47 +1400,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>平凡的一天</title>
-    <url>/blog/2019/07/12/0040.a-normal-day-in-wuhan/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/190712/wx20190713-1135@鸦青.png" alt title="平凡的一天"></p>
-<p>2019/7/12，武汉，小雨，22/30°C</p>
-<a id="more"></a>
-<p>想了好久，结果还是想不到一个很好的标题，至于为什么要记录这一天，因为今天初次尝试了一些项目，比如第一次密室逃脱、第一次去猫🐱咖、第一次去酒馆。</p>
-<p>最后思来想去还是直接取名“平凡的一天”吧。</p>
-<p>上午将近12点，昭来找我们玩，包子去南大门接他，希则先一步去世界城看中午吃啥去了。这期间也搞了个乌龙，包子他让我下去，说好南三碰头，结果他的意思是“南三门”，而我理解的是“南三楼”233</p>
-<p>后来在世界城和希碰面，说起来我们几个互相也好久没见了，寒暄了一会儿，之后挑了个五楼一家店恰饭，恰完差不多两点了，他们说想试一下密室逃脱，其实我们四个人都没玩过，最后挑了个比较“温馨”的一个类型（其实是照顾我了，毕竟第一次不敢玩太猛的）</p>
-<p><img data-src="https://github.com/taseikyo/bili-box/raw/master/images/cry.png" alt title="1551"></p>
-<h3 id="初尝试密室逃脱"><a href="#初尝试密室逃脱" class="headerlink" title="初尝试密室逃脱"></a>初尝试密室逃脱</h3><p>那家店比较偏，在某栋楼的五楼，也找了好久吧，开始玩差不多两点五十了。</p>
-<p><img data-src="/blog/images/190712/IMG_20190712_143827.jpg" alt title="晴 天"></p>
-<p>主题名为“晴天”，讲的是一对青梅竹马的故事，男主李雷，女主韩梅梅（…），一共大概有 5 关的样子，前几关其实还好，不算太难，应该都能过，但是最后一关我们失败了（…菜啊），结束的时候我们时间也到了（就给一个小时的时间，时间到了没过关也算失败）</p>
-<p>第一次玩密室逃脱，给我的感觉还不错，主要是这个主题的原因吧，做做小游戏，解解谜（虽然最后一关脑子不够用，完全想不出来），总体来说还是比较轻松的，难怪老板说适合新手😂，希说之后要来试一下刺激主题的🌚我（…）</p>
-<p>出来之后，昭说带我们去打桌球，完全就是他的个人秀了，吊打我们三个😂，我们仨玩了一个小时左右就累了，坐在沙发上看他一个人玩 233</p>
-<p>大概五点半左右就出来了，进入到我最期待的项目：猫咖。</p>
-<h3 id="第一次去猫咖"><a href="#第一次去猫咖" class="headerlink" title="第一次去猫咖"></a>第一次去猫咖</h3><p>这个猫咖也很偏，那个地方我去过几次了，从来没注意有个猫咖。</p>
-<p><img data-src="/blog/images/190712/IMG_20190712_181449.jpg" alt title="感到鸭梨"></p>
-<p>这个猫咖给我感觉一般吧，猫不是很多，而且大部分都在睡觉，一方面是我们去的时间不太对，就一个木偶比较活跃，在猫咖里面到处晃悠。</p>
-<p>不过那的草莓莫吉托很赞，虽然是我第一次喝，但是一下子就爱上了👀</p>
-<p>晚一点猫们差不多醒了，好几只在猫咖里面晃悠，还有幸目睹了两只猫掐架 233</p>
-<p>离开猫咖八点多了，最后一个项目：酒馆。</p>
-<h3 id="第一次去酒馆"><a href="#第一次去酒馆" class="headerlink" title="第一次去酒馆"></a>第一次去酒馆</h3><p>胡桃里酒馆，位置很好，就在地铁出站口。</p>
-<p><img data-src="/blog/images/190712/IMG_20190712_204941.jpg" alt title="好嗨哦"></p>
-<p>我们的座位很不错，正对着上面的台子，背后是一个屏幕，可以扫二维码发些东西上墙，若是想常驻上面可以氪金，貌似是停多久就多少软妹币。</p>
-<p>第一次去酒馆，感觉还行，菜不错，挺合我胃口的（酒就不说了🤔）。刚进门的时候里面正在唱陈雪凝的《你的酒馆对我打了烊》，瞬间就有那么点感觉了 233。</p>
-<p>最后到学校 10 点半以后了，总的来说这一天玩得挺开心的，尝试了一些之前没尝试的项目，惊喜抑或略微失望，总归是体验了一番。</p>
-<p>人生短短数十载，还是要勇于尝试新的东西，不然岂不是枉来人世走一遭？（雾</p>
-<p>以上，2019/07/12 平凡的一天。</p>
-<p><img data-src="/blog/images/190712/wx20190713-1135@鸦青.png" alt title="平凡的一天"></p>
-]]></content>
-      <categories>
-        <category>Essay</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>person</tag>
-        <tag>daily</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>将博客部署到子目录下</title>
     <url>/blog/2019/09/03/0041.deploy-blog-to-subdirectory/</url>
     <content><![CDATA[<p><img data-src="/blog/images/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
@@ -1420,6 +1420,33 @@ cpuid
       <tags>
         <tag>blog</tag>
         <tag>daily</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在服务器上装 Ubuntu1804 遇到的一些问题</title>
+    <url>/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/</url>
+    <content><![CDATA[<p>由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
+<p>开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装的时候有问题，于是又换了个软件重新制作启动盘。</p>
+<p>大概叫 Universal-USB-Installer 吧，在下载目录中还有这个软件，但是问题来了，制作完成，再装的过程中到分区那一步，我有点懵逼了，因为有三块盘，不知道怎么分区，于是百度了一下按照某个教程来的，貌似是装好了，结果重启进不了系统…这还是 9 月 20 号的事了，过了几天（大概是 23）段博他们给新的服务器（NVM）换内存条的位置导致读不出来，于是又换了一下。等他们搞完我让段博帮我看一下，后来还是没搞定他建议我重装，还说可以直接装桌面版的，不一定要 server 版。</p>
+<p>后来由于志愿者的事、出差北京的事耽误了一周，直到今天才重新装的。</p>
+<p>装桌面版的由于有桌面感觉要友好一点，然后到了分区那一步，我这次没手动分区，直接将系统装在 SSD 那个盘，同时勾选建立 LVM 的选项，让它自己分区。</p>
+<p>装完之后进入系统我发现它就没详细分区，就一个根目录，没有 home、boot、swap这些分区，都裹在一起了。但是至少能启动了不是 233</p>
+<p>后来喊来小王博配 IP，搞完之后回去发现 xshell 连不上。然后又回去装 openssh-server，搞完之后可以远程连接了。</p>
+<p>然后又遇到一个问题，那就是新建的用户命令行提示只有一个“$”，其他上下左右方向键会出现 ^H，^[ 这些奇怪的东西。后来查了一下是要将默认的 shell 改成 bash，默认是 sh，然后断开重连就好了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/passwd</span><br><span class="line"><span class="comment"># 将指定用户如:</span></span><br><span class="line">/home/taseikyo:/sh</span><br><span class="line"><span class="comment"># 修改为</span></span><br><span class="line">/home/taseikyo:/bin/bash</span><br></pre></td></tr></table></figure>
+<p>之后想看 IP，结果 ifcofig 命令没装，于是 apt net-tools，又出现问题，Package ‘net-tools’ has no installation candidate。查了一下是需要换源，改成阿里云的源再 update 一下就可以正常安装了。</p>
+<p>我真的服了，麻烦多多啊。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>ubuntu</tag>
+        <tag>ubuntu1804</tag>
+        <tag>server</tag>
+        <tag>os</tag>
+        <tag>operating-system</tag>
       </tags>
   </entry>
   <entry>
@@ -1457,30 +1484,24 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>在服务器上装 Ubuntu1804 遇到的一些问题</title>
-    <url>/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/</url>
-    <content><![CDATA[<p>由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
-<p>开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装的时候有问题，于是又换了个软件重新制作启动盘。</p>
-<p>大概叫 Universal-USB-Installer 吧，在下载目录中还有这个软件，但是问题来了，制作完成，再装的过程中到分区那一步，我有点懵逼了，因为有三块盘，不知道怎么分区，于是百度了一下按照某个教程来的，貌似是装好了，结果重启进不了系统…这还是 9 月 20 号的事了，过了几天（大概是 23）段博他们给新的服务器（NVM）换内存条的位置导致读不出来，于是又换了一下。等他们搞完我让段博帮我看一下，后来还是没搞定他建议我重装，还说可以直接装桌面版的，不一定要 server 版。</p>
-<p>后来由于志愿者的事、出差北京的事耽误了一周，直到今天才重新装的。</p>
-<p>装桌面版的由于有桌面感觉要友好一点，然后到了分区那一步，我这次没手动分区，直接将系统装在 SSD 那个盘，同时勾选建立 LVM 的选项，让它自己分区。</p>
-<p>装完之后进入系统我发现它就没详细分区，就一个根目录，没有 home、boot、swap这些分区，都裹在一起了。但是至少能启动了不是 233</p>
-<p>后来喊来小王博配 IP，搞完之后回去发现 xshell 连不上。然后又回去装 openssh-server，搞完之后可以远程连接了。</p>
-<p>然后又遇到一个问题，那就是新建的用户命令行提示只有一个“$”，其他上下左右方向键会出现 ^H，^[ 这些奇怪的东西。后来查了一下是要将默认的 shell 改成 bash，默认是 sh，然后断开重连就好了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/passwd</span><br><span class="line"><span class="comment"># 将指定用户如:</span></span><br><span class="line">/home/taseikyo:/sh</span><br><span class="line"><span class="comment"># 修改为</span></span><br><span class="line">/home/taseikyo:/bin/bash</span><br></pre></td></tr></table></figure>
-<p>之后想看 IP，结果 ifcofig 命令没装，于是 apt net-tools，又出现问题，Package ‘net-tools’ has no installation candidate。查了一下是需要换源，改成阿里云的源再 update 一下就可以正常安装了。</p>
-<p>我真的服了，麻烦多多啊。</p>
+    <title>win10 &quot;请确认系统网络配置是否完整&quot;</title>
+    <url>/blog/2019/10/25/0045.win10-network-error/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
+<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
+<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
+<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
+<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
+<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
+<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
 ]]></content>
       <categories>
         <category>Study</category>
       </categories>
       <tags>
-        <tag>linux</tag>
-        <tag>ubuntu</tag>
-        <tag>ubuntu1804</tag>
-        <tag>server</tag>
-        <tag>os</tag>
-        <tag>operating-system</tag>
+        <tag>windows</tag>
+        <tag>windows10</tag>
+        <tag>win10</tag>
+        <tag>network</tag>
       </tags>
   </entry>
   <entry>
@@ -1505,10 +1526,10 @@ cpuid
         <tag>linux</tag>
         <tag>ubuntu</tag>
         <tag>ubuntu1804</tag>
+        <tag>network</tag>
         <tag>ip</tag>
         <tag>static-ip</tag>
         <tag>netplan</tag>
-        <tag>network</tag>
       </tags>
   </entry>
   <entry>
@@ -1527,27 +1548,6 @@ cpuid
         <tag>pywin32</tag>
         <tag>dll</tag>
         <tag>importerror</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10 &quot;请确认系统网络配置是否完整&quot;</title>
-    <url>/blog/2019/10/25/0045.win10-network-error/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
-<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
-<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
-<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
-<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
-<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
-<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
-        <tag>windows</tag>
-        <tag>windows10</tag>
-        <tag>network</tag>
       </tags>
   </entry>
   <entry>
@@ -1656,6 +1656,23 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>Xshell 无法连接服务器</title>
+    <url>/blog/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</url>
+    <content><![CDATA[<p>上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。</p>
+<p>最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>ubuntu1804</tag>
+        <tag>server</tag>
+        <tag>xshell</tag>
+        <tag>ping</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>win10 下将如何将单声道变成双声道</title>
     <url>/blog/2019/12/25/0050.win10-single-sound-channel/</url>
     <content><![CDATA[<p>打开设置，然后进行如下选择：</p>
@@ -1667,8 +1684,8 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>win10</tag>
         <tag>windows</tag>
+        <tag>win10</tag>
         <tag>mono</tag>
         <tag>sound</tag>
       </tags>
@@ -1702,23 +1719,6 @@ cpuid
         <tag>linux</tag>
         <tag>vscode</tag>
         <tag>ssh - server - remote</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xshell 无法连接服务器</title>
-    <url>/blog/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</url>
-    <content><![CDATA[<p>上周五 node10 又无法直接连接，不知道是什么问题，当时没注意，今天来连接还是不行，谷歌百度了好多方法就是不行，因为它问题很怪，可以上网，可以 ping 我 windows ip，但是 ping 不通网关，无法用 Xshell 连接，就很烦。</p>
-<p>最后我灵机一动，将两个网卡配置互换了，以前是第一个网卡（eno1，10.192.16x.xxx）做内网跳转，第二个网卡（enp4s0f1，211.69.19x.xxx）做外网连接，交换之后就可以直连了，虽然成功了但是不知道问题何在。</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-        <tag>ubuntu1804</tag>
-        <tag>server</tag>
-        <tag>xshell</tag>
-        <tag>ping</tag>
       </tags>
   </entry>
   <entry>
@@ -1813,8 +1813,8 @@ cpuid
         <category>Study</category>
       </categories>
       <tags>
-        <tag>win10</tag>
         <tag>windows</tag>
+        <tag>win10</tag>
         <tag>scoop</tag>
       </tags>
   </entry>
@@ -1839,27 +1839,6 @@ cpuid
         <tag>git-push</tag>
         <tag>username</tag>
         <tag>password</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【C++】每日 Bug - int 转 double</title>
-    <url>/blog/2020/08/25/0059.bug-200825-cpp-int2double/</url>
-    <content><![CDATA[<p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
-<p>看下面这个函数，你觉得有没有什么问题？</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">count_avg</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
-<p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
-<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</int></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>cpp</tag>
-        <tag>bug</tag>
-        <tag>int</tag>
-        <tag>double</tag>
       </tags>
   </entry>
   <entry>
@@ -1907,6 +1886,27 @@ cpuid
         <tag>up</tag>
         <tag>xinkeniang</tag>
         <tag>qingfengzuimeng</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【C++】每日 Bug - int 转 double</title>
+    <url>/blog/2020/08/25/0059.bug-200825-cpp-int2double/</url>
+    <content><![CDATA[<p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
+<p>看下面这个函数，你觉得有没有什么问题？</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">count_avg</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
+<p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
+<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</int></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>cpp</tag>
+        <tag>bug</tag>
+        <tag>int</tag>
+        <tag>double</tag>
       </tags>
   </entry>
   <entry>
@@ -2168,6 +2168,36 @@ cpuid
         <tag>ubuntu</tag>
         <tag>server</tag>
         <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 个人使用配置</title>
+    <url>/blog/2020/10/13/0064.self-linux-config/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/arian-darvishi-wh-RPfR_3_M-unsplash.jpg" alt title="Photo by Arian Darvishi on Unsplash"></p>
+<p>这里简单做一个个人向的 Linux 使用配置吧，无论是 Ubuntu 还是 CentOS，都可以使用这个配置来提升使用体验，以及工作效率。</p>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为什么会有这个，因为在实验室服务器上多个节点都有账户，然后 OS 也不相同，有 Ubuntu，有 CentOS，最近还有 Fedora，但基本都能使用一套配置，但是由于前后时间个人使用风格（？）的不同导致不同的配置，比如以前我在 Ubuntu 上会将一些个人的配置或者 alias 直接写入 <code>.bashrc</code>，后面则会新建一个 <code>.myrc</code> 配置文件，最近又将配置和 alias 分开，将配置写入 <code>.bashrc</code>，而将 alias 写入 <code>.bash_aliases</code>，总之就是很混乱，且没有统一，所以有了这篇文章。</p>
+<h2 id="统一配置"><a href="#统一配置" class="headerlink" title="统一配置"></a>统一配置</h2><p>由于我一般都会安装 zsh 来提升使用体验（在博客搜索 “zsh” 就能找到那篇安装 oh-my-zsh 的文章），所以跟 Bash 还是稍微有点区别，但是总的来说他们都有一个配置文件：<code>.bashrc/.zshrc</code> 所以我们就有了一个算是统一的入口。</p>
+<p>前几天我还整理了一篇常用的 alias 的文章（搜索 “alias”），并建议保存为 <code>.bash_aliases</code>，现在我觉得为了统一还是不这么做，为了统一起见，将其保存为 <code>.myrc</code> 并且将个人配置也放入其中，然后只需要在 <code>.bashrc</code> 和/或 <code>.zshrc</code> 加入 <code>source .myrc</code> 即可，需要备份的话直接保存 <code>.myrc</code> 就完事了。</p>
+<h2 id="配置哪些东西"><a href="#配置哪些东西" class="headerlink" title="配置哪些东西"></a>配置哪些东西</h2><p><code>.myrc</code> 里面可以放哪些东西？老实说，可以放的东西很多，最常用的莫过于常用的 alias，另外就是登录时想运行的脚本，比如 remove_duplicate_cmds.py （见文末）这个去除冗余的历史命令。再比如设置一些环境变量，如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> LC_ALL=en_US.UTF-8</span><br><span class="line"><span class="built_in">export</span> PROJECT=/home/tian/my-python3-project</span><br><span class="line"><span class="built_in">export</span> MAKEFLAGS=<span class="string">"-j<span class="variable">$(nproc)</span>"</span></span><br></pre></td></tr></table></figure>
+<p>总之，可以将任何想配置的命令放入 <code>.myrc</code> 这个文件，而且一旦完成好一份使用效果很棒的配置，以后可以直接 copy 过去，再在 <code>.bashrc/.zshrc</code> 加入一行命令就完了，所以就很方便。</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><ul>
+<li>remove_duplicate_cmds.py</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2020-09-21 11:26:59</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : github.com/taseikyo</span><br><span class="line"># @Version : python3.8</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">bash 和 zsh 会记录重复命令 于是有了这个脚本来</span><br><span class="line">去除 .zsh_history/.bash_history 中的重复命令</span><br><span class="line"></span><br><span class="line">为了保持顺序 使用 set 和list</span><br><span class="line"></span><br><span class="line">若想每次自动去重 可以将脚本放入 ~/.bashrc 中：</span><br><span class="line"></span><br><span class="line">tian@node:~$ chmod +x ./remove_duplicate_cmds.py</span><br><span class="line">tian@node:~$ echo &quot;/home/tian/remove_duplicate_cmds.py&quot; &gt;&gt; .bashrc</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">import os</span><br><span class="line">import time</span><br><span class="line">from datetime import datetime</span><br><span class="line"></span><br><span class="line">BASH_HISTORY_PATH = &quot;/home/chtian/.bash_history&quot;</span><br><span class="line">ZSH_HISTORY_PATH = &quot;/home/chtian/.zsh_history&quot;</span><br><span class="line"># 定义一个时间阈值 避免每次切换/登录都要跑一遍</span><br><span class="line">THRESHOLD_SECONDS = 3600</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def cal_time(stamp):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    计算 stamp 到当前时间的间隔秒数</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    t1 = datetime.utcfromtimestamp(time.time())</span><br><span class="line">    t2 = datetime.utcfromtimestamp(stamp)</span><br><span class="line">    return (t1 - t2).seconds</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def bash_history():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    我之前记得 bash 是不记录重复命令的啊</span><br><span class="line">    难道我记忆错乱了？</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    table = set()</span><br><span class="line">    cmds = []</span><br><span class="line">    cnt = 0</span><br><span class="line">    # 如果修改时间小于时间阈值则不管</span><br><span class="line">    if cal_time(os.path.getmtime(BASH_HISTORY_PATH)) &lt; THRESHOLD_SECONDS:</span><br><span class="line">        return</span><br><span class="line"></span><br><span class="line">    with open(BASH_HISTORY_PATH, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">        for cmd in f:</span><br><span class="line">            cnt += 1</span><br><span class="line">            if cmd in table:</span><br><span class="line">                continue</span><br><span class="line">            table.add(cmd)</span><br><span class="line">            cmds.append(cmd)</span><br><span class="line">    # print(&quot;&quot;.join(cmds))</span><br><span class="line">    print(f&quot;&#123;BASH_HISTORY_PATH&#125; &#123;cnt&#125; -&gt; &#123;len(cmds)&#125;&quot;)</span><br><span class="line">    with open(BASH_HISTORY_PATH, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">        f.write(&quot;&quot;.join(cmds))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def zsh_history():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    由于 zsh 会在命令前面加入时间戳</span><br><span class="line">    所以需要一个 split 的操作</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    table = set()</span><br><span class="line">    cmds = []</span><br><span class="line">    cnt = 0</span><br><span class="line">    # 如果修改时间小于时间阈值则不管</span><br><span class="line">    if cal_time(os.path.getmtime(ZSH_HISTORY_PATH)) &lt; THRESHOLD_SECONDS:</span><br><span class="line">        return</span><br><span class="line">    with open(ZSH_HISTORY_PATH, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">        for cmd in f:</span><br><span class="line">            cnt += 1</span><br><span class="line">            purge_cmd = &quot;&quot;.join(cmd.split(&quot;:&quot;)[2:])</span><br><span class="line">            if purge_cmd in table:</span><br><span class="line">                continue</span><br><span class="line">            table.add(purge_cmd)</span><br><span class="line">            cmds.append(cmd)</span><br><span class="line">    # print(&quot;&quot;.join(cmds))</span><br><span class="line">    print(f&quot;&#123;ZSH_HISTORY_PATH&#125; &#123;cnt&#125; -&gt; &#123;len(cmds)&#125;&quot;)</span><br><span class="line">    with open(ZSH_HISTORY_PATH, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:</span><br><span class="line">        f.write(&quot;&quot;.join(cmds))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    如果想加其他的 xsh 也可以</span><br><span class="line">    直接参考上面的写法</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    bash_history()</span><br><span class="line">    zsh_history()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>person</tag>
+        <tag>ubuntu</tag>
+        <tag>zsh</tag>
+        <tag>bash</tag>
+        <tag>centos</tag>
+        <tag>config</tag>
       </tags>
   </entry>
   <entry>
