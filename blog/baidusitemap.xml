@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://taseikyo.github.io/blog/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
+    <lastmod>2020-10-15</lastmod>
+  </url>
+  <url>
     <loc>https://taseikyo.github.io/blog/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
     <lastmod>2020-10-15</lastmod>
   </url>
@@ -130,10 +134,6 @@
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2019/05/31/0038.onenote-open-link-error/</loc>
-    <lastmod>2020-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
     <lastmod>2020-09-30</lastmod>
   </url>
   <url>

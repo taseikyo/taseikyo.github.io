@@ -23,18 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="https://blog.csdn.net/dcz1994/article/details/103120254 https://blog.csdn.net/maokelong95/article/details/91801944  上面两个博客的方法都没解决问题  https://github.com/microsoft/vscode-remote-release/issues/18 https">
-<meta name="keywords" content="linux,vscode,ssh - server - remote">
+  <meta name="description" content="前言听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 C:\Users\taseikyo\.ssh\config 配置，如下： 1234Host node    HostName a.b.c.d    User taseikyo    Identity">
+<meta name="keywords" content="linux,vscode,ssh - server - remote - ssh-keygen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS Code 通过跳板机连接服务器">
+<meta property="og:title" content="vscode 通过跳板机连接服务器">
 <meta property="og:url" content="https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="https://blog.csdn.net/dcz1994/article/details/103120254 https://blog.csdn.net/maokelong95/article/details/91801944  上面两个博客的方法都没解决问题  https://github.com/microsoft/vscode-remote-release/issues/18 https">
+<meta property="og:description" content="前言听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 C:\Users\taseikyo\.ssh\config 配置，如下： 1234Host node    HostName a.b.c.d    User taseikyo    Identity">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-30T01:45:16.040Z">
+<meta property="og:updated_time" content="2020-10-15T13:01:06.981Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VS Code 通过跳板机连接服务器">
-<meta name="twitter:description" content="https://blog.csdn.net/dcz1994/article/details/103120254 https://blog.csdn.net/maokelong95/article/details/91801944  上面两个博客的方法都没解决问题  https://github.com/microsoft/vscode-remote-release/issues/18 https">
+<meta name="twitter:title" content="vscode 通过跳板机连接服务器">
+<meta name="twitter:description" content="前言听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 C:\Users\taseikyo\.ssh\config 配置，如下： 1234Host node    HostName a.b.c.d    User taseikyo    Identity">
 
 <link rel="canonical" href="https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/">
 
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>VS Code 通过跳板机连接服务器 | Tian's Daily Life</title>
+  <title>vscode 通过跳板机连接服务器 | Tian's Daily Life</title>
   
 
 
@@ -226,7 +226,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          VS Code 通过跳板机连接服务器
+          vscode 通过跳板机连接服务器
         </h1>
 
         <div class="post-meta">
@@ -259,7 +259,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
+        <p><img data-src="https://microsoft.github.io/vscode-remote-release/images/ssh-readme.gif" alt title="remote-ssh"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 <code>C:\Users\taseikyo\.ssh\config</code> 配置，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host node</span><br><span class="line">    HostName a.b.c.d</span><br><span class="line">    User taseikyo</span><br><span class="line">    IdentityFile C:\Users\taseikyo\.ssh\id_rsa</span><br></pre></td></tr></table></figure>
+<p>但是对于只能内部跳转的服务器无法直连，这个时候就需要一个有 IP 的节点作为跳板跳转，此时在 vscode 中怎么配置呢？于是有了这篇文章。</p>
+<a id="more"></a>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ul>
 <li><a href="https://blog.csdn.net/dcz1994/article/details/103120254" target="_blank" rel="noopener">https://blog.csdn.net/dcz1994/article/details/103120254</a></li>
 <li><a href="https://blog.csdn.net/maokelong95/article/details/91801944" target="_blank" rel="noopener">https://blog.csdn.net/maokelong95/article/details/91801944</a></li>
 </ul>
@@ -274,10 +279,17 @@
 <p>按照第一个博客的步骤：</p>
 <ol>
 <li>安装最新的 openssh</li>
-<li>生成密钥<br>将公钥复制到 target 服务器的 authorized_keys 中</li>
+<li>生成密钥（<code>ssh-keygen -t rsa -b 1024 -C taseikyo@mypc</code>），然后将公钥复制到 target 服务器的 authorized_keys 中</li>
 <li>配置 vscdoe</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host jumpnode</span><br><span class="line">    HostName 111.111.111.111</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 配置下面这个可以免密登陆</span></span><br><span class="line">    IdentityFile C:\Users\taseikyo\.ssh\id_rsa</span><br><span class="line"> </span><br><span class="line">Host target</span><br><span class="line">    HostName 10.20.20.20</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 注意 ssh 要是完整路径不然会报错连不上</span></span><br><span class="line">    ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p node10</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host jumpnode</span><br><span class="line">    HostName 111.111.111.111</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 配置下面这个可以免密登陆</span></span><br><span class="line">    IdentityFile C:\Users\taseikyo\.ssh\id_rsa</span><br><span class="line"> </span><br><span class="line">Host target</span><br><span class="line">    HostName 10.20.20.20</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 注意 ssh 要是完整路径不然会报错连不上</span></span><br><span class="line">    ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p jumpnode</span><br></pre></td></tr></table></figure>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>另外有个算是上面已经说的问题，如果节点 A 想免密码转到节点 B，需要将 A 的公钥复制到 B 的 authorized_keys 中，具体步骤是：</p>
+<ol>
+<li>在 A 节点生成公钥，<code>ssh-keygen -t rsa -b 1024 -C taseikyo@mypc</code>，若是 Windows 路径在 <code>C:\Users\taseikyo\.ssh\id_rsa.pub</code>，若是 Linux 则在 <code>~/.ssh/id_rsa.pub</code></li>
+<li>将 A 节点的公钥复制到 B 节点的 authorized_keys 文件中（<code>vim ~/.ssh/authorized_keys</code>）</li>
+<li>然后从 A 节点可以免密 ssh 到节点 B 中</li>
+</ol>
+
     </div>
 
     
@@ -327,7 +339,7 @@
           <div class="post-tags">
               <a href="/blog/tags/linux/" rel="tag"># linux</a>
               <a href="/blog/tags/vscode/" rel="tag"># vscode</a>
-              <a href="/blog/tags/ssh-server-remote/" rel="tag"># ssh - server - remote</a>
+              <a href="/blog/tags/ssh-server-remote-ssh-keygen/" rel="tag"># ssh - server - remote - ssh-keygen</a>
           </div>
 
         
@@ -401,6 +413,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -429,7 +442,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">157</span>
+        <span class="site-state-item-count">158</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

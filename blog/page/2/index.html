@@ -626,7 +626,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/" class="post-title-link" itemprop="url">VS Code 通过跳板机连接服务器</a>
+            <a href="/blog/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/" class="post-title-link" itemprop="url">vscode 通过跳板机连接服务器</a>
         </h2>
 
         <div class="post-meta">
@@ -659,25 +659,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li><a href="https://blog.csdn.net/dcz1994/article/details/103120254" target="_blank" rel="noopener">https://blog.csdn.net/dcz1994/article/details/103120254</a></li>
-<li><a href="https://blog.csdn.net/maokelong95/article/details/91801944" target="_blank" rel="noopener">https://blog.csdn.net/maokelong95/article/details/91801944</a></li>
-</ul>
-<p>上面两个博客的方法都没解决问题</p>
-<ul>
-<li><a href="https://github.com/microsoft/vscode-remote-release/issues/18" target="_blank" rel="noopener">https://github.com/microsoft/vscode-remote-release/issues/18</a></li>
-<li><a href="https://serverfault.com/questions/956613/windows-10-ssh-proxycommand-posix-spawn-no-such-file-or-directory" target="_blank" rel="noopener">https://serverfault.com/questions/956613/windows-10-ssh-proxycommand-posix-spawn-no-such-file-or-directory</a></li>
-</ul>
-<p>在 GitHub 上面也有好多讨论</p>
-<p>最终解决了问题。</p>
-<p>目的是 windows 通过中间跳板最终链接目标服务器<br>windows - jumpnode - target</p>
-<p>按照第一个博客的步骤：</p>
-<ol>
-<li>安装最新的 openssh</li>
-<li>生成密钥<br>将公钥复制到 target 服务器的 authorized_keys 中</li>
-<li>配置 vscdoe</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host jumpnode</span><br><span class="line">    HostName 111.111.111.111</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 配置下面这个可以免密登陆</span></span><br><span class="line">    IdentityFile C:\Users\taseikyo\.ssh\id_rsa</span><br><span class="line"> </span><br><span class="line">Host target</span><br><span class="line">    HostName 10.20.20.20</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 注意 ssh 要是完整路径不然会报错连不上</span></span><br><span class="line">    ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p node10</span><br></pre></td></tr></table></figure>
+          <p><img data-src="https://microsoft.github.io/vscode-remote-release/images/ssh-readme.gif" alt title="remote-ssh"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 <code>C:\Users\taseikyo\.ssh\config</code> 配置，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host node</span><br><span class="line">    HostName a.b.c.d</span><br><span class="line">    User taseikyo</span><br><span class="line">    IdentityFile C:\Users\taseikyo\.ssh\id_rsa</span><br></pre></td></tr></table></figure>
+<p>但是对于只能内部跳转的服务器无法直连，这个时候就需要一个有 IP 的节点作为跳板跳转，此时在 vscode 中怎么配置呢？于是有了这篇文章。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -914,7 +907,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">157</span>
+        <span class="site-state-item-count">158</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
