@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
+    <lastmod>2020-10-15</lastmod>
+  </url>
+  <url>
     <loc>https://taseikyo.github.io/blog/2020/10/13/0064.self-linux-config/</loc>
     <lastmod>2020-10-13</lastmod>
   </url>
@@ -221,15 +225,15 @@
     <lastmod>2020-05-28</lastmod>
   </url>
   <url>
+    <loc>https://taseikyo.github.io/blog/2017/10/14/0004.hust-rank/</loc>
+    <lastmod>2020-05-28</lastmod>
+  </url>
+  <url>
     <loc>https://taseikyo.github.io/blog/2017/10/10/0003.ram-jd/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2017/08/25/0002.cloud-music-lyric/</loc>
-    <lastmod>2020-05-28</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2017/10/14/0004.hust-rank/</loc>
     <lastmod>2020-05-28</lastmod>
   </url>
   <url>

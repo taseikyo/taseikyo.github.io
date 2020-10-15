@@ -210,6 +210,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/09/03/0041.deploy-blog-to-subdirectory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/09/03/0041.deploy-blog-to-subdirectory/" class="post-title-link" itemprop="url">将博客部署到子目录下</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-03 09:35:19" itemprop="dateCreated datePublished" datetime="2019-09-03T09:35:19+08:00">2019-09-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Essay/" itemprop="url" rel="index"><span itemprop="name">Essay</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
+<p>由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。</p>
+<p>不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你 username.github.io 仓的根目录，所以需要手动将生成的 public 目录复制到你 username.github.io/bolg 目录下。</p>
+<p>但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io/images/xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io/blog/images/xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了：</p>
+<ol>
+<li>手动替换地址</li>
+<li>找到对应的 js 文件，将正文中的地址替换掉</li>
+</ol>
+<p>或者想网上说的，再开一个库，将文件部署到这个库，但是我不想专门开个库，麻烦。</p>
+<p>对应的 js 有好多，hexo-generator-xxx 不知道哪个是…</p>
+<p>最后还是自己修改图片地址…反正用 python 批量替换也挺快的 hhh，然后还得换掉自定义的 js 文件的路径，同时自定义的 js 中使用到的图片路径也得换，反正也不多，挺快的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/07/12/0040.a-normal-day-in-wuhan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -744,82 +821,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/03/20/0032.includeos-helloworld/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/03/20/0032.includeos-helloworld/" class="post-title-link" itemprop="url">includeOS 初体验 - Hello World!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-03-20 11:20:02" itemprop="dateCreated datePublished" datetime="2019-03-20T11:20:02+08:00">2019-03-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Unikernel/" itemprop="url" rel="index"><span itemprop="name">Unikernel</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
-<p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
-<p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2019/03/20/0032.includeos-helloworld/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -891,7 +892,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -904,7 +905,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">150</span>
+        <span class="site-state-item-count">157</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
