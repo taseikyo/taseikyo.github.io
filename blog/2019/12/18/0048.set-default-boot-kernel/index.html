@@ -31,7 +31,7 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="b.s. 今天武汉下雪了。 由于实验室服务器上不是一个人在用，所以一个节点会编译了多种版本的内核，默认启动好像是自带的版本，然后今天就遇到这个问题。 我需要的是 4.10.2 自己编译的版本，但是同学重启之后就变成默认的 5.0.37 了，所以就搜了一下，怎么让默认启动就是 4.10.2。 其实方法也挺简单的：  查看内核的顺序  12345678910111213141516171819202">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-07T08:57:31.630Z">
+<meta property="og:updated_time" content="2020-10-16T02:01:19.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 设置默认启动内核版本">
 <meta name="twitter:description" content="b.s. 今天武汉下雪了。 由于实验室服务器上不是一个人在用，所以一个节点会编译了多种版本的内核，默认启动好像是自带的版本，然后今天就遇到这个问题。 我需要的是 4.10.2 自己编译的版本，但是同学重启之后就变成默认的 5.0.37 了，所以就搜了一下，怎么让默认启动就是 4.10.2。 其实方法也挺简单的：  查看内核的顺序  12345678910111213141516171819202">
@@ -103,7 +103,7 @@
       <h1 class="site-title">Tian's Daily Life</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Everything that kills me makes me feel alive.</p>
+      <p class="site-subtitle" itemprop="description">Love yourself; Love your like.</p>
   </div>
 
   <div class="site-nav-right">
@@ -272,7 +272,7 @@
 <ol start="2">
 <li>修改配置文件</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/default/grub</span><br><span class="line"></span><br><span class="line">GRUB_DEFAULT=0 =&gt; GRUB_DEFAULT=<span class="string">"1&gt;6"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/default/grub</span><br><span class="line"></span><br><span class="line">GRUB_DEFAULT=0 =&gt; GRUB_DEFAULT=<span class="string">"1&gt;6"</span></span><br></pre></td></tr></table></figure>
 <p>这个修改也好懂，之前的 0 代表着在主菜单就直接选择第一项；而 1&gt;6 则代表着先选择第二项（Advanced options for Ubuntu），然后选择第 7 个内核。</p>
 <ol start="3">
 <li>更新 grub</li>
@@ -428,7 +428,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -441,7 +441,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">158</span>
+        <span class="site-state-item-count">161</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

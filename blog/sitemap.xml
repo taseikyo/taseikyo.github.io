@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://taseikyo.github.io/2020/10/16/grant-user-sudo-privilege/</loc>
+    
+    <lastmod>2020-10-16T02:40:46.573Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/12/18/0048.set-default-boot-kernel/</loc>
+    
+    <lastmod>2020-10-16T02:01:19.405Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
     
     <lastmod>2020-10-15T13:01:06.981Z</lastmod>
@@ -201,13 +215,6 @@
     <loc>https://taseikyo.github.io/2019/12/24/0049.taseikyo-2019-hust/</loc>
     
     <lastmod>2020-10-07T08:58:09.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/12/18/0048.set-default-boot-kernel/</loc>
-    
-    <lastmod>2020-10-07T08:57:31.630Z</lastmod>
     
   </url>
   
