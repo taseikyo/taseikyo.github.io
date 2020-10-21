@@ -9,7 +9,7 @@ function pages(num){
             return;
         }
         if (parseInt(path) == 2){
-            window.location.href="https://taseikyo.github.io/blog/netease/";
+            window.location.href="https://taseikyo.github.io/netease/";
         }
         else{
             path = (window.location.href).replace(/[1-9][0-9]*/g, parseInt(path)-1); 
@@ -19,7 +19,7 @@ function pages(num){
     }
     else if(num == -2){//下一页
         if (!path){
-            window.location.href="https://taseikyo.github.io/blog/netease/?2";
+            window.location.href="https://taseikyo.github.io/netease/?2";
         }
         else if(parseInt(path) == 15){
             return;
@@ -31,13 +31,13 @@ function pages(num){
     }
     else{//跳到指定页
         if (num == 1) {
-            window.location.href="https://taseikyo.github.io/blog/netease";
+            window.location.href="https://taseikyo.github.io/netease";
         }
         else if(num > 15){
             return;
         }
         else{
-            window.location.href = "https://taseikyo.github.io/blog/netease/?"+num;
+            window.location.href = "https://taseikyo.github.io/netease/?"+num;
         }
     }
 }

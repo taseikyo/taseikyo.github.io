@@ -67,7 +67,7 @@
         },
         methods: {
             getData: function() {
-                this.$http.get("https://taseikyo.github.io/blog/radio/json/" + page + ".json").then(function(res) {
+                this.$http.get("https://taseikyo.github.io/radio/json/" + page + ".json").then(function(res) {
                     // console.log(res);
                     for (var i = 0, len = res.body.length; i < len; i++) {
                         //获取每个元素
