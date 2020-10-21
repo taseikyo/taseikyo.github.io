@@ -23,18 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;amp;id={id}&amp;amp;lv=-1&amp;amp;kv=-1&amp;amp;tv=-1 中间 {id} 换成歌曲的 id 即可。于是就很简单了，用一个 QLineEdit 来输入歌">
+  <meta name="description" content="2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。 首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;amp;id={id}&amp;amp;lv=-1&amp;amp;kv=-1&amp;amp;tv=-1 中间 {id} 换成歌曲的 id 即可。 于是就很简单了，用一个 QLineEdit 来输">
 <meta name="keywords" content="c++,qt,lyric,netease-cloud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网易云歌词下载器">
 <meta property="og:url" content="https://taseikyo.github.io/2017/08/25/0002.cloud-music-lyric/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;amp;id={id}&amp;amp;lv=-1&amp;amp;kv=-1&amp;amp;tv=-1 中间 {id} 换成歌曲的 id 即可。于是就很简单了，用一个 QLineEdit 来输入歌">
+<meta property="og:description" content="2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。 首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;amp;id={id}&amp;amp;lv=-1&amp;amp;kv=-1&amp;amp;tv=-1 中间 {id} 换成歌曲的 id 即可。 于是就很简单了，用一个 QLineEdit 来输">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-28T10:19:38.000Z">
+<meta property="og:updated_time" content="2020-10-21T07:39:37.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网易云歌词下载器">
-<meta name="twitter:description" content="2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;amp;id={id}&amp;amp;lv=-1&amp;amp;kv=-1&amp;amp;tv=-1 中间 {id} 换成歌曲的 id 即可。于是就很简单了，用一个 QLineEdit 来输入歌">
+<meta name="twitter:description" content="2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。 首先知道网易云获取歌词的 API 是 http://music.163.com/api/song/lyric?os=pc&amp;amp;id={id}&amp;amp;lv=-1&amp;amp;kv=-1&amp;amp;tv=-1 中间 {id} 换成歌曲的 id 即可。 于是就很简单了，用一个 QLineEdit 来输">
 
 <link rel="canonical" href="https://taseikyo.github.io/2017/08/25/0002.cloud-music-lyric/">
 
@@ -121,11 +121,6 @@
         <li class="menu-item menu-item-home">
 
     <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-netease">
-
-    <a href="/blog/netease" rel="section"><i class="fa fa-fw fa-music"></i>netease</a>
 
   </li>
         <li class="menu-item menu-item-c++">
@@ -254,8 +249,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。<br>首先知道网易云获取歌词的 API 是 <code>http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1</code> 中间 {id} 换成歌曲的 id 即可。<br>于是就很简单了，用一个 <code>QLineEdit</code> 来输入歌曲的 id，然后 <code>QNetworkAccessManager</code> 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。</p>
-<h3 id="下载链接-https-github-com-taseikyo-NeteaseLyric-releases"><a href="#下载链接-https-github-com-taseikyo-NeteaseLyric-releases" class="headerlink" title="下载链接: https://github.com/taseikyo/NeteaseLyric/releases"></a>下载链接: <a href="https://github.com/taseikyo/NeteaseLyric/releases" target="_blank" rel="noopener">https://github.com/taseikyo/NeteaseLyric/releases</a></h3><p>程序界面如下：<br><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-084637bccfd7b7b99cab75da37305f72_b.png" alt="interface" title="程序界面"><br><a id="more"></a><br>输入歌曲 id 或者完整的链接，点击 <code>get</code> 按钮，或者敲击回车，然后就可以获取歌曲名、歌手、歌词信息。<br>你可以隐藏时间轴和翻译。<br><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-1f66b0f451e28a6fe0740eb186d13f56_b.png" alt="hide" title="隐藏时间轴和翻译"><br>保存歌词快捷键是 <code>Ctrl+S</code>。<br><img data-src="https://images.weserv.nl/?url=pic4.zhimg.com/v2-bae6f4ff7a822b43c6d8cb34f3bb1e77_b.png" alt="save" title="保存歌词"></p>
+        <p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。</p>
+<p>首先知道网易云获取歌词的 API 是 <code>http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1</code> 中间 {id} 换成歌曲的 id 即可。</p>
+<p>于是就很简单了，用一个 <code>QLineEdit</code> 来输入歌曲的 id，然后 <code>QNetworkAccessManager</code> 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。</p>
+<p>下载链接: <a href="https://github.com/taseikyo/NeteaseLyric/releases" target="_blank" rel="noopener">https://github.com/taseikyo/NeteaseLyric/releases</a></p>
+<p>程序界面如下：</p>
+<p><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-084637bccfd7b7b99cab75da37305f72_b.png" alt="interface" title="程序界面"></p>
+<p>输入歌曲 id 或者完整的链接，点击 <code>get</code> 按钮，或者敲击回车，然后就可以获取歌曲名、歌手、歌词信息。<br>你可以隐藏时间轴和翻译。</p>
+<p><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-1f66b0f451e28a6fe0740eb186d13f56_b.png" alt="hide" title="隐藏时间轴和翻译"></p>
+<p>保存歌词快捷键是 <code>Ctrl+S</code>。</p>
+<p><img data-src="https://images.weserv.nl/?url=pic4.zhimg.com/v2-bae6f4ff7a822b43c6d8cb34f3bb1e77_b.png" alt="save" title="保存歌词"></p>
 
     </div>
 
@@ -381,7 +384,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载链接-https-github-com-taseikyo-NeteaseLyric-releases"><span class="nav-number">1.</span> <span class="nav-text">下载链接: https://github.com/taseikyo/NeteaseLyric/releases</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
