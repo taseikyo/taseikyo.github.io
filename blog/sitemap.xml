@@ -2,7 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://taseikyo.github.io/2020/10/16/grant-user-sudo-privilege/</loc>
+    <loc>https://taseikyo.github.io/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</loc>
+    
+    <lastmod>2020-10-21T07:15:07.628Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/</loc>
+    
+    <lastmod>2020-10-21T07:12:48.698Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/</loc>
+    
+    <lastmod>2020-10-21T07:11:05.157Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/13/0064.self-linux-config/</loc>
+    
+    <lastmod>2020-10-21T07:10:23.076Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
+    
+    <lastmod>2020-10-21T06:58:38.086Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
+    
+    <lastmod>2020-10-21T06:55:53.449Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/16/0066.grant-user-sudo-privilege/</loc>
     
     <lastmod>2020-10-16T02:40:46.573Z</lastmod>
     
@@ -19,20 +61,6 @@
     <loc>https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
     
     <lastmod>2020-10-15T13:01:06.981Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
-    
-    <lastmod>2020-10-15T09:03:31.191Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/13/0064.self-linux-config/</loc>
-    
-    <lastmod>2020-10-13T08:24:30.859Z</lastmod>
     
   </url>
   
@@ -110,27 +138,6 @@
     <loc>https://taseikyo.github.io/2020/06/09/0057.xinkeniang-qingfeng/</loc>
     
     <lastmod>2020-10-09T01:51:20.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
-    
-    <lastmod>2020-10-09T01:50:29.473Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/</loc>
-    
-    <lastmod>2020-10-09T01:50:01.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/</loc>
-    
-    <lastmod>2020-10-07T09:16:25.189Z</lastmod>
     
   </url>
   
@@ -215,13 +222,6 @@
     <loc>https://taseikyo.github.io/2019/12/24/0049.taseikyo-2019-hust/</loc>
     
     <lastmod>2020-10-07T08:58:09.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</loc>
-    
-    <lastmod>2020-10-07T08:53:43.060Z</lastmod>
     
   </url>
   

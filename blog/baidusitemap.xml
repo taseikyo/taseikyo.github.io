@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/16/grant-user-sudo-privilege/</loc>
+    <loc>https://taseikyo.github.io/blog/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/07/0062.useful-bash-alias/</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/09/0063centos-ubuntu-command-diff/</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/13/0064.self-linux-config/</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
+    <lastmod>2020-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://taseikyo.github.io/blog/2020/10/16/0066.grant-user-sudo-privilege/</loc>
     <lastmod>2020-10-16</lastmod>
   </url>
   <url>
@@ -11,14 +35,6 @@
   <url>
     <loc>https://taseikyo.github.io/blog/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
     <lastmod>2020-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
-    <lastmod>2020-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/13/0064.self-linux-config/</loc>
-    <lastmod>2020-10-13</lastmod>
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2018/11/01/0019.pc-win-no-voice/</loc>
@@ -63,18 +79,6 @@
   <url>
     <loc>https://taseikyo.github.io/blog/2020/06/09/0057.xinkeniang-qingfeng/</loc>
     <lastmod>2020-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
-    <lastmod>2020-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/09/0063centos-ubuntu-command-diff/</loc>
-    <lastmod>2020-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/07/0062.useful-bash-alias/</loc>
-    <lastmod>2020-10-07</lastmod>
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</loc>
@@ -122,10 +126,6 @@
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2019/12/24/0049.taseikyo-2019-hust/</loc>
-    <lastmod>2020-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</loc>
     <lastmod>2020-10-07</lastmod>
   </url>
   <url>

@@ -23,18 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一看根本没用。 1234567# .bash_profileif [ -n &quot;$BA">
+  <meta name="description" content="*Photo by Sai Kiran Anagani on Unsplash 当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一">
 <meta name="keywords" content="linux,ubuntu,bash,alias,shell,bashrc,bash-profile">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有用的 bash alias">
 <meta property="og:url" content="https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一看根本没用。 1234567# .bash_profileif [ -n &quot;$BA">
+<meta property="og:description" content="*Photo by Sai Kiran Anagani on Unsplash 当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-07T09:16:25.189Z">
+<meta property="og:updated_time" content="2020-10-21T07:12:48.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有用的 bash alias">
-<meta name="twitter:description" content="当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一看根本没用。 1234567# .bash_profileif [ -n &quot;$BA">
+<meta name="twitter:description" content="*Photo by Sai Kiran Anagani on Unsplash 当新建用户时，在自己的 home 目录应该有如下几个文件：.bash_profile .bashrc .bash_logout，有可能有两个，也有可能都没有，这个时候需要自己新建，在 .bash_profile 文件中可以写入以下内容，这样在每次登录都会执行 .bashrc 了，不然你写了一堆 alias 可能登录一">
 
 <link rel="canonical" href="https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/">
 
@@ -136,11 +136,6 @@
         <li class="menu-item menu-item-python">
 
     <a href="/blog/categories/Python/" rel="section"><i class="fa fa-fw fa-codepen"></i>python</a>
-
-  </li>
-        <li class="menu-item menu-item-javascript">
-
-    <a href="/blog/categories/JavaScript/" rel="section"><i class="fa fa-fw fa-code"></i>javascript</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -259,7 +254,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
+        <p><img data-src="/blog/images/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
+<p>*<em>Photo by Sai Kiran Anagani on Unsplash</em></p>
+<p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 算了</p>
 <p>可能会有换行的问题，用 vim 打开，输入 <code>set ff=unix</code> 命令就行了</p>

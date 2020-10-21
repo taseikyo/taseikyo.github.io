@@ -23,18 +23,18 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="详细内容可以查看知乎的这篇文章：linux 忘记 root 密码怎么办？，文章中有较为详细的介绍，这里不罗嗦。 一句话解决问题，如果你有 sudo 权限，那么下面两种均可：  直接 sudo passwd root 重置密码即可。 编辑 /etc/shadow 文件，将 root 的加密密码替换成这串密文 $6$LyVpT/aetS$mTDFTG9SzM7iVdP7Kqz6q2lsvgqjA45">
+  <meta name="description" content="详细内容可以查看知乎的这篇文章：linux 忘记 root 密码怎么办？，文章中有较为详细的介绍，这里不罗嗦。 一句话解决问题，如果你有 sudo 权限，那么下面两种均可：  直接 sudo passwd root 重置密码即可。 编辑 /etc/shadow 文件，将 root 的加密密码替换成这串密文 $6$LyVpT/aetS$mTDFTG9SzM7iVdP7Kqz6q2lsvgqjA45q">
 <meta name="keywords" content="linux,password,root,etc,passwd,shadow,salt,hash,encryption">
 <meta property="og:type" content="article">
 <meta property="og:title" content="忘记 root 密码如何找回或者重置？">
 <meta property="og:url" content="https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="详细内容可以查看知乎的这篇文章：linux 忘记 root 密码怎么办？，文章中有较为详细的介绍，这里不罗嗦。 一句话解决问题，如果你有 sudo 权限，那么下面两种均可：  直接 sudo passwd root 重置密码即可。 编辑 /etc/shadow 文件，将 root 的加密密码替换成这串密文 $6$LyVpT/aetS$mTDFTG9SzM7iVdP7Kqz6q2lsvgqjA45">
+<meta property="og:description" content="详细内容可以查看知乎的这篇文章：linux 忘记 root 密码怎么办？，文章中有较为详细的介绍，这里不罗嗦。 一句话解决问题，如果你有 sudo 权限，那么下面两种均可：  直接 sudo passwd root 重置密码即可。 编辑 /etc/shadow 文件，将 root 的加密密码替换成这串密文 $6$LyVpT/aetS$mTDFTG9SzM7iVdP7Kqz6q2lsvgqjA45q">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-15T09:03:31.191Z">
+<meta property="og:updated_time" content="2020-10-21T06:55:53.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="忘记 root 密码如何找回或者重置？">
-<meta name="twitter:description" content="详细内容可以查看知乎的这篇文章：linux 忘记 root 密码怎么办？，文章中有较为详细的介绍，这里不罗嗦。 一句话解决问题，如果你有 sudo 权限，那么下面两种均可：  直接 sudo passwd root 重置密码即可。 编辑 /etc/shadow 文件，将 root 的加密密码替换成这串密文 $6$LyVpT/aetS$mTDFTG9SzM7iVdP7Kqz6q2lsvgqjA45">
+<meta name="twitter:description" content="详细内容可以查看知乎的这篇文章：linux 忘记 root 密码怎么办？，文章中有较为详细的介绍，这里不罗嗦。 一句话解决问题，如果你有 sudo 权限，那么下面两种均可：  直接 sudo passwd root 重置密码即可。 编辑 /etc/shadow 文件，将 root 的加密密码替换成这串密文 $6$LyVpT/aetS$mTDFTG9SzM7iVdP7Kqz6q2lsvgqjA45q">
 
 <link rel="canonical" href="https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/">
 
@@ -136,11 +136,6 @@
         <li class="menu-item menu-item-python">
 
     <a href="/blog/categories/Python/" rel="section"><i class="fa fa-fw fa-codepen"></i>python</a>
-
-  </li>
-        <li class="menu-item menu-item-javascript">
-
-    <a href="/blog/categories/JavaScript/" rel="section"><i class="fa fa-fw fa-code"></i>javascript</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -259,8 +254,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img data-src="/blog/images/markus-spiske-iar-afB0QQw-unsplash.jpg" alt title="Photo by Markus Spiske on Unsplash"></p>
-<p>详细内容可以查看知乎的这篇文章：<a href="https://zhuanlan.zhihu.com/p/35147209" target="_blank" rel="noopener">linux 忘记 root 密码怎么办？</a>，文章中有较为详细的介绍，这里不罗嗦。</p>
+        <p>详细内容可以查看知乎的这篇文章：<a href="https://zhuanlan.zhihu.com/p/35147209" target="_blank" rel="noopener">linux 忘记 root 密码怎么办？</a>，文章中有较为详细的介绍，这里不罗嗦。</p>
 <p>一句话解决问题，如果你有 sudo 权限，那么下面两种均可：</p>
 <ol>
 <li>直接 <code>sudo passwd root</code> 重置密码即可。</li>
@@ -335,7 +329,7 @@
       <i class="fa fa-chevron-left"></i> Linux 个人使用配置
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/2020/10/16/grant-user-sudo-privilege/" rel="next" title="赋予普通用户 sudo 的权限方法">
+    <a href="/blog/2020/10/16/0066.grant-user-sudo-privilege/" rel="next" title="赋予普通用户 sudo 的权限方法">
       赋予普通用户 sudo 的权限方法 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
