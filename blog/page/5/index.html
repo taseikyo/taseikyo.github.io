@@ -200,6 +200,163 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/13/0036.centos7-sudo-cmd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/05/13/0036.centos7-sudo-cmd/" class="post-title-link" itemprop="url">sudo pip3 "command not found" in centos7</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-05-13 13:06:27" itemprop="dateCreated datePublished" datetime="2019-05-13T13:06:27+08:00">2019-05-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div style="float: right; margin-left: 10px;margin-top: 0px;"><br>    <img data-src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?"><br></div>
+
+<p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3/pip3 都是可以跑的。</p>
+<p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ sudo pip3</span><br><span class="line">sudo: pip3: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
+<p>有人说“出于安全原因，sudo 不依赖 $PATH。有一个 secure_path 选项 /etc/sudoers，指定 PATH 是 sudo 将用于定位二进制文件。”</p>
+<p>相关问答:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/32020594/sudo-pip-command-not-found-in-centos" target="_blank" rel="noopener">sudo: pip: command not found in CentOS</a></li>
+<li><a href="https://cloud.tencent.com/developer/ask/34025" target="_blank" rel="noopener">在CentOS中找不到sudo：pip：命令？</a></li>
+<li><a href="https://unix.stackexchange.com/questions/169251/root-shell-sees-pip-but-sudo-pip-command-not-found" target="_blank" rel="noopener">Root shell sees pip but sudo pip “command not found”</a></li>
+</ul>
+<p>我看了下 secure_path 的路径 <code>Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ whereis pip3</span><br><span class="line">pip3: /usr/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3.7</span><br></pre></td></tr></table></figure>
+<p>pip3 已经在 <code>/usr/bin</code> 目录下了，就很奇怪，不知道为什么就是找不到…</p>
+<p>将 <code>/usr/local/bin/</code> 加到 secure_path 或许可以，但我用的是另一个方法: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 ~]$ sudo `<span class="built_in">which</span> pip3` </span><br><span class="line"></span><br><span class="line">Usage:   </span><br><span class="line">  pip3 &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/10/0035.good-things-recommended-win-softwares/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/" class="post-title-link" itemprop="url">好物推荐之 windows 软件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-05-10 09:19:43" itemprop="dateCreated datePublished" datetime="2019-05-10T09:19:43+08:00">2019-05-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Essay/" itemprop="url" rel="index"><span itemprop="name">Essay</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。<br>目的是为了以后换了电脑/笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。<br>本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。</p>
+<p><img data-src="/blog/images/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/04/08/0034.python3-map/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -232,7 +389,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                  <a href="/blog/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
                 </span>
             </span>
 
@@ -464,7 +621,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                  <a href="/blog/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
                 </span>
             </span>
 
@@ -542,7 +699,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                  <a href="/blog/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
                 </span>
             </span>
 
@@ -655,155 +812,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/01/25/0028.first2codewars/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/01/25/0028.first2codewars/" class="post-title-link" itemprop="url">codewars 初体验 XD</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-01-25 16:48:33" itemprop="dateCreated datePublished" datetime="2019-01-25T16:48:33+08:00">2019-01-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="/blog/images/first2codewars.png" alt></p>
-<p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
-<blockquote>
-<p>@GloomyGhost: 有这时间还不如刷codewar</p>
-</blockquote>
-<p>然后就有点好奇了，就今天下午注册试了下，感觉还挺有趣的，其实呢，codewars 和其他如 leetcode 刷题网站类似，但它也有自己一些独特之处（虽然我也没怎么刷过 leetcode）。</p>
-<p>首先你注册之后等级是 8 级，等级越高数字越低，是不是一下子就有刷题提升段位的冲动了呢（滑稽<br>然后还有就是，如果你没有做过（train）题是没办法看别人的解题方法的 0w0<br>另外好像和你段位差太多的题你是没办法点进去的（等级打击），因为我到了 7 级不能做 4 级的题 233</p>
-<p>其他的应该基本上都差不多，哦对了还有 codewars 可以选择自己擅长的语言，在做题的时候也可以换语言（如果可以换的话）<br>但是等级是和对应语言绑定的，也就是说就算你 Python 刷到 2级，但你想换成 JavaScript 还是得从 8 级慢慢刷~</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2018/12/30/0027.summary-1812/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2018/12/30/0027.summary-1812/" class="post-title-link" itemprop="url">Tich·十二月总结/2018</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-12-30 17:20:18" itemprop="dateCreated datePublished" datetime="2018-12-30T17:20:18+08:00">2018-12-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Essay/" itemprop="url" rel="index"><span itemprop="name">Essay</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="/blog/images/summary_1812.png" alt></p>
-<p>由于 12 月进入了考试月，所以这个月基本没做什么，原来每个月两本书的计划也只能搁置了。<br>相关的论文也没怎么看，就写了一个嗶哩嗶哩的下载工具（摸鱼当场抓获</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2018/12/30/0027.summary-1812/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -875,20 +883,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-count">172</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

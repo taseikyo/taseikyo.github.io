@@ -200,6 +200,186 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/22/0067,microsoft-store-0x80131500/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/10/22/0067,microsoft-store-0x80131500/" class="post-title-link" itemprop="url">Windows 应用商店错误代码 0x80131500</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-22 10:43:38" itemprop="dateCreated datePublished" datetime="2020-10-22T10:43:38+08:00">2020-10-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/ws-0x80131500.jpg" alt></p>
+<p>今天遇到这个问题，打开应用商店一直“灰屏”，底部有错误代码：0x80131500，搜了一下解决办法，前几个都没用，不过都记录一下，万一以后遇到这些办法有效。</p>
+<ol>
+<li>重置应用商店<ul>
+<li>管理员 CMD - 输入 <code>wsreset</code></li>
+</ul>
+</li>
+<li>使用 TLS 1.2<ul>
+<li>打开“运行”输入 inetcpl.cpl （“WINDOWS”+“R” 键，输入 inetcpl.cpl）</li>
+<li>点开高级往下拉，勾上”使用TLS 1.2”选项，或者点还原高级设置</li>
+</ul>
+</li>
+<li>关闭代理<ul>
+<li>设置 - 网络和 Internet - “使用代理服务器”关闭</li>
+</ul>
+</li>
+</ol>
+<p>解决的是第三个，之前为了加速 <code>git clone</code> 设置了代理：<code>127.0.0.1:7890</code>，关了之后就好了。舒服！</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://tieba.baidu.com/p/6028738660" target="_blank" rel="noopener">https://tieba.baidu.com/p/6028738660</a></li>
+<li><a href="https://tieba.baidu.com/p/6033241727" target="_blank" rel="noopener">https://tieba.baidu.com/p/6033241727</a></li>
+<li><a href="https://blog.csdn.net/weixin_40607008/article/details/85055751" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40607008/article/details/85055751</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/22/microsoft-store-0x80131500/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/10/22/microsoft-store-0x80131500/" class="post-title-link" itemprop="url">Windows 应用商店错误代码 0x80131500</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-22 10:43:38" itemprop="dateCreated datePublished" datetime="2020-10-22T10:43:38+08:00">2020-10-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/ws-0x80131500.jpg" alt></p>
+<p>今天遇到这个问题，打开应用商店一直“灰屏”，底部有错误代码：0x80131500，搜了一下解决办法，前几个都没用，不过都记录一下，万一以后遇到这些办法有效。</p>
+<ol>
+<li>重置应用商店<ul>
+<li>管理员 CMD - 输入 <code>wsreset</code></li>
+</ul>
+</li>
+<li>使用 TLS 1.2<ul>
+<li>打开“运行”输入 inetcpl.cpl （“WINDOWS”+“R” 键，输入 inetcpl.cpl）</li>
+<li>点开高级往下拉，勾上”使用TLS 1.2”选项，或者点还原高级设置</li>
+</ul>
+</li>
+<li>关闭代理<ul>
+<li>设置 - 网络和 Internet - “使用代理服务器”关闭</li>
+</ul>
+</li>
+</ol>
+<p>解决的是第三个，之前为了加速 <code>git clone</code> 设置了代理：<code>127.0.0.1:7890</code>，关了之后就好了。舒服！</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://tieba.baidu.com/p/6028738660" target="_blank" rel="noopener">https://tieba.baidu.com/p/6028738660</a></li>
+<li><a href="https://tieba.baidu.com/p/6033241727" target="_blank" rel="noopener">https://tieba.baidu.com/p/6033241727</a></li>
+<li><a href="https://blog.csdn.net/weixin_40607008/article/details/85055751" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40607008/article/details/85055751</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/16/0066.grant-user-sudo-privilege/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -607,7 +787,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
                 </span>
             </span>
 
@@ -633,175 +813,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/09/30/0060.contribute-to-the-algorithm-python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2020/09/30/0060.contribute-to-the-algorithm-python/" class="post-title-link" itemprop="url">向 TheAlgorithms/Python 贡献代码须知</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-30 09:10:25" itemprop="dateCreated datePublished" datetime="2020-09-30T09:10:25+08:00">2020-09-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
-<ul>
-<li>fork 到自己的仓库</li>
-<li>git clone 到本地</li>
-<li>上游建立连接<ul>
-<li><code>git remote add upstream 开源项目地址</code></li>
-</ul>
-</li>
-<li>创建开发分支（非必须）<ul>
-<li><code>git checkout -b dev</code></li>
-</ul>
-</li>
-<li>修改提交代码<ul>
-<li><code>git status git</code></li>
-<li><code>add . git commit -m ...</code></li>
-<li><code>git push origin branch</code></li>
-</ul>
-</li>
-<li>同步代码三部曲<ul>
-<li><code>git fetch upstream</code></li>
-<li><code>git rebase upstream/master</code></li>
-<li><code>git push origin master</code></li>
-</ul>
-</li>
-<li>提交pr<br>  去自己 github 仓库对应 fork 的项目下 new pull request</li>
-</ul>
-<p>另外由于每个开源项目都有自己的要求，比如 TheAlgorithms/Python 提交 pr 都会进行各种格式检查，所以先本地 check 一下就可以避免出现格式语法错而得重新 commit 的浪费时间问题，下面是一个维护者提出的步骤：</p>
-<ul>
-<li><a href="https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650" target="_blank" rel="noopener">https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650</a></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">black &lt;filename&gt;</span><br><span class="line">isort &lt;filename&gt;</span><br><span class="line">flake8 --ignore=E203,W503 --max-complexity=25 --max-line-length=88 --statistics --count &lt;filename&gt;</span><br><span class="line">mypy --ignore-missing-imports &lt;filename&gt;</span><br><span class="line">pytest --doctest-modules &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/08/25/0059.bug-200825-cpp-int2double/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2020/08/25/0059.bug-200825-cpp-int2double/" class="post-title-link" itemprop="url">【C++】每日 Bug - int 转 double</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-08-25 11:00:11" itemprop="dateCreated datePublished" datetime="2020-08-25T11:00:11+08:00">2020-08-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
-<p>看下面这个函数，你觉得有没有什么问题？</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">count_avg</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
-<p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
-<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</int></p>
-
       
     </div>
 
@@ -887,20 +898,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-count">172</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

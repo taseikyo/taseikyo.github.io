@@ -200,6 +200,160 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/15/0044.ubuntu1804-static-ip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/10/15/0044.ubuntu1804-static-ip/" class="post-title-link" itemprop="url">ubuntu1804 静态 ip 配置问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-10-15 10:36:49" itemprop="dateCreated datePublished" datetime="2019-10-15T10:36:49+08:00">2019-10-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/photo-1570937937487-125575170d69.jpg" alt="autumn" title="Photo by Nong Vang on Unsplash"></p>
+<p>对于 Ubuntu18.04，他的 IP 配置跟之前的版本不太一样，是从 17.10 开始启用 netplan，所以配置文件的位置改了。</p>
+<p>现在的配置文件为 <code>/etc/netplan/xxx.yaml</code>，配置静态 IP 需要手动修改其内容，也不复杂，该文件是一个 YAML 格式的配置文件。</p>
+<p>下面是一个桌面版的配置文件。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Let NetworkManager manage all devices on this system</span></span><br><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">renderer:</span> <span class="string">NetworkManager</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">enp1:</span> <span class="comment"># 网卡名称</span></span><br><span class="line">      <span class="attr">dhcp4:</span> <span class="literal">no</span> <span class="comment"># 禁用 dhcp4</span></span><br><span class="line">      <span class="attr">dhcp6:</span> <span class="literal">no</span> <span class="comment"># 禁用 dhcp6</span></span><br><span class="line">      <span class="attr">addresses:</span> <span class="string">[1.1.1.1/24]</span> <span class="comment"># IP及掩码</span></span><br><span class="line">      <span class="attr">gateway4:</span> <span class="number">1.1</span><span class="number">.1</span><span class="number">.1</span> <span class="comment"># 网关</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span> <span class="string">[8.8.8.8,</span> <span class="number">1.1</span><span class="number">.1</span><span class="number">.1</span><span class="string">]</span> <span class="comment"># DNS</span></span><br></pre></td></tr></table></figure>
+<p>配置好了然后输入 <code>sudo netplan apply</code>，按理说就起作用了。</p>
+<p>但是昨晚我配置好 IP 的服务器还是有问题，仍然不能直接用 IP 连接，输入 <code>ifconfig -a</code> 命令也能看到对应网卡的 IP 配置完成了，就很奇怪。</p>
+<p>我在看到网上教程中没有 renderer 那一项，于是将其注释掉，然后 XShell 就卡住了=w=，然后去机房，将注释去掉再 <code>sudo netplan apply</code>，很诡异的事情发生了，apply 之后就可以用 IP 只连了。我缓缓打出一个 ❓</p>
+<p>晚上服务器重启之后又不行了，今天早上我又去机房看，还配置对应网卡的路由，结果还是不行。然后想到昨天那个方法，先把 renderer 注释，然后再去掉，再 apply，果然就好了。。。</p>
+<p>所以我还是不懂这个到底是为什么。。。</p>
+<p><img data-src="/blog/images/small-confuse.jpg" alt></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/" class="post-title-link" itemprop="url">在服务器上装 Ubuntu1804 遇到的一些问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-10-10 16:59:35" itemprop="dateCreated datePublished" datetime="2019-10-10T16:59:35+08:00">2019-10-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5/7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
+<p>开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装的时候有问题，于是又换了个软件重新制作启动盘。</p>
+<p>大概叫 Universal-USB-Installer 吧，在下载目录中还有这个软件，但是问题来了，制作完成，再装的过程中到分区那一步，我有点懵逼了，因为有三块盘，不知道怎么分区，于是百度了一下按照某个教程来的，貌似是装好了，结果重启进不了系统…这还是 9 月 20 号的事了，过了几天（大概是 23）段博他们给新的服务器（NVM）换内存条的位置导致读不出来，于是又换了一下。等他们搞完我让段博帮我看一下，后来还是没搞定他建议我重装，还说可以直接装桌面版的，不一定要 server 版。</p>
+<p>后来由于志愿者的事、出差北京的事耽误了一周，直到今天才重新装的。</p>
+<p>装桌面版的由于有桌面感觉要友好一点，然后到了分区那一步，我这次没手动分区，直接将系统装在 SSD 那个盘，同时勾选建立 LVM 的选项，让它自己分区。</p>
+<p>装完之后进入系统我发现它就没详细分区，就一个根目录，没有 home、boot、swap这些分区，都裹在一起了。但是至少能启动了不是 233</p>
+<p>后来喊来小王博配 IP，搞完之后回去发现 xshell 连不上。然后又回去装 openssh-server，搞完之后可以远程连接了。</p>
+<p>然后又遇到一个问题，那就是新建的用户命令行提示只有一个“$”，其他上下左右方向键会出现 ^H，^[ 这些奇怪的东西。后来查了一下是要将默认的 shell 改成 bash，默认是 sh，然后断开重连就好了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/passwd</span><br><span class="line"><span class="comment"># 将指定用户如:</span></span><br><span class="line">/home/taseikyo:/sh</span><br><span class="line"><span class="comment"># 修改为</span></span><br><span class="line">/home/taseikyo:/bin/bash</span><br></pre></td></tr></table></figure>
+<p>之后想看 IP，结果 ifcofig 命令没装，于是 apt net-tools，又出现问题，Package ‘net-tools’ has no installation candidate。查了一下是需要换源，改成阿里云的源再 update 一下就可以正常安装了。</p>
+<p>我真的服了，麻烦多多啊。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/09/08/0042.diff-stack-heap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -535,7 +689,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Essay/" itemprop="url" rel="index"><span itemprop="name">Essay</span></a>
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
                 </span>
             </span>
 
@@ -649,163 +803,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/13/0036.centos7-sudo-cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/05/13/0036.centos7-sudo-cmd/" class="post-title-link" itemprop="url">sudo pip3 "command not found" in centos7</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-05-13 13:06:27" itemprop="dateCreated datePublished" datetime="2019-05-13T13:06:27+08:00">2019-05-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div style="float: right; margin-left: 10px;margin-top: 0px;"><br>    <img data-src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?"><br></div>
-
-<p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3/pip3 都是可以跑的。</p>
-<p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ sudo pip3</span><br><span class="line">sudo: pip3: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
-<p>有人说“出于安全原因，sudo 不依赖 $PATH。有一个 secure_path 选项 /etc/sudoers，指定 PATH 是 sudo 将用于定位二进制文件。”</p>
-<p>相关问答:</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/32020594/sudo-pip-command-not-found-in-centos" target="_blank" rel="noopener">sudo: pip: command not found in CentOS</a></li>
-<li><a href="https://cloud.tencent.com/developer/ask/34025" target="_blank" rel="noopener">在CentOS中找不到sudo：pip：命令？</a></li>
-<li><a href="https://unix.stackexchange.com/questions/169251/root-shell-sees-pip-but-sudo-pip-command-not-found" target="_blank" rel="noopener">Root shell sees pip but sudo pip “command not found”</a></li>
-</ul>
-<p>我看了下 secure_path 的路径 <code>Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 desktop]$ whereis pip3</span><br><span class="line">pip3: /usr/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3.7</span><br></pre></td></tr></table></figure>
-<p>pip3 已经在 <code>/usr/bin</code> 目录下了，就很奇怪，不知道为什么就是找不到…</p>
-<p>将 <code>/usr/local/bin/</code> 加到 secure_path 或许可以，但我用的是另一个方法: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[chtian@node18 ~]$ sudo `<span class="built_in">which</span> pip3` </span><br><span class="line"></span><br><span class="line">Usage:   </span><br><span class="line">  pip3 &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/10/0035.good-things-recommended-win-softwares/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/" class="post-title-link" itemprop="url">好物推荐之 windows 软件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-05-10 09:19:43" itemprop="dateCreated datePublished" datetime="2019-05-10T09:19:43+08:00">2019-05-10</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Essay/" itemprop="url" rel="index"><span itemprop="name">Essay</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。<br>目的是为了以后换了电脑/笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。<br>本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。</p>
-<p><img data-src="/blog/images/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -877,20 +874,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-count">172</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
