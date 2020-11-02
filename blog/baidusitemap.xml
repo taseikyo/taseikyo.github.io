@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://taseikyo.github.io/blog/2020/11/02/0068.public-using-server-keep-privacy/</loc>
+    <lastmod>2020-11-02</lastmod>
+  </url>
+  <url>
     <loc>https://taseikyo.github.io/blog/2020/10/22/0067,microsoft-store-0x80131500/</loc>
     <lastmod>2020-10-22</lastmod>
   </url>
@@ -126,10 +130,6 @@
   </url>
   <url>
     <loc>https://taseikyo.github.io/blog/2017/08/07/0001.topology/</loc>
-    <lastmod>2020-10-22</lastmod>
-  </url>
-  <url>
-    <loc>https://taseikyo.github.io/blog/2020/10/22/microsoft-store-0x80131500/</loc>
     <lastmod>2020-10-22</lastmod>
   </url>
   <url>
