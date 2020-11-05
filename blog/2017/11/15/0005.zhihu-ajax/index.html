@@ -24,14 +24,14 @@
   </script>
 
   <meta name="description" content="几天前知乎上有人问我怎么爬知乎的异步加载页面，他得到的返回页面错误码是401，开始我以为他是参数传错了，因为记得之前爬知乎的时候遇到过，于是问他是不是参数没有传对，结果他说他把能传的都传了。本来不打算爬的，今晚没事就试了下，用 Chrome 开发者工具很快就得到了第二页的ajax链接，在打开返回的 Json 数据的 paging 数据时发现了一个有趣的事发现这里不仅有 next，还有 previo">
-<meta name="keywords" content="python,crawler,zhihu,ajax">
+<meta name="keywords" content="programming,crawler,zhihu,ajax,chrome">
 <meta property="og:type" content="article">
 <meta property="og:title" content="爬取知乎异步加载页面">
 <meta property="og:url" content="https://taseikyo.github.io/2017/11/15/0005.zhihu-ajax/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="几天前知乎上有人问我怎么爬知乎的异步加载页面，他得到的返回页面错误码是401，开始我以为他是参数传错了，因为记得之前爬知乎的时候遇到过，于是问他是不是参数没有传对，结果他说他把能传的都传了。本来不打算爬的，今晚没事就试了下，用 Chrome 开发者工具很快就得到了第二页的ajax链接，在打开返回的 Json 数据的 paging 数据时发现了一个有趣的事发现这里不仅有 next，还有 previo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-22T03:42:22.156Z">
+<meta property="og:updated_time" content="2020-11-05T02:16:07.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬取知乎异步加载页面">
 <meta name="twitter:description" content="几天前知乎上有人问我怎么爬知乎的异步加载页面，他得到的返回页面错误码是401，开始我以为他是参数传错了，因为记得之前爬知乎的时候遇到过，于是问他是不是参数没有传对，结果他说他把能传的都传了。本来不打算爬的，今晚没事就试了下，用 Chrome 开发者工具很快就得到了第二页的ajax链接，在打开返回的 Json 数据的 paging 数据时发现了一个有趣的事发现这里不仅有 next，还有 previo">
@@ -123,16 +123,6 @@
     <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-c++">
-
-    <a href="/blog/categories/C/" rel="section"><i class="fa fa-fw fa-file-code-o"></i>c++</a>
-
-  </li>
-        <li class="menu-item menu-item-python">
-
-    <a href="/blog/categories/Python/" rel="section"><i class="fa fa-fw fa-codepen"></i>python</a>
-
-  </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
@@ -146,6 +136,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/../taseikyo/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -234,7 +229,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
                 </span>
             </span>
 
@@ -298,10 +293,11 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/python/" rel="tag"># python</a>
+              <a href="/blog/tags/programming/" rel="tag"># programming</a>
               <a href="/blog/tags/crawler/" rel="tag"># crawler</a>
               <a href="/blog/tags/zhihu/" rel="tag"># zhihu</a>
               <a href="/blog/tags/ajax/" rel="tag"># ajax</a>
+              <a href="/blog/tags/chrome/" rel="tag"># chrome</a>
           </div>
 
         
@@ -397,13 +393,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">166</span>
+        <span class="site-state-item-count">170</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

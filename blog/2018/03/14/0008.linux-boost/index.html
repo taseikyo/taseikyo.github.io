@@ -24,14 +24,14 @@
   </script>
 
   <meta name="description" content="由于毕业设计要求需要安装 SHMA 然后依赖有许多库 而 boot 就是其中之一… 以下是我编译安装 boost 的步骤">
-<meta name="keywords" content="c++,linux,bost,compiler,install">
+<meta name="keywords" content="linux,bost,c++,compiler,install">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 编译和安装 boost 库">
 <meta property="og:url" content="https://taseikyo.github.io/2018/03/14/0008.linux-boost/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="由于毕业设计要求需要安装 SHMA 然后依赖有许多库 而 boot 就是其中之一… 以下是我编译安装 boost 的步骤">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-10-22T03:43:09.460Z">
+<meta property="og:updated_time" content="2020-11-05T02:26:43.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 编译和安装 boost 库">
 <meta name="twitter:description" content="由于毕业设计要求需要安装 SHMA 然后依赖有许多库 而 boot 就是其中之一… 以下是我编译安装 boost 的步骤">
@@ -123,16 +123,6 @@
     <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-c++">
-
-    <a href="/blog/categories/C/" rel="section"><i class="fa fa-fw fa-file-code-o"></i>c++</a>
-
-  </li>
-        <li class="menu-item menu-item-python">
-
-    <a href="/blog/categories/Python/" rel="section"><i class="fa fa-fw fa-codepen"></i>python</a>
-
-  </li>
         <li class="menu-item menu-item-tags">
 
     <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
@@ -146,6 +136,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/../taseikyo/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -271,7 +266,7 @@
 <p><code>sudo ldconfig</code></p>
 <p>更新一下系统的动态链接库</p>
 <h3 id="5-boost-使用测试"><a href="#5-boost-使用测试" class="headerlink" title="5. boost 使用测试"></a>5. boost 使用测试</h3><p>以 <code>boost_thread</code> 为例，测试代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt; //包含boost头文件</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">volatile</span> <span class="keyword">bool</span> isRuning = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"func1:"</span> &lt;&lt; cnt1++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> cnt2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"\tfunc2:"</span> &lt;&lt; cnt2++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        sleep(<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">boost::thread <span class="title">thread1</span><span class="params">(&amp;func1)</span></span>;</span><br><span class="line">    <span class="function">boost::thread <span class="title">thread2</span><span class="params">(&amp;func2)</span></span>;</span><br><span class="line"></span><br><span class="line">    system(<span class="string">"read"</span>);</span><br><span class="line">    isRuning = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    thread2.join();</span><br><span class="line">    thread1.join();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"exit"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;boost/thread/thread.hpp&gt; //包含boost头文件</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">volatile</span> <span class="keyword">bool</span> isRuning = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> cnt1 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"func1:"</span> &lt;&lt; cnt1++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		sleep(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> cnt2 = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (isRuning) &#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"\tfunc2:"</span> &lt;&lt; cnt2++ &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		sleep(<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">boost::thread <span class="title">thread1</span><span class="params">(&amp;func1)</span></span>;</span><br><span class="line">	<span class="function">boost::thread <span class="title">thread2</span><span class="params">(&amp;func2)</span></span>;</span><br><span class="line"></span><br><span class="line">	system(<span class="string">"read"</span>);</span><br><span class="line">	isRuning = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	thread2.join();</span><br><span class="line">	thread1.join();</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"exit"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在编译程序时，需要加入对boost_thread库的引用：</p>
 <p><code>g++ main.cpp -g -o main -lboost_thread -lboost_system</code></p>
 
@@ -322,9 +317,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/c/" rel="tag"># c++</a>
               <a href="/blog/tags/linux/" rel="tag"># linux</a>
               <a href="/blog/tags/bost/" rel="tag"># bost</a>
+              <a href="/blog/tags/c/" rel="tag"># c++</a>
               <a href="/blog/tags/compiler/" rel="tag"># compiler</a>
               <a href="/blog/tags/install/" rel="tag"># install</a>
           </div>
@@ -423,13 +418,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">166</span>
+        <span class="site-state-item-count">170</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
