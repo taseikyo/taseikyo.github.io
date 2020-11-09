@@ -195,6 +195,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/25/0045.win10-network-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2019/10/25/0045.win10-network-error/" class="post-title-link" itemprop="url">win10 "请确认系统网络配置是否完整"</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-10-25 21:39:38" itemprop="dateCreated datePublished" datetime="2019-10-25T21:39:38+08:00">2019-10-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
+<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
+<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
+<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
+<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
+<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
+<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/15/0044.ubuntu1804-static-ip/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -722,82 +795,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/20/0037.includeos-helloworld2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2019/05/20/0037.includeos-helloworld2/" class="post-title-link" itemprop="url">includeOS 再体验 - Bye World!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-05-20 16:07:36" itemprop="dateCreated datePublished" datetime="2019-05-20T16:07:36+08:00">2019-05-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
-<p>今天与发上一篇 <a href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/" target="_blank" rel="noopener">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a href="https://github.com/includeos/IncludeOS#getting_started" target="_blank" rel="noopener">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a href="https://conan.io/" target="_blank" rel="noopener">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
-<p>当然我没有深究这个东西，简要看了一下文档介绍然后安装之。我卡住并不是因为这个 conan。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2019/05/20/0037.includeos-helloworld2/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -869,7 +866,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -882,7 +879,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">170</span>
+        <span class="site-state-item-count">175</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
