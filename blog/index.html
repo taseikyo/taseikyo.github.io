@@ -195,6 +195,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/11/24/0071.win10-tim-login-timeout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/11/24/0071.win10-tim-login-timeout/" class="post-title-link" itemprop="url">Windows TIM 登录超时解决办法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-24 09:16:36" itemprop="dateCreated datePublished" datetime="2020-11-24T09:16:36+08:00">2020-11-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天遇到一个奇怪的问题，明明网络是好的，微信可以登，网页正常打开，TIM 就是登不上，一直显示 <strong>00001：无法连接到互联网</strong>，重启几次没用，把 TIM 更新到最新版，正好昨天（11-23）更新了，还是无法解决，就是报错。</p>
+<p>最后在贴吧找到解决办法，这个 <a href="https://tieba.baidu.com/p/5613854112" target="_blank" rel="noopener">win10 更新 tim 登录超时</a> 帖子中给出了解决办法：</p>
+<blockquote>
+<p>@<a href="https://tieba.baidu.com/home/main?un=66666huang&amp;ie=utf-8&amp;id=tb.1.1fa3c995.FuPyZvXhUBl7RymTAbIRgA" target="_blank" rel="noopener">66666huang</a>：打开Windows powershell（管理员）输入：netsh winsock reset，回车最后重启电脑就ok了，希望能帮到大家</p>
+</blockquote>
+<p>输入命令然后重启就好了。</p>
+<p>记得之前遇到什么问题也用过这个命令，查了下：</p>
+<blockquote>
+<p>netsh winsock reset 命令，作用是重置 Winsock 目录。如果一台机器上的 Winsock 协议配置有问题的话将会导致网络连接等问题，就需要用 netsh winsock reset 命令来重置 Winsock 目录借以恢复网络。这个命令可以重新初始化网络环境，以解决由于软件冲突、病毒原因造成的参数错误问题。 netsh 是一个能够通过命令行操作几乎所有网络相关设置的接口，比如设置 IP，DNS，网卡，无线网络等，Winsock 是系统内部目录，Winsock 是 Windows 网络编程接口，winsock 工作在应用层，它提供与底层传输协议无关的高层数据传输编程接口，reset 是对 Winsock 的重置操作。当执行完 winsock 的命令重启计算机后，需要重新配置 IP。</p>
+</blockquote>
+<p><em>解决由于软件冲突、病毒原因造成的参数错误问题</em>，可能是 TIM 或者其他软件搞的鬼吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/11/11/0070.run-the-osv-image-on-another-node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -735,86 +812,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2020/10/09/0063centos-ubuntu-command-diff/" class="post-title-link" itemprop="url">CentOS 和 Ubuntu 命令区别列表总结</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-09 09:33:03" itemprop="dateCreated datePublished" datetime="2020-10-09T09:33:03+08:00">2020-10-09</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a href="https://blog.csdn.net/qq_34857250/article/details/54313804" target="_blank" rel="noopener">原文</a> 是个图片，我将其转成表格了。</p>
-<p><img data-src="/blog/images/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
-<p>*<em>图片来自 <a href="https://zhuanlan.zhihu.com/p/145812549" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2020/10/09/0063centos-ubuntu-command-diff/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/9/">9</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -882,7 +883,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">72</span>
+          <span class="site-state-item-count">73</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -895,7 +896,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-count">180</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
