@@ -63,9 +63,10 @@
 // });
 
 // API: https://gushi.ci/
+// https://v1.jinrishici.com/all
 $.ajax({
 	type: "GET",
-	url: "https://api.gushi.ci/all.json",
+	url: "https://v1.jinrishici.com/all",
 	success: function(json) {
 		// console.log(json["content"]);
 		// p = document.querySelector(".site-subtitle");
