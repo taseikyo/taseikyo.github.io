@@ -20,6 +20,22 @@
       </tags>
   </entry>
   <entry>
+    <title>暑假实习：拓扑图可视化</title>
+    <url>/blog/2017/08/07/0001.topology/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/59e5e12cca4a7.png" alt></p>
+<h2 id="实习成果展示："><a href="#实习成果展示：" class="headerlink" title="实习成果展示："></a>实习成果展示：</h2><ul>
+<li><a href="https://taseikyo.github.io/show/?0.json">拓扑图可视化</a></li>
+<li><a href="http://suzhouxing.coding.me/Demo/NetworkVisualization.RSA/index.html?0.json" target="_blank" rel="noopener">学长改进版</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>programming - javascript - topology - d3 - internship</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网易云歌词下载器</title>
     <url>/blog/2017/08/25/0002.cloud-music-lyric/</url>
     <content><![CDATA[<p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。</p>
@@ -41,19 +57,15 @@
       </tags>
   </entry>
   <entry>
-    <title>暑假实习：拓扑图可视化</title>
-    <url>/blog/2017/08/07/0001.topology/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/59e5e12cca4a7.png" alt></p>
-<h2 id="实习成果展示："><a href="#实习成果展示：" class="headerlink" title="实习成果展示："></a>实习成果展示：</h2><ul>
-<li><a href="https://taseikyo.github.io/show/?0.json">拓扑图可视化</a></li>
-<li><a href="http://suzhouxing.coding.me/Demo/NetworkVisualization.RSA/index.html?0.json" target="_blank" rel="noopener">学长改进版</a></li>
-</ul>
+    <title>华中科技大学贴吧牛人排行榜数据分析</title>
+    <url>/blog/2017/10/14/0004.hust-rank/</url>
+    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://taseikyo.github.io/HUST">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
 ]]></content>
       <categories>
         <category>Study</category>
       </categories>
       <tags>
-        <tag>programming - javascript - topology - d3 - internship</tag>
+        <tag>programming - python - crawler - baidu - tieba - echarts - javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -66,6 +78,25 @@
       </categories>
       <tags>
         <tag>programming - python - crawler - ram - jingdong - echarts - javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网易云电台</title>
+    <url>/blog/2017/12/05/0006.netease-radio/</url>
+    <content><![CDATA[<p>突然就有一个简单的想法，与之前爬网易云热评类似，这次是想着爬取网易云电台，将播放量超过 <code>1w</code> 的节目信息爬取下来，然后展示出来，这也是与热评类似。</p>
+<p>然而说起来容易做起来难，因为数据实在是太多了，截止到 <code>2017/12/12</code> 也仅仅值爬到 <code>150</code> 条左右的数据，而此时的 <code>program_id</code> 才到 <code>30w</code> ，可是已经有的节目量呢？已经 <code>136700w+</code> 了，感觉仅仅我一个人来爬数据可能还得好久好久。。。</p>
+<p>电台入口：<a href="https://taseikyo.github.io/radio">୧(๑•̀⌄•́๑)૭✧ 喵喵喵先生电台</a></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>programming</tag>
+        <tag>python</tag>
+        <tag>crawler</tag>
+        <tag>netease</tag>
+        <tag>netease-cloud</tag>
+        <tag>netease-radio</tag>
       </tags>
   </entry>
   <entry>
@@ -85,34 +116,22 @@
       </tags>
   </entry>
   <entry>
-    <title>网易云电台</title>
-    <url>/blog/2017/12/05/0006.netease-radio/</url>
-    <content><![CDATA[<p>突然就有一个简单的想法，与之前爬网易云热评类似，这次是想着爬取网易云电台，将播放量超过 <code>1w</code> 的节目信息爬取下来，然后展示出来，这也是与热评类似。</p>
-<p>然而说起来容易做起来难，因为数据实在是太多了，截止到 <code>2017/12/12</code> 也仅仅值爬到 <code>150</code> 条左右的数据，而此时的 <code>program_id</code> 才到 <code>30w</code> ，可是已经有的节目量呢？已经 <code>136700w+</code> 了，感觉仅仅我一个人来爬数据可能还得好久好久。。。</p>
-<p>电台入口：<a href="https://taseikyo.github.io/radio">୧(๑•̀⌄•́๑)૭✧ 喵喵喵先生电台</a></p>
+    <title>网易云热评</title>
+    <url>/blog/2017/12/13/0007.netease-hot-comments/</url>
+    <content><![CDATA[<p>这篇博客写的有些晚了，东西是今年 3、4 月份做出来并且展示的，motivation 是当时杭州(?)地铁里面的热评，感觉很不错于是就有了这个网站。</p>
+<p>但是当时并没有搭建这个博客，所以今天补写，基本想法是爬取网易云的热评，这里取巧了，有个歌单搜集了一些破万的单曲，所以爬热评比爬电台简单得多，不用每个页面去爬，但是也有另一个影响就是可能有遗漏的数据。</p>
+<p>热评入口：<a href="https://taseikyo.github.io/netease">网易云热评</a></p>
 ]]></content>
       <categories>
         <category>Study</category>
       </categories>
       <tags>
         <tag>programming</tag>
-        <tag>crawler</tag>
         <tag>python</tag>
+        <tag>crawler</tag>
         <tag>netease</tag>
-        <tag>netease-cloud</tag>
-        <tag>netease-radio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>华中科技大学贴吧牛人排行榜数据分析</title>
-    <url>/blog/2017/10/14/0004.hust-rank/</url>
-    <content><![CDATA[<p>爬取了 <a href="http://tieba.baidu.com/f/like/furank?kw=%BB%AA%D6%D0%BF%C6%BC%BC%B4%F3%D1%A7" target="_blank" rel="noopener">华中科技大学贴吧牛人排行榜</a> 10 级以上人的数据，一共 1 万 5 千多条数据，详情见 <a href="https://github.com/taseikyo/HUST" target="_blank" rel="noopener">HUST-Rank</a>，可视化见 <a href="https://taseikyo.github.io/HUST">ECharts</a><br><img data-src="https://i.loli.net/2017/10/15/59e338ecb3532.png" alt="ScreenShot" title="ScreenShot"></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>programming - python - crawler - baidu - tieba - echarts - javascript</tag>
+        <tag>netease-music</tag>
+        <tag>hot-comments</tag>
       </tags>
   </entry>
   <entry>
@@ -156,37 +175,57 @@
       </tags>
   </entry>
   <entry>
-    <title>网易云热评</title>
-    <url>/blog/2017/12/13/0007.netease-hot-comments/</url>
-    <content><![CDATA[<p>这篇博客写的有些晚了，东西是今年 3、4 月份做出来并且展示的，motivation 是当时杭州(?)地铁里面的热评，感觉很不错于是就有了这个网站。</p>
-<p>但是当时并没有搭建这个博客，所以今天补写，基本想法是爬取网易云的热评，这里取巧了，有个歌单搜集了一些破万的单曲，所以爬热评比爬电台简单得多，不用每个页面去爬，但是也有另一个影响就是可能有遗漏的数据。</p>
-<p>热评入口：<a href="https://taseikyo.github.io/netease">网易云热评</a></p>
+    <title>提取 SPEC CPU2006 的执行命令</title>
+    <url>/blog/2018/03/22/0009.spec-run-cmd/</url>
+    <content><![CDATA[<h3 id="1-单独运行-SPEC-CPU-Int-Float-测试程序"><a href="#1-单独运行-SPEC-CPU-Int-Float-测试程序" class="headerlink" title="1.单独运行 SPEC CPU Int Float 测试程序"></a>1.单独运行 SPEC CPU Int Float 测试程序</h3><ul>
+<li>参考 <a href="http://www.spec.org/cpu2006/Docs/install-guide-unix.html#exstep6" target="_blank" rel="noopener">官方文档</a></li>
+</ul>
+<p>以 bzip2 为例说明</p>
+<ul>
+<li><p>编译<br>首先进入 SPEC 的安装目录（下面即cpu2006）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /cpu2006/</span><br><span class="line">$ . ./shrc</span><br><span class="line">$ cd config</span><br><span class="line">$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg</span><br><span class="line">$ runspec --config=mytest.cfg --action=build --tune=base bzip2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1 bzip2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>size 参数共有三个，分别是 test 、train 、ref  </p>
+<a id="more"></a>
+<h3 id="2-提取-SPEC-CPU-Int-Float运行命令"><a href="#2-提取-SPEC-CPU-Int-Float运行命令" class="headerlink" title="2.提取 SPEC CPU Int Float运行命令"></a>2.提取 SPEC CPU Int Float运行命令</h3><ul>
+<li>参考 <a href="https://blog.csdn.net/maray/article/details/6106752" target="_blank" rel="noopener">CSDN</a></li>
+</ul>
+<p>一共有两种方法</p>
+<ol>
+<li>完全动手，彻底消除spec神秘感（我没使用这个方法）</li>
+</ol>
+<p>先利用上述方法运行 bzip2，然后运行下面的命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -ef | grep bzip</span><br></pre></td></tr></table></figure></p>
+<p>可以看到真实的命令行和进程路径，提取出来，依样画葫芦即可。</p>
+<p>对于 bzip2，提取到的命令行类似如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">run_base_test_cpu2006.0000/bzip2_base.cpu2006 input.combined 280</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>使用 SPEC 自带的命令<br>以执行 gcc 例：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd YOUR_SPEC_ROOT/benchspec/CPU2006/403.gcc/run/run_base_ref_cpu2006.0000</span><br><span class="line">#specinvoke -n</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>可以得到如下命令行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 166.i -o 166.s &gt; 166.out 2&gt;&gt; 166.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 200.i -o 200.s &gt; 200.out 2&gt;&gt; 200.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn c-typeck.i -o c-typeck.s &gt; c-typeck.out 2&gt;&gt; c-typeck.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn cp-decl.i -o cp-decl.s &gt; cp-decl.out 2&gt;&gt; cp-decl.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr.i -o expr.s &gt; expr.out 2&gt;&gt; expr.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr2.i -o expr2.s &gt; expr2.out 2&gt;&gt; expr2.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn g23.i -o g23.s &gt; g23.out 2&gt;&gt; g23.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn s04.i -o s04.s &gt; s04.out 2&gt;&gt; s04.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn scilab.i -o scilab.s &gt; scilab.out 2&gt;&gt; scilab.err</span><br></pre></td></tr></table></figure>
+<h3 id="3-我的做法"><a href="#3-我的做法" class="headerlink" title="3. 我的做法"></a>3. 我的做法</h3><p>由于我也是新手，所以也是一个个执行玩然后用 2 中的方法2提取指令</p>
+<p>当然也不是手动输入，写了一个简单的 bash 脚本实现了自动运行所有 benchmark ，然后写了另一个脚本打印运行命令</p>
+<p>以下是部分脚本：</p>
+<ul>
+<li><p>auto_run.sh</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  483</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  998</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  999</span><br><span class="line"></span><br><span class="line">./auto_print.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto_print.sh</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>Study</category>
       </categories>
       <tags>
-        <tag>programming</tag>
-        <tag>crawler</tag>
-        <tag>python</tag>
-        <tag>netease</tag>
-        <tag>netease-music</tag>
-        <tag>hot-comments</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>solve omnetpp run error</title>
-    <url>/blog/2018/05/03/0011.omnetpp-ini-open-error/</url>
-    <content><![CDATA[<p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
-<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
-]]></content>
-      <categories>
-        <category>Bug</category>
-      </categories>
-      <tags>
+        <tag>spec</tag>
         <tag>spec-cpu2006</tag>
         <tag>command</tag>
-        <tag>spec</tag>
+        <tag>benchmark</tag>
       </tags>
   </entry>
   <entry>
@@ -376,57 +415,18 @@
       </tags>
   </entry>
   <entry>
-    <title>提取 SPEC CPU2006 的执行命令</title>
-    <url>/blog/2018/03/22/0009.spec-run-cmd/</url>
-    <content><![CDATA[<h3 id="1-单独运行-SPEC-CPU-Int-Float-测试程序"><a href="#1-单独运行-SPEC-CPU-Int-Float-测试程序" class="headerlink" title="1.单独运行 SPEC CPU Int Float 测试程序"></a>1.单独运行 SPEC CPU Int Float 测试程序</h3><ul>
-<li>参考 <a href="http://www.spec.org/cpu2006/Docs/install-guide-unix.html#exstep6" target="_blank" rel="noopener">官方文档</a></li>
-</ul>
-<p>以 bzip2 为例说明</p>
-<ul>
-<li><p>编译<br>首先进入 SPEC 的安装目录（下面即cpu2006）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd /cpu2006/</span><br><span class="line">$ . ./shrc</span><br><span class="line">$ cd config</span><br><span class="line">$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg</span><br><span class="line">$ runspec --config=mytest.cfg --action=build --tune=base bzip2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1 bzip2</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>size 参数共有三个，分别是 test 、train 、ref  </p>
-<a id="more"></a>
-<h3 id="2-提取-SPEC-CPU-Int-Float运行命令"><a href="#2-提取-SPEC-CPU-Int-Float运行命令" class="headerlink" title="2.提取 SPEC CPU Int Float运行命令"></a>2.提取 SPEC CPU Int Float运行命令</h3><ul>
-<li>参考 <a href="https://blog.csdn.net/maray/article/details/6106752" target="_blank" rel="noopener">CSDN</a></li>
-</ul>
-<p>一共有两种方法</p>
-<ol>
-<li>完全动手，彻底消除spec神秘感（我没使用这个方法）</li>
-</ol>
-<p>先利用上述方法运行 bzip2，然后运行下面的命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -ef | grep bzip</span><br></pre></td></tr></table></figure></p>
-<p>可以看到真实的命令行和进程路径，提取出来，依样画葫芦即可。</p>
-<p>对于 bzip2，提取到的命令行类似如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">run_base_test_cpu2006.0000/bzip2_base.cpu2006 input.combined 280</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>使用 SPEC 自带的命令<br>以执行 gcc 例：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cd YOUR_SPEC_ROOT/benchspec/CPU2006/403.gcc/run/run_base_ref_cpu2006.0000</span><br><span class="line">#specinvoke -n</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>可以得到如下命令行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 166.i -o 166.s &gt; 166.out 2&gt;&gt; 166.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 200.i -o 200.s &gt; 200.out 2&gt;&gt; 200.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn c-typeck.i -o c-typeck.s &gt; c-typeck.out 2&gt;&gt; c-typeck.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn cp-decl.i -o cp-decl.s &gt; cp-decl.out 2&gt;&gt; cp-decl.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr.i -o expr.s &gt; expr.out 2&gt;&gt; expr.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr2.i -o expr2.s &gt; expr2.out 2&gt;&gt; expr2.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn g23.i -o g23.s &gt; g23.out 2&gt;&gt; g23.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn s04.i -o s04.s &gt; s04.out 2&gt;&gt; s04.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn scilab.i -o scilab.s &gt; scilab.out 2&gt;&gt; scilab.err</span><br></pre></td></tr></table></figure>
-<h3 id="3-我的做法"><a href="#3-我的做法" class="headerlink" title="3. 我的做法"></a>3. 我的做法</h3><p>由于我也是新手，所以也是一个个执行玩然后用 2 中的方法2提取指令</p>
-<p>当然也不是手动输入，写了一个简单的 bash 脚本实现了自动运行所有 benchmark ，然后写了另一个脚本打印运行命令</p>
-<p>以下是部分脚本：</p>
-<ul>
-<li><p>auto_run.sh</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  483</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  998</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  999</span><br><span class="line"></span><br><span class="line">./auto_print.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>auto_print.sh</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
-</ul>
+    <title>solve omnetpp run error</title>
+    <url>/blog/2018/05/03/0011.omnetpp-ini-open-error/</url>
+    <content><![CDATA[<p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
+<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
 ]]></content>
       <categories>
-        <category>Study</category>
+        <category>Bug</category>
       </categories>
       <tags>
+        <tag>spec</tag>
         <tag>spec-cpu2006</tag>
         <tag>command</tag>
-        <tag>spec</tag>
-        <tag>benchmark</tag>
       </tags>
   </entry>
   <entry>
@@ -445,6 +445,99 @@
         <tag>desktop</tag>
         <tag>windows10</tag>
         <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyQt5 多语言支持</title>
+    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
+    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
+<ol>
+<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
+</li>
+<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
+<ol start="4">
+<li>源码<a id="more"></a>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
+
+</li>
+</ol>
+<p>点击英文：</p>
+<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
+
+
+<ul>
+<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>programming</tag>
+        <tag>python</tag>
+        <tag>pyqt5</tag>
+        <tag>pyqt</tag>
+        <tag>i18n</tag>
+        <tag>language</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tich·九月总结/2018</title>
+    <url>/blog/2018/10/01/0015.summary-1809/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/summary_1809.png" alt></p>
+<p>为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。<br>主要内容也就是对上个月的工作简单做个回顾总结。<br>下面是 2018 年九月的总结。</p>
+<a id="more"></a>
+<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>『正说大宋十八帝』- 刘亚玲<br>（本来打算是看两本的，结果另一本没看完）<br>书的内容如书名那般，讲述了南北宋的十八位帝王的一生。<br>本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。<br>看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。</p>
+<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
+<li><p>《Learn Python 3 the Hard Way》(pdf)<br>这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。</p>
+</li>
+<li><p>《Cpp Application Development with Code Blocks》(pdf)<br>这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。</p>
+</li>
+<li><p>《Python for Data Analysis》(pdf)<br>介绍如何使用 Python 进行数据分析，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《Xen 虚拟化技术完全解读》<br>介绍 Xen 虚拟化技术的，<strong>还没看完</strong>。</p>
+</li>
+<li><p>《Real World OCaml》<br>OCaml 从入门到入土，<strong>还没看完</strong>。</p>
+</li>
+</ul>
+<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><p>很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy:</p>
+<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><p>这个月主要写了四个主要的东西吧（包括开始但未完成）</p>
+<ol>
+<li><p><a href="https://github.com/taseikyo/danmaku-convertor" target="_blank" rel="noopener">弹幕转换器</a><br>主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。<br>已经实现了腾讯、优酷的弹幕转化<br>下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。</p>
+</li>
+<li><p><a href="https://github.com/taseikyo/autoQA" target="_blank" rel="noopener">autoQA</a><br>主要功能是自动提交 QA。</p>
+</li>
+<li><p>d3 可视化框架<br>可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。<br>已经出了一个 <a href="https://www.bilibili.com/video/av33856779" target="_blank" rel="noopener">视频</a></p>
+</li>
+<li><p><a href="https://github.com/taseikyo/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
+</li>
+<li><p><a href="https://github.com/taseikyo/project-euler" target="_blank" rel="noopener">project-euler</a><br>刷了一些欧拉计划的题。<br>这个欧拉计划还是那个 <a href="https://github.com/csaarg" target="_blank" rel="noopener">计科艺研小组</a> 的一个大佬推荐给我的。</p>
+</li>
+</ol>
+<p>以上。</p>
+<p>九月的总结大概就是这些，下个月要继续加油才是。</p>
+<p><img data-src="/blog/images/summary_1809.png" alt="summary for 2018/9 by Tich." title="summary for 2018/9 by Tich."></p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>summary</tag>
+        <tag>person</tag>
       </tags>
   </entry>
   <entry>
@@ -536,96 +629,24 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>Tich·九月总结/2018</title>
-    <url>/blog/2018/10/01/0015.summary-1809/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/summary_1809.png" alt></p>
-<p>为了避免浑浑噩噩虚度光阴，另一方面也越来越健忘，所以决定每个月写个总结叭。<br>主要内容也就是对上个月的工作简单做个回顾总结。<br>下面是 2018 年九月的总结。</p>
+    <title>win10 笔记本麦克风没声音</title>
+    <url>/blog/2018/10/20/0016.microphone-no-voice/</url>
+    <content><![CDATA[<p>记得去年跟别人玩&lt;荒野行动&gt;的时候还能语音的，今年暑假跟同学玩饥荒和 L4D2  讨论组语音，我可以听到他们的声音，他们却听不到我的声音很难受，搜了一些方法都不管用，最后没办法只能用手机跟他们语音。<br>今天玩&lt;无限法则&gt;，对面有人先说话了，然后我按 U 想说，结果没声音（名字后面没有小喇叭），那个唯一说话的老哥看到没人回应也不说话了，于是整场沉默…<br>再晚点和 B 站科技区的几个 UP 玩游戏（L4D2）还是没声音，我卸载了麦克风驱动，去官网重新下，安装之后还是不行，很绝望，又去搜了一些方法，什么用驱动精灵更新啊、禁用立体声混音设备啊，都不行，最后找到一个方法才管用。</p>
 <a id="more"></a>
-<h3 id="1-看的非专业书籍"><a href="#1-看的非专业书籍" class="headerlink" title="1. 看的非专业书籍"></a>1. 看的非专业书籍</h3><p>『正说大宋十八帝』- 刘亚玲<br>（本来打算是看两本的，结果另一本没看完）<br>书的内容如书名那般，讲述了南北宋的十八位帝王的一生。<br>本人是非常喜欢历史的，特别是宋朝的历史（然而没勇气去读《宋史》），因为感觉宋朝风气比较开放，统治者对文人（士大夫）比较宽容，经济发达（然而军事…），人民生活也相对来说比较丰富，出现了交子、瓦肆这些东西，在哪看到说好像汴京城没有宵禁，不知道是不是真的。<br>看完这本书真是令人叹息赵匡胤，他一手打下天下，但是他的后继者没几个是合格的，一步步断送了大好河山。有人说“北宋缺将，南宋缺相”，然而事实真是如此吗？不见得吧。</p>
-<h3 id="2-看的专业书籍"><a href="#2-看的专业书籍" class="headerlink" title="2. 看的专业书籍"></a>2. 看的专业书籍</h3><ul>
-<li><p>《Learn Python 3 the Hard Way》(pdf)<br>这本书中文译名好像是《笨方法学 Python3》感觉挺基础的，反正我是很快就翻完了（有些也直接略过了），看上面讲的例子基本都是一些基础知识，应该是给刚入门的人看的吧，对我不是很有用。</p>
-</li>
-<li><p>《Cpp Application Development with Code Blocks》(pdf)<br>这本书讲的是如何用 Code Clocks 开发 C++ 应用程序，页数不多，感觉还是有点用的吧，包括如何编译生成 DLL 库、如何开发 Win32 应用，最后讲了一个开发图片查看器的例子，虽然我现在用 Qt 比较多233。</p>
-</li>
-<li><p>《Python for Data Analysis》(pdf)<br>介绍如何使用 Python 进行数据分析，<strong>还没看完</strong>。</p>
-</li>
-<li><p>《Xen 虚拟化技术完全解读》<br>介绍 Xen 虚拟化技术的，<strong>还没看完</strong>。</p>
-</li>
-<li><p>《Real World OCaml》<br>OCaml 从入门到入土，<strong>还没看完</strong>。</p>
-</li>
-</ul>
-<h3 id="3-看的论文"><a href="#3-看的论文" class="headerlink" title="3. 看的论文"></a>3. 看的论文</h3><p>很惭愧，这个月就读了一篇 paper，《A survey of memory management techniques in virtualized systems》不过内容很充实，毕竟是个 survey，调查了虚拟化系统中使用的各种内存管理技术，是一篇值得一读的 paper，问题是太长了看到后面就忘了前面:joy:</p>
-<h3 id="4-写的几行代码"><a href="#4-写的几行代码" class="headerlink" title="4. 写的几行代码"></a>4. 写的几行代码</h3><p>这个月主要写了四个主要的东西吧（包括开始但未完成）</p>
-<ol>
-<li><p><a href="https://github.com/taseikyo/danmaku-convertor" target="_blank" rel="noopener">弹幕转换器</a><br>主要功能是用于将其他平台的视频弹幕转换成 bilibili 格式的弹幕，以配合 BiliLocal 来观看本地视频。<br>已经实现了腾讯、优酷的弹幕转化<br>下载的话，腾讯已经做好了，测试了几个，不知道是否有 bug；优酷针对的是电影，对于要会员的似乎没问题了，但是普通的就有问题。</p>
-</li>
-<li><p><a href="https://github.com/taseikyo/autoQA" target="_blank" rel="noopener">autoQA</a><br>主要功能是自动提交 QA。</p>
-</li>
-<li><p>d3 可视化框架<br>可视化数据，以弧形圆环的方式呈现，代码有 error，但是对效果似乎没有影响。<br>已经出了一个 <a href="https://www.bilibili.com/video/av33856779" target="_blank" rel="noopener">视频</a></p>
-</li>
-<li><p><a href="https://github.com/taseikyo/leetcode" target="_blank" rel="noopener">leetcode</a><br>刷了一些 leetcode 题。</p>
-</li>
-<li><p><a href="https://github.com/taseikyo/project-euler" target="_blank" rel="noopener">project-euler</a><br>刷了一些欧拉计划的题。<br>这个欧拉计划还是那个 <a href="https://github.com/csaarg" target="_blank" rel="noopener">计科艺研小组</a> 的一个大佬推荐给我的。</p>
-</li>
-</ol>
-<p>以上。</p>
-<p>九月的总结大概就是这些，下个月要继续加油才是。</p>
-<p><img data-src="/blog/images/summary_1809.png" alt="summary for 2018/9 by Tich." title="summary for 2018/9 by Tich."></p>
+<blockquote>
+<p>设置 - 隐私中，选择麦克风选项，然后这里我们允许应用使用我的麦克风打开。</p>
+</blockquote>
+<p><img data-src="/blog/images/no-voice.png" alt="microphone no voice" title="允许应用访问我的麦克风"></p>
 ]]></content>
       <categories>
-        <category>Blog</category>
+        <category>Bug</category>
       </categories>
       <tags>
-        <tag>blog</tag>
-        <tag>summary</tag>
-        <tag>person</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyQt5 多语言支持</title>
-    <url>/blog/2018/07/16/0014.pyqt-mutilanguage/</url>
-    <content><![CDATA[<p>主要使用到的是 QTranslator 类，这个类加载 .qm 文件，.qm是一个二进制的文件，它由.ts生成。<br>大致过程如下：</p>
-<ol>
-<li><p>.ts 使用 pylupdate5 命令生成，命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pylupdate5 mwin.py  -ts   zh_CN.ts</span><br><span class="line">pylupdate5 mwin.py  -ts   en.ts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用 Qt Linguist.exe（/Lib/site-packages/pyqt5-tools/）,用它打开刚刚生成的 .ts 文件翻译。注意，你每翻译好一个后要打上那个√。完成之后点击 file 中的 Release，然后就生成了 .qm 文件。</p>
-</li>
-<li><p>例如，用 QT 写了一个界面文件 mwin.py，然后执行如下指令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pyuic5.exe -o mwin.py mwin.ui</span><br><span class="line">pylupdate5.exe mwin.py -ts zh_CN.ts</span><br><span class="line">pylupdate5.exe mwin.py -ts en.ts</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>新建 main.py 文件，在其中加载对应的界面文件和翻译文件就可以了。</p>
-<ol start="4">
-<li>源码<a id="more"></a>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># mwin.py</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># Form implementation generated from reading ui file &apos;mwin.ui&apos;</span><br><span class="line">#</span><br><span class="line"># Created by: PyQt5 UI code generator 5.10.1</span><br><span class="line">#</span><br><span class="line"># WARNING! All changes made in this file will be lost!</span><br><span class="line">from PyQt5 import QtCore, QtGui, QtWidgets</span><br><span class="line">class Ui_MWin(object):</span><br><span class="line">    def setupUi(self, MWin):</span><br><span class="line">        MWin.setObjectName(&quot;MWin&quot;)</span><br><span class="line">        MWin.resize(400, 300)</span><br><span class="line">        self.centralWidget = QtWidgets.QWidget(MWin)</span><br><span class="line">        self.centralWidget.setObjectName(&quot;centralWidget&quot;)</span><br><span class="line">        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralWidget)</span><br><span class="line">        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)</span><br><span class="line">        self.horizontalLayout.setSpacing(6)</span><br><span class="line">        self.horizontalLayout.setObjectName(&quot;horizontalLayout&quot;)</span><br><span class="line">        self.gridLayout = QtWidgets.QGridLayout()</span><br><span class="line">        self.gridLayout.setSpacing(6)</span><br><span class="line">        self.gridLayout.setObjectName(&quot;gridLayout&quot;)</span><br><span class="line">        self.btn1 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn1.setObjectName(&quot;btn1&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn1, 1, 0, 1, 1)</span><br><span class="line">        self.btn2 = QtWidgets.QPushButton(self.centralWidget)</span><br><span class="line">        self.btn2.setObjectName(&quot;btn2&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.btn2, 1, 1, 1, 1)</span><br><span class="line">        self.label = QtWidgets.QLabel(self.centralWidget)</span><br><span class="line">        font = QtGui.QFont()</span><br><span class="line">        font.setFamily(&quot;Microsoft YaHei&quot;)</span><br><span class="line">        font.setPointSize(20)</span><br><span class="line">        self.label.setFont(font)</span><br><span class="line">        self.label.setAlignment(QtCore.Qt.AlignCenter)</span><br><span class="line">        self.label.setObjectName(&quot;label&quot;)</span><br><span class="line">        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)</span><br><span class="line">        self.horizontalLayout.addLayout(self.gridLayout)</span><br><span class="line">        MWin.setCentralWidget(self.centralWidget)</span><br><span class="line">        self.menuBar = QtWidgets.QMenuBar(MWin)</span><br><span class="line">        self.menuBar.setGeometry(QtCore.QRect(0, 0, 400, 26))</span><br><span class="line">        self.menuBar.setObjectName(&quot;menuBar&quot;)</span><br><span class="line">        MWin.setMenuBar(self.menuBar)</span><br><span class="line">        self.mainToolBar = QtWidgets.QToolBar(MWin)</span><br><span class="line">        self.mainToolBar.setObjectName(&quot;mainToolBar&quot;)</span><br><span class="line">        MWin.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)</span><br><span class="line">        self.statusBar = QtWidgets.QStatusBar(MWin)</span><br><span class="line">        self.statusBar.setObjectName(&quot;statusBar&quot;)</span><br><span class="line">        MWin.setStatusBar(self.statusBar)</span><br><span class="line">        self.retranslateUi(MWin)</span><br><span class="line">        QtCore.QMetaObject.connectSlotsByName(MWin)</span><br><span class="line">    def retranslateUi(self, MWin):</span><br><span class="line">        _translate = QtCore.QCoreApplication.translate</span><br><span class="line">        MWin.setWindowTitle(_translate(&quot;MWin&quot;, &quot;MWin&quot;))</span><br><span class="line">        self.btn1.setText(_translate(&quot;MWin&quot;, &quot;中文&quot;))</span><br><span class="line">        self.btn2.setText(_translate(&quot;MWin&quot;, &quot;英文&quot;))</span><br><span class="line">        self.label.setText(_translate(&quot;MWin&quot;, &quot;hello world&quot;))</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">#!/usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"># @Date    : 2018-07-16 11:28:06</span><br><span class="line"># @Author  : Lewis Tian (taseikyo@gmail.com)</span><br><span class="line"># @Link    : https://taseikyo.github.io/</span><br><span class="line"># @Version : Python3.6</span><br><span class="line">from mwin import Ui_MWin</span><br><span class="line">from PyQt5.QtCore import *</span><br><span class="line">from PyQt5.QtWidgets import *</span><br><span class="line">from  PyQt5.QtGui import *</span><br><span class="line">import sys</span><br><span class="line">class MyWindow(QMainWindow, Ui_MWin):</span><br><span class="line">    def __init__(self, parent=None):</span><br><span class="line">        super(MyWindow, self).__init__(parent)</span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        #  翻译</span><br><span class="line">        self.trans = QTranslator() </span><br><span class="line">        # 连接到槽函数</span><br><span class="line">        self.btn1.clicked.connect(self._trigger_zh_cn)</span><br><span class="line">        self.btn2.clicked.connect(self._trigger_english)</span><br><span class="line">    def _trigger_english(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to English&quot;)</span><br><span class="line">        self.trans.load(&quot;en&quot;)</span><br><span class="line">        _app = QApplication.instance()  # 获取app实例</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        # 重新翻译界面</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">    def _trigger_zh_cn(self):</span><br><span class="line">        print(&quot;[MainWindow] Change to zh_CN&quot;)</span><br><span class="line">        self.trans.load(&quot;zh_CN&quot;)</span><br><span class="line">        _app = QApplication.instance()</span><br><span class="line">        _app.installTranslator(self.trans)</span><br><span class="line">        self.retranslateUi(self)</span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    mainWindow = MyWindow()</span><br><span class="line">    mainWindow.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>界面<br>点击中文：<div align="center"><br> <img data-src="/blog/images/20180716114819.jpg" alt="中文.jpg"><br></div>
-
-</li>
-</ol>
-<p>点击英文：</p>
-<div align="center"><br>    <img data-src="/blog/images/20180716114825.jpg" alt="英文.jpg"><br></div>
-
-
-<ul>
-<li>参考：<br><a href="https://blog.csdn.net/CholenMine/article/details/80725088" target="_blank" rel="noopener">https://blog.csdn.net/CholenMine/article/details/80725088</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>programming</tag>
-        <tag>python</tag>
-        <tag>pyqt5</tag>
-        <tag>pyqt</tag>
-        <tag>i18n</tag>
-        <tag>language</tag>
+        <tag>windows</tag>
+        <tag>win10</tag>
+        <tag>microphone</tag>
+        <tag>no-voice</tag>
+        <tag>daily</tag>
       </tags>
   </entry>
   <entry>
@@ -708,27 +729,6 @@ cpuid
       <tags>
         <tag>blog</tag>
         <tag>summary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10 笔记本麦克风没声音</title>
-    <url>/blog/2018/10/20/0016.microphone-no-voice/</url>
-    <content><![CDATA[<p>记得去年跟别人玩&lt;荒野行动&gt;的时候还能语音的，今年暑假跟同学玩饥荒和 L4D2  讨论组语音，我可以听到他们的声音，他们却听不到我的声音很难受，搜了一些方法都不管用，最后没办法只能用手机跟他们语音。<br>今天玩&lt;无限法则&gt;，对面有人先说话了，然后我按 U 想说，结果没声音（名字后面没有小喇叭），那个唯一说话的老哥看到没人回应也不说话了，于是整场沉默…<br>再晚点和 B 站科技区的几个 UP 玩游戏（L4D2）还是没声音，我卸载了麦克风驱动，去官网重新下，安装之后还是不行，很绝望，又去搜了一些方法，什么用驱动精灵更新啊、禁用立体声混音设备啊，都不行，最后找到一个方法才管用。</p>
-<a id="more"></a>
-<blockquote>
-<p>设置 - 隐私中，选择麦克风选项，然后这里我们允许应用使用我的麦克风打开。</p>
-</blockquote>
-<p><img data-src="/blog/images/no-voice.png" alt="microphone no voice" title="允许应用访问我的麦克风"></p>
-]]></content>
-      <categories>
-        <category>Bug</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>win10</tag>
-        <tag>microphone</tag>
-        <tag>no-voice</tag>
-        <tag>daily</tag>
       </tags>
   </entry>
   <entry>
@@ -825,24 +825,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>嗶哩嗶哩工具箱</title>
-    <url>/blog/2018/12/09/0024.bili-box/</url>
-    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
-<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
-<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
-<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>programming</tag>
-        <tag>python</tag>
-        <tag>pyqt5</tag>
-        <tag>bilibili</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Tich·十一月总结/2018</title>
     <url>/blog/2018/11/30/0023.summary-1811/</url>
     <content><![CDATA[<p><img data-src="/blog/images/summary_1811.png" alt></p>
@@ -901,6 +883,24 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>嗶哩嗶哩工具箱</title>
+    <url>/blog/2018/12/09/0024.bili-box/</url>
+    <content><![CDATA[<p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br><a id="more"></a><br>其实用 Python 来写的话很简单，所以 Github 上有很多这样的项目，为什么要重新写一个，是因为有的界面比较辣眼睛，或者不符合我的审美。<br>我用 Qt 画界面的时候，更多是使用原生 UI，没有使用 QSS 来增加样式，这就是我的设计原则：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">简约但不简单</span><br></pre></td></tr></table></figure></p>
+<p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
+<p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
+<p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>programming</tag>
+        <tag>python</tag>
+        <tag>pyqt5</tag>
+        <tag>bilibili</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MIT 18.06 Linear Algebra, Spring 2005</title>
     <url>/blog/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</url>
     <content><![CDATA[<p><img data-src="/blog//images/18.06-Linear-Algebra.jpg" alt></p>
@@ -951,6 +951,29 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>codewars 初体验 XD</title>
+    <url>/blog/2019/01/25/0028.first2codewars/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/first2codewars.png" alt></p>
+<p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
+<blockquote>
+<p>@GloomyGhost: 有这时间还不如刷codewar</p>
+</blockquote>
+<p>然后就有点好奇了，就今天下午注册试了下，感觉还挺有趣的，其实呢，codewars 和其他如 leetcode 刷题网站类似，但它也有自己一些独特之处（虽然我也没怎么刷过 leetcode）。</p>
+<p>首先你注册之后等级是 8 级，等级越高数字越低，是不是一下子就有刷题提升段位的冲动了呢（滑稽<br>然后还有就是，如果你没有做过（train）题是没办法看别人的解题方法的 0w0<br>另外好像和你段位差太多的题你是没办法点进去的（等级打击），因为我到了 7 级不能做 4 级的题 233</p>
+<p>其他的应该基本上都差不多，哦对了还有 codewars 可以选择自己擅长的语言，在做题的时候也可以换语言（如果可以换的话）<br>但是等级是和对应语言绑定的，也就是说就算你 Python 刷到 2级，但你想换成 JavaScript 还是得从 8 级慢慢刷~</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>programming</tag>
+        <tag>python</tag>
+        <tag>javascript</tag>
+        <tag>codewars</tag>
+        <tag>oj</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Tich·十二月总结/2018</title>
     <url>/blog/2018/12/30/0027.summary-1812/</url>
     <content><![CDATA[<p><img data-src="/blog/images/summary_1812.png" alt></p>
@@ -973,29 +996,6 @@ cpuid
         <tag>blog</tag>
         <tag>summary</tag>
         <tag>person</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>codewars 初体验 XD</title>
-    <url>/blog/2019/01/25/0028.first2codewars/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/first2codewars.png" alt></p>
-<p>起因是昨天上午在“科技区UP抱团交♂流群”中某位大佬抱怨：</p>
-<blockquote>
-<p>@GloomyGhost: 有这时间还不如刷codewar</p>
-</blockquote>
-<p>然后就有点好奇了，就今天下午注册试了下，感觉还挺有趣的，其实呢，codewars 和其他如 leetcode 刷题网站类似，但它也有自己一些独特之处（虽然我也没怎么刷过 leetcode）。</p>
-<p>首先你注册之后等级是 8 级，等级越高数字越低，是不是一下子就有刷题提升段位的冲动了呢（滑稽<br>然后还有就是，如果你没有做过（train）题是没办法看别人的解题方法的 0w0<br>另外好像和你段位差太多的题你是没办法点进去的（等级打击），因为我到了 7 级不能做 4 级的题 233</p>
-<p>其他的应该基本上都差不多，哦对了还有 codewars 可以选择自己擅长的语言，在做题的时候也可以换语言（如果可以换的话）<br>但是等级是和对应语言绑定的，也就是说就算你 Python 刷到 2级，但你想换成 JavaScript 还是得从 8 级慢慢刷~</p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>programming</tag>
-        <tag>python</tag>
-        <tag>javascript</tag>
-        <tag>codewars</tag>
-        <tag>oj</tag>
       </tags>
   </entry>
   <entry>
@@ -1043,76 +1043,6 @@ cpuid
         <tag>css</tag>
         <tag>pendant</tag>
         <tag>avatar</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>includeOS 初体验 - Hello World!</title>
-    <url>/blog/2019/03/20/0032.includeos-helloworld/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
-<p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
-<p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
-<a id="more"></a>
-<h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
-<p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
-<p><strong>20190406 更新</strong><br>有个地方忘记写了，少了这一步可能会导致安装出问题。<br>自己也是装了两遍才成功。下面分析是我 <strong>瞎分析的</strong> 233，不知道究竟是不是这样。<br>因为在安装过程中有请求 root 权限，导致用户改变了，所以 root 的环境变量也得变，下面是我添加的<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=/home/tian/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
-<h3 id="安装-includeOS"><a href="#安装-includeOS" class="headerlink" title="安装 includeOS"></a>安装 includeOS</h3><p>直接运行下面命令即可<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/hioa-cs/IncludeOS</span><br><span class="line">$ <span class="built_in">cd</span> IncludeOS</span><br><span class="line">$ ./install.sh</span><br></pre></td></tr></table></figure></p>
-<p>install.sh 脚本帮你做了如下工作：</p>
-<ol>
-<li>安装了一些必要的依赖： curl make clang-5.0 nasm bridge-utils qemu</li>
-<li>用 CMake 编译 IncludeOS (将所有东西安装在 $INCLUDEOS_PREFIX/includeos ，如果在开始没有做自定义安装位置那一步则默认安装在 /usr/local 目录下)</li>
-</ol>
-<h3 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h3><p><code>$ ./test.sh</code><br>这样貌似就成功了叭_(:△」∠)_<br><img data-src="/blog/images/includeOS-test.sh.png" alt="test.sh" title="run test.sh"><br><img data-src="/blog/images/includeOS-links.png" alt="includeOS-links" title="links -dump 10.0.0.42"></p>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>终于到了这一步！(´ｰ∀ｰ`)<br>将 seed/service 目录复制一份，然后在 Service 类中实现 Service::start 函数即可（我发现里面已经有了 Hello world 2333<br>然后更新 CMakeLists.txt 来指定项目的名称<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cp -r seed/service ~/includeos_hellowrold</span><br><span class="line">$ <span class="built_in">cd</span> ~/includeos_hellowrold</span><br><span class="line">$ subl service.cpp</span><br><span class="line">$ mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ boot HelloWrold</span><br></pre></td></tr></table></figure></p>
-<p>正如上面所说，该 service.cpp 文件中其实已经输出了想要的 Hello world，所以我就加了一些额外的话。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Service::start</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __GNUG__</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Built by g++ "</span> __VERSION__ <span class="string">"\n"</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello world! --LewisTian\n"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Congratulations! Your first IncludeOS program runs successfully!\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然后改了 CMakeLists.txt 中的服务名与生成文件名<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Human-readable name of your service</span><br><span class="line">set(SERVICE_NAME &quot;IncludeOS HelloWrold&quot;)</span><br><span class="line"></span><br><span class="line"># Name of your service binary</span><br><span class="line">set(BINARY       &quot;HelloWrold&quot;)</span><br></pre></td></tr></table></figure></p>
-<p>一颗赛艇！最后使用命令 <code>boot HelloWrold</code> 运行你写的 IncludeOS HelloWrold<br>运行结果：<br><img data-src="/blog/images/includeOS-HelloWorld.png" alt="includeOS-HelloWorld" title="boot HelloWrold"></p>
-]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>first-try</tag>
-        <tag>cpp</tag>
-        <tag>unikernel</tag>
-        <tag>includeos</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2019/02/27 组会小记</title>
-    <url>/blog/2019/02/28/0033.meeting-190227/</url>
-    <content><![CDATA[<p>昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。</p>
-<p>毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）</p>
-<a id="more"></a>
-<ul>
-<li>搜索 unikernel 关键词结果只有 <strong>5</strong> 条</li>
-</ul>
-<p><img data-src="/blog/images/cnki-unikernel-result.png" alt title="知网搜索 unikernel 关键词结果"></p>
-<ul>
-<li>搜索 unikernel 内存管理关键词则没有😂</li>
-</ul>
-<p><img data-src="/blog/images/cnki-unikernel-mm-result.png" alt title="知网搜索 unikernel 内存管理关键词结果"></p>
-<p>然后老师又要求每个研一的同学说说自己的想法，没办法我只能借鉴之前看的一般异构内存管理的方法。</p>
-<p>我就大概有三点想法：</p>
-<ol>
-<li>若是能知道启动的 unikernel 的读写比例，则可以相应给其分配不同比例的内存<br> 然后学长说这一点这是不可能的，因为你无法决定数据到底放在 DRAM 还是 NVM。</li>
-<li>自己添加一个库/模块，其作用是当 unikernel 处于 idle 状态/内存利用率不高的时候将空闲内存返还给 hypervisor，然后当其内存不够的时候再向 hypervisor 申请<br> 听完之后学长立马就说，这不是那个 ballooning 吗？（我沉默了一会，因为这就是借鉴它的思想）然后我反驳道：这个技术没被用到 unikernel 上啊。</li>
-<li>开始的时候初始化一个较大内存池，由 hypervisor 管理，结合上面一点来使用。</li>
-</ol>
-<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：</p>
-<p><img data-src="/blog/images/yangmi-kuxiao.jpg" alt></p>
-<p>最后老师还是给我了一个思路：“大页”（就我理解大概就是比传统 4k 更大的页面吧233）<br>瞬间感觉得救了吧，至少有了一个方向，之前完全是两眼一抹黑，看的论文基本都是讲 unikernel 安全的。</p>
-<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。</p>
-<p><img data-src="/blog/images/dog-lay.jpg" alt title="差不多是条废狗了"></p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>unikernel</tag>
-        <tag>meeting</tag>
-        <tag>huge-page</tag>
-        <tag>memory-management</tag>
       </tags>
   </entry>
   <entry>
@@ -1196,10 +1126,42 @@ cpuid
       </categories>
       <tags>
         <tag>programming</tag>
-        <tag>crawler</tag>
         <tag>python</tag>
+        <tag>crawler</tag>
         <tag>bilibili</tag>
         <tag>mad</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>includeOS 初体验 - Hello World!</title>
+    <url>/blog/2019/03/20/0032.includeos-helloworld/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/includeOS.png" alt title="includeOS"></p>
+<p>今天第一次体验 includeOS，决定写个 Hello World 耍一耍( •̀ ω •́ )✧</p>
+<p>基本是按照 <a href="https://github.com/hioa-cs/IncludeOS#getting-started" target="_blank" rel="noopener">Getting started</a> 来做。</p>
+<a id="more"></a>
+<h3 id="自定义安装位置"><a href="#自定义安装位置" class="headerlink" title="自定义安装位置"></a>自定义安装位置</h3><p>编辑 <code>~/.bashrc</code> 文件，使用命令 <code>subl ~/.bashrc</code>，在文件尾添加下面代码<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=~/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
+<p>上述命令使 boost 程序全局可见，运行 <code>boot &lt;myservice&gt;</code> 命令就可以在任何服务文件夹中运行你自己写的服务。</p>
+<p><strong>20190406 更新</strong><br>有个地方忘记写了，少了这一步可能会导致安装出问题。<br>自己也是装了两遍才成功。下面分析是我 <strong>瞎分析的</strong> 233，不知道究竟是不是这样。<br>因为在安装过程中有请求 root 权限，导致用户改变了，所以 root 的环境变量也得变，下面是我添加的<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> INCLUDEOS_PREFIX=/home/tian/includeos</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$INCLUDEOS_PREFIX</span>/bin</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装-includeOS"><a href="#安装-includeOS" class="headerlink" title="安装 includeOS"></a>安装 includeOS</h3><p>直接运行下面命令即可<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/hioa-cs/IncludeOS</span><br><span class="line">$ <span class="built_in">cd</span> IncludeOS</span><br><span class="line">$ ./install.sh</span><br></pre></td></tr></table></figure></p>
+<p>install.sh 脚本帮你做了如下工作：</p>
+<ol>
+<li>安装了一些必要的依赖： curl make clang-5.0 nasm bridge-utils qemu</li>
+<li>用 CMake 编译 IncludeOS (将所有东西安装在 $INCLUDEOS_PREFIX/includeos ，如果在开始没有做自定义安装位置那一步则默认安装在 /usr/local 目录下)</li>
+</ol>
+<h3 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h3><p><code>$ ./test.sh</code><br>这样貌似就成功了叭_(:△」∠)_<br><img data-src="/blog/images/includeOS-test.sh.png" alt="test.sh" title="run test.sh"><br><img data-src="/blog/images/includeOS-links.png" alt="includeOS-links" title="links -dump 10.0.0.42"></p>
+<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>终于到了这一步！(´ｰ∀ｰ`)<br>将 seed/service 目录复制一份，然后在 Service 类中实现 Service::start 函数即可（我发现里面已经有了 Hello world 2333<br>然后更新 CMakeLists.txt 来指定项目的名称<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ cp -r seed/service ~/includeos_hellowrold</span><br><span class="line">$ <span class="built_in">cd</span> ~/includeos_hellowrold</span><br><span class="line">$ subl service.cpp</span><br><span class="line">$ mkdir build &amp;&amp; <span class="built_in">cd</span> build</span><br><span class="line">$ cmake ..</span><br><span class="line">$ make</span><br><span class="line">$ boot HelloWrold</span><br></pre></td></tr></table></figure></p>
+<p>正如上面所说，该 service.cpp 文件中其实已经输出了想要的 Hello world，所以我就加了一些额外的话。<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Service::start</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> __GNUG__</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Built by g++ "</span> __VERSION__ <span class="string">"\n"</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello world! --LewisTian\n"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Congratulations! Your first IncludeOS program runs successfully!\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后改了 CMakeLists.txt 中的服务名与生成文件名<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Human-readable name of your service</span><br><span class="line">set(SERVICE_NAME &quot;IncludeOS HelloWrold&quot;)</span><br><span class="line"></span><br><span class="line"># Name of your service binary</span><br><span class="line">set(BINARY       &quot;HelloWrold&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>一颗赛艇！最后使用命令 <code>boot HelloWrold</code> 运行你写的 IncludeOS HelloWrold<br>运行结果：<br><img data-src="/blog/images/includeOS-HelloWorld.png" alt="includeOS-HelloWorld" title="boot HelloWrold"></p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>first-try</tag>
+        <tag>cpp</tag>
+        <tag>unikernel</tag>
+        <tag>includeos</tag>
       </tags>
   </entry>
   <entry>
@@ -1230,6 +1192,75 @@ cpuid
         <tag>map</tag>
         <tag>any</tag>
         <tag>all</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2019/02/27 组会小记</title>
+    <url>/blog/2019/02/28/0033.meeting-190227/</url>
+    <content><![CDATA[<p>昨天晚上开了这学期第一次组会，算是活过去了233，因为要求每个人讲一下自己的思路，通知说 3 月初开题，然而我没做 ppt，也没啥思路。</p>
+<p>毕竟关于我那个课题（关于 unikernel 的异构内存管理）的论文很少，我还去知网搜了一下，然后我笑了。（毕竟我一般去谷歌学术搜论文）</p>
+<a id="more"></a>
+<ul>
+<li>搜索 unikernel 关键词结果只有 <strong>5</strong> 条</li>
+</ul>
+<p><img data-src="/blog/images/cnki-unikernel-result.png" alt title="知网搜索 unikernel 关键词结果"></p>
+<ul>
+<li>搜索 unikernel 内存管理关键词则没有😂</li>
+</ul>
+<p><img data-src="/blog/images/cnki-unikernel-mm-result.png" alt title="知网搜索 unikernel 内存管理关键词结果"></p>
+<p>然后老师又要求每个研一的同学说说自己的想法，没办法我只能借鉴之前看的一般异构内存管理的方法。</p>
+<p>我就大概有三点想法：</p>
+<ol>
+<li>若是能知道启动的 unikernel 的读写比例，则可以相应给其分配不同比例的内存<br> 然后学长说这一点这是不可能的，因为你无法决定数据到底放在 DRAM 还是 NVM。</li>
+<li>自己添加一个库/模块，其作用是当 unikernel 处于 idle 状态/内存利用率不高的时候将空闲内存返还给 hypervisor，然后当其内存不够的时候再向 hypervisor 申请<br> 听完之后学长立马就说，这不是那个 ballooning 吗？（我沉默了一会，因为这就是借鉴它的思想）然后我反驳道：这个技术没被用到 unikernel 上啊。</li>
+<li>开始的时候初始化一个较大内存池，由 hypervisor 管理，结合上面一点来使用。</li>
+</ol>
+<p>最后老师表示最后一条好像还行，其他的还是算了吧，特别是第一个。<br>然后我问道，这个方面没啥资料，我也不知道该怎么做啊;3之前问同组的一个学长（我们组就我们俩做 unikernel）有没有这方面资料，他表示本来 unikernel 就没多少人做，然后内存管理就更少了，他那边也么得，我哭了…<br>老师：就是因为没人做，做起来才有意义啊！（学长们都偷偷笑了）<br>而当时我是这个表情：</p>
+<p><img data-src="/blog/images/yangmi-kuxiao.jpg" alt></p>
+<p>最后老师还是给我了一个思路：“大页”（就我理解大概就是比传统 4k 更大的页面吧233）<br>瞬间感觉得救了吧，至少有了一个方向，之前完全是两眼一抹黑，看的论文基本都是讲 unikernel 安全的。</p>
+<p>而且前两天看的 github 上的一个 <a href="https://github.com/cetic/unikernels" target="_blank" rel="noopener">unikernel</a> 总结了所有的 unikernel 的特性、实现语言、适用平台以及现状（是否仍在维护），最后做了一个对比试验，选取的是 includeOS，将其和 Docker 进行性能比较，最后发现 unikernel 占优势的仅仅是生成的镜像大小，其余如延迟、启动时间、性能均不如 Docker（作者指出一个原因可能是 includeOS 自身存在某些 bug），可能之后我还是逃脱不了 MirageOS ，得去学 OCaml 吧。</p>
+<p><img data-src="/blog/images/dog-lay.jpg" alt title="差不多是条废狗了"></p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>unikernel</tag>
+        <tag>meeting</tag>
+        <tag>huge-page</tag>
+        <tag>memory-management</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sudo pip3 &quot;command not found&quot; in centos7</title>
+    <url>/blog/2019/05/13/0036.centos7-sudo-cmd/</url>
+    <content><![CDATA[<div style="float: right; margin-left: 10px;margin-top: 0px;"><br>    <img data-src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?"><br></div>
+
+<p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3/pip3 都是可以跑的。</p>
+<p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[chtian@node18 desktop]$ sudo pip3</span><br><span class="line">sudo: pip3: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
+<p>有人说“出于安全原因，sudo 不依赖 $PATH。有一个 secure_path 选项 /etc/sudoers，指定 PATH 是 sudo 将用于定位二进制文件。”</p>
+<p>相关问答:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/32020594/sudo-pip-command-not-found-in-centos" target="_blank" rel="noopener">sudo: pip: command not found in CentOS</a></li>
+<li><a href="https://cloud.tencent.com/developer/ask/34025" target="_blank" rel="noopener">在CentOS中找不到sudo：pip：命令？</a></li>
+<li><a href="https://unix.stackexchange.com/questions/169251/root-shell-sees-pip-but-sudo-pip-command-not-found" target="_blank" rel="noopener">Root shell sees pip but sudo pip “command not found”</a></li>
+</ul>
+<p>我看了下 secure_path 的路径 <code>Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[chtian@node18 desktop]$ whereis pip3</span><br><span class="line">pip3: /usr/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3.7</span><br></pre></td></tr></table></figure>
+<p>pip3 已经在 <code>/usr/bin</code> 目录下了，就很奇怪，不知道为什么就是找不到…</p>
+<p>将 <code>/usr/local/bin/</code> 加到 secure_path 或许可以，但我用的是另一个方法: </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[chtian@node18 ~]$ sudo `<span class="built_in">which</span> pip3` </span><br><span class="line"></span><br><span class="line">Usage:   </span><br><span class="line">  pip3 &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Bug</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>linux</tag>
+        <tag>centos7</tag>
+        <tag>pip3</tag>
+        <tag>python3</tag>
       </tags>
   </entry>
   <entry>
@@ -1271,34 +1302,26 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>sudo pip3 &quot;command not found&quot; in centos7</title>
-    <url>/blog/2019/05/13/0036.centos7-sudo-cmd/</url>
-    <content><![CDATA[<div style="float: right; margin-left: 10px;margin-top: 0px;"><br>    <img data-src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?"><br></div>
-
-<p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3/pip3 都是可以跑的。</p>
-<p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[chtian@node18 desktop]$ sudo pip3</span><br><span class="line">sudo: pip3: <span class="built_in">command</span> not found</span><br></pre></td></tr></table></figure>
-<p>有人说“出于安全原因，sudo 不依赖 $PATH。有一个 secure_path 选项 /etc/sudoers，指定 PATH 是 sudo 将用于定位二进制文件。”</p>
-<p>相关问答:</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/32020594/sudo-pip-command-not-found-in-centos" target="_blank" rel="noopener">sudo: pip: command not found in CentOS</a></li>
-<li><a href="https://cloud.tencent.com/developer/ask/34025" target="_blank" rel="noopener">在CentOS中找不到sudo：pip：命令？</a></li>
-<li><a href="https://unix.stackexchange.com/questions/169251/root-shell-sees-pip-but-sudo-pip-command-not-found" target="_blank" rel="noopener">Root shell sees pip but sudo pip “command not found”</a></li>
-</ul>
-<p>我看了下 secure_path 的路径 <code>Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[chtian@node18 desktop]$ whereis pip3</span><br><span class="line">pip3: /usr/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3 /usr/<span class="built_in">local</span>/bin/pip3.7</span><br></pre></td></tr></table></figure>
-<p>pip3 已经在 <code>/usr/bin</code> 目录下了，就很奇怪，不知道为什么就是找不到…</p>
-<p>将 <code>/usr/local/bin/</code> 加到 secure_path 或许可以，但我用的是另一个方法: </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[chtian@node18 ~]$ sudo `<span class="built_in">which</span> pip3` </span><br><span class="line"></span><br><span class="line">Usage:   </span><br><span class="line">  pip3 &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  install                     Install packages.</span><br><span class="line">  download                    Download packages.</span><br><span class="line">  uninstall                   Uninstall packages.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>]]></content>
+    <title>OneNote 无法打开链接出现错误：你的组织策略阻止我们为你完成此操作</title>
+    <url>/blog/2019/05/31/0038.onenote-open-link-error/</url>
+    <content><![CDATA[<p>从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作/Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk.</p>
+<p>搜到的方法基本是修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 的默认值为 Htmlfile，重启电脑。</p>
+<p><img data-src="/blog/images/onenote-1545731852.png" alt="onenote"></p>
+<p>然后你发现其实并没有什么卵用，该错还是错。</p>
+<p>一个折衷的方法是鼠标放在链接上然后右键打开链接 - MSEdge.EXE<br>可以从执行文件上看出，它就是打开了 edge 浏览器，也算是解决了问题吧，但是打开了像 CSDN 这种网页（别问我为什么要用 CSDN），没有 Adblock Plus，一大堆恶心的广告扑面而来。。。。</p>
+<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/images/onenote-20190531144338.png" alt="onenote"></p>
+<p>重启 OneNote 之后，点开链接就直接打开 Chrome 了，竟然被我猜对了 233</p>
+<p><img data-src="/blog/images/memes/0014.jpg" alt="memes"></p>
+]]></content>
       <categories>
         <category>Bug</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>linux</tag>
-        <tag>centos7</tag>
-        <tag>pip3</tag>
-        <tag>python3</tag>
+        <tag>windows</tag>
+        <tag>win10</tag>
+        <tag>bug</tag>
+        <tag>onenote</tag>
+        <tag>organization-policies</tag>
       </tags>
   </entry>
   <entry>
@@ -1354,29 +1377,6 @@ cpuid
       <tags>
         <tag>terminal</tag>
         <tag>win10 - windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OneNote 无法打开链接出现错误：你的组织策略阻止我们为你完成此操作</title>
-    <url>/blog/2019/05/31/0038.onenote-open-link-error/</url>
-    <content><![CDATA[<p>从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作/Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk.</p>
-<p>搜到的方法基本是修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 的默认值为 Htmlfile，重启电脑。</p>
-<p><img data-src="/blog/images/onenote-1545731852.png" alt="onenote"></p>
-<p>然后你发现其实并没有什么卵用，该错还是错。</p>
-<p>一个折衷的方法是鼠标放在链接上然后右键打开链接 - MSEdge.EXE<br>可以从执行文件上看出，它就是打开了 edge 浏览器，也算是解决了问题吧，但是打开了像 CSDN 这种网页（别问我为什么要用 CSDN），没有 Adblock Plus，一大堆恶心的广告扑面而来。。。。</p>
-<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/images/onenote-20190531144338.png" alt="onenote"></p>
-<p>重启 OneNote 之后，点开链接就直接打开 Chrome 了，竟然被我猜对了 233</p>
-<p><img data-src="/blog/images/memes/0014.jpg" alt="memes"></p>
-]]></content>
-      <categories>
-        <category>Bug</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>win10</tag>
-        <tag>bug</tag>
-        <tag>onenote</tag>
-        <tag>organization-policies</tag>
       </tags>
   </entry>
   <entry>
@@ -1533,27 +1533,6 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>win10 &quot;请确认系统网络配置是否完整&quot;</title>
-    <url>/blog/2019/10/25/0045.win10-network-error/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
-<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
-<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
-<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
-<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
-<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
-<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
-]]></content>
-      <categories>
-        <category>Bug</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>windows10</tag>
-        <tag>win10</tag>
-        <tag>network</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ImportError DLL load failed while importing win32api 找不到指定的模块</title>
     <url>/blog/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/</url>
     <content><![CDATA[<p>今天在使用 jupyter notebook 时遇到很多问题，由于我上周把 Python3.7 给卸载了，更新为 3.8，然后就出现了很多问题，第一个就是 <a href="https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror" target="_blank" rel="noopener">Jupyter Notebook with Python 3.8 - NotImplementedError</a>，在 StackOverflow 上找到答案，以为就解决了，结果启动之后，在网页新建一个 Python 3 的笔记之后，右上角出现一个红色的按钮，点开看是错误信息，<code>ImportError: DLL load failed while importing win32api: 找不到指定的模块。</code>，然后也在 <a href="https://stackoverflow.com/questions/58612306/how-to-fix-importerror-dll-load-failed-while-importing-win32api" target="_blank" rel="noopener">StackOverflow</a> 上找到答案了，结果不太对，还是会报错，最后用百度搜到一个 <a href="https://blog.csdn.net/mtt_sky/article/details/50445938" target="_blank" rel="noopener">CSDN</a> 的博客，按照上面的说法，把 <code>Lib\site-packages\pywin32_system32\*</code> 目录下的两个 DLL 复制到 <code>C:\Windows\System32</code> 就好了，或者复制到 <code>Lib\site-packages\win32</code> 也行。</p>
@@ -1570,6 +1549,28 @@ cpuid
         <tag>importerror</tag>
         <tag>jupyter-notebook</tag>
         <tag>jupyter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
+    <url>/blog/2019/12/05/0047.vscode-remote-server-find-code-definition/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/0x02F.1565323224_198145.png" alt title="无法跳转函数定义"></p>
+<p>主要原因是远程连接时，本地安装的插件并没有在远程安装，所以只需要在远程安装即可。</p>
+<p><img data-src="/blog/images/0x02F.20191205160719.png" alt title="本地与远程都安装上 C/C++ 插件"></p>
+<p>如上图，在远程和本地都安装上 C/C++ 这个插件就可以使用了，实际效果图：</p>
+<p><img data-src="/blog/images/0x02F.20191205160953.png" alt title="使用效果"></p>
+<p>参考：<a href="https://blog.csdn.net/qq_27727147/article/details/101203360" target="_blank" rel="noopener">https://blog.csdn.net/qq_27727147/article/details/101203360</a></p>
+]]></content>
+      <categories>
+        <category>Bug</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>server</tag>
+        <tag>vscode</tag>
+        <tag>code</tag>
+        <tag>definition</tag>
+        <tag>remote-server</tag>
       </tags>
   </entry>
   <entry>
@@ -1612,28 +1613,6 @@ cpuid
         <tag>ubuntu</tag>
         <tag>kernel</tag>
         <tag>boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode 远程连接 Linux 服务器无法查找代码定义</title>
-    <url>/blog/2019/12/05/0047.vscode-remote-server-find-code-definition/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/0x02F.1565323224_198145.png" alt title="无法跳转函数定义"></p>
-<p>主要原因是远程连接时，本地安装的插件并没有在远程安装，所以只需要在远程安装即可。</p>
-<p><img data-src="/blog/images/0x02F.20191205160719.png" alt title="本地与远程都安装上 C/C++ 插件"></p>
-<p>如上图，在远程和本地都安装上 C/C++ 这个插件就可以使用了，实际效果图：</p>
-<p><img data-src="/blog/images/0x02F.20191205160953.png" alt title="使用效果"></p>
-<p>参考：<a href="https://blog.csdn.net/qq_27727147/article/details/101203360" target="_blank" rel="noopener">https://blog.csdn.net/qq_27727147/article/details/101203360</a></p>
-]]></content>
-      <categories>
-        <category>Bug</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>server</tag>
-        <tag>vscode</tag>
-        <tag>code</tag>
-        <tag>definition</tag>
-        <tag>remote-server</tag>
       </tags>
   </entry>
   <entry>
@@ -1710,6 +1689,27 @@ cpuid
         <tag>server</tag>
         <tag>xshell</tag>
         <tag>ping</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10 &quot;请确认系统网络配置是否完整&quot;</title>
+    <url>/blog/2019/10/25/0045.win10-network-error/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/aaron-burden-xtIYGB0KEqc-unsplash.jpg" alt="winter" title="Photo by Aaron Burden on Unsplash"></p>
+<p>前几天在 vultr 交了 10 刀，试了下水，然后新建了几个主机都 ping 不同，网上说是被墙了，又试了几次都是不行，就没试了。</p>
+<p>今天抽风了，又试了几次，结果好了，于是兴致满满准备搞事情，按照教程搭好了 v2*y，结果开了 PAC 模式，还是访问不了谷歌，然后试了下 ss，也是不行，新手第一次尝试失败，然后打算周末再弄。</p>
+<p>到了下午，出大事了，谷歌翻译访问不了，我意识到出事了，然后把电脑重启了，然后问题大了，点开锐捷不弹出验证那个界面，就是一运行就消失了。禁止网卡再启动还是不行，重启了几次还是不行。然后我准备拔网线了，结果那个网线头有问题，动不了。</p>
+<p>中间还做了些事我忘了，最后用火绒的网络诊断，结果诊断不了，反而弹出窗口说“请确认系统网络配置的相关注册表是否完整xxx”</p>
+<p>用手机搜了一下，出来下面的结果，没看前面的东西，就直接输了下面一段写的命令 <code>netsh winsock reset</code> 然后重启就好了，绝了。</p>
+<p><img data-src="/blog/images/Screenshot_2019-10-25-15-42-04-541_com.android.br.jpg" alt="answer"></p>
+]]></content>
+      <categories>
+        <category>Bug</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>windows10</tag>
+        <tag>win10</tag>
+        <tag>network</tag>
       </tags>
   </entry>
   <entry>
@@ -1944,6 +1944,39 @@ cpuid
       </tags>
   </entry>
   <entry>
+    <title>解决 Ubuntu18.04 的 dpkg warning files list file for package &#39;XXXXXXX&#39; missing, assuming package has no files currently installed bug</title>
+    <url>/blog/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</url>
+    <content><![CDATA[<p>多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。</p>
+<p><img data-src="/blog/images/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
+<p>*<em>Photo by Tim Gouw on Unsplash</em></p>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道是谁动了服务器，导致环境不对了，gcc/g++ 使用报错，找不到头文件，以及每次使用 apt 都会输出标题的 warning，后来在粘贴到 txt 文档发现有多达 180 个 warning，真的服气，找了很多方案都没用，比如删除 <code>/var/lib/dpkg/info</code> 然后自动生成，可能对那个博主有用，但是对我无效，最后这个：<a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">Ubuntu 18.04中的Dpkg警告解决方案，简单而粗糙</a> 有用，稍微修改整理了下，于是有了这篇博客。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>他博客里面写需要新建三个文件，其实只需要两个文件，因为最后一个 Shell 脚本是自动生成的。</p>
+<h3 id="错误信息的文档"><a href="#错误信息的文档" class="headerlink" title="错误信息的文档"></a>错误信息的文档</h3><p>第一个就是包含 warning 的文本文档，我将其命名为 dpkg_warning.txt，然后将所有信息复制到这个文本中，大概如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dpkg: 警告: 无法找到软件包 libc++abi1:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 vdpau-driver-all:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 libgsasl7:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 libpgm-5.2-0:amd64 </span><br><span class="line">...</span><br><span class="line">dpkg: 警告: 无法找到软件包 libnppial9.1:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br></pre></td></tr></table></figure>
+<h3 id="用于生成-Shell-的-Python-脚本"><a href="#用于生成-Shell-的-Python-脚本" class="headerlink" title="用于生成 Shell 的 Python 脚本"></a>用于生成 Shell 的 Python 脚本</h3><p>这个 Python 脚本的主要作用就是从上面的 txt 文档中提取出软件名，然后生成一条对应的重装命令，并写入 Shell 脚本，这个脚本我也做了修改，我去掉了软件名后面挂的 amd64，原博客是没去的，​但是好像没影响。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Date    : 2020-10-06 15:00:41</span></span><br><span class="line"><span class="comment"># @Author  : Lewis Tian (taseikyo@gmail.com)</span></span><br><span class="line"><span class="comment"># @Link    : github.com/taseikyo</span></span><br><span class="line"><span class="comment"># @Version : python3.8</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">遇到这个问题，找了很多都没解决</span></span><br><span class="line"><span class="string">这个链接似乎有效</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- https://www.pythonf.cn/read/105362</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    pat = re.compile(<span class="string">"dpkg: 警告: 无法找到软件包 (.+) "</span>)</span><br><span class="line">    miss_pkgs = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> open(<span class="string">"dpkg_warning.txt"</span>, encoding=<span class="string">"utf-8"</span>):</span><br><span class="line">        pkg = re.match(pat, line)</span><br><span class="line">        <span class="keyword">if</span> pkg:</span><br><span class="line">            miss_pkgs.append(pkg.group(<span class="number">1</span>).split(<span class="string">":"</span>)[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"fix.sh"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(<span class="string">"#!/bin/bash\n\n"</span>)</span><br><span class="line">        <span class="keyword">for</span> mpkp <span class="keyword">in</span> miss_pkgs:</span><br><span class="line">            f.write(<span class="string">f"sudo apt-get -y install --reinstall <span class="subst">&#123;mpkp&#125;</span>\n"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h3 id="执行-Shell-脚本"><a href="#执行-Shell-脚本" class="headerlink" title="执行 Shell 脚本"></a>执行 Shell 脚本</h3><p>从上面的 Python 脚本中可以看到，最后的 Shell 脚本为 fix.sh，我们将其传到服务器上，由于是在 Windows 上写的文件，放到 Linux 上会由于换行存在问题，用 vim 打开，输入命令将换行转成 Linux 的格式。最后给脚本加上可执行的权限，最后运行即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim fix.sh</span><br><span class="line"><span class="comment"># :set fileformat=unix</span></span><br><span class="line"><span class="comment"># :wq</span></span><br><span class="line">sudo chmod +x fix.sh</span><br><span class="line">./fix.sh</span><br></pre></td></tr></table></figure>
+<p>在执行过程中可以看到 warning 仍然存在，但是个数在不断减少，当执行到最后一条命令时，不出意外 warning 应该没了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">https://www.pythonf.cn/read/105362</a></li>
+<li><a href="https://fitzeng.org/2017/11/04/linuxDpkgBug/" target="_blank" rel="noopener">https://fitzeng.org/2017/11/04/linuxDpkgBug/</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Bug</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>ubuntu1804</tag>
+        <tag>dkpg</tag>
+        <tag>apt</tag>
+        <tag>apt-get</tag>
+        <tag>linux - warning - bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>向 TheAlgorithms/Python 贡献代码须知</title>
     <url>/blog/2020/09/30/0060.contribute-to-the-algorithm-python/</url>
     <content><![CDATA[<p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
@@ -1989,36 +2022,67 @@ cpuid
       </tags>
   </entry>
   <entry>
-    <title>解决 Ubuntu18.04 的 dpkg warning files list file for package &#39;XXXXXXX&#39; missing, assuming package has no files currently installed bug</title>
-    <url>/blog/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</url>
-    <content><![CDATA[<p>多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。</p>
-<p><img data-src="/blog/images/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
-<p>*<em>Photo by Tim Gouw on Unsplash</em></p>
+    <title>有用的 bash alias</title>
+    <url>/blog/2020/10/07/0062.useful-bash-alias/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
+<p>*<em>Photo by Sai Kiran Anagani on Unsplash</em></p>
+<p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 算了</p>
+<p>可能会有换行的问题，用 vim 打开，输入 <code>set ff=unix</code> 命令就行了</p>
 <a id="more"></a>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道是谁动了服务器，导致环境不对了，gcc/g++ 使用报错，找不到头文件，以及每次使用 apt 都会输出标题的 warning，后来在粘贴到 txt 文档发现有多达 180 个 warning，真的服气，找了很多方案都没用，比如删除 <code>/var/lib/dpkg/info</code> 然后自动生成，可能对那个博主有用，但是对我无效，最后这个：<a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">Ubuntu 18.04中的Dpkg警告解决方案，简单而粗糙</a> 有用，稍微修改整理了下，于是有了这篇博客。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>他博客里面写需要新建三个文件，其实只需要两个文件，因为最后一个 Shell 脚本是自动生成的。</p>
-<h3 id="错误信息的文档"><a href="#错误信息的文档" class="headerlink" title="错误信息的文档"></a>错误信息的文档</h3><p>第一个就是包含 warning 的文本文档，我将其命名为 dpkg_warning.txt，然后将所有信息复制到这个文本中，大概如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dpkg: 警告: 无法找到软件包 libc++abi1:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 vdpau-driver-all:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 libgsasl7:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br><span class="line">dpkg: 警告: 无法找到软件包 libpgm-5.2-0:amd64 </span><br><span class="line">...</span><br><span class="line">dpkg: 警告: 无法找到软件包 libnppial9.1:amd64 的文件名列表文件，现假定该软件包目前没有任何文件被安装在系统里。</span><br></pre></td></tr></table></figure>
-<h3 id="用于生成-Shell-的-Python-脚本"><a href="#用于生成-Shell-的-Python-脚本" class="headerlink" title="用于生成 Shell 的 Python 脚本"></a>用于生成 Shell 的 Python 脚本</h3><p>这个 Python 脚本的主要作用就是从上面的 txt 文档中提取出软件名，然后生成一条对应的重装命令，并写入 Shell 脚本，这个脚本我也做了修改，我去掉了软件名后面挂的 amd64，原博客是没去的，​但是好像没影响。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Date    : 2020-10-06 15:00:41</span></span><br><span class="line"><span class="comment"># @Author  : Lewis Tian (taseikyo@gmail.com)</span></span><br><span class="line"><span class="comment"># @Link    : github.com/taseikyo</span></span><br><span class="line"><span class="comment"># @Version : python3.8</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">遇到这个问题，找了很多都没解决</span></span><br><span class="line"><span class="string">这个链接似乎有效</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">- https://www.pythonf.cn/read/105362</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    pat = re.compile(<span class="string">"dpkg: 警告: 无法找到软件包 (.+) "</span>)</span><br><span class="line">    miss_pkgs = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> open(<span class="string">"dpkg_warning.txt"</span>, encoding=<span class="string">"utf-8"</span>):</span><br><span class="line">        pkg = re.match(pat, line)</span><br><span class="line">        <span class="keyword">if</span> pkg:</span><br><span class="line">            miss_pkgs.append(pkg.group(<span class="number">1</span>).split(<span class="string">":"</span>)[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"fix.sh"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(<span class="string">"#!/bin/bash\n\n"</span>)</span><br><span class="line">        <span class="keyword">for</span> mpkp <span class="keyword">in</span> miss_pkgs:</span><br><span class="line">            f.write(<span class="string">f"sudo apt-get -y install --reinstall <span class="subst">&#123;mpkp&#125;</span>\n"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<h3 id="执行-Shell-脚本"><a href="#执行-Shell-脚本" class="headerlink" title="执行 Shell 脚本"></a>执行 Shell 脚本</h3><p>从上面的 Python 脚本中可以看到，最后的 Shell 脚本为 fix.sh，我们将其传到服务器上，由于是在 Windows 上写的文件，放到 Linux 上会由于换行存在问题，用 vim 打开，输入命令将换行转成 Linux 的格式。最后给脚本加上可执行的权限，最后运行即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim fix.sh</span><br><span class="line"><span class="comment"># :set fileformat=unix</span></span><br><span class="line"><span class="comment"># :wq</span></span><br><span class="line">sudo chmod +x fix.sh</span><br><span class="line">./fix.sh</span><br></pre></td></tr></table></figure>
-<p>在执行过程中可以看到 warning 仍然存在，但是个数在不断减少，当执行到最后一条命令时，不出意外 warning 应该没了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">https://www.pythonf.cn/read/105362</a></li>
-<li><a href="https://fitzeng.org/2017/11/04/linuxDpkgBug/" target="_blank" rel="noopener">https://fitzeng.org/2017/11/04/linuxDpkgBug/</a></li>
+<h2 id="Change-Directories"><a href="#Change-Directories" class="headerlink" title="Change Directories"></a>Change Directories</h2><ul>
+<li>alias ..=’cd ..’</li>
+<li>alias …=’cd ../..’</li>
+<li>alias ….=’cd ../../..’</li>
+<li>alias …..=’cd ../../../..’</li>
+<li><p>alias ……=’cd ../../../../..’</p>
+</li>
+<li><p>alias 2=’cd ..’</p>
+</li>
+<li>alias 3=’cd ../..’</li>
+<li>alias 4=’cd ../../..’</li>
+<li>alias 5=’cd ../../../..’</li>
+<li>alias 6=’cd ../../../../..’</li>
+</ul>
+<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><ul>
+<li>alias gs=’git status’</li>
+<li>alias gl=’git log –pretty=format:”%C(auto)%h %Cred%an(%ad) %C(auto)%s%d” –graph –date=short’</li>
+</ul>
+<h2 id="History-commands"><a href="#History-commands" class="headerlink" title="History commands"></a>History commands</h2><ul>
+<li>alias h=’history’</li>
+<li>alias h1=’history 10’</li>
+<li>alias h2=’history 20’</li>
+<li>alias h3=’history 30’</li>
+</ul>
+<h2 id="List-commands"><a href="#List-commands" class="headerlink" title="List commands"></a>List commands</h2><ul>
+<li>alias l.=’ls -d .* –color=auto’</li>
+<li>alias ls=’ls –color=auto’</li>
+<li>alias ll=’ls -la’</li>
+<li>alias l=ll</li>
+</ul>
+<h2 id="Install-amp-Update-utilties"><a href="#Install-amp-Update-utilties" class="headerlink" title="Install &amp; Update utilties"></a>Install &amp; Update utilties</h2><ul>
+<li>alias sai=’sudo apt install ‘</li>
+<li>alias sai=’sudo apt-get install ‘</li>
+<li>alias sau=’sudo apt update’</li>
+<li>alias sau=’sudo apt-get update’</li>
+<li>alias update=’sudo apt update’</li>
+</ul>
+<h2 id="Get-details-of-a-process"><a href="#Get-details-of-a-process" class="headerlink" title="Get details of a process"></a>Get details of a process</h2><ul>
+<li>alias paux=’ps aux | grep ‘</li>
 </ul>
 ]]></content>
       <categories>
-        <category>Bug</category>
+        <category>Linux</category>
       </categories>
       <tags>
+        <tag>linux</tag>
         <tag>ubuntu</tag>
-        <tag>ubuntu1804</tag>
-        <tag>dkpg</tag>
-        <tag>apt</tag>
-        <tag>apt-get</tag>
-        <tag>linux - warning - bug</tag>
+        <tag>bash</tag>
+        <tag>alias</tag>
+        <tag>shell</tag>
+        <tag>bashrc</tag>
+        <tag>bash-profile</tag>
       </tags>
   </entry>
   <entry>
@@ -2169,8 +2233,8 @@ cpuid
         <tag>person</tag>
         <tag>ubuntu</tag>
         <tag>zsh</tag>
-        <tag>centos</tag>
         <tag>bash</tag>
+        <tag>centos</tag>
         <tag>config</tag>
       </tags>
   </entry>
@@ -2197,109 +2261,6 @@ cpuid
         <tag>salt</tag>
         <tag>hash</tag>
         <tag>encryption</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>有用的 bash alias</title>
-    <url>/blog/2020/10/07/0062.useful-bash-alias/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
-<p>*<em>Photo by Sai Kiran Anagani on Unsplash</em></p>
-<p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 算了</p>
-<p>可能会有换行的问题，用 vim 打开，输入 <code>set ff=unix</code> 命令就行了</p>
-<a id="more"></a>
-<h2 id="Change-Directories"><a href="#Change-Directories" class="headerlink" title="Change Directories"></a>Change Directories</h2><ul>
-<li>alias ..=’cd ..’</li>
-<li>alias …=’cd ../..’</li>
-<li>alias ….=’cd ../../..’</li>
-<li>alias …..=’cd ../../../..’</li>
-<li><p>alias ……=’cd ../../../../..’</p>
-</li>
-<li><p>alias 2=’cd ..’</p>
-</li>
-<li>alias 3=’cd ../..’</li>
-<li>alias 4=’cd ../../..’</li>
-<li>alias 5=’cd ../../../..’</li>
-<li>alias 6=’cd ../../../../..’</li>
-</ul>
-<h2 id="Git-commands"><a href="#Git-commands" class="headerlink" title="Git commands"></a>Git commands</h2><ul>
-<li>alias gs=’git status’</li>
-<li>alias gl=’git log –pretty=format:”%C(auto)%h %Cred%an(%ad) %C(auto)%s%d” –graph –date=short’</li>
-</ul>
-<h2 id="History-commands"><a href="#History-commands" class="headerlink" title="History commands"></a>History commands</h2><ul>
-<li>alias h=’history’</li>
-<li>alias h1=’history 10’</li>
-<li>alias h2=’history 20’</li>
-<li>alias h3=’history 30’</li>
-</ul>
-<h2 id="List-commands"><a href="#List-commands" class="headerlink" title="List commands"></a>List commands</h2><ul>
-<li>alias l.=’ls -d .* –color=auto’</li>
-<li>alias ls=’ls –color=auto’</li>
-<li>alias ll=’ls -la’</li>
-<li>alias l=ll</li>
-</ul>
-<h2 id="Install-amp-Update-utilties"><a href="#Install-amp-Update-utilties" class="headerlink" title="Install &amp; Update utilties"></a>Install &amp; Update utilties</h2><ul>
-<li>alias sai=’sudo apt install ‘</li>
-<li>alias sai=’sudo apt-get install ‘</li>
-<li>alias sau=’sudo apt update’</li>
-<li>alias sau=’sudo apt-get update’</li>
-<li>alias update=’sudo apt update’</li>
-</ul>
-<h2 id="Get-details-of-a-process"><a href="#Get-details-of-a-process" class="headerlink" title="Get details of a process"></a>Get details of a process</h2><ul>
-<li>alias paux=’ps aux | grep ‘</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>ubuntu</tag>
-        <tag>bash</tag>
-        <tag>alias</tag>
-        <tag>shell</tag>
-        <tag>bashrc</tag>
-        <tag>bash-profile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>inside 游戏完结体会</title>
-    <url>/blog/2020/11/07/0069.inside-perception/</url>
-    <content><![CDATA[<p><img data-src="/blog/images/inside.jpg" alt><br>制作精良的冒险解谜游戏，整体氛围是比较压抑的（画风+音效），戴耳机玩则更有身临其境的感觉。<br>整体流程不算长，有些关卡还是蛮有难度的，查了下攻略才过（菜）。像“空气冲击波”那段需要卡好时机，不然就直接被轰成渣。<br>普通结局是[spoiler] 小男孩被吸进一个“大肉球”，将工厂设施捣烂，最终逃离，然后静静地停留在河边，我本来以为会有后续是小男孩离开肉球，没想到就这样结束了，我其实是没太懂这个结局。 [/spoiler]<br>隐藏结局是[spoiler] 完成所有14个收集，从场景7打开暗门，输入指令，穿过暗道，最后到达一个控制室的地方，当你拔掉电源之后，你就失去了控制，整个画面变黑，然后回到游戏开始界面，我：？（草） 我一脸懵逼，所以这个结局是逃离了还是没有？ [/spoiler]</p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>inside</tag>
-        <tag>steame</tag>
-        <tag>game</tag>
-        <tag>puzzle</tag>
-        <tag>adventure</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>赋予普通用户 sudo 的权限方法</title>
-    <url>/blog/2020/10/16/0066.grant-user-sudo-privilege/</url>
-    <content><![CDATA[<p>赋予普通用户 sudo 权限有两种方法：</p>
-<ol>
-<li>通过修改 <code>/etc/sudoers</code> 文件，添加一行即可 “user ALL=(ALL:ALL) ALL”</li>
-<li>将用户添加到 sudo 组中，可以在 <code>/etc/group</code> 中看到 <code>sudo:x:27:usera,userb</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -a -G sudo user</span><br><span class="line">$ sudo chsh -s /bin/bash user</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>root</tag>
-        <tag>etc</tag>
-        <tag>sudo</tag>
-        <tag>admin</tag>
-        <tag>sudoers</tag>
-        <tag>group</tag>
       </tags>
   </entry>
   <entry>
@@ -2340,6 +2301,45 @@ cpuid
         <tag>microsoft-store</tag>
         <tag>2148734208</tag>
         <tag>error-code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>赋予普通用户 sudo 的权限方法</title>
+    <url>/blog/2020/10/16/0066.grant-user-sudo-privilege/</url>
+    <content><![CDATA[<p>赋予普通用户 sudo 权限有两种方法：</p>
+<ol>
+<li>通过修改 <code>/etc/sudoers</code> 文件，添加一行即可 “user ALL=(ALL:ALL) ALL”</li>
+<li>将用户添加到 sudo 组中，可以在 <code>/etc/group</code> 中看到 <code>sudo:x:27:usera,userb</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo usermod -a -G sudo user</span><br><span class="line">$ sudo chsh -s /bin/bash user</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>root</tag>
+        <tag>etc</tag>
+        <tag>sudo</tag>
+        <tag>admin</tag>
+        <tag>sudoers</tag>
+        <tag>group</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>inside 游戏完结体会</title>
+    <url>/blog/2020/11/07/0069.inside-perception/</url>
+    <content><![CDATA[<p><img data-src="/blog/images/inside.jpg" alt><br>制作精良的冒险解谜游戏，整体氛围是比较压抑的（画风+音效），戴耳机玩则更有身临其境的感觉。<br>整体流程不算长，有些关卡还是蛮有难度的，查了下攻略才过（菜）。像“空气冲击波”那段需要卡好时机，不然就直接被轰成渣。<br>普通结局是[spoiler] 小男孩被吸进一个“大肉球”，将工厂设施捣烂，最终逃离，然后静静地停留在河边，我本来以为会有后续是小男孩离开肉球，没想到就这样结束了，我其实是没太懂这个结局。 [/spoiler]<br>隐藏结局是[spoiler] 完成所有14个收集，从场景7打开暗门，输入指令，穿过暗道，最后到达一个控制室的地方，当你拔掉电源之后，你就失去了控制，整个画面变黑，然后回到游戏开始界面，我：？（草） 我一脸懵逼，所以这个结局是逃离了还是没有？ [/spoiler]</p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>inside</tag>
+        <tag>steame</tag>
+        <tag>game</tag>
+        <tag>puzzle</tag>
+        <tag>adventure</tag>
       </tags>
   </entry>
   <entry>
@@ -2453,6 +2453,48 @@ cpuid
         <tag>youtube</tag>
         <tag>ccll</tag>
         <tag>chucolala</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>是时候从 os.path 转向 pathlib 了</title>
+    <url>/blog/2020/12/11/0073.os-to-pathlib/</url>
+    <content><![CDATA[<p>之前就听说过 pathlib 这个库，是从 3.4 加入的，由于习惯了 os 的相关操作，一直没有改，今天又查了一下，觉得还是转了，毕竟 pathlib 相关操作确实简单一些。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br></pre></td></tr></table></figure>
+<ul>
+<li>判断某路径是否存在</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">os.path.exists(<span class="string">"foo/tmp.txt"</span>)</span><br><span class="line">Path(<span class="string">"foo/tmp.txt"</span>).exists()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建文件夹</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">"foo"</span>):</span><br><span class="line">	os.mkdir(<span class="string">"foo"</span>)</span><br><span class="line"></span><br><span class="line">p = Path(<span class="string">"foo"</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> p.exists():</span><br><span class="line">	p.mkdir()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>遍历文件夹</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(<span class="string">"foo"</span>):</span><br><span class="line">	print(file)</span><br><span class="line"></span><br><span class="line">p = Path(<span class="string">"foo"</span>)</span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> p.iterdir():</span><br><span class="line">	print(file)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据所给的通配符遍历</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> p.glob(<span class="string">"*(2)*"</span>):</span><br><span class="line">	print(file)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>判断是文件/文件夹</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">os.path.isdir(<span class="string">"foo"</span>)</span><br><span class="line">Path(<span class="string">"foo"</span>).is_dir()</span><br><span class="line"></span><br><span class="line">os.path.isfile(<span class="string">"foo"</span>)</span><br><span class="line">Path(<span class="string">"foo"</span>).is_file()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建空文件</li>
+</ul>
+<p>这个 touch 是不是很熟悉？</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">p = Path(<span class="string">"foo/tmp.txt"</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> p.exists():</span><br><span class="line">	p.touch()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>打开文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">p = Path(<span class="string">"foo/tmp.txt"</span>)</span><br><span class="line"><span class="keyword">with</span> p.open(encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">	f.read()</span><br></pre></td></tr></table></figure>
+<p>还有很多好用的方法，具体可以看 <a href="https://docs.python.org/zh-cn/3/library/pathlib.html" target="_blank" rel="noopener">pathlib — 面向对象的文件系统路径</a> 官方文档。</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>os</tag>
+        <tag>path</tag>
+        <tag>pathlib</tag>
       </tags>
   </entry>
   <entry>

@@ -195,6 +195,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2017/08/25/0002.cloud-music-lyric/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2017/08/25/0002.cloud-music-lyric/" class="post-title-link" itemprop="url">网易云歌词下载器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-08-25 18:50:05" itemprop="dateCreated datePublished" datetime="2017-08-25T18:50:05+08:00">2017-08-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>2017/8/23 晚上在知乎上看到一个话题是怎么下载网易云歌词，于是乎自己用 QT 写了一个小程序。</p>
+<p>首先知道网易云获取歌词的 API 是 <code>http://music.163.com/api/song/lyric?os=pc&amp;id={id}&amp;lv=-1&amp;kv=-1&amp;tv=-1</code> 中间 {id} 换成歌曲的 id 即可。</p>
+<p>于是就很简单了，用一个 <code>QLineEdit</code> 来输入歌曲的 id，然后 <code>QNetworkAccessManager</code> 构造 get 请求，得到一个 JSON 文件，歌词和翻译信息就在里面了。如果要得到歌曲名，歌手名等信息还得 get 另一个网页，就是完整的歌曲链接，得到 HTML 页面之后用正则提取出歌曲名，歌手信息。</p>
+<p>下载链接: <a href="https://github.com/taseikyo/NeteaseLyric/releases" target="_blank" rel="noopener">https://github.com/taseikyo/NeteaseLyric/releases</a></p>
+<p>程序界面如下：</p>
+<p><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-084637bccfd7b7b99cab75da37305f72_b.png" alt="interface" title="程序界面"></p>
+<p>输入歌曲 id 或者完整的链接，点击 <code>get</code> 按钮，或者敲击回车，然后就可以获取歌曲名、歌手、歌词信息。<br>你可以隐藏时间轴和翻译。</p>
+<p><img data-src="https://images.weserv.nl/?url=pic3.zhimg.com/v2-1f66b0f451e28a6fe0740eb186d13f56_b.png" alt="hide" title="隐藏时间轴和翻译"></p>
+<p>保存歌词快捷键是 <code>Ctrl+S</code>。</p>
+<p><img data-src="https://images.weserv.nl/?url=pic4.zhimg.com/v2-bae6f4ff7a822b43c6d8cb34f3bb1e77_b.png" alt="save" title="保存歌词"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2017/08/07/0001.topology/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -402,7 +478,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-count">75</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -415,7 +491,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-count">187</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
