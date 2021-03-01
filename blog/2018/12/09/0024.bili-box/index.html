@@ -9,20 +9,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
-
 <link rel="stylesheet" href="/blog/css/main.css">
-
-
 <link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
   <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
-
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
   <meta name="description" content="最近又重新写了一个 哔哩哔哩下载器，至于放弃 之前那个 的原因在 README 中写的很清楚的了，在此就不再多说了。界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 这里，就是将那个库中的功能整合到这个下载器中。">
 <meta name="keywords" content="programming,python,pyqt5,bilibili">
 <meta property="og:type" content="article">
@@ -32,15 +27,12 @@
 <meta property="og:description" content="最近又重新写了一个 哔哩哔哩下载器，至于放弃 之前那个 的原因在 README 中写的很清楚的了，在此就不再多说了。界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 这里，就是将那个库中的功能整合到这个下载器中。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://taseikyo.github.io/images/bili-box.png">
-<meta property="og:updated_time" content="2020-11-05T02:19:04.976Z">
+<meta property="og:updated_time" content="2021-01-14T13:04:00.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="嗶哩嗶哩工具箱">
 <meta name="twitter:description" content="最近又重新写了一个 哔哩哔哩下载器，至于放弃 之前那个 的原因在 README 中写的很清楚的了，在此就不再多说了。界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 这里，就是将那个库中的功能整合到这个下载器中。">
 <meta name="twitter:image" content="https://taseikyo.github.io/images/bili-box.png">
-
 <link rel="canonical" href="https://taseikyo.github.io/2018/12/09/0024.bili-box/">
-
-
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
@@ -50,15 +42,7 @@
     lang   : 'en'
   };
 </script>
-
   <title>嗶哩嗶哩工具箱 | Tian's Daily Life</title>
-  
-
-
-
-
-
-
   <noscript>
   <style>
   .use-motion .brand,
@@ -70,24 +54,19 @@
   .use-motion .post-header,
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
-
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
     top: initial;
   }
-
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
-
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
-
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
@@ -97,9 +76,7 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-
   <div class="site-meta">
-
     <a href="/blog/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">Tian's Daily Life</h1>
@@ -107,43 +84,28 @@
     </a>
       <p class="site-subtitle" itemprop="description">Love yourself; Love your like.</p>
   </div>
-
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
-
-
-
-
 <nav class="site-nav">
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-
     <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
   </li>
         <li class="menu-item menu-item-tags">
-
     <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
-
   </li>
         <li class="menu-item menu-item-categories">
-
     <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
-
   </li>
         <li class="menu-item menu-item-archives">
-
     <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
-
   </li>
         <li class="menu-item menu-item-about">
-
     <a href="/blog/../taseikyo/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
-
   </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -151,9 +113,6 @@
       </li>
   </ul>
 </nav>
-
-
-
   <div class="search-pop-overlay">
     <div class="popup search-popup">
         <div class="search-header">
@@ -174,40 +133,25 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
     </div>
   </div>
-
 </div>
     </header>
-
-    
   <div class="back-to-top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
-
-
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-
           <div class="content post posts-expand">
-            
-
-    
-  
-  
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2018/12/09/0024.bili-box/">
-
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
       <meta itemprop="name" content="Lewis Tian">
       <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
     </span>
-
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tian's Daily Life">
     </span>
@@ -215,14 +159,12 @@
         <h1 class="post-title" itemprop="name headline">
           嗶哩嗶哩工具箱
         </h1>
-
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-
               <time title="Created: 2018-12-09 17:10:00" itemprop="dateCreated datePublished" datetime="2018-12-09T17:10:00+08:00">2018-12-09</time>
             </span>
             <span class="post-meta-item">
@@ -234,18 +176,9 @@
                   <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
                 </span>
             </span>
-
-          
-
         </div>
       </header>
-
-    
-    
-    
     <div class="post-body" itemprop="articleBody">
-
-      
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
             <img src="/blog/images/bili-box.png" itemprop="contentUrl">
         </div>
@@ -253,52 +186,36 @@
 <p>所以重新写了一个，写起来也很快，因为视频的下载链接就在请求的 HTML 中，每个分 p 就是一个 HTML 请求，格式如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">f'https://www.bilibili.com/video/av<span class="subst">&#123;aid&#125;</span>?p=<span class="subst">&#123;page&#125;</span>'</span></span><br></pre></td></tr></table></figure></p>
 <p>用正则表达式就可以将下载链接提取出来<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'"order":(.*?),"length":(.*?),"size":(.*?),.*?"url":"(.*?)"'</span></span><br></pre></td></tr></table></figure></p>
 <p>每一个分 p 视频有可能多个切片，上面的表达式提取出来的第一个参数就是切片的序号，第二个就是时间，第三个是大小，最后一个就是切片链接。<br>为了加快速度，使用多线程来获取视频链接，每个线程就是一个分 p 视频的 get 请求。<br>然后使用 QT 中的 <strong>信号、槽</strong> 机制来动态更新数据，每个线程获取、解析数据完毕之后就发信号，然后这个信号会被主线程捕获，对应一个更新视频表(vtable)的槽函数。<br>还有就是下载视频，每次更新视频表之后会保存视频链接(为了省空间仅保存下载链接)，选择视频表的行点击下载就会将对应行的链接传给下载视频的线程以下载，若是多切片则会使用 ffmpeg 来合并视频。<br>获取图片、收藏类似，都是使用多线程获取下载链接，然后保存链接，最后选中表格的行点击下载。<br>部分功能演示如下:<br><img data-src="https://raw.githubusercontent.com/taseikyo/bili-box/master/images/preview.gif" alt="嗶哩嗶哩工具箱" title="嗶哩嗶哩工具箱"></p>
-
     </div>
-
-    
-    
-    
         <div class="reward-container">
   <div></div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     Donate
   </button>
   <div id="qr" style="display: none;">
-      
       <div style="display: inline-block;">
         <img src="/blog/images/wechatpay.jpg" alt="Lewis Tian WeChat Pay">
         <p>WeChat Pay</p>
       </div>
-      
       <div style="display: inline-block;">
         <img src="/blog/images/alipay.jpg" alt="Lewis Tian Alipay">
         <p>Alipay</p>
       </div>
-
   </div>
 </div>
-
-        
-
   <div class="followme">
     <p>Welcome to my other publishing channels</p>
-
     <div class="social-list">
-
         <div class="social-item">
           <a target="_blank" class="social-link" href="/blog/images/wechat-qcode.jpg">
             <span class="icon">
               <i class="fa fa-wechat"></i>
             </span>
-
             <span class="label">WeChat</span>
           </a>
         </div>
     </div>
   </div>
-
-
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/blog/tags/programming/" rel="tag"># programming</a>
@@ -306,11 +223,6 @@
               <a href="/blog/tags/pyqt5/" rel="tag"># pyqt5</a>
               <a href="/blog/tags/bilibili/" rel="tag"># bilibili</a>
           </div>
-
-        
-
-
-        
     <div class="post-nav">
       <div class="post-nav-item">
     <a href="/blog/2018/11/30/0023.summary-1811/" rel="prev" title="Tich·十一月总结/2018">
@@ -322,17 +234,8 @@
     </a></div>
     </div>
       </footer>
-    
   </article>
-  
-  
-  
-
-
-
           </div>
-          
-
 <script>
   window.addEventListener('tabs:register', () => {
     let { activeClass } = CONFIG.comments;
@@ -354,19 +257,14 @@
     });
   }
 </script>
-
         </div>
-          
-  
   <div class="toggle sidebar-toggle">
     <span class="toggle-line toggle-line-first"></span>
     <span class="toggle-line toggle-line-middle"></span>
     <span class="toggle-line toggle-line-last"></span>
   </div>
-
   <aside class="sidebar">
     <div class="sidebar-inner">
-
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -375,12 +273,10 @@
           Overview
         </li>
       </ul>
-
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
       </div>
       <!--/noindex-->
-
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lewis Tian"
@@ -392,21 +288,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-        
-          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
-          
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-          
-        <span class="site-state-item-count">189</span>
+        <span class="site-state-item-count">200</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -419,29 +312,17 @@
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
       </span>
   </div>
-
-
-
       </div>
-
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
-
-
       </div>
     </main>
-
     <footer class="footer">
       <div class="footer-inner">
-        
-
-        
-
 <div class="copyright">
-  
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -449,21 +330,9 @@
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
-
-        
-
-
-
-
-
-
-
-
       </div>
     </footer>
   </div>
-
-  
   <script src="/blog/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
@@ -474,10 +343,6 @@
 <script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
-
-
-
-  
   <script>
     (function(){
       var bp = document.createElement('script');
@@ -487,27 +352,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-
-
-
-
   <script src="/blog/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

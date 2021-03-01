@@ -9,20 +9,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
-
 <link rel="stylesheet" href="/blog/css/main.css">
-
-
 <link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
   <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
-
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
   <meta name="description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下">
 <meta name="keywords" content="python,javascript,bilibili,css,pendant,avatar">
 <meta property="og:type" content="article">
@@ -31,14 +26,11 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-11-05T02:20:06.039Z">
+<meta property="og:updated_time" content="2021-01-14T13:04:00.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为博客头像添加哔哩哔哩挂件">
 <meta name="twitter:description" content="之前在做 bili-box 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 搜集挂件 然后作者将其用在博客头像上，看上去不错，于是就写了个 爬虫 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。 昨天晚上参考该作者的 hexo-theme-beep 主题，修改了一下">
-
 <link rel="canonical" href="https://taseikyo.github.io/2019/02/15/0029.bili-pendant/">
-
-
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
@@ -48,15 +40,7 @@
     lang   : 'en'
   };
 </script>
-
   <title>为博客头像添加哔哩哔哩挂件 | Tian's Daily Life</title>
-  
-
-
-
-
-
-
   <noscript>
   <style>
   .use-motion .brand,
@@ -68,24 +52,19 @@
   .use-motion .post-header,
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
-
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
     top: initial;
   }
-
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
-
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
-
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
@@ -95,9 +74,7 @@
       <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
-
   <div class="site-meta">
-
     <a href="/blog/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">Tian's Daily Life</h1>
@@ -105,43 +82,28 @@
     </a>
       <p class="site-subtitle" itemprop="description">Love yourself; Love your like.</p>
   </div>
-
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
-
-
-
-
 <nav class="site-nav">
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-
     <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
   </li>
         <li class="menu-item menu-item-tags">
-
     <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
-
   </li>
         <li class="menu-item menu-item-categories">
-
     <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
-
   </li>
         <li class="menu-item menu-item-archives">
-
     <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
-
   </li>
         <li class="menu-item menu-item-about">
-
     <a href="/blog/../taseikyo/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
-
   </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -149,9 +111,6 @@
       </li>
   </ul>
 </nav>
-
-
-
   <div class="search-pop-overlay">
     <div class="popup search-popup">
         <div class="search-header">
@@ -172,40 +131,25 @@
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
 </div>
-
     </div>
   </div>
-
 </div>
     </header>
-
-    
   <div class="back-to-top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
-
-
     <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-
           <div class="content post posts-expand">
-            
-
-    
-  
-  
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/02/15/0029.bili-pendant/">
-
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
       <meta itemprop="name" content="Lewis Tian">
       <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
     </span>
-
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Tian's Daily Life">
     </span>
@@ -213,14 +157,12 @@
         <h1 class="post-title" itemprop="name headline">
           为博客头像添加哔哩哔哩挂件
         </h1>
-
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-
               <time title="Created: 2019-02-15 21:01:09" itemprop="dateCreated datePublished" datetime="2019-02-15T21:01:09+08:00">2019-02-15</time>
             </span>
             <span class="post-meta-item">
@@ -232,18 +174,9 @@
                   <a href="/blog/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
             </span>
-
-          
-
         </div>
       </header>
-
-    
-    
-    
     <div class="post-body" itemprop="articleBody">
-
-      
         <p><img data-src="/blog/images/author-bili-pendant.png" alt></p>
 <p>之前在做 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">bili-box</a> 中有收集哔哩哔哩的 logo，就是 b 站主页左上角的那个 “bilibili” ，于是在 Github 搜看是否也有人在搜集这个，结果发现有人在 <a href="https://github.com/lewky/bilibili-avatar-pendant" target="_blank" rel="noopener">搜集挂件</a> 然后作者将其用在博客头像上，看上去不错，于是就写了个 <a href="https://github.com/taseikyo/Crawler#logo%E5%9B%BE%E7%89%87%E7%88%AC%E5%8F%96" target="_blank" rel="noopener">爬虫</a> 来爬挂件，由于挂件商城中并没有多少，于是想到在每个视频的评论中爬取评论者的挂件。</p>
 <p>昨天晚上参考该作者的 <a href="https://github.com/lewky/hexo-theme-beep" target="_blank" rel="noopener">hexo-theme-beep</a> 主题，修改了一下自定义的 js 和 css 文件，然后将挂件加到了我自己的博客头像上。</p>
@@ -257,52 +190,36 @@
 <li><p>themes\next-overload\source\css_custom\custom.styl</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/* 使用bilibili头像挂件时的头像 */</span><br><span class="line">.site-author-image &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    margin-top: -132px;</span><br><span class="line">    margin-bottom: 30px;</span><br><span class="line">    padding: 0;</span><br><span class="line">    max-width: 94px;</span><br><span class="line">    height: auto;</span><br><span class="line">    border: 1px solid #eee;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* bilibili头像挂件 */</span><br><span class="line">.site-avatar-plug-bilibili &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    display: block;</span><br><span class="line">    padding: 0;</span><br><span class="line">    max-width: 168px;</span><br><span class="line">    height: auto;</span><br><span class="line">    z-index: 1;</span><br><span class="line">    pointer-events: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-
     </div>
-
-    
-    
-    
         <div class="reward-container">
   <div></div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     Donate
   </button>
   <div id="qr" style="display: none;">
-      
       <div style="display: inline-block;">
         <img src="/blog/images/wechatpay.jpg" alt="Lewis Tian WeChat Pay">
         <p>WeChat Pay</p>
       </div>
-      
       <div style="display: inline-block;">
         <img src="/blog/images/alipay.jpg" alt="Lewis Tian Alipay">
         <p>Alipay</p>
       </div>
-
   </div>
 </div>
-
-        
-
   <div class="followme">
     <p>Welcome to my other publishing channels</p>
-
     <div class="social-list">
-
         <div class="social-item">
           <a target="_blank" class="social-link" href="/blog/images/wechat-qcode.jpg">
             <span class="icon">
               <i class="fa fa-wechat"></i>
             </span>
-
             <span class="label">WeChat</span>
           </a>
         </div>
     </div>
   </div>
-
-
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/blog/tags/python/" rel="tag"># python</a>
@@ -312,11 +229,6 @@
               <a href="/blog/tags/pendant/" rel="tag"># pendant</a>
               <a href="/blog/tags/avatar/" rel="tag"># avatar</a>
           </div>
-
-        
-
-
-        
     <div class="post-nav">
       <div class="post-nav-item">
     <a href="/blog/2019/01/25/0028.first2codewars/" rel="prev" title="codewars 初体验 XD">
@@ -328,17 +240,8 @@
     </a></div>
     </div>
       </footer>
-    
   </article>
-  
-  
-  
-
-
-
           </div>
-          
-
 <script>
   window.addEventListener('tabs:register', () => {
     let { activeClass } = CONFIG.comments;
@@ -360,19 +263,14 @@
     });
   }
 </script>
-
         </div>
-          
-  
   <div class="toggle sidebar-toggle">
     <span class="toggle-line toggle-line-first"></span>
     <span class="toggle-line toggle-line-middle"></span>
     <span class="toggle-line toggle-line-last"></span>
   </div>
-
   <aside class="sidebar">
     <div class="sidebar-inner">
-
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -381,12 +279,10 @@
           Overview
         </li>
       </ul>
-
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
       </div>
       <!--/noindex-->
-
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Lewis Tian"
@@ -398,21 +294,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-        
-          <span class="site-state-item-count">76</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
-          
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-          
-        <span class="site-state-item-count">189</span>
+        <span class="site-state-item-count">200</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -425,29 +318,17 @@
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
       </span>
   </div>
-
-
-
       </div>
-
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
-
-
       </div>
     </main>
-
     <footer class="footer">
       <div class="footer-inner">
-        
-
-        
-
 <div class="copyright">
-  
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -455,21 +336,9 @@
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
-
-        
-
-
-
-
-
-
-
-
       </div>
     </footer>
   </div>
-
-  
   <script src="/blog/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
@@ -480,10 +349,6 @@
 <script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
-
-
-
-  
   <script>
     (function(){
       var bp = document.createElement('script');
@@ -493,27 +358,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-
-
-
-
   <script src="/blog/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>
