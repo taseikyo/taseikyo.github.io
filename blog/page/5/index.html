@@ -142,6 +142,46 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/" class="post-title-link" itemprop="url">ImportError DLL load failed while importing win32api 找不到指定的模块</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2019-11-27 16:58:16" itemprop="dateCreated datePublished" datetime="2019-11-27T16:58:16+08:00">2019-11-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p>今天在使用 jupyter notebook 时遇到很多问题，由于我上周把 Python3.7 给卸载了，更新为 3.8，然后就出现了很多问题，第一个就是 <a href="https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror" target="_blank" rel="noopener">Jupyter Notebook with Python 3.8 - NotImplementedError</a>，在 StackOverflow 上找到答案，以为就解决了，结果启动之后，在网页新建一个 Python 3 的笔记之后，右上角出现一个红色的按钮，点开看是错误信息，<code>ImportError: DLL load failed while importing win32api: 找不到指定的模块。</code>，然后也在 <a href="https://stackoverflow.com/questions/58612306/how-to-fix-importerror-dll-load-failed-while-importing-win32api" target="_blank" rel="noopener">StackOverflow</a> 上找到答案了，结果不太对，还是会报错，最后用百度搜到一个 <a href="https://blog.csdn.net/mtt_sky/article/details/50445938" target="_blank" rel="noopener">CSDN</a> 的博客，按照上面的说法，把 <code>Lib\site-packages\pywin32_system32\*</code> 目录下的两个 DLL 复制到 <code>C:\Windows\System32</code> 就好了，或者复制到 <code>Lib\site-packages\win32</code> 也行。</p>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/25/0045.win10-network-error/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -482,53 +522,6 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/31/0038.onenote-open-link-error/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2019/05/31/0038.onenote-open-link-error/" class="post-title-link" itemprop="url">OneNote 无法打开链接出现错误：你的组织策略阻止我们为你完成此操作</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2019-05-31 14:32:49" itemprop="dateCreated datePublished" datetime="2019-05-31T14:32:49+08:00">2019-05-31</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作/Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk.</p>
-<p>搜到的方法基本是修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 的默认值为 Htmlfile，重启电脑。</p>
-<p><img data-src="/blog/images/onenote-1545731852.png" alt="onenote"></p>
-<p>然后你发现其实并没有什么卵用，该错还是错。</p>
-<p>一个折衷的方法是鼠标放在链接上然后右键打开链接 - MSEdge.EXE<br>可以从执行文件上看出，它就是打开了 edge 浏览器，也算是解决了问题吧，但是打开了像 CSDN 这种网页（别问我为什么要用 CSDN），没有 Adblock Plus，一大堆恶心的广告扑面而来。。。。</p>
-<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/images/onenote-20190531144338.png" alt="onenote"></p>
-<p>重启 OneNote 之后，点开链接就直接打开 Chrome 了，竟然被我猜对了 233</p>
-<p><img data-src="/blog/images/memes/0014.jpg" alt="memes"></p>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/blog/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/blog/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><a class="extend next" rel="next" href="/blog/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -585,7 +578,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">80</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -596,7 +589,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">200</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

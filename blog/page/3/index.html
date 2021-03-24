@@ -142,6 +142,58 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2020/10/07/0062.useful-bash-alias/" class="post-title-link" itemprop="url">有用的 bash alias</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2020-10-07 16:48:09" itemprop="dateCreated datePublished" datetime="2020-10-07T16:48:09+08:00">2020-10-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p><img data-src="/blog/images/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
+<p>*<em>Photo by Sai Kiran Anagani on Unsplash</em></p>
+<p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 算了</p>
+<p>可能会有换行的问题，用 vim 打开，输入 <code>set ff=unix</code> 命令就行了</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2020/10/07/0062.useful-bash-alias/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -509,73 +561,6 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/03/16/0054.ubuntu-zsh-autojump-autosuggestions/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2020/03/16/0054.ubuntu-zsh-autojump-autosuggestions/" class="post-title-link" itemprop="url">Ubuntu 安装 oh-my-zsh、autojump 和 autosuggestions</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2020-03-16 16:57:03" itemprop="dateCreated datePublished" datetime="2020-03-16T16:57:03+08:00">2020-03-16</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>每次重装系统都会重新百度怎么安装 <em>oh-my-zsh</em> 索性记录下来</p>
-<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zsh</span><br></pre></td></tr></table></figure>
-<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></span><br></pre></td></tr></table></figure>
-<p>替换自己默认的 bash</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/passwd</span><br></pre></td></tr></table></figure>
-<p>“taseikyo:x:1000:1000::/home/taseikyo:/bin/bash” → “taseikyo:x:1000:1000::/home/taseikyo:/bin/zsh”</p>
-<p>修改主题</p>
-<ul>
-<li><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh/wiki/Themes</a></li>
-</ul>
-<p>上面连接中给了很多主题，但是我习惯了 agnoster</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
-<p>修改 “ZSH_THEME” 为 “agnoster”</p>
-<p>退出重新登录就好了</p>
-<h2 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h2><p>当你习惯了 autojump 操作之后，没了它就会觉得十分别扭</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install autojump</span><br></pre></td></tr></table></figure>
-<p>在 zsh 的配置文件中加上 <code>. /usr/share/autojump/autojump.sh</code></p>
-<p>最后 <code>source ~/.zshrc</code> 大功告成！</p>
-<p>哦对了，记得把 <code>alias gs=&quot;git status&quot;</code> 也写入配置文件。</p>
-<h2 id="autosuggestions"><a href="#autosuggestions" class="headerlink" title="autosuggestions"></a>autosuggestions</h2><p>自动补全命令的功能也是必不可少的。</p>
-<ol>
-<li>将该插件到 <code>.oh-my-zsh</code> 的插件目录</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git://github.com/zsh-users/zsh-autosuggestions <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>启用该插件</li>
-</ol>
-<p>编辑配置文件，找到 “plugins=(git)” 并修改为 “plugins=(git zsh-autosuggestions)”<br>然后 source 配置文件即可。</p>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -632,7 +617,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">80</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -643,7 +628,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">200</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
