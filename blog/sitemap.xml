@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://taseikyo.github.io/2021/03/24/0079.running-python-rtupdate-hooks-for-python3-5x/</loc>
+    
+    <lastmod>2021-03-24T12:09:29.641Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://taseikyo.github.io/2021/03/24/0078.how-to-allow-an-ip-address-for-ssh-connection/</loc>
     
     <lastmod>2021-03-24T09:33:29.649Z</lastmod>

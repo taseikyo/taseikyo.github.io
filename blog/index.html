@@ -142,6 +142,54 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2021/03/24/0079.running-python-rtupdate-hooks-for-python3-5x/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2021/03/24/0079.running-python-rtupdate-hooks-for-python3-5x/" class="post-title-link" itemprop="url">running python rtupdate hooks for python3.5x</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2021-03-24 20:06:14" itemprop="dateCreated datePublished" datetime="2021-03-24T20:06:14+08:00">2021-03-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p>今天在 24 上装软件遇到这个问题，经过搜索，解决这个问题：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">taseikyo@node ~&gt; sai gcc make libncurses5-dev openssl libssl-dev </span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">python3 is already the newest version (3.7.5-1).</span><br><span class="line">0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.</span><br><span class="line">1 not fully installed or removed.</span><br><span class="line">After this operation, 0 B of additional disk space will be used.</span><br><span class="line">Do you want to <span class="built_in">continue</span>? [Y/n] Y</span><br><span class="line">Setting up python3 (3.7.5-1) ...</span><br><span class="line">running python rtupdate hooks <span class="keyword">for</span> python3.7...</span><br><span class="line">dpkg-query: package <span class="string">'rhythmbox-plugin-alternative-toolbar'</span> is not installed</span><br><span class="line">Use dpkg --contents (= dpkg-deb --contents) to list archive files contents.</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 210, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    main()</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 196, <span class="keyword">in</span> main</span><br><span class="line">    pfiles = <span class="built_in">set</span>(dpf.from_package(options.package))</span><br><span class="line">  File <span class="string">"/usr/share/python3/debpython/files.py"</span>, line 53, <span class="keyword">in</span> from_package</span><br><span class="line">    raise Exception(<span class="string">"cannot get content of %s"</span> % package_name)</span><br><span class="line">Exception: cannot get content of rhythmbox-plugin-alternative-toolbar</span><br><span class="line">error running python rtupdate hook rhythmbox-plugin-alternative-toolbar</span><br><span class="line">dpkg-query: package <span class="string">'rhythmbox-plugins'</span> is not installed</span><br><span class="line">Use dpkg --contents (= dpkg-deb --contents) to list archive files contents.</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 210, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    main()</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 196, <span class="keyword">in</span> main</span><br><span class="line">    pfiles = <span class="built_in">set</span>(dpf.from_package(options.package))</span><br><span class="line">  File <span class="string">"/usr/share/python3/debpython/files.py"</span>, line 53, <span class="keyword">in</span> from_package</span><br><span class="line">    raise Exception(<span class="string">"cannot get content of %s"</span> % package_name)</span><br><span class="line">Exception: cannot get content of rhythmbox-plugins</span><br><span class="line">error running python rtupdate hook rhythmbox-plugins</span><br><span class="line">dpkg-query: package <span class="string">'sosreport'</span> is not installed</span><br><span class="line">Use dpkg --contents (= dpkg-deb --contents) to list archive files contents.</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 210, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    main()</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 196, <span class="keyword">in</span> main</span><br><span class="line">    pfiles = <span class="built_in">set</span>(dpf.from_package(options.package))</span><br><span class="line">  File <span class="string">"/usr/share/python3/debpython/files.py"</span>, line 53, <span class="keyword">in</span> from_package</span><br><span class="line">    raise Exception(<span class="string">"cannot get content of %s"</span> % package_name)</span><br><span class="line">Exception: cannot get content of sosreport</span><br><span class="line">error running python rtupdate hook sosreport</span><br><span class="line">dpkg-query: package <span class="string">'streamlink'</span> is not installed</span><br><span class="line">Use dpkg --contents (= dpkg-deb --contents) to list archive files contents.</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 210, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    main()</span><br><span class="line">  File <span class="string">"/usr/bin/py3clean"</span>, line 196, <span class="keyword">in</span> main</span><br><span class="line">    pfiles = <span class="built_in">set</span>(dpf.from_package(options.package))</span><br><span class="line">  File <span class="string">"/usr/share/python3/debpython/files.py"</span>, line 53, <span class="keyword">in</span> from_package</span><br><span class="line">    raise Exception(<span class="string">"cannot get content of %s"</span> % package_name)</span><br><span class="line">Exception: cannot get content of streamlink</span><br><span class="line">error running python rtupdate hook streamlink</span><br><span class="line">dpkg: error processing package python3 (--configure):</span><br><span class="line"> installed python3 package post-installation script subprocess returned error <span class="built_in">exit</span> status 4</span><br><span class="line">Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line"> python3</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://askubuntu.com/a/941789/1015648" target="_blank" rel="noopener">https://askubuntu.com/a/941789/1015648</a></li>
+</ul>
+<p>with similar output all around due to having rtupdate hooks for packages that were not installed on the system in <code>/usr/share/python3/runtime.d</code>.</p>
+<p>Fixed by removing the <code>&lt;missing-package-name&gt;.rtupdate</code> files in the directory above and reinstalling python3.</p>
+<p>将错误信息中的 xxx.rtupdate 从 <code>/usr/share/python3/runtime.d</code> 目录删除，然后重装 Python3 然后就好了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">taseikyo@node ~&gt; sai gcc make libncurses5-dev openssl libssl-dev </span><br><span class="line">Reading package lists... Done</span><br><span class="line">Building dependency tree       </span><br><span class="line">Reading state information... Done</span><br><span class="line">gcc is already the newest version (4:9.2.1-3.1ubuntu1).</span><br><span class="line">libncurses5-dev is already the newest version (6.1+20190803-1ubuntu1).</span><br><span class="line">libssl-dev is already the newest version (1.1.1c-1ubuntu4.1).</span><br><span class="line">make is already the newest version (4.2.1-1.2).</span><br><span class="line">openssl is already the newest version (1.1.1c-1ubuntu4.1).</span><br><span class="line">0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.</span><br></pre></td></tr></table></figure>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2021/03/24/0078.how-to-allow-an-ip-address-for-ssh-connection/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -489,58 +537,8 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/11/24/0071.win10-tim-login-timeout/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2020/11/24/0071.win10-tim-login-timeout/" class="post-title-link" itemprop="url">Windows TIM 登录超时解决办法</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2020-11-24 09:16:36" itemprop="dateCreated datePublished" datetime="2020-11-24T09:16:36+08:00">2020-11-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>今天遇到一个奇怪的问题，明明网络是好的，微信可以登，网页正常打开，TIM 就是登不上，一直显示 <strong>00001：无法连接到互联网</strong>，重启几次没用，把 TIM 更新到最新版，正好昨天（11-23）更新了，还是无法解决，就是报错。</p>
-<p>最后在贴吧找到解决办法，这个 <a href="https://tieba.baidu.com/p/5613854112" target="_blank" rel="noopener">win10 更新 tim 登录超时</a> 帖子中给出了解决办法：</p>
-<blockquote>
-<p>@<a href="https://tieba.baidu.com/home/main?un=66666huang&amp;ie=utf-8&amp;id=tb.1.1fa3c995.FuPyZvXhUBl7RymTAbIRgA" target="_blank" rel="noopener">66666huang</a>：打开Windows powershell（管理员）输入：netsh winsock reset，回车最后重启电脑就ok了，希望能帮到大家</p>
-</blockquote>
-<p>输入命令然后重启就好了。</p>
-<p>记得之前遇到什么问题也用过这个命令，查了下：</p>
-<blockquote>
-<p>netsh winsock reset 命令，作用是重置 Winsock 目录。如果一台机器上的 Winsock 协议配置有问题的话将会导致网络连接等问题，就需要用 netsh winsock reset 命令来重置 Winsock 目录借以恢复网络。这个命令可以重新初始化网络环境，以解决由于软件冲突、病毒原因造成的参数错误问题。 netsh 是一个能够通过命令行操作几乎所有网络相关设置的接口，比如设置 IP，DNS，网卡，无线网络等，Winsock 是系统内部目录，Winsock 是 Windows 网络编程接口，winsock 工作在应用层，它提供与底层传输协议无关的高层数据传输编程接口，reset 是对 Winsock 的重置操作。当执行完 winsock 的命令重启计算机后，需要重新配置 IP。</p>
-</blockquote>
-<p><em>解决由于软件冲突、病毒原因造成的参数错误问题</em>，可能是 TIM 或者其他软件搞的鬼吧。</p>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
           </div>
 <script>
@@ -595,7 +593,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">80</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

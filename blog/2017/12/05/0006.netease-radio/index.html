@@ -19,7 +19,7 @@
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
   <meta name="description" content="突然就有一个简单的想法，与之前爬网易云热评类似，这次是想着爬取网易云电台，将播放量超过 1w 的节目信息爬取下来，然后展示出来，这也是与热评类似。 然而说起来容易做起来难，因为数据实在是太多了，截止到 2017/12/12 也仅仅值爬到 150 条左右的数据，而此时的 program_id 才到 30w ，可是已经有的节目量呢？已经 136700w+ 了，感觉仅仅我一个人来爬数据可能还得好久好久。">
-<meta name="keywords" content="programming,python,crawler,netease,netease-cloud,netease-radio">
+<meta name="keywords" content="programming,crawler,python,netease,netease-cloud,netease-radio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网易云电台">
 <meta property="og:url" content="https://taseikyo.github.io/2017/12/05/0006.netease-radio/index.html">
@@ -213,8 +213,8 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/blog/tags/programming/" rel="tag"># programming</a>
-              <a href="/blog/tags/python/" rel="tag"># python</a>
               <a href="/blog/tags/crawler/" rel="tag"># crawler</a>
+              <a href="/blog/tags/python/" rel="tag"># python</a>
               <a href="/blog/tags/netease/" rel="tag"># netease</a>
               <a href="/blog/tags/netease-cloud/" rel="tag"># netease-cloud</a>
               <a href="/blog/tags/netease-radio/" rel="tag"># netease-radio</a>
@@ -284,7 +284,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">80</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
