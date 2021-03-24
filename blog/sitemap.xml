@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
+    
+    <lastmod>2021-03-24T09:19:29.142Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/05/13/0036.centos7-sudo-cmd/</loc>
+    
+    <lastmod>2021-03-24T09:11:02.752Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/11/01/0019.pc-win-no-voice/</loc>
+    
+    <lastmod>2021-03-24T09:10:42.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/10/20/0016.microphone-no-voice/</loc>
+    
+    <lastmod>2021-03-24T09:10:42.539Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/07/11/0013.windows-right-click-slow/</loc>
+    
+    <lastmod>2021-03-24T09:10:42.528Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://taseikyo.github.io/2021/02/28/0077.error-apt-update/</loc>
     
     <lastmod>2021-03-01T03:01:18.347Z</lastmod>
@@ -198,13 +233,6 @@
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
-    
-    <lastmod>2021-01-14T13:04:00.406Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://taseikyo.github.io/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</loc>
     
     <lastmod>2021-01-14T13:04:00.403Z</lastmod>
@@ -306,13 +334,6 @@
     <loc>https://taseikyo.github.io/2019/05/20/0037.includeos-helloworld2/</loc>
     
     <lastmod>2021-01-14T13:04:00.354Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/05/13/0036.centos7-sudo-cmd/</loc>
-    
-    <lastmod>2021-01-14T13:04:00.345Z</lastmod>
     
   </url>
   
@@ -429,13 +450,6 @@
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2018/11/01/0019.pc-win-no-voice/</loc>
-    
-    <lastmod>2021-01-14T13:04:00.256Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://taseikyo.github.io/2018/10/31/0018.chrome-exts-hide2show/</loc>
     
     <lastmod>2021-01-14T13:04:00.231Z</lastmod>
@@ -450,13 +464,6 @@
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2018/10/20/0016.microphone-no-voice/</loc>
-    
-    <lastmod>2021-01-14T13:04:00.218Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://taseikyo.github.io/2018/10/01/0015.summary-1809/</loc>
     
     <lastmod>2021-01-14T13:04:00.208Z</lastmod>
@@ -467,13 +474,6 @@
     <loc>https://taseikyo.github.io/2018/07/16/0014.pyqt-mutilanguage/</loc>
     
     <lastmod>2021-01-14T13:04:00.199Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/07/11/0013.windows-right-click-slow/</loc>
-    
-    <lastmod>2021-01-14T13:04:00.175Z</lastmod>
     
   </url>
   

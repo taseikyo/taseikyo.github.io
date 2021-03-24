@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="前言听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 C:\Users\taseikyo\.ssh\config 配置，如下： 1234Host node    HostName a.b.c.d    User taseikyo    Identity">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2021-01-14T13:04:00.406Z">
+<meta property="og:updated_time" content="2021-03-24T09:19:29.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode 通过跳板机连接服务器">
 <meta name="twitter:description" content="前言听说 vscode 安装 Remote-SSh 就能够远程连接服务器，于是试了下，果然如此，这下就很方便，比较 vscode 比 vim 还是方便地多。有个问题是对于有 IP 的服务器可以直接在 C:\Users\taseikyo\.ssh\config 配置，如下： 1234Host node    HostName a.b.c.d    User taseikyo    Identity">
@@ -203,10 +203,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host jumpnode</span><br><span class="line">    HostName 111.111.111.111</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 配置下面这个可以免密登陆</span></span><br><span class="line">    IdentityFile C:\Users\taseikyo\.ssh\id_rsa</span><br><span class="line"> </span><br><span class="line">Host target</span><br><span class="line">    HostName 10.20.20.20</span><br><span class="line">    User taseikyo</span><br><span class="line">    <span class="comment"># 注意 ssh 要是完整路径不然会报错连不上</span></span><br><span class="line">    ProxyCommand C:\Windows\System32\OpenSSH\ssh.exe -W %h:%p jumpnode</span><br></pre></td></tr></table></figure>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>另外有个算是上面已经说的问题，如果节点 A 想免密码转到节点 B，需要将 A 的公钥复制到 B 的 authorized_keys 中，具体步骤是：</p>
 <ol>
-<li>在 A 节点生成公钥，<code>ssh-keygen -t rsa -b 1024 -C taseikyo@mypc</code>，若是 Windows 路径在 <code>C:\Users\taseikyo\.ssh\id_rsa.pub</code>，若是 Linux 则在 <code>~/.ssh/id_rsa.pub</code></li>
+<li>在 A 节点生成公钥，<code>ssh-keygen -t rsa -b 1024 -C &quot;taseikyo@gmail.com&quot;</code>，若是 Windows 路径在 <code>C:\Users\taseikyo\.ssh\id_rsa.pub</code>，若是 Linux 则在 <code>~/.ssh/id_rsa.pub</code></li>
 <li>将 A 节点的公钥复制到 B 节点的 authorized_keys 文件中（<code>vim ~/.ssh/authorized_keys</code>）</li>
 <li>然后从 A 节点可以免密 ssh 到节点 B 中</li>
 </ol>
+<h3 id="再后记"><a href="#再后记" class="headerlink" title="再后记"></a>再后记</h3><p>210324</p>
+<p>由于实验室服务器被恶意攻击（被当作矿机了），所以节点被限制 ip 访问，原先用 VS Code 直连现在不行了，即使开放了访问（在 <code>/etc/hosts.allow</code> 中加入了 <code>sshd:123.123.123.123</code>），将公钥添加到对应服务器的 <code>authorized_keys</code>，VS Code 还是长时间连接不上，最后直接在服务器上将 <code>~/.vscode-server</code> 文件夹删掉了，然后让 VS Code 自己重新安装 remote-ssh 等一些东西就连上了。</p>
     </div>
         <div class="reward-container">
   <div></div>
@@ -295,7 +297,7 @@
       </ul>
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#再后记"><span class="nav-number">3.1.</span> <span class="nav-text">再后记</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
