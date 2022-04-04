@@ -142,6 +142,73 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/12/18/0048.set-default-boot-kernel/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2019/12/18/0048.set-default-boot-kernel/" class="post-title-link" itemprop="url">Ubuntu 设置默认启动内核版本</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2019-12-18 17:34:53" itemprop="dateCreated datePublished" datetime="2019-12-18T17:34:53+08:00">2019-12-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p><img data-src="https://images.unsplash.com/photo-1550143387-52fa147f9c65?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1348&amp;q=50" alt title="Photo by Xu haojie on Unsplash"></p>
+<p>b.s. 今天武汉下雪了。</p>
+<p>由于实验室服务器上不是一个人在用，所以一个节点会编译了多种版本的内核，默认启动好像是自带的版本，然后今天就遇到这个问题。</p>
+<p>我需要的是 4.10.2 自己编译的版本，但是同学重启之后就变成默认的 5.0.37 了，所以就搜了一下，怎么让默认启动就是 4.10.2。</p>
+<p>其实方法也挺简单的：</p>
+<ol>
+<li>查看内核的顺序</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; grep <span class="string">'menuentry'</span> /boot/grub/grub.cfg</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ x<span class="string">"<span class="variable">$&#123;feature_menuentry_id&#125;</span>"</span> = xy ]; <span class="keyword">then</span></span><br><span class="line">  menuentry_id_option=<span class="string">"--id"</span></span><br><span class="line">  menuentry_id_option=<span class="string">""</span></span><br><span class="line"><span class="built_in">export</span> menuentry_id_option</span><br><span class="line">menuentry <span class="string">'Ubuntu'</span>  <span class="string">'gnulinux-simple-xxxx'</span> &#123;</span><br><span class="line">submenu <span class="string">'Advanced options for Ubuntu'</span> <span class="variable">$menuentry_id_option</span> <span class="string">'gnulinux-advancedxxx'</span> &#123;</span><br><span class="line">0	menuentry <span class="string">'Ubuntu, with Linux 5.0.0-37-generic'</span>  <span class="string">'gnulinux-5.0.0-37-generic-advancedxxx'</span> &#123;</span><br><span class="line">1	menuentry <span class="string">'Ubuntu, with Linux 5.0.0-37-generic (recovery mode)'</span>  <span class="string">'gnulinux-5.0.0-37-generic-recovery-xxx'</span> &#123;</span><br><span class="line">2	menuentry <span class="string">'Ubuntu, with Linux 5.0.0-36-generic'</span>  <span class="string">'gnulinux-5.0.0-36-generic-advancedxxx'</span> &#123;</span><br><span class="line">3	menuentry <span class="string">'Ubuntu, with Linux 5.0.0-36-generic (recovery mode)'</span>  <span class="string">'gnulinux-5.0.0-36-generic-recovery-xxx'</span> &#123;</span><br><span class="line">4	menuentry <span class="string">'Ubuntu, with Linux 4.18.20'</span>  <span class="string">'gnulinux-4.18.20-advancedxxx'</span> &#123;</span><br><span class="line">5	menuentry <span class="string">'Ubuntu, with Linux 4.18.20 (recovery mode)'</span>  <span class="string">'gnulinux-4.18.20-recovery-xxx'</span> &#123;</span><br><span class="line">6	menuentry <span class="string">'Ubuntu, with Linux 4.10.2'</span>  <span class="string">'gnulinux-4.10.2-advancedxxx'</span> &#123;</span><br><span class="line">7	menuentry <span class="string">'Ubuntu, with Linux 4.10.2 (recovery mode)'</span>  <span class="string">'gnulinux-4.10.2-recovery-xxx'</span> &#123;</span><br><span class="line">8	menuentry <span class="string">'Ubuntu, with Linux 3.12.13'</span>  <span class="string">'gnulinux-3.12.13-advancedxxx'</span> &#123;</span><br><span class="line">9	menuentry <span class="string">'Ubuntu, with Linux 3.12.13 (recovery mode)'</span>  <span class="string">'gnulinux-3.12.13-recovery-xxx'</span> &#123;</span><br><span class="line">menuentry <span class="string">'Memory test (memtest86+)'</span> &#123;</span><br><span class="line">menuentry <span class="string">'Memory test (memtest86+, serial console 115200)'</span> &#123;</span><br><span class="line">menuentry <span class="string">'Ubuntu 18.04.3 LTS (18.04) (on /dev/sdc1)'</span>  <span class="string">'osprober-gnulinux-simple-xxxxx'</span> &#123;</span><br><span class="line">submenu <span class="string">'Advanced options for Ubuntu 18.04.3 LTS (18.04) (on /dev/sdc1)'</span> <span class="variable">$menuentry_id_option</span> <span class="string">'osprober-gnulinux-advanced-xxxxx'</span> &#123;</span><br><span class="line">	menuentry <span class="string">'Ubuntu (on /dev/sdc1)'</span> --class gnu-linux --class gnu --class os <span class="variable">$menuentry_id_option</span> <span class="string">'osprober-gnulinux-/vmlinuz-4.15.0-55-generic--xxxxx'</span> &#123;</span><br><span class="line">	menuentry <span class="string">'Ubuntu, with Linux 4.15.0-55-generic (on /dev/sdc1)'</span> --class gnu-linux --class gnu --class os <span class="variable">$menuentry_id_option</span> <span class="string">'osprober-gnulinux-/vmlinuz-4.15.0-55-generic--xxxxx'</span> &#123;</span><br><span class="line">	menuentry <span class="string">'Ubuntu, with Linux 4.15.0-55-generic (recovery mode) (on /dev/sdc1)'</span> --class gnu-linux --class gnu --class os <span class="variable">$menuentry_id_option</span> <span class="string">'osprober-gnulinux-/vmlinuz-4.15.0-55-generic-root=UUID=xxx ro recovery nomodeset-xxx'</span> &#123;</span><br></pre></td></tr></table></figure>
+<p>显然要选自己编译的内核版本是要进高级选项的（Advanced options for Ubuntu），然后可以看到下面就有一堆版本，我所需要的 Linux 4.10.2（Ubuntu, with Linux 4.10.2）是第 7 个（看我在上面每个 menuentry 前标的序号），所以怎么改配置文件呢？</p>
+<ol start="2">
+<li>修改配置文件</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/default/grub</span><br><span class="line"></span><br><span class="line">GRUB_DEFAULT=0 =&gt; GRUB_DEFAULT=<span class="string">"1&gt;6"</span></span><br></pre></td></tr></table></figure>
+<p>这个修改也好懂，之前的 0 代表着在主菜单就直接选择第一项；而 1&gt;6 则代表着先选择第二项（Advanced options for Ubuntu），然后选择第 7 个内核。</p>
+<ol start="3">
+<li>更新 grub</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br></pre></td></tr></table></figure>
+<p>这一步很重要，我配置了好几次就是因为没有 update 所以重启一直都不对。。。</p>
+<ol start="4">
+<li>重启</li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://www.lostend.com/index.php/archives/23/" target="_blank" rel="noopener">https://www.lostend.com/index.php/archives/23/</a></li>
+<li><a href="https://support.huaweicloud.com/trouble-ecs/zh-cn_topic_0177415364.html" target="_blank" rel="noopener">https://support.huaweicloud.com/trouble-ecs/zh-cn_topic_0177415364.html</a></li>
+<li><a href="https://www.cnblogs.com/open-skill/p/8295234.html" target="_blank" rel="noopener">https://www.cnblogs.com/open-skill/p/8295234.html</a></li>
+</ul>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/12/05/0047.vscode-remote-server-find-code-definition/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -471,54 +538,6 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/07/12/0040.a-normal-day-in-wuhan/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2019/07/12/0040.a-normal-day-in-wuhan/" class="post-title-link" itemprop="url">平凡的一天</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2019-07-12 12:24:51" itemprop="dateCreated datePublished" datetime="2019-07-12T12:24:51+08:00">2019-07-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/190712/wx20190713-1135@鸦青.png" alt title="平凡的一天"></p>
-<p>2019/7/12，武汉，小雨，22/30°C</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2019/07/12/0040.a-normal-day-in-wuhan/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/blog/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/blog/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="extend next" rel="next" href="/blog/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -575,7 +594,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-count">82</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -586,7 +605,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">203</span>
+        <span class="site-state-item-count">204</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -609,7 +628,7 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
