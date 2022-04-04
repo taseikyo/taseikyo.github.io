@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。  *Photo by Tim Gouw on Unsplash">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:19:02.548Z">
+<meta property="og:updated_time" content="2022-04-04T12:14:29.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决 Ubuntu18.04 的 dpkg warning files list file for package &#39;XXXXXXX&#39; missing, assuming package has no files currently installed bug">
 <meta name="twitter:description" content="多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。  *Photo by Tim Gouw on Unsplash">
@@ -178,7 +178,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
         <p>多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。</p>
-<p><img data-src="/blog/images/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
+<p><img data-src="/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
 <p>*<em>Photo by Tim Gouw on Unsplash</em></p>
 <a id="more"></a>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道是谁动了服务器，导致环境不对了，gcc/g++ 使用报错，找不到头文件，以及每次使用 apt 都会输出标题的 warning，后来在粘贴到 txt 文档发现有多达 180 个 warning，真的服气，找了很多方案都没用，比如删除 <code>/var/lib/dpkg/info</code> 然后自动生成，可能对那个博主有用，但是对我无效，最后这个：<a href="https://www.pythonf.cn/read/105362" target="_blank" rel="noopener">Ubuntu 18.04中的Dpkg警告解决方案，简单而粗糙</a> 有用，稍微修改整理了下，于是有了这篇博客。</p>

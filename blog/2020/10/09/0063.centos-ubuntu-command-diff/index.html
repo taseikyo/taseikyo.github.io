@@ -18,19 +18,19 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="最近打开 Cmder 总是会有弹窗提示没有安装 7zip 或者 winRar，它默认取得路径是 %ProgramFiles%\7-Zip\7zg.exe，这个看到没有啊，弱智吧  怎么修复呢？ Win+Alt+P 打开设置，切到 General - Update，看下图：  很明显路径不对，由于用 scoop 装过 7zip，将路径改一下好了：&amp;quot;%SCOOP%/apps/7zip/cur">
-<meta name="keywords" content="scoop,cmder">
+  <meta name="description" content="因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，原文 是个图片，我将其转成表格了。  *图片来自 https://zhuanlan.zhihu.com/p/145812549">
+<meta name="keywords" content="command,linux,ubuntu,server,centos">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cmder 弹窗 7zip or Winrar not found Not installed">
-<meta property="og:url" content="https://taseikyo.github.io/2022/04/04/0080-cmder-7zip-winrar-not-found/index.html">
+<meta property="og:title" content="CentOS 和 Ubuntu 命令区别列表总结">
+<meta property="og:url" content="https://taseikyo.github.io/2020/10/09/0063.centos-ubuntu-command-diff/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="最近打开 Cmder 总是会有弹窗提示没有安装 7zip 或者 winRar，它默认取得路径是 %ProgramFiles%\7-Zip\7zg.exe，这个看到没有啊，弱智吧  怎么修复呢？ Win+Alt+P 打开设置，切到 General - Update，看下图：  很明显路径不对，由于用 scoop 装过 7zip，将路径改一下好了：&amp;quot;%SCOOP%/apps/7zip/cur">
+<meta property="og:description" content="因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，原文 是个图片，我将其转成表格了。  *图片来自 https://zhuanlan.zhihu.com/p/145812549">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:33:44.481Z">
+<meta property="og:updated_time" content="2022-04-04T12:03:28.227Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cmder 弹窗 7zip or Winrar not found Not installed">
-<meta name="twitter:description" content="最近打开 Cmder 总是会有弹窗提示没有安装 7zip 或者 winRar，它默认取得路径是 %ProgramFiles%\7-Zip\7zg.exe，这个看到没有啊，弱智吧  怎么修复呢？ Win+Alt+P 打开设置，切到 General - Update，看下图：  很明显路径不对，由于用 scoop 装过 7zip，将路径改一下好了：&amp;quot;%SCOOP%/apps/7zip/cur">
-<link rel="canonical" href="https://taseikyo.github.io/2022/04/04/0080-cmder-7zip-winrar-not-found/">
+<meta name="twitter:title" content="CentOS 和 Ubuntu 命令区别列表总结">
+<meta name="twitter:description" content="因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，原文 是个图片，我将其转成表格了。  *图片来自 https://zhuanlan.zhihu.com/p/145812549">
+<link rel="canonical" href="https://taseikyo.github.io/2020/10/09/0063.centos-ubuntu-command-diff/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
@@ -40,7 +40,7 @@
     lang   : 'en'
   };
 </script>
-  <title>Cmder 弹窗 7zip or Winrar not found Not installed | Tian's Daily Life</title>
+  <title>CentOS 和 Ubuntu 命令区别列表总结 | Tian's Daily Life</title>
   <noscript>
   <style>
   .use-motion .brand,
@@ -144,7 +144,7 @@
         <div class="content-wrap">
           <div class="content post posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2022/04/04/0080-cmder-7zip-winrar-not-found/">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/09/0063.centos-ubuntu-command-diff/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
       <meta itemprop="name" content="Lewis Tian">
@@ -155,7 +155,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Cmder 弹窗 7zip or Winrar not found Not installed
+          CentOS 和 Ubuntu 命令区别列表总结
         </h1>
         <div class="post-meta">
             <span class="post-meta-item">
@@ -163,7 +163,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2022-04-04 16:26:17" itemprop="dateCreated datePublished" datetime="2022-04-04T16:26:17+08:00">2022-04-04</time>
+              <time title="Created: 2020-10-09 09:33:03" itemprop="dateCreated datePublished" datetime="2020-10-09T09:33:03+08:00">2020-10-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -171,18 +171,119 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
                 </span>
             </span>
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p>最近打开 Cmder 总是会有弹窗提示没有安装 7zip 或者 winRar，它默认取得路径是 <code>%ProgramFiles%\7-Zip\7zg.exe</code>，这个看到没有啊，弱智吧</p>
-<p><img data-src="/blog/images/220404/20220404162921.jpg" alt title="报错弹窗"></p>
-<p>怎么修复呢？</p>
-<p><code>Win+Alt+P</code> 打开设置，切到 General - Update，看下图：</p>
-<p><img data-src="/blog/images/220404/20220404163223.jpg" alt title="修改位置"></p>
-<p>很明显路径不对，由于用 scoop 装过 7zip，将路径改一下好了：<code>&quot;%SCOOP%/apps/7zip/current/7zg.exe&quot; x -y &quot;%1&quot;</code></p>
+        <p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a href="https://blog.csdn.net/qq_34857250/article/details/54313804" target="_blank" rel="noopener">原文</a> 是个图片，我将其转成表格了。</p>
+<p><img data-src="/blog/images/2020/10/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
+<p>*<em>图片来自 <a href="https://zhuanlan.zhihu.com/p/145812549" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
+<a id="more"></a>
+<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">软件包后缀</td>
+<td><code>*.rpm</code></td>
+<td><code>*.deb</code></td>
+</tr>
+<tr>
+<td style="text-align:center">软件源配置文件</td>
+<td>/etc/yum.conf</td>
+<td>/etc/apt/sources.list</td>
+</tr>
+</tbody>
+</table>
+<h2 id="服务相关（启动、关闭、重启）"><a href="#服务相关（启动、关闭、重启）" class="headerlink" title="服务相关（启动、关闭、重启）"></a>服务相关（启动、关闭、重启）</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">启动服务</td>
+<td>service httpd start</td>
+<td>/etc/init.d/apache start</td>
+</tr>
+<tr>
+<td style="text-align:center">停止服务</td>
+<td>service httpd stop</td>
+<td>/etc/init.d/apache stop</td>
+</tr>
+<tr>
+<td style="text-align:center">重启服务</td>
+<td>service httpd restart</td>
+<td>/etc/init.d/apache restart</td>
+</tr>
+<tr>
+<td style="text-align:center">随系统启动自动运</td>
+<td>chkconfig httpd on</td>
+<td>update-rc.d apache</td>
+</tr>
+<tr>
+<td style="text-align:center">禁止启动自动运行</td>
+<td>chkconfig httpd off</td>
+<td>update-rc.d apache purge</td>
+</tr>
+</tbody>
+</table>
+<h2 id="系统及软件相关（安装、卸载、更新）"><a href="#系统及软件相关（安装、卸载、更新）" class="headerlink" title="系统及软件相关（安装、卸载、更新）"></a>系统及软件相关（安装、卸载、更新）</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th>RedHat（CentoS）</th>
+<th>Ubuntu（Debian）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">更新软件包列表</td>
+<td>每次运行 yum 时自动更新</td>
+<td>apt-get update</td>
+</tr>
+<tr>
+<td style="text-align:center">从软件仓库安装软件</td>
+<td>yum install package</td>
+<td>apt-get install package</td>
+</tr>
+<tr>
+<td style="text-align:center">安装已下载的软件包</td>
+<td>yum install pkg.rpm 或 rpm -ivh pkg.rpm</td>
+<td>dpkg -i pkg.deb</td>
+</tr>
+<tr>
+<td style="text-align:center">删除软件包</td>
+<td>yum -e package</td>
+<td>apt-get remove package</td>
+</tr>
+<tr>
+<td style="text-align:center">软件包升级测试</td>
+<td>yum check-update</td>
+<td>apt-get -s update 或 apt-get -s dist-update</td>
+</tr>
+<tr>
+<td style="text-align:center">升级软件包</td>
+<td>yum update 或 rpm-Uvh [args]</td>
+<td>apt-get upgrade</td>
+</tr>
+<tr>
+<td style="text-align:center">升级整个系统</td>
+<td>yum upgrade</td>
+<td>apt-get dist-upgrade</td>
+</tr>
+</tbody>
+</table>
     </div>
         <div class="reward-container">
   <div></div>
@@ -215,15 +316,21 @@
   </div>
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/scoop/" rel="tag"># scoop</a>
-              <a href="/blog/tags/cmder/" rel="tag"># cmder</a>
+              <a href="/blog/tags/command/" rel="tag"># command</a>
+              <a href="/blog/tags/linux/" rel="tag"># linux</a>
+              <a href="/blog/tags/ubuntu/" rel="tag"># ubuntu</a>
+              <a href="/blog/tags/server/" rel="tag"># server</a>
+              <a href="/blog/tags/centos/" rel="tag"># centos</a>
           </div>
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2021/03/24/0079.running-python-rtupdate-hooks-for-python3-5x/" rel="prev" title="running python rtupdate hooks for python3.5x">
-      <i class="fa fa-chevron-left"></i> running python rtupdate hooks for python3.5x
+    <a href="/blog/2020/10/07/0062.useful-bash-alias/" rel="prev" title="有用的 bash alias">
+      <i class="fa fa-chevron-left"></i> 有用的 bash alias
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blog/2020/10/13/0064.self-linux-config/" rel="next" title="Linux 个人使用配置">
+      Linux 个人使用配置 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
   </article>
@@ -267,6 +374,7 @@
       </ul>
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本信息"><span class="nav-number">1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务相关（启动、关闭、重启）"><span class="nav-number">2.</span> <span class="nav-text">服务相关（启动、关闭、重启）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统及软件相关（安装、卸载、更新）"><span class="nav-number">3.</span> <span class="nav-text">系统及软件相关（安装、卸载、更新）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">

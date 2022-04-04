@@ -176,7 +176,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <p>这里简单做一个个人向的 Linux 使用配置吧，无论是 Ubuntu 还是 CentOS，都可以使用这个配置来提升使用体验，以及工作效率。</p>
-<p><img data-src="/blog/images/arian-darvishi-wh-RPfR_3_M-unsplash.jpg" alt></p>
+<p><img data-src="/blog/images/banner/arian-darvishi-wh-RPfR_3_M-unsplash.jpg" alt></p>
 <p>*<em>Photo by Arian Darvishi on Unsplash</em></p>
           <!--noindex-->
             <div class="post-button">
@@ -191,7 +191,7 @@
       </footer>
   </article>
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/09/0063centos-ubuntu-command-diff/">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/09/0063.centos-ubuntu-command-diff/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
       <meta itemprop="name" content="Lewis Tian">
@@ -202,7 +202,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2020/10/09/0063centos-ubuntu-command-diff/" class="post-title-link" itemprop="url">CentOS 和 Ubuntu 命令区别列表总结</a>
+            <a href="/blog/2020/10/09/0063.centos-ubuntu-command-diff/" class="post-title-link" itemprop="url">CentOS 和 Ubuntu 命令区别列表总结</a>
         </h2>
         <div class="post-meta">
             <span class="post-meta-item">
@@ -225,11 +225,11 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a href="https://blog.csdn.net/qq_34857250/article/details/54313804" target="_blank" rel="noopener">原文</a> 是个图片，我将其转成表格了。</p>
-<p><img data-src="/blog/images/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
+<p><img data-src="/blog/images/2020/10/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
 <p>*<em>图片来自 <a href="https://zhuanlan.zhihu.com/p/145812549" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/2020/10/09/0063centos-ubuntu-command-diff/#more" rel="contents">
+              <a class="btn" href="/blog/2020/10/09/0063.centos-ubuntu-command-diff/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -273,7 +273,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
+          <p><img data-src="/blog/images/banner/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
 <p>*<em>Photo by Sai Kiran Anagani on Unsplash</em></p>
 <p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
@@ -326,7 +326,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <p>多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。</p>
-<p><img data-src="/blog/images/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
+<p><img data-src="/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
 <p>*<em>Photo by Tim Gouw on Unsplash</em></p>
           <!--noindex-->
             <div class="post-button">
