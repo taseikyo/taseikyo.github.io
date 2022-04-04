@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+  <meta name="description" content="Intel 有一个超过 100 页的文档，专门介绍 cpuid 这条指令，可见这条指令涉及内容的丰富。 记得去年的时候，曾经有个“英布之剑”问过我这条指令，当时并没有给出一个满意的回答，现在放假，想起来，把资料整理了一下。很久以前确实用过这条指令，其实指令本身并没有什么难的，关键是看你有没有耐心研读完繁琐的资料，当然还得对 CPU 有一定的了解，如果“英布之剑”看到这篇文章，而且仍然需要更详细的">
+<meta name="keywords" content="intel,cpuid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intel CPU 的 CPUID 指令（转载）">
+<meta property="og:url" content="https://taseikyo.github.io/2018/07/03/0012.intel-cpu-cpuid-instruction/index.html">
+<meta property="og:site_name" content="Tian&#39;s Daily Life">
+<meta property="og:description" content="Intel 有一个超过 100 页的文档，专门介绍 cpuid 这条指令，可见这条指令涉及内容的丰富。 记得去年的时候，曾经有个“英布之剑”问过我这条指令，当时并没有给出一个满意的回答，现在放假，想起来，把资料整理了一下。很久以前确实用过这条指令，其实指令本身并没有什么难的，关键是看你有没有耐心研读完繁琐的资料，当然还得对 CPU 有一定的了解，如果“英布之剑”看到这篇文章，而且仍然需要更详细的">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-04-04T08:19:02.531Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Intel CPU 的 CPUID 指令（转载）">
+<meta name="twitter:description" content="Intel 有一个超过 100 页的文档，专门介绍 cpuid 这条指令，可见这条指令涉及内容的丰富。 记得去年的时候，曾经有个“英布之剑”问过我这条指令，当时并没有给出一个满意的回答，现在放假，想起来，把资料整理了一下。很久以前确实用过这条指令，其实指令本身并没有什么难的，关键是看你有没有耐心研读完繁琐的资料，当然还得对 CPU 有一定的了解，如果“英布之剑”看到这篇文章，而且仍然需要更详细的">
+<link rel="canonical" href="https://taseikyo.github.io/2018/07/03/0012.intel-cpu-cpuid-instruction/">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+  <title>Intel CPU 的 CPUID 指令（转载） | Tian's Daily Life</title>
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+  <div class="site-meta">
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tian's Daily Life</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Love yourself; Love your like.</p>
+  </div>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+  </li>
+        <li class="menu-item menu-item-tags">
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+  </li>
+        <li class="menu-item menu-item-categories">
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+  </li>
+        <li class="menu-item menu-item-archives">
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+  </li>
+        <li class="menu-item menu-item-about">
+    <a href="/blog/../taseikyo/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    </header>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div class="content post posts-expand">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2018/07/03/0012.intel-cpu-cpuid-instruction/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Intel CPU 的 CPUID 指令（转载）
+        </h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2018-07-03 17:34:38" itemprop="dateCreated datePublished" datetime="2018-07-03T17:34:38+08:00">2018-07-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+        <p> Intel 有一个超过 100 页的文档，专门介绍 cpuid 这条指令，可见这条指令涉及内容的丰富。</p>
+<p>记得去年的时候，曾经有个“英布之剑”问过我这条指令，当时并没有给出一个满意的回答，现在放假，想起来，把资料整理了一下。很久以前确实用过这条指令，其实指令本身并没有什么难的，关键是看你有没有耐心研读完繁琐的资料，当然还得对 CPU 有一定的了解，如果“英布之剑”看到这篇文章，而且仍然需要更详细的资料，可以给我一个联系方式，或者相互之间可以交流一下。</p>
+<p>cpuid 就是一条读取 CPU 各种信息的一条指令，大概是从 80486 的某个版本开始就存在了。似乎是从 80386 开始，当 CPU 被 RESET 以后，CPU 会在 EDX 寄存器中返回一个 32bits 的 CPU 签名（Processor Identification Signature），但这时候 CPU 还没有 CPUID 这条指令，后来出现了这条指令后，软件无需以来 CPU 复位就可以读出这个 CPU 签名，同时还可以读出很多 CPU 的相关信息。</p>
+<p> CPUID 这条指令，除了用于识别 CPU（CPU 的型号、家族、类型等），还可以读出CPU支持的功能（比如是否支持MMX，是否支持 4MB 的页等等），内容的确是十分丰富。 CPUID 指令有两组功能，一组返回的是基本信息，另一组返回的是扩展信息，本文介绍基本信息部分，扩展信息部分下篇中介绍。本文所在程序或程序片段，均使用 MASM 6.11 编译连接，可以在 DOS（包括虚拟机的 DOS下）运行。<br><a id="more"></a></p>
+<h3 id="1、如何判断-CPU-是否支持-CPUID-指令"><a href="#1、如何判断-CPU-是否支持-CPUID-指令" class="headerlink" title="1、如何判断 CPU 是否支持 CPUID 指令"></a>1、如何判断 CPU 是否支持 CPUID 指令</h3><p>前面说过，大概是从 80486 开始才有的 cpuid 这个指令，是不是所有的80486家族CPU都有这个指令我也不是很清楚，但在 EFLAGS 中的 bit 21 可以识别 CPU 是否支持 CPUID 指令，如下图：</p>
+<div align="center"><br>    <img data-src="/blog/images/cpuid-1.jpg" alt="cpuid-1.jpg"><br></div><br>在 8086 和 8088CPU 中，FLAGS 只有 16 位长，在 80386CPU 中，bit 21 被保留未用，在支持 CPUID 指令的 CPU 中，这一位将为 1。<br><br>### 2、CPUID 指令的执行方法<br>把功能代码放在EAX寄存器中，执行 CPUID 指令即可。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov eax, 1</span><br><span class="line">cpuid</span><br></pre></td></tr></table></figure><br><br>前面说过 CPUID 指令分为两组，一组返回基本信息，一组返回扩展信息，当执行返回基本信息的CPUID指令时，EAX中功能代码的bit 31为0，当执行返回扩展信息的CPUID指令时，EAX中的功能代码的bit 31为1。那么不管是那组功能，如何知道EAX中的功能代码最大可以是多少呢？根据Intel的说明，可以用如下方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov eax, 0</span><br><span class="line">cpuid</span><br></pre></td></tr></table></figure><br><br>执行完CPUID指令后，EAX中返回的值就是返回基本信息时，功能代码的最大值，在执行CPUID指令要求返回基本信息时，EAX中的值必须小于或等于该值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov eax, 80000000h</span><br><span class="line">cpuid</span><br></pre></td></tr></table></figure><br><br>执行完CPUID指令后，EAX中返回的值就是返回扩展信息时，功能代码的最大值，在执行CPUID指令要求返回扩展信息时，EAX中的值必须小于或等于该值。<br><br>由于很多编译器都不能编译CPUID指令，所以了解CPUID指令的操作码是必要的，CPUID指令的操作码是：<code>0FA2h</code><br><br>### 3、返回基本信息的功能全貌<br>在实际介绍每一个功能之前，我们先通过一张图了解一下返回基本信息的功能全貌。<br><div align="center"><br>    <img data-src="/blog/images/cpuid-2.jpg" alt="cpuid-2.jpg"><br></div>
+<h3 id="4、EAX-0：获取CPU的Vendor-ID"><a href="#4、EAX-0：获取CPU的Vendor-ID" class="headerlink" title="4、EAX=0：获取CPU的Vendor ID"></a>4、EAX=0：获取CPU的Vendor ID</h3><p>Vendor ID这个东西，在以前介绍PCI的文章中应该介绍过，实际上就是制造商的标识，用下面的方法执行该功能：</p>
+<pre><code>mov eax, 0
+cpuid
+</code></pre><p>执行CPUID指令后，AX中返回的内容前面已经说过了，返回的Vendor ID固定为12个ASCII字符依次存放在EBX、EDX、ECX中，对于Intel的CPU，返回的字符串永远是：GenuineIntel。对应在三个寄存器中的值如下：</p>
+<pre><code>EBX=756E6547h，EDX=49656E69h，ECX=6C65746Eh
+</code></pre><p>大家可以参考图2。</p>
+<p>尽管本文是介绍 Intel 的 CPUID 指令，但下面还是尽我所知，列出其它厂家生产的 IA-32 架构CPU的 Vendor ID，希望能对需要这些资料的人有所帮助。</p>
+<ul>
+<li>AMDisbetter! —- 早期AMD K5芯片的工程样品芯片</li>
+<li>AuthenticAMD —- AMD</li>
+<li>CentourHauls —- Centour</li>
+<li>CyrixInstead —- Cyrix</li>
+<li>GenuineTMx86 或 TransmetaCPU —- Transmeta</li>
+<li>Geode by NSC —- National Semiconductor</li>
+<li>NexGenDriven —- NexGen</li>
+<li>SiS SiS SiS  —- SiS</li>
+<li>RiseRiseRise —- Rise</li>
+<li>UMC UMC UMC  —- UMC</li>
+<li>VIA VIA VIA  —- VIA</li>
+</ul>
+<h3 id="5、EAX-1：处理器签名（Processor-Signiture）和功能（Feature）位"><a href="#5、EAX-1：处理器签名（Processor-Signiture）和功能（Feature）位" class="headerlink" title="5、EAX=1：处理器签名（Processor Signiture）和功能（Feature）位"></a>5、EAX=1：处理器签名（Processor Signiture）和功能（Feature）位</h3><pre><code>mov eax, 1
+cpuid
+</code></pre><p>执行完成后，处理器签名放在EAX中，功能位及其它杂七杂八的内容分别放在EBX、ECX和EDX中。</p>
+<p>处理器签名（Processor Signiture）：<br>    返回在EAX中，定义如下：</p>
+<div align="center"><br>    <img data-src="/blog/images/cpuid-3.jpg" alt="cpuid-3.jpg"><br></div><br>图中的灰色区域表示没有定义。前面说过，当CPU复位时，会在EDX中返回处理器签名，从80486以后，这个签名和上面的定义完全一样，只是放在不同的寄存器中而已。前面还提到过，80386在复位时也返回处理器签名，但80386返回的签名格式是和上面不同的，后面可能会提到。<br><br>通过处理器签名，可以确定CPU的具体型号，以下是部分Intel CPU的处理器签名数据（资料来自Intel）：<br><div align="center"><br>    <img data-src="/blog/images/cpuid-4.jpg" alt="cpuid-4.jpg"><br></div><br>前面说过，80386尽管没有CPUID指令，但在复位时也是可以返回处理器签名的，下面是80386返回的处理器签名的格式：<br><div align="center"><br>    <img data-src="/blog/images/cpuid-5.jpg" alt="cpuid-5.jpg"><br></div><br>下面是80386处理器签名的识别方法（资料来自Intel）：<br><div align="center"><br>    <img data-src="/blog/images/cpuid-6.jpg" alt="cpuid-6.jpg"><br></div><br>- 关于Stepping的说明：<br>Intel和AMD都有Stepping的概念，用来标识一款同样规模的微处理器从一开始到你用的这款处理器经历的设计过程，用一个字母和一个数字表示。一般来说，一款同样规模的微处理器的第一个版本是A0，如果改进了设计，则可以通过改变字母或者数字进行标识，如果仅仅改变数字（比如改成A3），说明进行了一些辅助的改进，如果字母和数字都改变，说明改动较大，Stepping可以使用户可以识别微处理器的版本。下面是一个Stepping的例子（不知道为什么穿上来后图这么小）。<br><div align="center"><br>    <img data-src="/blog/images/cpuid-7.jpg" alt="cpuid-7.jpg"><br></div><br>- 当处理器签名一样时的处理<br>有时候，从处理器签名上仍然不能识别CPU，比如根据Intel提供的资料，Pentium II, Model 5、Pentium II Xeon, Model 5和Celeron®, Model 5的处理器签名完全一样，要区别他们只能通过检查他们的高速缓存（Cache）的大小，后面将介绍使用CPUID指令获得CPU高速缓存信息的方法，如果没有高速缓存，则是Celeron®处理器；如果L2高速缓存为1MB或者2MB，则应该是Pentium II Xeon处理器，其它情况则应该是Pentium II处理器或者是只有512KB高速缓存的Pentium II Xeon处理器。<br>有些情况下，如果从处理器签名上不能区分CPU，也可以使用Brand ID(在EBX的bit7:0返回）来区分CPU，比如Pentium III, Model 8、Pentium III Xeon, Model 8和Celeron®, Model 8三种处理器的处理器签名也是一样的，但它们的Brand ID是不同的。<br>- 关于处理器类型的定义<br>在处理器签名中的bit12:13返回的是处理器类型，其定义如下：<br><br>Value    Descriptor<br>—<br> 00      以前的OEM处理器<br> 01      OverDrive®处理器<br> 10      多处理器（指可用于多处理器系统）<br>- 功能标志（Feature Flag）<br>在EDX和ECX中返回的功能标志表明着该CPU都支持那些功能，EDX定义如下（资料来源与Intel）：<br><br>bit  Name  Description<br>—<br>00  FPU   FPU On-chip<br>01  VME   Virtual Mode Extended<br>02  DE    Debugging Extension<br>03  PSE   Page Size Extension<br>04  TSC   Time Stamp Counter<br>05  MSR   Model Specific Registers<br>06  PAE   Physical Address Extension<br>07  MCE   Machine-Check Exception<br>08  CX8   CMPXCHG8 Instruction<br>09  APIC  On-chip APIC Hardware<br>10        Reserved<br>11  SEP   Fast System Call<br>12  MTRR  Memory Type Range Registers<br>13  PGE   Page Global Enable<br>14  MCA   Machine-Check Architecture<br>15  CMOV  Conditional Move Instruction<br>16  PAT   Page Attribute Table<br>17  PSE-36 36-bit Page Size Extension<br>18  PSN   Processor serial number is present and enabled<br>19  CLFSH CLFLUSH Instruction<br>20        Reserved<br>21  DS    Debug Store<br>22  ACPI  Thermal Monitor and Software Controlled Clock Facilities<br>23  MMX   MMX technology<br>24  FXSR  FXSAVE and FXSTOR Instructions<br>25  SSE   Streaming SIMD Extensions<br>26  SSE2  Streaming SIMD Extensions 2<br>27  SS    Self-Snoop<br>28  HTT   Multi-Threading<br>29  TM    Thermal Monitor<br>30  IA64  IA64 Capabilities<br>31  PBE   Pending Break Enable<br><br>ECX定义如下（资料来自Intel）：<br><br>bit   Name     Description<br>—<br>00   SSE3     Streaming SIMD Extensions 3<br>01            Reserved<br>02   DTES64   64-Bit Debug Store<br>03   MONITOR  MONITOR/MWAIT<br>04   DS-CPL   CPL Qualified Debug Store<br>05   VMX      Virtual Machine Extensions<br>06   SMX      Safer Mode Extensions<br>07   EST      Enhanced Intel SpeedStep® Technology<br>08   TM2      Thermal Monitor 2<br>09   SSSE3    Supplemental Streaming SIMD Extensions 3<br>10   CNXT-ID  L1 Context ID<br>12:11           Reserved<br>13   CX16     CMPXCHG16B<br>14   xTPR     xTPR Update Control<br>15   PDCM     Perfmon and Debug Capability<br>17:16           Reserved<br>18   DCA      Direct Cache Access<br>19   SSE4.1   Streaming SIMD Extensions 4.1<br>20   SSE4.2   Streaming SIMD Extensions 4.2<br>21   x2APIC   Extended xAPIC Support<br>22   MOVBE    MOVBE Instruction<br>23   POPCNT   POPCNT Instruction<br>25:24           Reserved<br>26   XSAVE    XSAVE/XSTOR States<br>27   OSXSAVE<br>31:28           Reserved<br><br>下面是在DEBUG中当EAX=0时执行CPUID指令时的情况：<br><div align="center"><br>    <img data-src="/blog/images/cpuid-8.jpg" alt="cpuid-8.jpg"><br></div><br>下面是在DEBUG中当EAX=1时执行CPUID指令时的情况：<br><div align="center"><br>    <img data-src="/blog/images/cpuid-9.jpg" alt="cpuid-9.jpg"><br></div>
+<h3 id="6、EAX-2：高速缓存描述符（Cache-Descriptor）"><a href="#6、EAX-2：高速缓存描述符（Cache-Descriptor）" class="headerlink" title="6、EAX=2：高速缓存描述符（Cache Descriptor）"></a>6、EAX=2：高速缓存描述符（Cache Descriptor）</h3><pre><code>mov eax, 2
+cpuid
+</code></pre><p>执行完CPUID指令后，高速缓存描述符和TLB(Translation Lookable Buffer)特性将在EAX、EBX、ECX和EDX中返回，每个寄存器中的4个字节分别表示4个描述符，描述符中不同的值表示不同的含义（后面有定义），其中EAX中的最低8位（AL）的值表示要得到完整的高速缓存的信息，需要执行EAX=2的CPUID指令的次数（一般都为1，在我这里的数台机器里，还没有为2的），同时，寄存器的最高位（bit 31）为0，表示该寄存器中的描述符是有效的，下面是描述符值的定义（资料来源与Intel）：</p>
+<h2 id="Value-Cache-or-TLB-Descriptor-Description"><a href="#Value-Cache-or-TLB-Descriptor-Description" class="headerlink" title="Value   Cache or TLB Descriptor Description"></a>Value   Cache or TLB Descriptor Description</h2><p>00h    Null<br>01h    Instruction TLB: 4-KB Pages, 4-way set associative, 32 entries<br>02h    Instruction TLB: 4-MB Pages, fully associative, 2 entries<br>03h    Data TLB: 4-KB Pages, 4-way set associative, 64 entries<br>04h    Data TLB: 4-MB Pages, 4-way set associative, 8 entries<br>05h    Data TLB: 4-MB Pages, 4-way set associative, 32 entries<br>06h   1st-level instruction cache: 8-KB, 4-way set associative, 32-byte line size<br>08h   1st-level instruction cache: 16-KB, 4-way set associative, 32-byte line size<br>09h   1st-level Instruction Cache: 32-KB, 4-way set associative, 64-byte line size<br>0Ah   1st-level data cache: 8-KB, 2-way set associative, 32-byte line size<br>0Ch   1st-level data cache: 16-KB, 4-way set associative, 32-byte line size<br>0Dh   1st-level Data Cache: 16-KB, 4-way set associative, 64-byte line size, ECC<br>21h   256-KB L2 (MLC), 8-way set associative, 64-byte line size<br>22h   3rd-level cache: 512-KB, 4-way set associative, sectored cache, 64-byte line size<br>23h   3rd-level cache: 1-MB, 8-way set associative, sectored cache, 64-byte line size<br>25h   3rd-level cache: 2-MB, 8-way set associative, sectored cache, 64-byte line size<br>29h   3rd-level cache: 4-MB, 8-way set associative, sectored cache, 64-byte line size<br>2Ch   1st-level data cache: 32-KB, 8-way set associative, 64-byte line size<br>30h   1st-level instruction cache: 32-KB, 8-way set associative, 64-byte line size<br>39h   2nd-level cache: 128-KB, 4-way set associative, sectored cache, 64-byte line size<br>3Ah   2nd-level cache: 192-KB, 6-way set associative, sectored cache, 64-byte line size<br>3Bh   2nd-level cache: 128-KB, 2-way set associative, sectored cache, 64-byte line size<br>3Ch   2nd-level cache: 256-KB, 4-way set associative, sectored cache, 64-byte line size<br>3Dh   2nd-level cache: 384-KB, 6-way set associative, sectored cache, 64-byte line size<br>3Eh   2nd-level cache: 512-KB, 4-way set associative, sectored cache, 64-byte line size<br>40h   No 2nd-level cache or, if processor contains a valid 2nd-level cache, no 3rd-level cache<br>41h   2nd-level cache: 128-KB, 4-way set associative, 32-byte line size<br>42h   2nd-level cache: 256-KB, 4-way set associative, 32-byte line size<br>43h   2nd-level cache: 512-KB, 4-way set associative, 32-byte line size<br>44h   2nd-level cache: 1-MB, 4-way set associative, 32-byte line size<br>45h   2nd-level cache: 2-MB, 4-way set associative, 32-byte line size<br>46h   3rd-level cache: 4-MB, 4-way set associative, 64-byte line size<br>47h   3rd-level cache: 8-MB, 8-way set associative, 64-byte line size<br>48h   2nd-level cache: 3-MB, 12-way set associative, 64-byte line size, unified on-die<br>49h   3rd-level cache: 4-MB, 16-way set associative, 64-byte line size(Intel Xeon<br>   processor MP, Family 0Fh, Model 06h) 2nd-level cache: 4-MB, 16-way set associative,<br>   64-byte line size<br>4Ah   3rd-level cache: 6-MB, 12-way set associative, 64-byte line size<br>4Bh   3rd-level cache: 8-MB, 16-way set associative, 64-byte line size<br>4Ch   3rd-level cache: 12-MB, 12-way set associative, 64-byte line size<br>4Dh   3rd-level cache: 16-MB, 16-way set associative, 64-byte line size<br>4Eh   2nd-level cache: 6-MB, 24-way set associative, 64-byte line size<br>50h   Instruction TLB: 4-KB, 2-MB or 4-MB pages, fully associative, 64 entries<br>51h   Instruction TLB: 4-KB, 2-MB or 4-MB pages, fully associative, 128 entries<br>52h   Instruction TLB: 4-KB, 2-MB or 4-MB pages, fully associative, 256 entries<br>55h   Instruction TLB: 2-MB or 4-MB pages, fully associative, 7 entries<br>56h   L1 Data TLB: 4-MB pages, 4-way set associative, 16 entries<br>57h   L1 Data TLB: 4-KB pages, 4-way set associative, 16 entries<br>5Ah   Data TLB0: 2-MB or 4-MB pages, 4-way associative, 32 entries<br>5Bh   Data TLB: 4-KB or 4-MB pages, fully associative, 64 entries<br>5Ch   Data TLB: 4-KB or 4-MB pages, fully associative, 128 entries<br>5Dh   Data TLB: 4-KB or 4-MB pages, fully associative, 256 entries<br>60h   1st-level data cache: 16-KB, 8-way set associative, sectored cache, 64-byte line size<br>66h   1st-level data cache: 8-KB, 4-way set associative, sectored cache, 64-byte line size<br>67h   1st-level data cache: 16-KB, 4-way set associative, sectored cache, 64-byte line size<br>68h   1st-level data cache: 32-KB, 4 way set associative, sectored cache, 64-byte line size<br>70h   Trace cache: 12K-uops, 8-way set associative<br>71h   Trace cache: 16K-uops, 8-way set associative<br>72h   Trace cache: 32K-uops, 8-way set associative<br>73h   Trace cache: 64K-uops, 8-way set associative<br>78h   2nd-level cache: 1-MB, 4-way set associative, 64-byte line size<br>79h   2nd-level cache: 128-KB, 8-way set associative, sectored cache, 64-byte line size<br>7Ah   2nd-level cache: 256-KB, 8-way set associative, sectored cache, 64-byte line size<br>7Bh   2nd-level cache: 512-KB, 8-way set associative, sectored cache, 64-byte line size<br>7Ch   2nd-level cache: 1-MB, 8-way set associative, sectored cache, 64-byte line size<br>7Dh   2nd-level cache: 2-MB, 8-way set associative, 64-byte line size<br>7Fh   2nd-level cache: 512-KB, 2-way set associative, 64-byte line size<br>82h   2nd-level cache: 256-KB, 8-way set associative, 32-byte line size<br>83h   2nd-level cache: 512-KB, 8-way set associative, 32-byte line size<br>84h   2nd-level cache: 1-MB, 8-way set associative, 32-byte line size<br>85h   2nd-level cache: 2-MB, 8-way set associative, 32-byte line size<br>86h   2nd-level cache: 512-KB, 4-way set associative, 64-byte line size<br>87h   2nd-level cache: 1-MB, 8-way set associative, 64-byte line size<br>B0h   Instruction TLB: 4-KB Pages, 4-way set associative, 128 entries<br>B1h   Instruction TLB: 2-MB pages, 4-way, 8 entries or 4M pages, 4-way, 4 entries<br>B2h   Instruction TLB: 4-KB pages, 4-way set associative, 64 entries<br>B3h   Data TLB: 4-KB Pages, 4-way set associative, 128 entries<br>B4h   Data TLB: 4-KB Pages, 4-way set associative, 256 entries<br>CAh   Shared 2nd-level TLB: 4 KB pages, 4-way set associative, 512 entries<br>D0h   512KB L3 Cache, 4-way set associative, 64-byte line size<br>D1h   1-MB L3 Cache, 4-way set associative, 64-byte line size<br>D2h   2-MB L3 Cache, 4-way set associative, 64-byte line size<br>D6h   1-MB L3 Cache, 8-way set associative, 64-byte line size<br>D7h   2-MB L3 Cache, 8-way set associative, 64-byte line size<br>D8h   4-MB L3 Cache, 8-way set associative, 64-byte line size<br>DCh   2-MB L3 Cache, 12-way set associative, 64-byte line size<br>DDh   4-MB L3 Cache, 12-way set associative, 64-byte line size<br>DEh   8-MB L3 Cache, 12-way set associative, 64-byte line size<br>E2h   2-MB L3 Cache, 16-way set associative, 64-byte line size<br>E3h   4-MB L3 Cache, 16-way set associative, 64-byte line size<br>E4h   8-MB L3 Cache, 16-way set associative, 64-byte line size<br>F0h   64-byte Prefetching<br>F1h   128-byte Prefetching</p>
+<p>举例来说，在我的机器上执行记过如下：</p>
+<p><div align="center"><br>    <img data-src="/blog/images/cpuid-10.jpg" alt="cpuid-10.jpg"><br></div><br>EAX、EBX、ECX和EDX的bit 31均为0，说明其中的描述符均有效，EAX中的低8位（AL）为1，说明执行一次即可，下面是描述符含义：<br>05h：Data TLB: 4-MB Pages, 4-way set associative, 32 entries<br>B0h：Instruction TLB: 4-KB Pages, 4-way set associative, 128 entries<br>B1h：Instruction TLB: 2-MB pages, 4-way, 8 entries or 4M pages, 4-way, 4 entries</p>
+<p>56h：L1 Data TLB: 4-MB pages, 4-way set associative, 16 entries<br>57h：L1 Data TLB: 4-KB pages, 4-way set associative, 16 entries<br>F0h：64-byte Prefetching</p>
+<p>2Ch：1st-level data cache: 32-KB, 8-way set associative, 64-byte line size<br>B4h：Data TLB: 4-KB Pages, 4-way set associative, 256 entries<br>30h：1st-level instruction cache: 32-KB, 8-way set associative, 64-byte line size<br>7Dh：2nd-level cache: 2-MB, 8-way set associative, 64-byte line size</p>
+<h3 id="7、EAX-3：处理器序列号"><a href="#7、EAX-3：处理器序列号" class="headerlink" title="7、EAX=3：处理器序列号"></a>7、EAX=3：处理器序列号</h3><pre><code>mov eax,3
+cpuid
+</code></pre><p>只有Pentium III提供该功能，486以后的CPU就不再提供该功能，据说是出于隐私的原因。查看你的处理器是否支持处理器序列号功能，可以执行EAX=1的CPUID指令，然后查看EDX的PSN功能(bit 18)，如果为1，说明你的处理器可以返回序列号，否则不支持序列号功能或者是序列号功能被关闭了。</p>
+<p>处理器序列号一共96位，最高32位就是处理器签名，通过执行EAX=1的CPUID指令获得，其余的64位在执行EAX=3的CPUID指令后，中间32位在EDX中，最低32位在ECX中。</p>
+<p>顺便提一句，AMD所有的CPU都没有提供过处理器序列号的功能。</p>
+<p>CPUID指令的基本信息，其实后面还有好几个，不过我在我这里的机器（大概有7、8台吧），好像都不支持，大多数只支持EAX=0、1、2三个，所以后面的就不介绍了。</p>
+<h3 id="8、EAX-80000001h：最大扩展功能号"><a href="#8、EAX-80000001h：最大扩展功能号" class="headerlink" title="8、EAX=80000001h：最大扩展功能号"></a>8、EAX=80000001h：最大扩展功能号</h3><pre><code>mov eax, 80000001h
+cpuid
+</code></pre><p>该功能除了能够向（一）中介绍的那样返回CPU支持的最大扩展功能号外，并没有其它作用，EBX、ECX、EDX都不返回有意义的信息。</p>
+<h3 id="9、EAX-80000002h：返回CPU支持的扩展功能"><a href="#9、EAX-80000002h：返回CPU支持的扩展功能" class="headerlink" title="9、EAX=80000002h：返回CPU支持的扩展功能"></a>9、EAX=80000002h：返回CPU支持的扩展功能</h3><pre><code>mov eax, 80000002h
+cpuid
+</code></pre><p>执行CPUID指令后，扩展功能标志在EDX和ECX中返回，EDX中的定义如下：</p>
+<h2 id="Bit-Name-Description"><a href="#Bit-Name-Description" class="headerlink" title="Bit    Name      Description"></a>Bit    Name      Description</h2><p>10:00             Reserved<br>  11    SYSCALL   SYSCALL/SYSRET<br>19:12             Reserved<br>  20    XD        Bit Execution Disable Bit<br>28:21             Reserved<br>  29    Intel® 64 Intel® 64 Instruction Set Architecture<br>31:30             Reserved</p>
+<p>返回在ECX中的位定义：</p>
+<h2 id="Bit-Name-Description-1"><a href="#Bit-Name-Description-1" class="headerlink" title="Bit    Name      Description"></a>Bit    Name      Description</h2><p>0     LAHF      LAHF / SAHF<br>31:01             Reserved</p>
+<h3 id="10、EAX-80000002h、80000003h、80000004h：返回处理器名称-商标字符串"><a href="#10、EAX-80000002h、80000003h、80000004h：返回处理器名称-商标字符串" class="headerlink" title="10、EAX=80000002h、80000003h、80000004h：返回处理器名称/商标字符串"></a>10、EAX=80000002h、80000003h、80000004h：返回处理器名称/商标字符串</h3><pre><code>mov eax, 80000002h
+cpuid
+......
+mov eax, 80000003h
+cpuid
+......
+mov eax, 80000004h
+cpuid
+</code></pre><p>每次调用CPUID分别在EAX、EBX、ECX、EDX中返回16个ASCII字符，处理器名称/商标字串最多48个字符，前导字符为空格，结束字符为NULL，在寄存器中的排列顺序为little-endian（即低字符在前），下面程序可以在DOS下显示处理器名称/商标字串(使用MASM 6编译)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">                .model tiny</span><br><span class="line">                .386</span><br><span class="line">cseg            segment para public &apos;code&apos;</span><br><span class="line">                org     100h</span><br><span class="line">                assume  cs:cseg, ds:cseg, es:cseg</span><br><span class="line">cpuid           macro</span><br><span class="line">                db      0fh</span><br><span class="line">                db      0a2h</span><br><span class="line">endm</span><br><span class="line">begin:</span><br><span class="line">                mov     eax, 80000000h</span><br><span class="line">                cpuid</span><br><span class="line">                cmp     eax, 80000004h</span><br><span class="line">                jb      not_supported</span><br><span class="line">                mov     di, offset CPU_name</span><br><span class="line">                mov     eax, 80000002h</span><br><span class="line">                cpuid</span><br><span class="line">                call    save_string</span><br><span class="line">                mov     eax, 80000003h</span><br><span class="line">                cpuid</span><br><span class="line">                call    save_string</span><br><span class="line">                mov     eax, 80000004h</span><br><span class="line">                cpuid</span><br><span class="line">                call    save_string</span><br><span class="line">                mov     dx, offset crlf</span><br><span class="line">                mov     ah, 9</span><br><span class="line">                int     21h</span><br><span class="line">                cld</span><br><span class="line">                mov     si, offset CPU_name</span><br><span class="line">spaces:</span><br><span class="line">                lodsb</span><br><span class="line">                cmp     al, &apos; &apos;</span><br><span class="line">                jz      spaces</span><br><span class="line">                cmp     al, 0</span><br><span class="line">                jz      done</span><br><span class="line">disp_char:</span><br><span class="line">                mov     dl, al</span><br><span class="line">                mov     ah, 2</span><br><span class="line">                int     21h</span><br><span class="line">                lodsb</span><br><span class="line">                cmp     al, 0</span><br><span class="line">                jnz     disp_char</span><br><span class="line">done:</span><br><span class="line">                mov     ax, 4c00h</span><br><span class="line">                int     21h</span><br><span class="line">not_supported:</span><br><span class="line">                jmp     done</span><br><span class="line">save_string:</span><br><span class="line">                mov     dword ptr [di], eax</span><br><span class="line">                mov     dword ptr [di + 4], ebx</span><br><span class="line">                mov     dword ptr [di + 8], ecx</span><br><span class="line">                mov     dword ptr [di + 12], edx</span><br><span class="line">                add     di, 16</span><br><span class="line">                ret</span><br><span class="line">crlf            db      0dh, 0ah, &apos;$&apos;</span><br><span class="line">CPU_name        db      50 dup(0)</span><br><span class="line">cseg            ends</span><br><span class="line">                end     begin</span><br></pre></td></tr></table></figure></p>
+<h3 id="11、EAX-80000005h：备用"><a href="#11、EAX-80000005h：备用" class="headerlink" title="11、EAX=80000005h：备用"></a>11、EAX=80000005h：备用</h3><h3 id="12、EAX-80000006h：扩展L2高速缓存功能"><a href="#12、EAX-80000006h：扩展L2高速缓存功能" class="headerlink" title="12、EAX=80000006h：扩展L2高速缓存功能"></a>12、EAX=80000006h：扩展L2高速缓存功能</h3><pre><code>mov eax, 80000006h
+cpuid
+</code></pre><p>执行完CPUID指令后，相应信息在ECX中返回，以下是ECX中返回信息的定义：</p>
+<h2 id="Bits-Description"><a href="#Bits-Description" class="headerlink" title="Bits    Description"></a>Bits    Description</h2><p>31:16    L2 Cache size described in 1024-byte units.<br>15:12    L2 Cache Associativity Encodings<br>           00h Disabled<br>           01h Direct mapped<br>           02h 2-Way<br>           04h 4-Way<br>           06h 8-Way<br>           08h 16-Way<br>           0Fh Fully associative<br>11:8     Reserved<br> 7:0     L2 Cache Line Size in bytes.</p>
+<h3 id="13、EAX-80000007h：电源管理"><a href="#13、EAX-80000007h：电源管理" class="headerlink" title="13、EAX=80000007h：电源管理"></a>13、EAX=80000007h：电源管理</h3><pre><code>mov eax, 80000007h
+cpuid
+</code></pre><p>执行CPUID指令后，是否支持电源管理功能在EDX的bit8中返回，其余位无意义。</p>
+<h3 id="14、EAX-80000008h：虚拟地址和物理地址大小"><a href="#14、EAX-80000008h：虚拟地址和物理地址大小" class="headerlink" title="14、EAX=80000008h：虚拟地址和物理地址大小"></a>14、EAX=80000008h：虚拟地址和物理地址大小</h3><pre><code>mov eax, 80000008h
+cpuid
+</code></pre><p>执行CPUID指令后，物理地址的大小在EAX的bit[7:0]返回，虚拟地址的大小在EAX的bit[15:8]返回，返回的内容为虚拟（物理）地址的位数。</p>
+<p>原文地址：<a href="https://blog.csdn.net/zhoujiaxq/article/details/24368879" target="_blank" rel="noopener">https://blog.csdn.net/zhoujiaxq/article/details/24368879</a></p>
+    </div>
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      <div style="display: inline-block;">
+        <img src="/blog/images/wechatpay.jpg" alt="Lewis Tian WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      <div style="display: inline-block;">
+        <img src="/blog/images/alipay.jpg" alt="Lewis Tian Alipay">
+        <p>Alipay</p>
+      </div>
+  </div>
+</div>
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+    <div class="social-list">
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/blog/images/wechat-qcode.jpg">
+            <span class="icon">
+              <i class="fa fa-wechat"></i>
+            </span>
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/intel/" rel="tag"># intel</a>
+              <a href="/blog/tags/cpuid/" rel="tag"># cpuid</a>
+          </div>
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2018/05/03/0011.omnetpp-ini-open-error/" rel="prev" title="solve omnetpp run error">
+      <i class="fa fa-chevron-left"></i> solve omnetpp run error
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2018/07/11/0013.windows-right-click-slow/" rel="next" title="win10 桌面点右键很慢才出菜单">
+      win10 桌面点右键很慢才出菜单 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+  </article>
+          </div>
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+        </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、如何判断-CPU-是否支持-CPUID-指令"><span class="nav-number">1.</span> <span class="nav-text">1、如何判断 CPU 是否支持 CPUID 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、EAX-0：获取CPU的Vendor-ID"><span class="nav-number">2.</span> <span class="nav-text">4、EAX=0：获取CPU的Vendor ID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、EAX-1：处理器签名（Processor-Signiture）和功能（Feature）位"><span class="nav-number">3.</span> <span class="nav-text">5、EAX=1：处理器签名（Processor Signiture）和功能（Feature）位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、EAX-2：高速缓存描述符（Cache-Descriptor）"><span class="nav-number">4.</span> <span class="nav-text">6、EAX=2：高速缓存描述符（Cache Descriptor）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Value-Cache-or-TLB-Descriptor-Description"><span class="nav-number"></span> <span class="nav-text">Value   Cache or TLB Descriptor Description</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7、EAX-3：处理器序列号"><span class="nav-number">1.</span> <span class="nav-text">7、EAX=3：处理器序列号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、EAX-80000001h：最大扩展功能号"><span class="nav-number">2.</span> <span class="nav-text">8、EAX=80000001h：最大扩展功能号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、EAX-80000002h：返回CPU支持的扩展功能"><span class="nav-number">3.</span> <span class="nav-text">9、EAX=80000002h：返回CPU支持的扩展功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bit-Name-Description"><span class="nav-number"></span> <span class="nav-text">Bit    Name      Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bit-Name-Description-1"><span class="nav-number"></span> <span class="nav-text">Bit    Name      Description</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10、EAX-80000002h、80000003h、80000004h：返回处理器名称-商标字符串"><span class="nav-number">1.</span> <span class="nav-text">10、EAX=80000002h、80000003h、80000004h：返回处理器名称/商标字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、EAX-80000005h：备用"><span class="nav-number">2.</span> <span class="nav-text">11、EAX=80000005h：备用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、EAX-80000006h：扩展L2高速缓存功能"><span class="nav-number">3.</span> <span class="nav-text">12、EAX=80000006h：扩展L2高速缓存功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bits-Description"><span class="nav-number"></span> <span class="nav-text">Bits    Description</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#13、EAX-80000007h：电源管理"><span class="nav-number">1.</span> <span class="nav-text">13、EAX=80000007h：电源管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、EAX-80000008h：虚拟地址和物理地址大小"><span class="nav-number">2.</span> <span class="nav-text">14、EAX=80000008h：虚拟地址和物理地址大小</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lewis Tian"
+      src="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+  <p class="site-author-name" itemprop="name">Lewis Tian</p>
+  <div class="site-description" itemprop="description">There is no destination for pursuit of knowledge in the finite lifetime.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+        <span class="site-state-item-count">204</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+  </div>
+      </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+      </div>
+    </footer>
+  </div>
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/blog/js/next-boot.js"></script>
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <script src="/blog/js/local-search.js"></script>
+  <script type="text/javascript" src="/blog/js/click-animation.js"></script>
+  <script type="text/javascript" src="/blog/js/one.js"></script> 
+  </style>
+<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>

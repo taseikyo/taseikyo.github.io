@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+  <meta name="description" content="1.单独运行 SPEC CPU Int Float 测试程序 参考 官方文档  以 bzip2 为例说明  编译首先进入 SPEC 的安装目录（下面即cpu2006） 12345$ cd /cpu2006/$ . ./shrc$ cd config$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg$ runspec --config=mytest.cfg">
+<meta name="keywords" content="spec,spec-cpu2006,command,benchmark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="提取 SPEC CPU2006 的执行命令">
+<meta property="og:url" content="https://taseikyo.github.io/2018/03/22/0009.spec-run-cmd/index.html">
+<meta property="og:site_name" content="Tian&#39;s Daily Life">
+<meta property="og:description" content="1.单独运行 SPEC CPU Int Float 测试程序 参考 官方文档  以 bzip2 为例说明  编译首先进入 SPEC 的安装目录（下面即cpu2006） 12345$ cd /cpu2006/$ . ./shrc$ cd config$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg$ runspec --config=mytest.cfg">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-04-04T08:19:02.530Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="提取 SPEC CPU2006 的执行命令">
+<meta name="twitter:description" content="1.单独运行 SPEC CPU Int Float 测试程序 参考 官方文档  以 bzip2 为例说明  编译首先进入 SPEC 的安装目录（下面即cpu2006） 12345$ cd /cpu2006/$ . ./shrc$ cd config$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg$ runspec --config=mytest.cfg">
+<link rel="canonical" href="https://taseikyo.github.io/2018/03/22/0009.spec-run-cmd/">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+  <title>提取 SPEC CPU2006 的执行命令 | Tian's Daily Life</title>
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+  <div class="site-meta">
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Tian's Daily Life</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Love yourself; Love your like.</p>
+  </div>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+  </li>
+        <li class="menu-item menu-item-tags">
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+  </li>
+        <li class="menu-item menu-item-categories">
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+  </li>
+        <li class="menu-item menu-item-archives">
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+  </li>
+        <li class="menu-item menu-item-about">
+    <a href="/blog/../taseikyo/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    </header>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div class="content post posts-expand">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2018/03/22/0009.spec-run-cmd/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          提取 SPEC CPU2006 的执行命令
+        </h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2018-03-22 21:26:37" itemprop="dateCreated datePublished" datetime="2018-03-22T21:26:37+08:00">2018-03-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="1-单独运行-SPEC-CPU-Int-Float-测试程序"><a href="#1-单独运行-SPEC-CPU-Int-Float-测试程序" class="headerlink" title="1.单独运行 SPEC CPU Int Float 测试程序"></a>1.单独运行 SPEC CPU Int Float 测试程序</h3><ul>
+<li>参考 <a href="http://www.spec.org/cpu2006/Docs/install-guide-unix.html#exstep6" target="_blank" rel="noopener">官方文档</a></li>
+</ul>
+<p>以 bzip2 为例说明</p>
+<ul>
+<li><p>编译<br>首先进入 SPEC 的安装目录（下面即cpu2006）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd /cpu2006/</span><br><span class="line">$ . ./shrc</span><br><span class="line">$ cd config</span><br><span class="line">$ cp Example-linux64-amd64-gcc43.cfg mytest.cfg</span><br><span class="line">$ runspec --config=mytest.cfg --action=build --tune=base bzip2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1 bzip2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>size 参数共有三个，分别是 test 、train 、ref  </p>
+<a id="more"></a>
+<h3 id="2-提取-SPEC-CPU-Int-Float运行命令"><a href="#2-提取-SPEC-CPU-Int-Float运行命令" class="headerlink" title="2.提取 SPEC CPU Int Float运行命令"></a>2.提取 SPEC CPU Int Float运行命令</h3><ul>
+<li>参考 <a href="https://blog.csdn.net/maray/article/details/6106752" target="_blank" rel="noopener">CSDN</a></li>
+</ul>
+<p>一共有两种方法</p>
+<ol>
+<li>完全动手，彻底消除spec神秘感（我没使用这个方法）</li>
+</ol>
+<p>先利用上述方法运行 bzip2，然后运行下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep bzip</span><br></pre></td></tr></table></figure></p>
+<p>可以看到真实的命令行和进程路径，提取出来，依样画葫芦即可。</p>
+<p>对于 bzip2，提取到的命令行类似如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run_base_test_cpu2006.0000/bzip2_base.cpu2006 input.combined 280</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>使用 SPEC 自带的命令<br>以执行 gcc 例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># cd YOUR_SPEC_ROOT/benchspec/CPU2006/403.gcc/run/run_base_ref_cpu2006.0000</span><br><span class="line">#specinvoke -n</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>可以得到如下命令行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 166.i -o 166.s &gt; 166.out 2&gt;&gt; 166.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn 200.i -o 200.s &gt; 200.out 2&gt;&gt; 200.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn c-typeck.i -o c-typeck.s &gt; c-typeck.out 2&gt;&gt; c-typeck.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn cp-decl.i -o cp-decl.s &gt; cp-decl.out 2&gt;&gt; cp-decl.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr.i -o expr.s &gt; expr.out 2&gt;&gt; expr.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn expr2.i -o expr2.s &gt; expr2.out 2&gt;&gt; expr2.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn g23.i -o g23.s &gt; g23.out 2&gt;&gt; g23.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn s04.i -o s04.s &gt; s04.out 2&gt;&gt; s04.err</span><br><span class="line"># Starting run for copy #0</span><br><span class="line">../run_base_ref_amd64-m64-gcc43-nn.0000/gcc_base.amd64-m64-gcc43-nn scilab.i -o scilab.s &gt; scilab.out 2&gt;&gt; scilab.err</span><br></pre></td></tr></table></figure>
+<h3 id="3-我的做法"><a href="#3-我的做法" class="headerlink" title="3. 我的做法"></a>3. 我的做法</h3><p>由于我也是新手，所以也是一个个执行玩然后用 2 中的方法2提取指令</p>
+<p>当然也不是手动输入，写了一个简单的 bash 脚本实现了自动运行所有 benchmark ，然后写了另一个脚本打印运行命令</p>
+<p>以下是部分脚本：</p>
+<ul>
+<li><p>auto_run.sh</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  483</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  998</span><br><span class="line">runspec --config=mytest.cfg --size=ref --noreportable --tune=base --iterations=1  999</span><br><span class="line"></span><br><span class="line">./auto_print.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>auto_print.sh</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"></span><br><span class="line">cd ../benchspec/CPU2006/999.specrand/run/run_base_ref_amd64-m64-gcc43-nn.0000/</span><br><span class="line">specinvoke -n</span><br><span class="line">pwd</span><br><span class="line">cd $SPEC/config/</span><br><span class="line">echo &quot;*************************&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+    </div>
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      <div style="display: inline-block;">
+        <img src="/blog/images/wechatpay.jpg" alt="Lewis Tian WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      <div style="display: inline-block;">
+        <img src="/blog/images/alipay.jpg" alt="Lewis Tian Alipay">
+        <p>Alipay</p>
+      </div>
+  </div>
+</div>
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+    <div class="social-list">
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/blog/images/wechat-qcode.jpg">
+            <span class="icon">
+              <i class="fa fa-wechat"></i>
+            </span>
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/spec/" rel="tag"># spec</a>
+              <a href="/blog/tags/spec-cpu2006/" rel="tag"># spec-cpu2006</a>
+              <a href="/blog/tags/command/" rel="tag"># command</a>
+              <a href="/blog/tags/benchmark/" rel="tag"># benchmark</a>
+          </div>
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2018/03/14/0008.linux-boost/" rel="prev" title="Linux 编译和安装 boost 库">
+      <i class="fa fa-chevron-left"></i> Linux 编译和安装 boost 库
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2018/04/13/0010.mpki-rbl-blp-spec/" rel="next" title="MPKI, RBL and BLP of SPEC CPU2006 benchmarks">
+      MPKI, RBL and BLP of SPEC CPU2006 benchmarks <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+  </article>
+          </div>
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+        </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-单独运行-SPEC-CPU-Int-Float-测试程序"><span class="nav-number">1.</span> <span class="nav-text">1.单独运行 SPEC CPU Int Float 测试程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-提取-SPEC-CPU-Int-Float运行命令"><span class="nav-number">2.</span> <span class="nav-text">2.提取 SPEC CPU Int Float运行命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-我的做法"><span class="nav-number">3.</span> <span class="nav-text">3. 我的做法</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lewis Tian"
+      src="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+  <p class="site-author-name" itemprop="name">Lewis Tian</p>
+  <div class="site-description" itemprop="description">There is no destination for pursuit of knowledge in the finite lifetime.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+        <span class="site-state-item-count">204</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+  </div>
+      </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+      </div>
+    </footer>
+  </div>
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/blog/js/next-boot.js"></script>
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+  <script src="/blog/js/local-search.js"></script>
+  <script type="text/javascript" src="/blog/js/click-animation.js"></script>
+  <script type="text/javascript" src="/blog/js/one.js"></script> 
+  </style>
+<script src="/blog/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/blog/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
