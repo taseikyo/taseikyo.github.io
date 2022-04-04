@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="对于 Ubuntu18.04，他的 IP 配置跟之前的版本不太一样，是从 17.10 开始启用 netplan，所以配置文件的位置改了。 现在的配置文件为 /etc/netplan/xxx.yaml，配置静态 IP 需要手动修改其内容，也不复杂，该文件是一个 YAML 格式的配置文件。 下面是一个桌面版的配置文件。 123456789101112# Let NetworkManager mana">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:19:02.542Z">
+<meta property="og:updated_time" content="2022-04-04T12:19:27.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu1804 静态 ip 配置问题">
 <meta name="twitter:description" content="对于 Ubuntu18.04，他的 IP 配置跟之前的版本不太一样，是从 17.10 开始启用 netplan，所以配置文件的位置改了。 现在的配置文件为 /etc/netplan/xxx.yaml，配置静态 IP 需要手动修改其内容，也不复杂，该文件是一个 YAML 格式的配置文件。 下面是一个桌面版的配置文件。 123456789101112# Let NetworkManager mana">
@@ -177,7 +177,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p><img data-src="/blog/images/photo-1570937937487-125575170d69.jpg" alt="autumn" title="Photo by Nong Vang on Unsplash"></p>
+        <p><img data-src="/blog/images/banner/photo-1570937937487-125575170d69.jpg" alt="autumn" title="Photo by Nong Vang on Unsplash"></p>
 <p>对于 Ubuntu18.04，他的 IP 配置跟之前的版本不太一样，是从 17.10 开始启用 netplan，所以配置文件的位置改了。</p>
 <p>现在的配置文件为 <code>/etc/netplan/xxx.yaml</code>，配置静态 IP 需要手动修改其内容，也不复杂，该文件是一个 YAML 格式的配置文件。</p>
 <p>下面是一个桌面版的配置文件。</p>
@@ -187,7 +187,7 @@
 <p>我在看到网上教程中没有 renderer 那一项，于是将其注释掉，然后 XShell 就卡住了=w=，然后去机房，将注释去掉再 <code>sudo netplan apply</code>，很诡异的事情发生了，apply 之后就可以用 IP 只连了。我缓缓打出一个 ❓</p>
 <p>晚上服务器重启之后又不行了，今天早上我又去机房看，还配置对应网卡的路由，结果还是不行。然后想到昨天那个方法，先把 renderer 注释，然后再去掉，再 apply，果然就好了。。。</p>
 <p>所以我还是不懂这个到底是为什么。。。</p>
-<p><img data-src="/blog/images/small-confuse.jpg" alt></p>
+<p><img data-src="/blog/images/memes/small-confuse.jpg" alt></p>
     </div>
         <div class="reward-container">
   <div></div>

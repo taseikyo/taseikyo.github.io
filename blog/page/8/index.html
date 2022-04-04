@@ -176,7 +176,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/bili-box.png" itemprop="contentUrl">
+            <img src="/blog/images/2018/12/bili-box.png" itemprop="contentUrl">
         </div>
           <p>最近又重新写了一个 <a href="https://github.com/taseikyo/bili-box" target="_blank" rel="noopener">哔哩哔哩下载器</a>，至于放弃 <a href="https://github.com/taseikyo/PyQt5-Apps/blob/master/bilibili-kit" target="_blank" rel="noopener">之前那个</a> 的原因在 README 中写的很清楚的了，在此就不再多说了。<br>界面仍然是用 Qt 写的，毕竟方便，然后转为 py，与之前相比多了点东西，可以下载图片和收藏，其实下载图片是之前写过的一个，在 <a href="https://github.com/taseikyo/bilibili-album" target="_blank" rel="noopener">这里</a>，就是将那个库中的功能整合到这个下载器中。<br>
           <!--noindex-->
@@ -225,7 +225,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/summary_1811.png" alt></p>
+          <p><img data-src="/blog/images/2018/10/summary_1811.png" alt></p>
 <p>不知不觉又摸鱼一个月了:3<br>下面是 2018 年十一月的总结。</p>
           <!--noindex-->
             <div class="post-button">
@@ -315,11 +315,11 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/c-pointer.jpg" alt></p>
+          <p><img data-src="/blog/images/2018/11/c-pointer.jpg" alt></p>
 <p>今天做了一道题，感觉很有趣，题目是下面这样的</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str_arg[<span class="number">100</span>])</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> str[] = <span class="string">"Hello"</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(str));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="built_in">strlen</span>(str));</span><br><span class="line">	<span class="keyword">char</span>*p = str;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(p));</span><br><span class="line">	Func(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
 <p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）</p>
-<p><img data-src="/blog/images/c-pointer-result.png" alt="result" title="运行结果"></p>
+<p><img data-src="/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
 <p>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
     </div>
       <footer class="post-footer">
@@ -401,7 +401,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/181101-no-voice-2.png" alt></p>
+          <p><img data-src="/blog/images/2018/11/181101-no-voice-2.png" alt></p>
 <p>今天实验室发新机器了，重装了 win10 之后，开机-网易云音乐-耳机-没有声音？不听歌还怎么玩，开始以为是驱动的问题，装好之后还是没有声音，就一直提示未插入扬声器或耳机，然而我明明插耳机了好吧。<br>于是乎上网找了许多方法，最后找到一个靠谱的方法。</p>
           <!--noindex-->
             <div class="post-button">
@@ -450,7 +450,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-            <img src="/blog/images/chrome.png" itemprop="contentUrl">
+            <img src="/blog/images/2018/10/chrome.png" itemprop="contentUrl">
         </div>
           <p><center>当你安装的 chrome 扩展太多之后，你会把常用的、没有右键功能的一些扩展隐藏起来，那么如何将隐藏的扩展显示出来？</center><br>
           <!--noindex-->
@@ -499,7 +499,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/summary_1810.png" alt></p>
+          <p><img data-src="/blog/images/2018/10/summary_1810.png" alt></p>
 <p>这个月听了个学术论坛，然后去杭州参加了 cncc 2018，想着是总结就都列进去了。<br>下面是 2018 年十月的总结。</p>
           <!--noindex-->
             <div class="post-button">

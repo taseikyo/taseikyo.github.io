@@ -178,11 +178,11 @@
           <p>出现这个问题已经很久了，明明已经添加了 ssh-key，但是每次 push 都要求输入用户名和密码，就很奇怪，记得在学校的时候没要求来着。</p>
 <p>然后搜了一下，这个 <a href="https://www.jianshu.com/p/5b81c9ce505c" target="_blank" rel="noopener">解决 git pull/push 每次都要输入用户名密码的问题</a> 解决了我的问题。</p>
 <p>我用的方法二，的确我每次添加的都是 https 的方式，点击切换成 ssh，如图所示：</p>
-<p><img data-src="/blog/images/clone-with-https.png" alt title="clone with https"><br><img data-src="/blog/images/clone-with-ssh.png" alt title="clone with ssh"></p>
+<p><img data-src="/blog/images/2020/05/clone-with-https.png" alt title="clone with https"><br><img data-src="/blog/images/2020/05/clone-with-ssh.png" alt title="clone with ssh"></p>
 <p>所以需要移除然后重新添加 ssh 的方式。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br><span class="line">git remote add origin git@github.com:taseikyo/repo.git</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 <p>之后就可以了。</p>
-<p><img data-src="/blog/images/git-push-with-ssh.png" alt title="git push via ssh"></p>
+<p><img data-src="/blog/images/2020/05/git-push-with-ssh.png" alt title="git push via ssh"></p>
     </div>
       <footer class="post-footer">
         <div class="post-eof"></div>

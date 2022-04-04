@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作/Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk. 搜到的方法基本">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:19:02.540Z">
+<meta property="og:updated_time" content="2022-04-04T11:52:14.289Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OneNote 无法打开链接出现错误：你的组织策略阻止我们为你完成此操作">
 <meta name="twitter:description" content="从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作/Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk. 搜到的方法基本">
@@ -179,10 +179,10 @@
     <div class="post-body" itemprop="articleBody">
         <p>从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作/Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk.</p>
 <p>搜到的方法基本是修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 的默认值为 Htmlfile，重启电脑。</p>
-<p><img data-src="/blog/images/onenote-1545731852.png" alt="onenote"></p>
+<p><img data-src="/blog/images/2019/05/onenote-1545731852.png" alt="onenote"></p>
 <p>然后你发现其实并没有什么卵用，该错还是错。</p>
 <p>一个折衷的方法是鼠标放在链接上然后右键打开链接 - MSEdge.EXE<br>可以从执行文件上看出，它就是打开了 edge 浏览器，也算是解决了问题吧，但是打开了像 CSDN 这种网页（别问我为什么要用 CSDN），没有 Adblock Plus，一大堆恶心的广告扑面而来。。。。</p>
-<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/images/onenote-20190531144338.png" alt="onenote"></p>
+<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/images/2019/05/onenote-20190531144338.png" alt="onenote"></p>
 <p>重启 OneNote 之后，点开链接就直接打开 Chrome 了，竟然被我猜对了 233</p>
 <p><img data-src="/blog/images/memes/0014.jpg" alt="memes"></p>
     </div>

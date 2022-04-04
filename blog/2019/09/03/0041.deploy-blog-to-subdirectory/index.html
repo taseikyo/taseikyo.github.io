@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。 不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:19:02.541Z">
+<meta property="og:updated_time" content="2022-04-04T12:13:07.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将博客部署到子目录下">
 <meta name="twitter:description" content="由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。 不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你">
@@ -177,7 +177,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p><img data-src="/blog/images/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
+        <p><img data-src="/blog/images/banner/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
 <p>由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。</p>
 <p>不过这次是将博客部署到 /blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 / 改成 /blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你 username.github.io 仓的根目录，所以需要手动将生成的 public 目录复制到你 username.github.io/bolg 目录下。</p>
 <p>但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io/images/xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io/blog/images/xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了：</p>
