@@ -25,15 +25,15 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="最近打开 Cmder 总是会有弹窗提示没有安装 7zip 或者 winRar，它默认取得路径是 %ProgramFiles%\7-Zip\7zg.exe，这个看到没有啊，弱智吧  怎么修复呢？ Win+Alt+P 打开设置，切到 General - Update，看下图：  很明显路径不对，由于用 scoop 装过 7zip，将路径改一下好了：&quot;%SCOOP%&#x2F;apps&#x2F;7zip&#x2F;cur">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2022/04/20220404162921.jpg">
-<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2022/04/20220404163223.jpg">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2022/04/20220404162921.jpg">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2022/04/20220404163223.jpg">
 <meta property="article:published_time" content="2022-04-04T08:26:17.000Z">
-<meta property="article:modified_time" content="2025-10-01T04:47:42.810Z">
+<meta property="article:modified_time" content="2025-10-01T06:40:31.147Z">
 <meta property="article:author" content="Lewis Tian">
 <meta property="article:tag" content="scoop">
 <meta property="article:tag" content="cmder">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://taseikyo.github.io/blog/blog/images/2022/04/20220404162921.jpg">
+<meta name="twitter:image" content="https://taseikyo.github.io/blog/images/2022/04/20220404162921.jpg">
 <link rel="canonical" href="https://taseikyo.github.io/2022/04/04/0080.cmder-7zip-winrar-not-found/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -182,10 +182,10 @@
       </header>
     <div class="post-body" itemprop="articleBody">
         <p>最近打开 Cmder 总是会有弹窗提示没有安装 7zip 或者 winRar，它默认取得路径是 <code>%ProgramFiles%\7-Zip\7zg.exe</code>，这个看到没有啊，弱智吧</p>
-<p><img data-src="/blog/blog/images/2022/04/20220404162921.jpg" title="报错弹窗"></p>
+<p><img data-src="/blog/images/2022/04/20220404162921.jpg" title="报错弹窗"></p>
 <p>怎么修复呢？</p>
 <p><code>Win+Alt+P</code> 打开设置，切到 General - Update，看下图：</p>
-<p><img data-src="/blog/blog/images/2022/04/20220404163223.jpg" title="修改位置"></p>
+<p><img data-src="/blog/images/2022/04/20220404163223.jpg" title="修改位置"></p>
 <p>很明显路径不对，由于用 scoop 装过 7zip，将路径改一下好了：<code>&quot;%SCOOP%/apps/7zip/current/7zg.exe&quot; x -y &quot;%1&quot;</code></p>
     </div>
         <div class="reward-container">
