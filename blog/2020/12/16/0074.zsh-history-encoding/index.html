@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -18,18 +18,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="我为了清理 bash 和 zsh 的重复历史记录写了个脚本（remove_duplicate_cmds.py），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。 1234567891011/home/taseikyo/.bash_histor">
-<meta name="keywords" content="python,zsh,history,encoding">
+  <meta name="description" content="我为了清理 bash 和 zsh 的重复历史记录写了个脚本（remove_duplicate_cmds.py），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。 1234567891011&#x2F;home&#x2F;taseikyo&#x2F;.bash_histor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zsh 历史文件编码问题">
 <meta property="og:url" content="https://taseikyo.github.io/2020/12/16/0074.zsh-history-encoding/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="我为了清理 bash 和 zsh 的重复历史记录写了个脚本（remove_duplicate_cmds.py），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。 1234567891011/home/taseikyo/.bash_histor">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:19:02.552Z">
+<meta property="og:description" content="我为了清理 bash 和 zsh 的重复历史记录写了个脚本（remove_duplicate_cmds.py），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。 1234567891011&#x2F;home&#x2F;taseikyo&#x2F;.bash_histor">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-16T07:40:27.000Z">
+<meta property="article:modified_time" content="2025-10-01T04:47:42.781Z">
+<meta property="article:author" content="Lewis Tian">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="zsh">
+<meta property="article:tag" content="history">
+<meta property="article:tag" content="encoding">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zsh 历史文件编码问题">
-<meta name="twitter:description" content="我为了清理 bash 和 zsh 的重复历史记录写了个脚本（remove_duplicate_cmds.py），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。 1234567891011/home/taseikyo/.bash_histor">
 <link rel="canonical" href="https://taseikyo.github.io/2020/12/16/0074.zsh-history-encoding/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -177,8 +180,8 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p>我为了清理 bash 和 zsh 的重复历史记录写了个脚本（<a href="https://github.com/taseikyo/backup-utils/blob/master/Python/00E_remove_duplicate_history_cmds.py" target="_blank" rel="noopener">remove_duplicate_cmds.py</a>），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/home/taseikyo/.bash_history 198 -&gt; 198</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/home/taseikyo/remove_duplicate_cmds.py"</span>, line 99, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    main()</span><br><span class="line">  File <span class="string">"/home/taseikyo/remove_duplicate_cmds.py"</span>, line 95, <span class="keyword">in</span> main</span><br><span class="line">    zsh_history()</span><br><span class="line">  File <span class="string">"/home/taseikyo/remove_duplicate_cmds.py"</span>, line 76, <span class="keyword">in</span> zsh_history</span><br><span class="line">    <span class="keyword">for</span> cmd <span class="keyword">in</span> f:</span><br><span class="line">  File <span class="string">"/usr/lib/python3.6/codecs.py"</span>, line 321, <span class="keyword">in</span> decode</span><br><span class="line">    (result, consumed) = self._buffer_decode(data, self.errors, final)</span><br><span class="line">UnicodeDecodeError: <span class="string">'utf-8'</span> codec can<span class="string">'t decode byte 0xbf in position 3549: invalid start byte</span></span><br></pre></td></tr></table></figure>
+        <p>我为了清理 bash 和 zsh 的重复历史记录写了个脚本（<a target="_blank" rel="noopener" href="https://github.com/taseikyo/backup-utils/blob/master/Python/00E_remove_duplicate_history_cmds.py">remove_duplicate_cmds.py</a>），在每次登录的时候（间隔时间超过阈值）都会执行一次，最近每次都会报错，报错信息如下所示，挺烦的，每次我都会手动找出有问题的那一行，然后重新运行，但是这样治标不治本，隔两天又报错，需要想一个彻底解决问题的办法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/home/taseikyo/.bash_history 198 -&gt; 198</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">&quot;/home/taseikyo/remove_duplicate_cmds.py&quot;</span>, line 99, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    main()</span><br><span class="line">  File <span class="string">&quot;/home/taseikyo/remove_duplicate_cmds.py&quot;</span>, line 95, <span class="keyword">in</span> main</span><br><span class="line">    zsh_history()</span><br><span class="line">  File <span class="string">&quot;/home/taseikyo/remove_duplicate_cmds.py&quot;</span>, line 76, <span class="keyword">in</span> zsh_history</span><br><span class="line">    <span class="keyword">for</span> cmd <span class="keyword">in</span> f:</span><br><span class="line">  File <span class="string">&quot;/usr/lib/python3.6/codecs.py&quot;</span>, line 321, <span class="keyword">in</span> decode</span><br><span class="line">    (result, consumed) = self._buffer_decode(data, self.errors, final)</span><br><span class="line">UnicodeDecodeError: <span class="string">&#x27;utf-8&#x27;</span> codec can<span class="string">&#x27;t decode byte 0xbf in position 3549: invalid start byte</span></span><br></pre></td></tr></table></figure>
 <p>其实就是 <code>.zsh_history</code> 这个文件的编码问题，就算你设置它为 utf-8 编码，它在写历史记录的时候又改回去了就很蠢，网上找的方法说是设置 LC_ALL 和 LANG 为 en_US.UTF-8，其实没啥用，咋办呢，只能每次出错就手动改编码。。。用 vim 打开，使用命令 <code>set encoding</code> 可以看到它的编码是 <code>latin-1</code>，需要改为 utf-8，<code>set encoding=utf-8</code> 就行了。</p>
 <p>话说回来，这也是个指标不治本的方法，除非找到它写历史记录的位置，让其以 utf-8 编码打开。都啥年代了，为啥还不改成 utf-8 编码，别人 bash 的历史记录就是，这就是所谓的有得有失？</p>
 <p>要是有更好的 xsh 出现，我直接换，zsh 虽说提示方便，但是很多地方不如 bash，明明有的命令存在，给我报错找不到，服了。</p>
@@ -284,7 +287,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -295,14 +298,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -318,13 +321,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -336,7 +339,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -348,7 +352,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

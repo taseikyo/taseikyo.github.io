@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -18,18 +18,29 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。  具体代码见 LewisTian/Crawler 数据及词云的材料 bili-mad.7z">
-<meta name="keywords" content="programming,python,crawler,bilibili,mad">
+  <meta name="description" content="最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。  具体代码见 LewisTian&#x2F;Crawler 数据及词云的材料 bili-mad.7z">
 <meta property="og:type" content="article">
 <meta property="og:title" content="补MAD计划">
 <meta property="og:url" content="https://taseikyo.github.io/2019/02/23/0031.mad-review/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。  具体代码见 LewisTian/Crawler 数据及词云的材料 bili-mad.7z">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T10:51:46.288Z">
+<meta property="og:description" content="最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。  具体代码见 LewisTian&#x2F;Crawler 数据及词云的材料 bili-mad.7z">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2019/02/bili-mad-year-data.png">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2019/02/play-top20.png">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2019/02/pub-top20.png">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2019/02/author-sum-top20.png">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2019/02/wordcloud.png">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2019/02/wordcloud-bilibili.png">
+<meta property="article:published_time" content="2019-02-23T11:46:43.000Z">
+<meta property="article:modified_time" content="2025-10-01T04:47:42.559Z">
+<meta property="article:author" content="Lewis Tian">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="crawler">
+<meta property="article:tag" content="bilibili">
+<meta property="article:tag" content="mad">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="补MAD计划">
-<meta name="twitter:description" content="最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。  具体代码见 LewisTian/Crawler 数据及词云的材料 bili-mad.7z">
+<meta name="twitter:image" content="https://taseikyo.github.io/blog/images/2019/02/bili-mad-year-data.png">
 <link rel="canonical" href="https://taseikyo.github.io/2019/02/23/0031.mad-review/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -179,76 +190,18 @@
     <div class="post-body" itemprop="articleBody">
         <p>最近突然很想看高质量的 MAD，然而总是可遇不可求，于是今晚直接将 B 站每月播放量最高的前20的 MAD 数据全部爬下来，然后稍作分析，同时也可以之后细看。</p>
 <ul>
-<li>具体代码见 <a href="https://github.com/taseikyo/Crawler#bilibili" target="_blank" rel="noopener">LewisTian/Crawler</a></li>
-<li>数据及词云的材料 <a href="https://github.com/taseikyo/Crawler/bilibili/bili-mad.7z" target="_blank" rel="noopener">bili-mad.7z</a></li>
+<li>具体代码见 <a target="_blank" rel="noopener" href="https://github.com/taseikyo/Crawler#bilibili">LewisTian&#x2F;Crawler</a></li>
+<li>数据及词云的材料 <a target="_blank" rel="noopener" href="https://github.com/taseikyo/Crawler/bilibili/bili-mad.7z">bili-mad.7z</a></li>
 </ul>
-<a id="more"></a>
-<h4 id="投稿数的变化如图所示："><a href="#投稿数的变化如图所示：" class="headerlink" title="投稿数的变化如图所示："></a>投稿数的变化如图所示：</h4><p><img data-src="/blog/images/2019/02/bili-mad-year-data.png" alt="投稿数" title="投稿数"></p>
-<h4 id="播放量前十的-MAD-如下（去除播放量为–的稿件）："><a href="#播放量前十的-MAD-如下（去除播放量为–的稿件）：" class="headerlink" title="播放量前十的 MAD 如下（去除播放量为–的稿件）："></a>播放量前十的 MAD 如下（去除播放量为–的稿件）：</h4><table>
-<thead>
-<tr>
-<th>标题</th>
-<th>up</th>
-<th>播放量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.bilibili.com/video/av810872/" target="_blank" rel="noopener">【炮姐/AMV】我永远都会守护在你的身边！</a></td>
-<td>暗猫の祝福</td>
-<td>11437890</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av113221/" target="_blank" rel="noopener">【魂】银魂——武士之魂</a></td>
-<td>N.ec鱼丸</td>
-<td>7855128</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av731700/" target="_blank" rel="noopener">【综漫 ASMV】 弱者（完整版）/The Weak (Full ver.)</a></td>
-<td>概念の天使</td>
-<td>6494493</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av1328701/" target="_blank" rel="noopener">【火影忍者】用战斗来祭奠这个世界 ！！</a></td>
-<td>花宫二橙</td>
-<td>6392419</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av3161283/" target="_blank" rel="noopener">【AMV】 点燃这绝望的火光！！！</a></td>
-<td>小小☆精灵</td>
-<td>4367202</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av1404184/" target="_blank" rel="noopener">【综漫燃/夜愿/AMV】Last ride of the day</a></td>
-<td>暗猫の祝福</td>
-<td>3717519</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av3698415/" target="_blank" rel="noopener">【泛式/单集MAD】一拳超人: 深海王篇——不屈的正义</a></td>
-<td>泛式</td>
-<td>3202031</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av2627270" target="_blank" rel="noopener">【ToLove】我的后宫不可能都是狐狸精！</a></td>
-<td>古川星尘</td>
-<td>3120416</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av2022873" target="_blank" rel="noopener">【综漫】好喜欢你，但是，再见了</a></td>
-<td>Yukari丶紫</td>
-<td>2927190</td>
-</tr>
-<tr>
-<td><a href="https://www.bilibili.com/video/av5690552" target="_blank" rel="noopener">【全程高燃/多素材/混剪】当我变成魔鬼的那一刻 世界就是地狱</a></td>
-<td>不知者_-</td>
-<td>2665211</td>
-</tr>
-</tbody>
-</table>
-<h3 id="以下-2019-2-25-更新"><a href="#以下-2019-2-25-更新" class="headerlink" title="以下 2019/2/25 更新"></a>以下 2019/2/25 更新</h3><h4 id="播放数-top20-的稿件"><a href="#播放数-top20-的稿件" class="headerlink" title="播放数 top20 的稿件"></a>播放数 top20 的稿件</h4><p>id 为视频的 id，mid 为 UP 的 id。访问视频用 <code>https://www.bilibili.com/video/av{id}</code> 方式，访问 UP 的个人空间用 <code>https://space.bilibili.com/{mid}</code> 方式<br><img data-src="/blog/images/2019/02/play-top20.png" alt="播放数 top20 的稿件" title="播放数 top20 的稿件"></p>
+<span id="more"></span>
+<h4 id="投稿数的变化如图所示："><a href="#投稿数的变化如图所示：" class="headerlink" title="投稿数的变化如图所示："></a>投稿数的变化如图所示：</h4><img data-src="/blog/images/2019/02/bili-mad-year-data.png" alt="投稿数" title="投稿数">
+<h4 id="播放量前十的-MAD-如下（去除播放量为–的稿件）："><a href="#播放量前十的-MAD-如下（去除播放量为–的稿件）：" class="headerlink" title="播放量前十的 MAD 如下（去除播放量为–的稿件）："></a>播放量前十的 MAD 如下（去除播放量为–的稿件）：</h4><p>| 								标题            								   |    up 	   | 播放量     |<br>|: —————————————————————————:|: ——– :|: —— : |<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av810872/">【炮姐&#x2F;AMV】我永远都会守护在你的身边！</a> | 暗猫の祝福  | 11437890 |<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av113221/">【魂】银魂——武士之魂</a> 				   |N.ec鱼丸    | 7855128   |<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av731700/">【综漫 ASMV】 弱者（完整版）&#x2F;The Weak (Full ver.)</a>  |概念の天使| 6494493|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av1328701/">【火影忍者】用战斗来祭奠这个世界 ！！</a> |花宫二橙     |6392419|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av3161283/">【AMV】 点燃这绝望的火光！！！</a>		   |小小☆精灵    | 4367202|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av1404184/">【综漫燃&#x2F;夜愿&#x2F;AMV】Last ride of the day</a>| 暗猫の祝福| 3717519|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av3698415/">【泛式&#x2F;单集MAD】一拳超人: 深海王篇——不屈的正义</a>| 泛式| 3202031|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av2627270">【ToLove】我的后宫不可能都是狐狸精！</a>	| 古川星尘   | 3120416|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av2022873">【综漫】好喜欢你，但是，再见了</a>			|Yukari丶紫  |2927190|<br>|<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av5690552">【全程高燃&#x2F;多素材&#x2F;混剪】当我变成魔鬼的那一刻 世界就是地狱</a>| 不知者_-| 2665211|</p>
+<h3 id="以下-2019-2-25-更新"><a href="#以下-2019-2-25-更新" class="headerlink" title="以下 2019&#x2F;2&#x2F;25 更新"></a>以下 2019&#x2F;2&#x2F;25 更新</h3><h4 id="播放数-top20-的稿件"><a href="#播放数-top20-的稿件" class="headerlink" title="播放数 top20 的稿件"></a>播放数 top20 的稿件</h4><p>id 为视频的 id，mid 为 UP 的 id。访问视频用 <code>https://www.bilibili.com/video/av&#123;id&#125;</code> 方式，访问 UP 的个人空间用 <code>https://space.bilibili.com/&#123;mid&#125;</code> 方式<br><img data-src="/blog/images/2019/02/play-top20.png" alt="播放数 top20 的稿件" title="播放数 top20 的稿件"></p>
 <h4 id="投稿时间-top20-的稿件"><a href="#投稿时间-top20-的稿件" class="headerlink" title="投稿时间 top20 的稿件"></a>投稿时间 top20 的稿件</h4><p>pubdate 为审核之后放出来的时间，这个是方便考古。<br><img data-src="/blog/images/2019/02/pub-top20.png" alt="投稿时间 top20 的稿件" title="投稿时间 top20 的稿件"></p>
-<h4 id="播放量-top20-的-UP"><a href="#播放量-top20-的-UP" class="headerlink" title="播放量 top20 的 UP"></a>播放量 top20 的 UP</h4><p>这个不太准确，因为爬虫只爬取了从 2010/1/1-2019/12/31 中每个月播放量前 20 的稿件。<br><img data-src="/blog/images/2019/02/author-sum-top20.png" alt="播放量 top20 的 UP" title="播放量 top20 的 UP"></p>
-<h4 id="标题词云图"><a href="#标题词云图" class="headerlink" title="标题词云图"></a>标题词云图</h4><p><img data-src="/blog/images/2019/02/wordcloud.png" alt="词云图" title="词云图"><br>去掉 MAD AMV 综漫这几个这几个关键词之后的图：<br><img data-src="/blog/images/2019/02/wordcloud-bilibili.png" alt="词云图" title="词云图"></p>
+<h4 id="播放量-top20-的-UP"><a href="#播放量-top20-的-UP" class="headerlink" title="播放量 top20 的 UP"></a>播放量 top20 的 UP</h4><p>这个不太准确，因为爬虫只爬取了从 2010&#x2F;1&#x2F;1-2019&#x2F;12&#x2F;31 中每个月播放量前 20 的稿件。<br><img data-src="/blog/images/2019/02/author-sum-top20.png" alt="播放量 top20 的 UP" title="播放量 top20 的 UP"></p>
+<h4 id="标题词云图"><a href="#标题词云图" class="headerlink" title="标题词云图"></a>标题词云图</h4><img data-src="/blog/images/2019/02/wordcloud.png" alt="词云图" title="词云图">
+去掉 MAD AMV 综漫这几个这几个关键词之后的图：
+<img data-src="/blog/images/2019/02/wordcloud-bilibili.png" alt="词云图" title="词云图">
     </div>
         <div class="reward-container">
   <div></div>
@@ -339,7 +292,7 @@
       </ul>
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#投稿数的变化如图所示："><span class="nav-number">1.</span> <span class="nav-text">投稿数的变化如图所示：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播放量前十的-MAD-如下（去除播放量为–的稿件）："><span class="nav-number">2.</span> <span class="nav-text">播放量前十的 MAD 如下（去除播放量为–的稿件）：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以下-2019-2-25-更新"><span class="nav-number"></span> <span class="nav-text">以下 2019/2/25 更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#播放数-top20-的稿件"><span class="nav-number">1.</span> <span class="nav-text">播放数 top20 的稿件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#投稿时间-top20-的稿件"><span class="nav-number">2.</span> <span class="nav-text">投稿时间 top20 的稿件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#播放量-top20-的-UP"><span class="nav-number">3.</span> <span class="nav-text">播放量 top20 的 UP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标题词云图"><span class="nav-number">4.</span> <span class="nav-text">标题词云图</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%95%E7%A8%BF%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96%E5%A6%82%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">投稿数的变化如图所示：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E9%87%8F%E5%89%8D%E5%8D%81%E7%9A%84-MAD-%E5%A6%82%E4%B8%8B%EF%BC%88%E5%8E%BB%E9%99%A4%E6%92%AD%E6%94%BE%E9%87%8F%E4%B8%BA%E2%80%93%E7%9A%84%E7%A8%BF%E4%BB%B6%EF%BC%89%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">播放量前十的 MAD 如下（去除播放量为–的稿件）：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B-2019-2-25-%E6%9B%B4%E6%96%B0"><span class="nav-number"></span> <span class="nav-text">以下 2019&#x2F;2&#x2F;25 更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E6%95%B0-top20-%E7%9A%84%E7%A8%BF%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">播放数 top20 的稿件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%95%E7%A8%BF%E6%97%B6%E9%97%B4-top20-%E7%9A%84%E7%A8%BF%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">投稿时间 top20 的稿件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%92%AD%E6%94%BE%E9%87%8F-top20-%E7%9A%84-UP"><span class="nav-number">3.</span> <span class="nav-text">播放量 top20 的 UP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E8%AF%8D%E4%BA%91%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">标题词云图</span></a></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
@@ -353,7 +306,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -364,14 +317,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -387,13 +340,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -405,7 +358,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -417,7 +371,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

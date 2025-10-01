@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -24,10 +24,9 @@
 <meta property="og:url" content="https://taseikyo.github.io/page/3/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Lewis Tian">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tian&#39;s Daily Life">
-<meta name="twitter:description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
 <link rel="canonical" href="https://taseikyo.github.io/page/3/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -142,6 +141,51 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/16/0066.grant-user-sudo-privilege/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2020/10/16/0066.grant-user-sudo-privilege/" class="post-title-link" itemprop="url">赋予普通用户 sudo 的权限方法</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2020-10-16 10:36:17" itemprop="dateCreated datePublished" datetime="2020-10-16T10:36:17+08:00">2020-10-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p>赋予普通用户 sudo 权限有两种方法：</p>
+<ol>
+<li>通过修改 <code>/etc/sudoers</code> 文件，添加一行即可 “user ALL&#x3D;(ALL:ALL) ALL”</li>
+<li>将用户添加到 sudo 组中，可以在 <code>/etc/group</code> 中看到 <code>sudo:x:27:usera,userb</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> usermod -a -G <span class="built_in">sudo</span> user</span><br><span class="line">$ <span class="built_in">sudo</span> chsh -s /bin/bash user</span><br></pre></td></tr></table></figure>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -175,7 +219,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p>详细内容可以查看知乎的这篇文章：<a href="https://zhuanlan.zhihu.com/p/35147209" target="_blank" rel="noopener">linux 忘记 root 密码怎么办？</a>，文章中有较为详细的介绍，这里不罗嗦。</p>
+          <p>详细内容可以查看知乎的这篇文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35147209">linux 忘记 root 密码怎么办？</a>，文章中有较为详细的介绍，这里不罗嗦。</p>
 <p>一句话解决问题，如果你有 sudo 权限，那么下面两种均可：</p>
 <ol>
 <li>直接 <code>sudo passwd root</code> 重置密码即可。</li>
@@ -221,7 +265,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <p>这里简单做一个个人向的 Linux 使用配置吧，无论是 Ubuntu 还是 CentOS，都可以使用这个配置来提升使用体验，以及工作效率。</p>
-<p><img data-src="/blog/images/banner/arian-darvishi-wh-RPfR_3_M-unsplash.jpg" alt></p>
+<p><img data-src="/blog/blog/images/banner/arian-darvishi-wh-RPfR_3_M-unsplash.jpg"></p>
 <p>*<em>Photo by Arian Darvishi on Unsplash</em></p>
           <!--noindex-->
             <div class="post-button">
@@ -269,9 +313,9 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a href="https://blog.csdn.net/qq_34857250/article/details/54313804" target="_blank" rel="noopener">原文</a> 是个图片，我将其转成表格了。</p>
-<p><img data-src="/blog/images/2020/10/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" alt title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
-<p>*<em>图片来自 <a href="https://zhuanlan.zhihu.com/p/145812549" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
+          <p>因为实验室服务器上有多种 Linux 的发行版（行吧，其实大多 Ubuntu 都是装的，原先默认都是 CentOS），有些命令老是搞混，于是找到一个总结，<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34857250/article/details/54313804">原文</a> 是个图片，我将其转成表格了。</p>
+<p><img data-src="/blog/blog/images/2020/10/v2-c8865c165c9671abf48af2cb1ee85c32_1440w.jpg" title="Ubuntu VS CentOS，谁才是更好的 Linux 版本？"></p>
+<p>*<em>图片来自 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/145812549">https://zhuanlan.zhihu.com/p/145812549</a></em></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/blog/2020/10/09/0063.centos-ubuntu-command-diff/#more" rel="contents">
@@ -318,10 +362,10 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/images/banner/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg" alt></p>
+          <p><img data-src="/blog/blog/images/banner/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg"></p>
 <p>*<em>Photo by Sai Kiran Anagani on Unsplash</em></p>
 <p>当新建用户时，在自己的 home 目录应该有如下几个文件：<code>.bash_profile</code> <code>.bashrc</code> <code>.bash_logout</code>，有可能有两个，也有可能都没有，这个时候需要自己新建，在 <code>.bash_profile</code> 文件中可以写入以下内容，这样在每次登录都会执行 <code>.bashrc</code> 了，不然你写了一堆 alias 可能登录一看根本没用。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .bash_profile</span></span><br><span class="line"><span class="keyword">if</span> [ -n <span class="string">&quot;<span class="variable">$BASH_VERSION</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="comment"># include .bashrc if it exists</span></span><br><span class="line">        <span class="keyword">if</span> [ -f <span class="string">&quot;<span class="variable">$HOME</span>/.bashrc&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">                . <span class="string">&quot;<span class="variable">$HOME</span>/.bashrc&quot;</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <p>可以将下面的 alias 写入 <code>.bashrc</code> 也可以写入 <code>.bash_aliases</code>，因为如果 <code>.bashrc</code> 是自动生成的话，它会执行 <code>.bash_aliases</code>，当然嫌麻烦直接堆在 <code>.bashrc</code> 算了</p>
 <p>可能会有换行的问题，用 vim 打开，输入 <code>set ff=unix</code> 命令就行了</p>
           <!--noindex-->
@@ -371,7 +415,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <p>多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。</p>
-<p><img data-src="/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg" alt></p>
+<p><img data-src="/blog/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg"></p>
 <p>*<em>Photo by Tim Gouw on Unsplash</em></p>
           <!--noindex-->
             <div class="post-button">
@@ -419,7 +463,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a href="https://github.com/gnipbao/iblog/issues/19" target="_blank" rel="noopener">GitHub 如何向开源项目提交 pr</a></p>
+          <p>第一次向开源项目提交 pr，还不太熟，于是搜了一下，找到：<a target="_blank" rel="noopener" href="https://github.com/gnipbao/iblog/issues/19">GitHub 如何向开源项目提交 pr</a></p>
 <ul>
 <li>fork 到自己的仓库</li>
 <li>git clone 到本地</li>
@@ -445,9 +489,9 @@
 </li>
 <li>提交pr<br>  去自己 github 仓库对应 fork 的项目下 new pull request</li>
 </ul>
-<p>另外由于每个开源项目都有自己的要求，比如 TheAlgorithms/Python 提交 pr 都会进行各种格式检查，所以先本地 check 一下就可以避免出现格式语法错而得重新 commit 的浪费时间问题，下面是一个维护者提出的步骤：</p>
+<p>另外由于每个开源项目都有自己的要求，比如 TheAlgorithms&#x2F;Python 提交 pr 都会进行各种格式检查，所以先本地 check 一下就可以避免出现格式语法错而得重新 commit 的浪费时间问题，下面是一个维护者提出的步骤：</p>
 <ul>
-<li><a href="https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650" target="_blank" rel="noopener">https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650">https://github.com/TheAlgorithms/Python/pull/2509#issuecomment-700773650</a></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">black &lt;filename&gt;</span><br><span class="line">isort &lt;filename&gt;</span><br><span class="line">flake8 --ignore=E203,W503 --max-complexity=25 --max-line-length=88 --statistics --count &lt;filename&gt;</span><br><span class="line">mypy --ignore-missing-imports &lt;filename&gt;</span><br><span class="line">pytest --doctest-modules &lt;filename&gt;</span><br></pre></td></tr></table></figure>
     </div>
@@ -491,61 +535,11 @@
     <div class="post-body" itemprop="articleBody">
           <p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
 <p>看下面这个函数，你觉得有没有什么问题？</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">count_avg</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">count_avg</span><span class="params">(vector&lt;<span class="type">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.<span class="built_in">size</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
 <p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
-<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</int></p>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/08/13/0058.bug-200813-cpp-int2string/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2020/08/13/0058.bug-200813-cpp-int2string/" class="post-title-link" itemprop="url">【C++】每日 Bug - int 转 string</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2020-08-13 11:00:11" itemprop="dateCreated datePublished" datetime="2020-08-13T11:00:11+08:00">2020-08-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>今天在刷题时遇到这个错，题目如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">字符串压缩。利用字符重复出现的次数，编写一种方法，实现基本的字符串压缩功能。比如，字符串aabcccccaaa会变为a2b1c5a3。若“压缩”后的字符串没有变短，则返回原先的字符串。你可以假设字符串中只包含大小写英文字母（a至z）。</span><br><span class="line"></span><br><span class="line">输入：&quot;aabcccccaaa&quot;</span><br><span class="line">输出：&quot;a2b1c5a3&quot;</span><br><span class="line"></span><br><span class="line">输入：&quot;abbccd&quot;</span><br><span class="line">输出：&quot;abbccd&quot;</span><br></pre></td></tr></table></figure>
-<p>题目不难，遍历一遍就完事了，每次把不同的字符和次数加载新字符串后面，问题就出现在次数上：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ans.push_back(s[i]);</span><br><span class="line">ans.push_back(<span class="string">'0'</span>+i-cur);</span><br></pre></td></tr></table></figure>
-<p>0-9 这样是没问题的，但是超过 9 就有问题了，提交代码就错了：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入："rrrrrLLLLLPPPPPPRRRRRgggNNNNNVVVVVVVVVVDDDDDDDDDDIIIIIIIIIIlllllllAAAAqqqqqqqbbbNNNNffffff"</span><br><span class="line">输出："r5L5P6R5g3N5V:D:I:l7A4q7b3N4f6"</span><br><span class="line">预期："r5L5P6R5g3N5V10D10I10l7A4q7b3N4f6"</span><br></pre></td></tr></table></figure>
-<p>查 ASCII 表就可以发现问题，<code>9</code> 后面是 <code>:</code>，正如错误答案一样 :p</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">二进制      十  八  图形</span><br><span class="line">0011 0000	48	30	0</span><br><span class="line">0011 0001	49	31	1</span><br><span class="line">0011 0010	50	32	2</span><br><span class="line">0011 0011	51	33	3</span><br><span class="line">0011 0100	52	34	4</span><br><span class="line">0011 0101	53	35	5</span><br><span class="line">0011 0110	54	36	6</span><br><span class="line">0011 0111	55	37	7</span><br><span class="line">0011 1000	56	38	8</span><br><span class="line">0011 1001	57	39	9</span><br><span class="line">0011 1010	58	3A	:</span><br><span class="line">0011 1011	59	3B	;</span><br><span class="line">0011 1100	60	3C	&lt;</span><br><span class="line">0011 1101	61	3D	=</span><br><span class="line">0011 1110	62	3E	&gt;</span><br><span class="line">0011 1111	63	3F	?</span><br></pre></td></tr></table></figure>
-<p>后面查了一下，C++ 11 有个新函数用来将 int 转 string：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">int</span> value)</span></span>; (<span class="number">1</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">long</span> value)</span></span>; (<span class="number">2</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> value)</span></span>; (<span class="number">3</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">unsigned</span> value)</span></span>; (<span class="number">4</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">long</span> value)</span></span>; (<span class="number">5</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> value)</span></span>; (<span class="number">6</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">float</span> value)</span></span>; (<span class="number">7</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">double</span> value)</span></span>; (<span class="number">8</span>) (C++<span class="number">11</span>起)</span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">to_string</span><span class="params">(<span class="keyword">long</span> <span class="keyword">double</span> value)</span></span>; (<span class="number">9</span>) (C++<span class="number">11</span>起)</span><br></pre></td></tr></table></figure>
-<p>替换掉之后就 OK 了！</p>
+<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</p>
     </div>
       <footer class="post-footer">
         <div class="post-eof"></div>
@@ -607,7 +601,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -618,14 +612,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -641,13 +635,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -659,7 +653,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -671,7 +666,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

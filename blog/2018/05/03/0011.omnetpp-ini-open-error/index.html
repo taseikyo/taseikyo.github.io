@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -18,18 +18,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="When I ran omnetpp with zsim simulator using the command $CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini, and I got an error like that">
-<meta name="keywords" content="spec,spec-cpu2006,command">
+  <meta name="description" content="When I ran omnetpp with zsim simulator using the command $CPUSPECPATH&#x2F;471.omnetpp&#x2F;exe&#x2F;omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH&#x2F;471.omnetpp&#x2F;data&#x2F;ref&#x2F;input&#x2F;omnetpp.ini, and I got an error like that">
 <meta property="og:type" content="article">
 <meta property="og:title" content="solve omnetpp run error">
 <meta property="og:url" content="https://taseikyo.github.io/2018/05/03/0011.omnetpp-ini-open-error/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="When I ran omnetpp with zsim simulator using the command $CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini, and I got an error like that">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T08:19:02.531Z">
+<meta property="og:description" content="When I ran omnetpp with zsim simulator using the command $CPUSPECPATH&#x2F;471.omnetpp&#x2F;exe&#x2F;omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH&#x2F;471.omnetpp&#x2F;data&#x2F;ref&#x2F;input&#x2F;omnetpp.ini, and I got an error like that">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-05-03T07:51:59.000Z">
+<meta property="article:modified_time" content="2025-10-01T04:47:42.462Z">
+<meta property="article:author" content="Lewis Tian">
+<meta property="article:tag" content="spec-cpu2006">
+<meta property="article:tag" content="command">
+<meta property="article:tag" content="spec">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="solve omnetpp run error">
-<meta name="twitter:description" content="When I ran omnetpp with zsim simulator using the command $CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini, and I got an error like that">
 <link rel="canonical" href="https://taseikyo.github.io/2018/05/03/0011.omnetpp-ini-open-error/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -177,8 +179,9 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &apos;omnetpp.ini&apos;</span><br><span class="line">....</span><br></pre></td></tr></table></figure></p>
-<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec/471.omnetpp/data/ref/input/omnetpp.ini) to my work directory(./omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
+        <p>When I ran <code>omnetpp</code> with <code>zsim</code> simulator using the command <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $CPUSPECPATH/471.omnetpp/data/ref/input/omnetpp.ini</code>, and I got an error like that:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!&gt;Cannot open `omnetpp.ini` .</span><br><span class="line">&lt;!&gt;Error during startup: Processing of init file &#x27;omnetpp.ini&#x27;</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<p>I tried to solve this using Baidu and Google, without success. However, the file existed indeed, I can obtain its content using command <code>vim $path/omnetpp.ini</code> or <code>cat $path/omnetpp.ini</code>, which made me confused.<br>Finally I copied the file from the SPEC path(spec&#x2F;471.omnetpp&#x2F;data&#x2F;ref&#x2F;input&#x2F;omnetpp.ini) to my work directory(.&#x2F;omnetpp.ini), and I changed the command like this <code>$CPUSPECPATH/471.omnetpp/exe/omnetpp_base.amd64-m64-gcc43-nn  $WORKPATH/omnetpp.ini</code>, then I ran the command successfully.</p>
     </div>
         <div class="reward-container">
   <div></div>
@@ -211,9 +214,9 @@
   </div>
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/spec/" rel="tag"># spec</a>
               <a href="/blog/tags/spec-cpu2006/" rel="tag"># spec-cpu2006</a>
               <a href="/blog/tags/command/" rel="tag"># command</a>
+              <a href="/blog/tags/spec/" rel="tag"># spec</a>
           </div>
     <div class="post-nav">
       <div class="post-nav-item">
@@ -280,7 +283,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -291,14 +294,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -314,13 +317,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -332,7 +335,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -344,7 +348,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

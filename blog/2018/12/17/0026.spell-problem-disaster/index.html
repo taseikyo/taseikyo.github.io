@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -18,19 +18,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=">
-<meta name="keywords" content="spell-problem,stupid,bug">
+  <meta name="description" content="本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug &#x3D;_&#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单词拼写错误导致的&quot;灾难&quot;">
 <meta property="og:url" content="https://taseikyo.github.io/2018/12/17/0026.spell-problem-disaster/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug &#x3D;_&#x3D;">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://taseikyo.github.io/images/2018/12/WTMD-no-fuck.jpg">
-<meta property="og:updated_time" content="2022-04-04T10:49:08.729Z">
+<meta property="article:published_time" content="2018-12-17T09:34:35.000Z">
+<meta property="article:modified_time" content="2025-10-01T04:47:42.531Z">
+<meta property="article:author" content="Lewis Tian">
+<meta property="article:tag" content="spell-problem">
+<meta property="article:tag" content="stupid">
+<meta property="article:tag" content="bug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单词拼写错误导致的&quot;灾难&quot;">
-<meta name="twitter:description" content="本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=">
 <meta name="twitter:image" content="https://taseikyo.github.io/images/2018/12/WTMD-no-fuck.jpg">
 <link rel="canonical" href="https://taseikyo.github.io/2018/12/17/0026.spell-problem-disaster/">
 <script id="page-configurations">
@@ -182,26 +184,28 @@
         <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
             <img src="/blog/images/2018/12/WTMD-no-fuck.jpg" itemprop="contentUrl">
         </div>
-        <p>本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug =_=<br><a id="more"></a><br>回想起来上一次犯这个错还是大二(？)，当时写了一个网页，然后在另一个单独的 CSS 文件中写样式，我给主体设置了一个类 “main”(鬼知道我为什么要设置这个)，那么问题又是什么呢？</p>
+        <p>本以为不会再犯这种低级错误了，没想到今天又犯了，导致一下午找 bug &#x3D;_&#x3D; </p>
+<span id="more"></span>
+<p>回想起来上一次犯这个错还是大二(？)，当时写了一个网页，然后在另一个单独的 CSS 文件中写样式，我给主体设置了一个类 “main”(鬼知道我为什么要设置这个)，那么问题又是什么呢？</p>
 <p>因为在 CSS 中写好了各种样式，结果在浏览器中没反应(wtf?)，不应该啊，我都写了那么多，为啥什么效果都么得。找了好久好久，最后发现我在 CSS 中写的是 “mian”…..</p>
 <p>心中一万头神兽呼啸而过，鬼知道几年后的今天这个错误又重演了</p>
 <p>今天做网络实验二 —— <em>SYN flood攻击及SYN cookie原理分析</em></p>
 <p>大概要求如下：</p>
 <blockquote>
-<p>一个虚拟机 B 开启 telnet 服务，然后虚拟机 A 使用 netwox 命令对 B 进行 SYN flood 攻击，同时使用 telnet 远程登陆 B，当默认条件下，是可以登陆的；将 /proc/sys/net/ipv4/tcp_syncookies 设置为 0，/proc/sys/net/ipv4/tcp_syncookies 设置为 5，之后应该是无法登陆的。</p>
+<p>一个虚拟机 B 开启 telnet 服务，然后虚拟机 A 使用 netwox 命令对 B 进行 SYN flood 攻击，同时使用 telnet 远程登陆 B，当默认条件下，是可以登陆的；将 &#x2F;proc&#x2F;sys&#x2F;net&#x2F;ipv4&#x2F;tcp_syncookies 设置为 0，&#x2F;proc&#x2F;sys&#x2F;net&#x2F;ipv4&#x2F;tcp_syncookies 设置为 5，之后应该是无法登陆的。</p>
 </blockquote>
-<p>照着实验要求做，本应该很容易，因为同实验室另外两个同学也是这样做的，很快就顺利完成了，可是我的出现问题了，在设置 cookies 为 0 之后，仍然能登陆？！在求助实验室同学/网络群同学之后仍然无法解决问题，本来打算放弃了。</p>
+<p>照着实验要求做，本应该很容易，因为同实验室另外两个同学也是这样做的，很快就顺利完成了，可是我的出现问题了，在设置 cookies 为 0 之后，仍然能登陆？！在求助实验室同学&#x2F;网络群同学之后仍然无法解决问题，本来打算放弃了。</p>
 <p>后来网络群有个同学说了句 </p>
 <blockquote>
 <p>Shit Happens: @Snail 你的网关最后一位不要是.0结尾</p>
 </blockquote>
 <p> 我设定的就不是 0 结尾啊，A、B 网关都为 192.168.1.1，A 的 IP 为 192.168.1.2，B 的 IP 为 192.168.1.3。</p>
-<p>然后我想告诉他事实，然后把 /etc/network/interfaces 文件截图发出去了，然后我突然发现最后一行的网关拼成了</p>
+<p>然后我想告诉他事实，然后把 &#x2F;etc&#x2F;network&#x2F;interfaces 文件截图发出去了，然后我突然发现最后一行的网关拼成了</p>
 <p><strong>gatway</strong></p>
 <p><strong>g a t w a y</strong> </p>
 <p>突然感觉哪里不对劲…</p>
 <p>我赶紧羞耻地撤回了，然后把 gateway 改回来了，之后结果不出所料，一路畅通。</p>
-<p><img data-src="/blog/images/2018/12/WTMD-no-fuck.jpg" alt="WTMD-no-fuck.jpg" title="我汤姆还能说什么？！"></p>
+<img data-src="/blog/images/2018/12/WTMD-no-fuck.jpg" alt="WTMD-no-fuck.jpg" title="我汤姆还能说什么？！">
 <p>所以就想做了记录，康康以后还会不会范这个蠢问题。</p>
     </div>
         <div class="reward-container">
@@ -304,7 +308,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -315,14 +319,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -338,13 +342,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -356,7 +360,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -368,7 +373,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

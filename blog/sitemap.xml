@@ -2,598 +2,2286 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://taseikyo.github.io/2022/02/01/0081.happy-new-year-2022/</loc>
+    <loc>https://taseikyo.github.io/2025/10/01/0082.relaunch-2025/</loc>
     
-    <lastmod>2022-04-04T13:07:11.947Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/10/15/0044.ubuntu1804-static-ip/</loc>
-    
-    <lastmod>2022-04-04T12:19:27.575Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/13/0064.self-linux-config/</loc>
-    
-    <lastmod>2022-04-04T12:15:02.645Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/</loc>
-    
-    <lastmod>2022-04-04T12:14:55.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</loc>
-    
-    <lastmod>2022-04-04T12:14:29.232Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/10/25/0045.win10-network-error/</loc>
-    
-    <lastmod>2022-04-04T12:13:32.844Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/09/03/0041.deploy-blog-to-subdirectory/</loc>
-    
-    <lastmod>2022-04-04T12:13:07.933Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/05/10/0035.good-things-recommended-win-softwares/</loc>
-    
-    <lastmod>2022-04-04T12:12:39.712Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/12/09/0024.bili-box/</loc>
-    
-    <lastmod>2022-04-04T12:11:11.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/10/31/0018.chrome-exts-hide2show/</loc>
-    
-    <lastmod>2022-04-04T12:07:38.402Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/12/04/0072.vtuber-and-me/</loc>
-    
-    <lastmod>2022-04-04T12:05:21.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/11/07/0069.inside-perception/</loc>
-    
-    <lastmod>2022-04-04T12:05:00.425Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/11/02/0068.public-using-server-keep-privacy/</loc>
-    
-    <lastmod>2022-04-04T12:04:46.654Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/22/0067.microsoft-store-0x80131500/</loc>
-    
-    <lastmod>2022-04-04T12:04:16.080Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/10/09/0063.centos-ubuntu-command-diff/</loc>
-    
-    <lastmod>2022-04-04T12:03:28.227Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/06/09/0057.xinkeniang-qingfeng/</loc>
-    
-    <lastmod>2022-04-04T12:01:05.868Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/05/28/0056.git-push-input-username-and-passwd/</loc>
-    
-    <lastmod>2022-04-04T12:00:18.336Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/12/24/0049.taseikyo-2019-hust/</loc>
-    
-    <lastmod>2022-04-04T11:58:35.965Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/12/05/0047.vscode-remote-server-find-code-definition/</loc>
-    
-    <lastmod>2022-04-04T11:57:30.849Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/07/09/0039.win10-terminal/</loc>
-    
-    <lastmod>2022-04-04T11:53:01.838Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/05/31/0038.onenote-open-link-error/</loc>
-    
-    <lastmod>2022-04-04T11:52:14.289Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/05/20/0037.includeos-helloworld2/</loc>
-    
-    <lastmod>2022-04-04T11:51:09.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/02/28/0033.meeting-190227/</loc>
-    
-    <lastmod>2022-04-04T10:53:58.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/03/20/0032.includeos-helloworld/</loc>
-    
-    <lastmod>2022-04-04T10:52:39.670Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/02/23/0031.mad-review/</loc>
-    
-    <lastmod>2022-04-04T10:51:46.288Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/02/15/0029.bili-pendant/</loc>
-    
-    <lastmod>2022-04-04T10:50:23.717Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/01/25/0028.first2codewars/</loc>
-    
-    <lastmod>2022-04-04T10:49:51.303Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/12/17/0026.spell-problem-disaster/</loc>
-    
-    <lastmod>2022-04-04T10:49:08.729Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</loc>
-    
-    <lastmod>2022-04-04T10:48:24.489Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</loc>
-    
-    <lastmod>2022-04-04T10:46:47.149Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/11/01/0019.pc-win-no-voice/</loc>
-    
-    <lastmod>2022-04-04T10:45:58.739Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/10/20/0016.microphone-no-voice/</loc>
-    
-    <lastmod>2022-04-04T10:44:23.618Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/12/30/0027.summary-1812/</loc>
-    
-    <lastmod>2022-04-04T10:43:12.761Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/11/30/0023.summary-1811/</loc>
-    
-    <lastmod>2022-04-04T10:43:08.511Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/10/30/0017.summary-1810/</loc>
-    
-    <lastmod>2022-04-04T10:43:03.487Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/10/01/0015.summary-1809/</loc>
-    
-    <lastmod>2022-04-04T10:42:26.800Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/07/16/0014.pyqt-mutilanguage/</loc>
-    
-    <lastmod>2022-04-04T10:42:06.347Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/07/03/0012.intel-cpu-cpuid-instruction/</loc>
-    
-    <lastmod>2022-04-04T10:38:10.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2018/03/14/0008.linux-boost/</loc>
-    
-    <lastmod>2022-04-04T10:36:34.160Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2017/08/07/0001.topology/</loc>
-    
-    <lastmod>2022-04-04T10:34:49.428Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2019/07/12/0040.a-normal-day-in-wuhan/</loc>
-    
-    <lastmod>2022-04-04T10:27:35.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2022/04/04/0080.cmder-7zip-winrar-not-found/</loc>
-    
-    <lastmod>2022-04-04T10:18:10.622Z</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/tags/index.html</loc>
     
-    <lastmod>2022-04-04T08:19:02.555Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/categories/index.html</loc>
     
-    <lastmod>2022-04-04T08:19:02.555Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2018/01/01/donate/</loc>
     
-    <lastmod>2022-04-04T08:19:02.554Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2022/02/01/0081.happy-new-year-2022/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2022/04/04/0080.cmder-7zip-winrar-not-found/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2021/03/24/0079.running-python-rtupdate-hooks-for-python3-5x/</loc>
     
-    <lastmod>2022-04-04T08:19:02.554Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/12/21/0075.latex-table-bug/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.553Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2021/02/28/0077.error-apt-update/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.553Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/12/24/0076.error-converting-wsl-to-wsl2/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.553Z</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2021/03/24/0078.how-to-allow-an-ip-address-for-ssh-connection/</loc>
     
-    <lastmod>2022-04-04T08:19:02.553Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2021/02/28/0077.error-apt-update/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/12/24/0076.error-converting-wsl-to-wsl2/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/12/21/0075.latex-table-bug/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/12/16/0074.zsh-history-encoding/</loc>
     
-    <lastmod>2022-04-04T08:19:02.552Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/12/11/0073.os-to-pathlib/</loc>
     
-    <lastmod>2022-04-04T08:19:02.552Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/12/04/0072.vtuber-and-me/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/11/24/0071.win10-tim-login-timeout/</loc>
     
-    <lastmod>2022-04-04T08:19:02.552Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/11/11/0070.run-the-osv-image-on-another-node/</loc>
     
-    <lastmod>2022-04-04T08:19:02.551Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
+    <loc>https://taseikyo.github.io/2020/11/07/0069.inside-perception/</loc>
     
-    <lastmod>2022-04-04T08:19:02.549Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/11/02/0068.public-using-server-keep-privacy/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/22/0067.microsoft-store-0x80131500/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/10/16/0066.grant-user-sudo-privilege/</loc>
     
-    <lastmod>2022-04-04T08:19:02.549Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2020/08/13/0058.bug-200813-cpp-int2string/</loc>
+    <loc>https://taseikyo.github.io/2020/10/15/0065.reset-root-passwd-when-forgetting-passwd/</loc>
     
-    <lastmod>2022-04-04T08:19:02.547Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2020/08/25/0059.bug-200825-cpp-int2double/</loc>
+    <loc>https://taseikyo.github.io/2020/10/13/0064.self-linux-config/</loc>
     
-    <lastmod>2022-04-04T08:19:02.547Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/09/0063.centos-ubuntu-command-diff/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/07/0062.useful-bash-alias/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/09/30/0060.contribute-to-the-algorithm-python/</loc>
     
-    <lastmod>2022-04-04T08:19:02.547Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/08/25/0059.bug-200825-cpp-int2double/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/08/13/0058.bug-200813-cpp-int2string/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/06/09/0057.xinkeniang-qingfeng/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/05/28/0056.git-push-input-username-and-passwd/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/04/02/0055.win10-scoop/</loc>
     
-    <lastmod>2022-04-04T08:19:02.546Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/03/09/0053.vmware-ubuntu1910-no-network/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.545Z</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/03/16/0054.ubuntu-zsh-autojump-autosuggestions/</loc>
     
-    <lastmod>2022-04-04T08:19:02.545Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2019/12/25/0050.win10-single-sound-channel/</loc>
+    <loc>https://taseikyo.github.io/2020/03/09/0053.vmware-ubuntu1910-no-network/</loc>
     
-    <lastmod>2022-04-04T08:19:02.544Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2020/01/08/0052.vscode-connect-remote-server-via-jump-server/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2020/01/06/0051.xshell-cannot-connet-ubuntu-server/</loc>
     
-    <lastmod>2022-04-04T08:19:02.544Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/</loc>
+    <loc>https://taseikyo.github.io/2019/12/25/0050.win10-single-sound-channel/</loc>
     
-    <lastmod>2022-04-04T08:19:02.543Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/12/24/0049.taseikyo-2019-hust/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2019/12/18/0048.set-default-boot-kernel/</loc>
     
-    <lastmod>2022-04-04T08:19:02.543Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/12/05/0047.vscode-remote-server-find-code-definition/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/11/27/0046.python38-dll-load-failed-while-importing-win32api/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/10/25/0045.win10-network-error/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/10/15/0044.ubuntu1804-static-ip/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/</loc>
     
-    <lastmod>2022-04-04T08:19:02.542Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2019/09/08/0042.diff-stack-heap/</loc>
     
-    <lastmod>2022-04-04T08:19:02.541Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/09/03/0041.deploy-blog-to-subdirectory/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/07/12/0040.a-normal-day-in-wuhan/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/07/09/0039.win10-terminal/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/05/31/0038.onenote-open-link-error/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/05/20/0037.includeos-helloworld2/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2019/05/13/0036.centos7-sudo-cmd/</loc>
     
-    <lastmod>2022-04-04T08:19:02.539Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/05/10/0035.good-things-recommended-win-softwares/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2019/04/08/0034.python3-map/</loc>
     
-    <lastmod>2022-04-04T08:19:02.538Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/02/28/0033.meeting-190227/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/03/20/0032.includeos-helloworld/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/02/23/0031.mad-review/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2019/02/16/0030.codewars-190216/</loc>
     
-    <lastmod>2022-04-04T08:19:02.537Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2018/11/20/0020.js-filereader-onload/</loc>
+    <loc>https://taseikyo.github.io/2019/02/15/0029.bili-pendant/</loc>
     
-    <lastmod>2022-04-04T08:19:02.534Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2019/01/25/0028.first2codewars/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/12/30/0027.summary-1812/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/12/17/0026.spell-problem-disaster/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/12/10/0025.mit-1806-linear-algebra-spring-2005/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/12/09/0024.bili-box/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/11/30/0023.summary-1811/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2018/11/27/0022.exercise-181127/</loc>
     
-    <lastmod>2022-04-04T08:19:02.534Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/11/20/0020.js-filereader-onload/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/11/01/0019.pc-win-no-voice/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/10/31/0018.chrome-exts-hide2show/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/10/30/0017.summary-1810/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/10/20/0016.microphone-no-voice/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/10/01/0015.summary-1809/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/07/16/0014.pyqt-mutilanguage/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2018/07/11/0013.windows-right-click-slow/</loc>
     
-    <lastmod>2022-04-04T08:19:02.532Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2018/07/03/0012.intel-cpu-cpuid-instruction/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2018/05/03/0011.omnetpp-ini-open-error/</loc>
     
-    <lastmod>2022-04-04T08:19:02.531Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2018/04/13/0010.mpki-rbl-blp-spec/</loc>
     
-    <lastmod>2022-04-04T08:19:02.531Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2017/12/05/0006.netease-radio/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.530Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://taseikyo.github.io/2017/12/13/0007.netease-hot-comments/</loc>
-    
-    <lastmod>2022-04-04T08:19:02.530Z</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2018/03/22/0009.spec-run-cmd/</loc>
     
-    <lastmod>2022-04-04T08:19:02.530Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2017/10/14/0004.hust-rank/</loc>
+    <loc>https://taseikyo.github.io/2018/03/14/0008.linux-boost/</loc>
     
-    <lastmod>2022-04-04T08:19:02.529Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2017/10/10/0003.ram-jd/</loc>
+    <loc>https://taseikyo.github.io/2017/12/13/0007.netease-hot-comments/</loc>
     
-    <lastmod>2022-04-04T08:19:02.529Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2017/12/05/0006.netease-radio/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2017/11/15/0005.zhihu-ajax/</loc>
     
-    <lastmod>2022-04-04T08:19:02.529Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://taseikyo.github.io/2017/07/26/0000.hello-world/</loc>
+    <loc>https://taseikyo.github.io/2017/10/14/0004.hust-rank/</loc>
     
-    <lastmod>2022-04-04T08:19:02.528Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2017/10/10/0003.ram-jd/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://taseikyo.github.io/2017/08/25/0002.cloud-music-lyric/</loc>
     
-    <lastmod>2022-04-04T08:19:02.528Z</lastmod>
+    <lastmod>2025-10-01</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2017/08/07/0001.topology/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/2017/07/26/0000.hello-world/</loc>
+    
+    <lastmod>2025-10-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://taseikyo.github.io/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/programming/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/python/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/crawler/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/netease/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/netease-cloud/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/netease-radio/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/blog/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/first-try/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/hexo/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/node/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/study/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/github-page/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/cpp/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/sizeof/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/array/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pointer/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/programming-c-qt-lyric-netease-cloud/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/javascript/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/fileReader/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/d3/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/zhihu/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ajax/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/chrome/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/programming-python-crawler-ram-jingdong-echarts-javascript/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/win10/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/windows/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/microphone/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/no-voice/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/daily/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/netease-music/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/hot-comments/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/right-click/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/menu/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/desktop/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/windows10/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/spec-spec-cpu2006-mpki-rbl-blp/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/programming-python-crawler-baidu-tieba-echarts-javascript/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/linux/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/bost/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/c/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/compiler/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/install/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pyqt5/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pyqt/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/i18n/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/language/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/summary/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/person/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/intel/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/cpuid/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/linear-algebra/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/mit/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/18-06/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/open-course/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/programming-javascript-topology-d3-internship/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/spec-cpu2006/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/command/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/spec/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/spell-problem/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/stupid/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/bug/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/chrome-extension/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/an-exercise-per-day/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/benchmark/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/bilibili/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/css/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pendant/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/avatar/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/codewars/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/oj/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/mad/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/meeting/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/unikernel/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/huge-page/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/memory-management/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/includeos/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/software/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/recommend/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/map/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/any/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/all/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/centos7/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pip3/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/python3/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/memory/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/stack/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/heap/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/dynamic-memory-allocation/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/onenote/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/organization-policies/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/terminal/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/win10-windows/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ubuntu/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ubuntu1804/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/server/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/os/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/operating-system/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ip/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/static-ip/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/netplan/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/network/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/win32api/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pywin32/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/dll/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/importerror/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/jupyter-notebook/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/jupyter/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/xshell/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ping/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/mono/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/sound/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/kernel/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/boot/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ubuntu1910/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/vmware/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/scoop/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/hust/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/eating/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/vscode/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/code/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/definition/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/remote-server/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/zsh/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/oh-my-zsh/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/autojump/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ssh-server-remote-ssh-keygen/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/up/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/xinkeniang/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/qingfengzuimeng/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/int/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/string/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/git/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/github/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/git-push/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/username/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/password/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/root/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/passwd/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/etc/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/shadow/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/salt/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/hash/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/encryption/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/dkpg/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/apt/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/apt-get/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/linux-warning-bug/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/contribution/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/algorithm/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/open-source/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/centos/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/double/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/bash/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/config/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/sudo/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/admin/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/sudoers/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/group/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/microsoft/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/microsoft-store/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/2148734208/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/error-code/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/privacy/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/public/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/human-nature/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/alias/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/shell/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/bashrc/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/bash-profile/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/osv/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/image/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/tim/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/qq/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/login/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/inside/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/steame/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/game/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/puzzle/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/adventure/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/path/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/pathlib/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/history/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/encoding/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/vup/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/vtuber/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/youtube/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ccll/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/chucolala/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/latex/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/table/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/compile/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/build/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/overleaf/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/wsl/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/wsl2/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ubuntu20-04/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/cmder/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ssh/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/access/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/deny/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/new-year/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/hangzhou/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/2022/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/cooking/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/update/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/source/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/ubuntu19-10/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/2025/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/relaunch/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/tags/donate/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://taseikyo.github.io/categories/Study/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/categories/Blog/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/categories/Bug/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://taseikyo.github.io/categories/Linux/</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 </urlset>

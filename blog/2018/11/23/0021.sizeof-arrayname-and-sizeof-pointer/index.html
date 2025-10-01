@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -18,18 +18,25 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="今天做了一道题，感觉很有趣，题目是下面这样的 123456789101112131432 位系统下下面程序的输出结果为多少？void Func(char str_arg[100]) &amp;#123;	printf(&quot;%d\n&quot;, sizeof(str_arg));&amp;#125;int main(void) &amp;#123;	char str[] = &quot;Hello&quot;;	printf(&quot;%d\n&quot;, size">
-<meta name="keywords" content="programming,cpp,sizeof,array,pointer">
+  <meta name="description" content="今天做了一道题，感觉很有趣，题目是下面这样的 123456789101112131432 位系统下下面程序的输出结果为多少？void Func(char str_arg[100]) &amp;#123;	printf(&quot;%d\n&quot;, sizeof(str_arg));&amp;#125;int main(void) &amp;#123;	char str[] &#x3D; &quot;Hello&quot;;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sizeof(数组名)和sizeof(指针)">
 <meta property="og:url" content="https://taseikyo.github.io/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="今天做了一道题，感觉很有趣，题目是下面这样的 123456789101112131432 位系统下下面程序的输出结果为多少？void Func(char str_arg[100]) &amp;#123;	printf(&quot;%d\n&quot;, sizeof(str_arg));&amp;#125;int main(void) &amp;#123;	char str[] = &quot;Hello&quot;;	printf(&quot;%d\n&quot;, size">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T10:46:47.149Z">
+<meta property="og:description" content="今天做了一道题，感觉很有趣，题目是下面这样的 123456789101112131432 位系统下下面程序的输出结果为多少？void Func(char str_arg[100]) &amp;#123;	printf(&quot;%d\n&quot;, sizeof(str_arg));&amp;#125;int main(void) &amp;#123;	char str[] &#x3D; &quot;Hello&quot;;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2018/11/c-pointer.jpg">
+<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2018/11/c-pointer-result.png">
+<meta property="article:published_time" content="2018-11-23T08:21:49.000Z">
+<meta property="article:modified_time" content="2025-10-01T04:47:42.508Z">
+<meta property="article:author" content="Lewis Tian">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="cpp">
+<meta property="article:tag" content="sizeof">
+<meta property="article:tag" content="array">
+<meta property="article:tag" content="pointer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sizeof(数组名)和sizeof(指针)">
-<meta name="twitter:description" content="今天做了一道题，感觉很有趣，题目是下面这样的 123456789101112131432 位系统下下面程序的输出结果为多少？void Func(char str_arg[100]) &amp;#123;	printf(&quot;%d\n&quot;, sizeof(str_arg));&amp;#125;int main(void) &amp;#123;	char str[] = &quot;Hello&quot;;	printf(&quot;%d\n&quot;, size">
+<meta name="twitter:image" content="https://taseikyo.github.io/blog/blog/images/2018/11/c-pointer.jpg">
 <link rel="canonical" href="https://taseikyo.github.io/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -177,11 +184,11 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p><img data-src="/blog/images/2018/11/c-pointer.jpg" alt></p>
+        <p><img data-src="/blog/blog/images/2018/11/c-pointer.jpg"></p>
 <p>今天做了一道题，感觉很有趣，题目是下面这样的</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Func</span><span class="params">(<span class="keyword">char</span> str_arg[<span class="number">100</span>])</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span> str[] = <span class="string">"Hello"</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(str));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="built_in">strlen</span>(str));</span><br><span class="line">	<span class="keyword">char</span>*p = str;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(p));</span><br><span class="line">	Func(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Func</span><span class="params">(<span class="type">char</span> str_arg[<span class="number">100</span>])</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">char</span> str[] = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(str));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">strlen</span>(str));</span><br><span class="line">	<span class="type">char</span>*p = str;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(p));</span><br><span class="line">	<span class="built_in">Func</span>(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span> </span><br></pre></td></tr></table></figure>
 <p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）</p>
-<p><img data-src="/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
+<p><img data-src="/blog/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
 <p>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
     </div>
         <div class="reward-container">
@@ -286,7 +293,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -297,14 +304,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -320,13 +327,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -338,7 +345,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -350,7 +358,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>

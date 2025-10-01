@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 6.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -18,18 +18,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"taseikyo.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-  <meta name="description" content="今天（20/11/2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。  问了几个可能使用登录我账户的同学，结果他们都说没有，然后我使用 last 命令查看近期登录服务器的账户，发现似乎被重启了（应该不是重启，我每次手动 restart 之后登录记录还在），最早的一条记录是（Sun">
-<meta name="keywords" content="server,privacy,public,human-nature">
+  <meta name="description" content="今天（20&#x2F;11&#x2F;2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。  问了几个可能使用登录我账户的同学，结果他们都说没有，然后我使用 last 命令查看近期登录服务器的账户，发现似乎被重启了（应该不是重启，我每次手动 restart 之后登录记录还在），最早">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在公共使用的服务器保证隐私？">
 <meta property="og:url" content="https://taseikyo.github.io/2020/11/02/0068.public-using-server-keep-privacy/index.html">
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
-<meta property="og:description" content="今天（20/11/2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。  问了几个可能使用登录我账户的同学，结果他们都说没有，然后我使用 last 命令查看近期登录服务器的账户，发现似乎被重启了（应该不是重启，我每次手动 restart 之后登录记录还在），最早的一条记录是（Sun">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-04-04T12:04:46.654Z">
+<meta property="og:description" content="今天（20&#x2F;11&#x2F;2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。  问了几个可能使用登录我账户的同学，结果他们都说没有，然后我使用 last 命令查看近期登录服务器的账户，发现似乎被重启了（应该不是重启，我每次手动 restart 之后登录记录还在），最早">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2020/11/QQ20201102100903.png">
+<meta property="article:published_time" content="2020-11-02T02:07:19.000Z">
+<meta property="article:modified_time" content="2025-10-01T04:47:42.748Z">
+<meta property="article:author" content="Lewis Tian">
+<meta property="article:tag" content="server">
+<meta property="article:tag" content="privacy">
+<meta property="article:tag" content="public">
+<meta property="article:tag" content="human-nature">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何在公共使用的服务器保证隐私？">
-<meta name="twitter:description" content="今天（20/11/2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。  问了几个可能使用登录我账户的同学，结果他们都说没有，然后我使用 last 命令查看近期登录服务器的账户，发现似乎被重启了（应该不是重启，我每次手动 restart 之后登录记录还在），最早的一条记录是（Sun">
+<meta name="twitter:image" content="https://taseikyo.github.io/blog/blog/images/2020/11/QQ20201102100903.png">
 <link rel="canonical" href="https://taseikyo.github.io/2020/11/02/0068.public-using-server-keep-privacy/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -177,11 +182,11 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p>今天（20/11/2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。</p>
-<p><img data-src="/blog/images/2020/11/QQ20201102100903.png" alt></p>
+        <p>今天（20&#x2F;11&#x2F;2）早上在登录服务器后，发现历史记录没了，如下图所示，从 4 开始是今早开始使用的，而前面的重启网卡以及 ps 命令并不是我所使用的，服了，果然在一个公共服务器就很麻烦。</p>
+<p><img data-src="/blog/blog/images/2020/11/QQ20201102100903.png"></p>
 <p>问了几个可能使用登录我账户的同学，结果他们都说没有，然后我使用 last 命令查看近期登录服务器的账户，发现似乎被重启了（应该不是重启，我每次手动 restart 之后登录记录还在），最早的一条记录是（Sun Nov  1 12:27 - 20:08），所以服务器肯定被动过了。</p>
 <p>这个没记录没法查是谁动了手脚，最后没办法在 <code>.myrc</code> 最后加了一条声明，算是防君子吧，但是硬要改你东西的人怎么能是君子（笑</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -e <span class="string">"\033[41;37m【请尊重个人隐私】\n\n如果不是本人（Lewis Tian），请不要随便动本人的东西！否则后果自负！\n如果需要使用本人相关文件、脚本，请先联系本人（taseikyo@qq.com），谢谢合作！\033[0m"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;\033[41;37m【请尊重个人隐私】\n\n如果不是本人（Lewis Tian），请不要随便动本人的东西！否则后果自负！\n如果需要使用本人相关文件、脚本，请先联系本人（taseikyo@qq.com），谢谢合作！\033[0m&quot;</span></span><br></pre></td></tr></table></figure>
 <p>上面一段话会以<em>红底白字</em>的形式打印在屏幕上，还算醒目，只不过可能并没有什么用吧。</p>
     </div>
         <div class="reward-container">
@@ -285,7 +290,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">83</span>
+          <span class="site-state-item-count">84</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -296,14 +301,14 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">210</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/taseikyo" title="GitHub → https://github.com/taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/taseikyo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;taseikyo" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:taseikyo@gmail.com" title="Email → mailto:taseikyo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
@@ -319,13 +324,13 @@
       <div class="footer-inner">
 <div class="copyright">
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lewis Tian</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
       </div>
     </footer>
@@ -337,7 +342,8 @@
   <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
   <script src="/blog/lib/velocity/velocity.min.js"></script>
   <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
-<script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script>
+<script src="/blog/js/utils.js"></script>
+<script src="/blog/js/motion.js"></script>
 <script src="/blog/js/schemes/pisces.js"></script>
 <script src="/blog/js/next-boot.js"></script>
   <script>
@@ -349,7 +355,7 @@
       s.parentNode.insertBefore(bp, s);
     })();
   </script>
-  <script src="/blog/js/local-search.js"></script>
+<script src="/blog/js/local-search.js"></script>
   <script type="text/javascript" src="/blog/js/click-animation.js"></script>
   <script type="text/javascript" src="/blog/js/one.js"></script> 
   </style>
