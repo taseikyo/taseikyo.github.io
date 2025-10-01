@@ -25,9 +25,9 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。  *Photo by Tim Gouw on Unsplash">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg">
 <meta property="article:published_time" content="2020-10-07T01:23:37.000Z">
-<meta property="article:modified_time" content="2025-10-01T04:47:42.711Z">
+<meta property="article:modified_time" content="2025-10-01T06:45:08.309Z">
 <meta property="article:author" content="Lewis Tian">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="ubuntu1804">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="apt-get">
 <meta property="article:tag" content="linux - warning - bug">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://taseikyo.github.io/blog/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg">
+<meta name="twitter:image" content="https://taseikyo.github.io/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg">
 <link rel="canonical" href="https://taseikyo.github.io/2020/10/07/0061.ubuntu1804-dpkg-warning-files-list-file-for-package-xxx-missing/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -185,7 +185,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
         <p>多人使用节点总会有这有那的问题，毕竟每个人都有 sudo 权限，每个人都会装软件，每个人都会改配置文件，有人不遵守游戏规则瞎改配置文件就会出问题。</p>
-<p><img data-src="/blog/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg"></p>
+<p><img data-src="/blog/images/banner/tim-gouw-rxLGSOM0e3U-unsplash.jpg"></p>
 <p>*<em>Photo by Tim Gouw on Unsplash</em></p>
 <span id="more"></span>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道是谁动了服务器，导致环境不对了，gcc&#x2F;g++ 使用报错，找不到头文件，以及每次使用 apt 都会输出标题的 warning，后来在粘贴到 txt 文档发现有多达 180 个 warning，真的服气，找了很多方案都没用，比如删除 <code>/var/lib/dpkg/info</code> 然后自动生成，可能对那个博主有用，但是对我无效，最后这个：<a target="_blank" rel="noopener" href="https://www.pythonf.cn/read/105362">Ubuntu 18.04中的Dpkg警告解决方案，简单而粗糙</a> 有用，稍微修改整理了下，于是有了这篇博客。</p>

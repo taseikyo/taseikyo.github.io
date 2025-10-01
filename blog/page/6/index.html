@@ -223,10 +223,10 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/banner/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
+          <p><img data-src="/blog/images/banner/anubhav-saxena-RA5ntyyDHlw-unsplash.jpg" alt="trouble" title="Photo by Anubhav Saxena on Unsplash"></p>
 <p>由于之前发生了一些事，删掉了一些库，换掉了 username，本来想直接删掉 gitpage 的，犹豫了好久还是开吧，毕竟有时候遇到一些问题还是挺值的记录的。</p>
 <p>不过这次是将博客部署到 &#x2F;blog 子目录下，需要修改一下地方，首先就是修改根目录下的配置文件(_config.yml)，将 root 由 &#x2F; 改成 &#x2F;blog，然后就不能直接使用 hexo d 这个命令了，因为默认还是将所有文件复制到你 username.github.io 仓的根目录，所以需要手动将生成的 public 目录复制到你 username.github.io&#x2F;bolg 目录下。</p>
-<p>但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io&#x2F;images&#x2F;xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io&#x2F;blog&#x2F;images&#x2F;xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了：</p>
+<p>但是这样你会发现一个问题，就是你博客正文里面的图片无法显示(地址不对，地址仍然是 username.github.io&#x2F;images&#x2F;xxxx)，奇怪的是 banner 图片却可以正常显示(地址正确，地址是 username.github.io&#x2F;images&#x2F;xxxx)，就很奇怪，我才是生成过程中，banner 中的图片地址被处理过了，但是正文里面的没有，这样处理方法就有两个了：</p>
 <ol>
 <li>手动替换地址</li>
 <li>找到对应的 js 文件，将正文中的地址替换掉</li>
@@ -273,7 +273,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2019/07/wx20190713-1135@%E9%B8%A6%E9%9D%92.png" title="平凡的一天"></p>
+          <p><img data-src="/blog/images/2019/07/wx20190713-1135@%E9%B8%A6%E9%9D%92.png" title="平凡的一天"></p>
 <p>2019&#x2F;7&#x2F;12，武汉，小雨，22&#x2F;30°C</p>
           <!--noindex-->
             <div class="post-button">
@@ -321,7 +321,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2019/07/0x027.001.png" title="windows-terminal"></p>
+          <p><img data-src="/blog/images/2019/07/0x027.001.png" title="windows-terminal"></p>
 <p>从 win10 terminal 的消息出来就想试试了，然而系统版本过低导致无法使用一直很气，上周将自己笔记本重装了，得到的版本是 1503 😂 然后升级了好久仍然只是到了 1809 (win+r &#x3D;&gt; winver)，最后下了 win10 易升强行升到 1903，赶紧从应用商店下了 terminal 来试试。</p>
           <!--noindex-->
             <div class="post-button">
@@ -371,12 +371,12 @@
     <div class="post-body" itemprop="articleBody">
           <p>从昨天开始使用 OneNote，感觉还不错，但有一点就是点开链接的时候总会弹出一个对话框：你的组织策略阻止我们为你完成此操作&#x2F;Your organization’s policies are preventing us from completing this action for you. For more info, please contact your help desk.</p>
 <p>搜到的方法基本是修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 的默认值为 Htmlfile，重启电脑。</p>
-<p><img data-src="/blog/blog/images/2019/05/onenote-1545731852.png" alt="onenote"></p>
+<p><img data-src="/blog/images/2019/05/onenote-1545731852.png" alt="onenote"></p>
 <p>然后你发现其实并没有什么卵用，该错还是错。</p>
 <p>一个折衷的方法是鼠标放在链接上然后右键打开链接 - MSEdge.EXE<br>可以从执行文件上看出，它就是打开了 edge 浏览器，也算是解决了问题吧，但是打开了像 CSDN 这种网页（别问我为什么要用 CSDN），没有 Adblock Plus，一大堆恶心的广告扑面而来。。。。</p>
-<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/blog/images/2019/05/onenote-20190531144338.png" alt="onenote"></p>
+<p>之后我点了 <code>HKEY_CURRENT_USER\Software\Classes\.html\OpenWithProgids</code> 然后看到里面有一堆表项，可以有一个前缀是 ChromeHTMLxxxx 的东西，不知道是什么东西，我猜可能是用 Chrome 打开 html 文件一个选项吧，然后将这个复制并修改 <code>HKEY_CURRENT_USER\Software\Classes\.html</code> 默认值<br><img data-src="/blog/images/2019/05/onenote-20190531144338.png" alt="onenote"></p>
 <p>重启 OneNote 之后，点开链接就直接打开 Chrome 了，竟然被我猜对了 233</p>
-<p><img data-src="/blog/blog/images/memes/0014.jpg" alt="memes"></p>
+<p><img data-src="/blog/images/memes/0014.jpg" alt="memes"></p>
     </div>
       <footer class="post-footer">
         <div class="post-eof"></div>
@@ -416,7 +416,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2019/03/includeOS.png" title="includeOS"></p>
+          <p><img data-src="/blog/images/2019/03/includeOS.png" title="includeOS"></p>
 <p>今天与发上一篇 <a target="_blank" rel="noopener" href="https://lewistian.github.io/2019/03/20/includeOS-helloworld/">includeOS 初体验 - Hello World!</a> 正好相隔两个月，再次提及却是没那么轻松。<br>之前安装两遍就完成了，现在，一个星期过去了，还没在服务器上装好。<br>一个最主要的原因在于 <a target="_blank" rel="noopener" href="https://github.com/includeos/IncludeOS#getting_started">IncludeOS</a> 已经改了安装方式，之前是直接编译源码安装，现在是使用一个叫 <a target="_blank" rel="noopener" href="https://conan.io/">conan</a> 的 C++ 包管理工具，本身对 C++ 就不怎么熟悉，更何况是它的包管理工具，之后我问过其他人，其他人也是一脸懵逼：<br>—— “柯南？”<br>—— “什么东西？”</p>
 <p>当然我没有深究这个东西，简要看了一下文档介绍然后安装之。我卡住并不是因为这个 conan。</p>
           <!--noindex-->
@@ -466,7 +466,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <div style="float: right; margin-left: 10px;margin-top: 0px;">
-	<img data-src="/blog/images/memes/0001.jpg" alt="?" title="what the hell?">
+	<img data-src="/images/memes/0001.jpg" alt="?" title="what the hell?">
 </div>
 <p>起因是今天在服务器上装 IncludeOS。<br>然后它需要 Python3 的一些库，我看了下我所在的节点(node18)，没有 Python3，所以就只能自己装 Python3，装完之后试了下 python3&#x2F;pip3 都是可以跑的。</p>
 <p>但是装库的话需要 root 权限，然后这个时候问题就来了。</p>
@@ -523,7 +523,7 @@
       </header>
     <div class="post-body" itemprop="articleBody">
           <p>记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。<br>目的是为了以后换了电脑&#x2F;笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。<br>本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。</p>
-<p><img data-src="/blog/blog/images/banner/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
+<p><img data-src="/blog/images/banner/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/#more" rel="contents">

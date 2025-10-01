@@ -224,8 +224,8 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2018/12/18.06-Linear-Algebra.jpg"></p>
-<p>2018&#x2F;12&#x2F;10 16:15 完结撒花！！！<br>因为听矩阵论听不懂而跑去看 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ZK3O402wf1c&list=PLE7DDD91010BC51F8">MIT 线性代数公开课</a> 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。<br>吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。<br>本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_<br><img data-src="/blog/blog/images/2018/12/18.06-Linear-Algebra-note.jpg" title="Linear Algebra Notes"></p>
+          <p><img data-src="/blog/images/2018/12/18.06-Linear-Algebra.jpg"></p>
+<p>2018&#x2F;12&#x2F;10 16:15 完结撒花！！！<br>因为听矩阵论听不懂而跑去看 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ZK3O402wf1c&list=PLE7DDD91010BC51F8">MIT 线性代数公开课</a> 来复习，结果打开了新世界的大门，对比就感觉当初学的线性代数简直是在搞笑233。<br>吉老师讲的线代结合实际应用，真的是为了让你听懂而讲，国内的教育和 MIT 还是存在着巨大的差距吧，国内可能就让你死记，能对付考试就行了。<br>本来打算就说听一下算了，想着到后面可能会忘记前面的东西，于是做了下笔记（其实如果不复习记了也会忘hhh），最后看完发现记了好多页啊_(°:з」∠)_<br><img data-src="/blog/images/2018/12/18.06-Linear-Algebra-note.jpg" title="Linear Algebra Notes"></p>
     </div>
       <footer class="post-footer">
         <div class="post-eof"></div>
@@ -315,7 +315,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2018/10/summary_1811.png"></p>
+          <p><img data-src="/blog/images/2018/10/summary_1811.png"></p>
 <p>不知不觉又摸鱼一个月了:3<br>下面是 2018 年十一月的总结。</p>
           <!--noindex-->
             <div class="post-button">
@@ -406,11 +406,11 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2018/11/c-pointer.jpg"></p>
+          <p><img data-src="/blog/images/2018/11/c-pointer.jpg"></p>
 <p>今天做了一道题，感觉很有趣，题目是下面这样的</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Func</span><span class="params">(<span class="type">char</span> str_arg[<span class="number">100</span>])</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">char</span> str[] = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(str));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">strlen</span>(str));</span><br><span class="line">	<span class="type">char</span>*p = str;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(p));</span><br><span class="line">	<span class="built_in">Func</span>(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span> </span><br></pre></td></tr></table></figure>
 <p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）</p>
-<p><img data-src="/blog/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
+<p><img data-src="/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
 <p>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
     </div>
       <footer class="post-footer">
@@ -494,7 +494,7 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-          <p><img data-src="/blog/blog/images/2018/11/181101-no-voice-2.png"></p>
+          <p><img data-src="/blog/images/2018/11/181101-no-voice-2.png"></p>
 <p>今天实验室发新机器了，重装了 win10 之后，开机-网易云音乐-耳机-没有声音？不听歌还怎么玩，开始以为是驱动的问题，装好之后还是没有声音，就一直提示未插入扬声器或耳机，然而我明明插耳机了好吧。<br>于是乎上网找了许多方法，最后找到一个靠谱的方法。</p>
           <!--noindex-->
             <div class="post-button">

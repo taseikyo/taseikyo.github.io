@@ -25,10 +25,10 @@
 <meta property="og:site_name" content="Tian&#39;s Daily Life">
 <meta property="og:description" content="今天做了一道题，感觉很有趣，题目是下面这样的 123456789101112131432 位系统下下面程序的输出结果为多少？void Func(char str_arg[100]) &amp;#123;	printf(&quot;%d\n&quot;, sizeof(str_arg));&amp;#125;int main(void) &amp;#123;	char str[] &#x3D; &quot;Hello&quot;;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2018/11/c-pointer.jpg">
-<meta property="og:image" content="https://taseikyo.github.io/blog/blog/images/2018/11/c-pointer-result.png">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2018/11/c-pointer.jpg">
+<meta property="og:image" content="https://taseikyo.github.io/blog/images/2018/11/c-pointer-result.png">
 <meta property="article:published_time" content="2018-11-23T08:21:49.000Z">
-<meta property="article:modified_time" content="2025-10-01T04:47:42.508Z">
+<meta property="article:modified_time" content="2025-10-01T06:49:09.781Z">
 <meta property="article:author" content="Lewis Tian">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="cpp">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="array">
 <meta property="article:tag" content="pointer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://taseikyo.github.io/blog/blog/images/2018/11/c-pointer.jpg">
+<meta name="twitter:image" content="https://taseikyo.github.io/blog/images/2018/11/c-pointer.jpg">
 <link rel="canonical" href="https://taseikyo.github.io/2018/11/23/0021.sizeof-arrayname-and-sizeof-pointer/">
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
@@ -184,11 +184,11 @@
         </div>
       </header>
     <div class="post-body" itemprop="articleBody">
-        <p><img data-src="/blog/blog/images/2018/11/c-pointer.jpg"></p>
+        <p><img data-src="/blog/images/2018/11/c-pointer.jpg"></p>
 <p>今天做了一道题，感觉很有趣，题目是下面这样的</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">32</span> 位系统下下面程序的输出结果为多少？</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Func</span><span class="params">(<span class="type">char</span> str_arg[<span class="number">100</span>])</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(str_arg));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="type">char</span> str[] = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(str));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">strlen</span>(str));</span><br><span class="line">	<span class="type">char</span>*p = str;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">sizeof</span>(p));</span><br><span class="line">	<span class="built_in">Func</span>(str);</span><br><span class="line">&#125;</span><br><span class="line">A <span class="number">5</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	B <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span>	C <span class="number">6</span> <span class="number">5</span> <span class="number">6</span> <span class="number">4</span>	D <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">100</span> </span><br></pre></td></tr></table></figure>
 <p>然而我选不出来。。。我觉得是 6 5 6 6 才对<br>于是把程序跑了一遍，毕竟 <strong>实践是检验的唯一标准</strong> 嘛<br>结果结果把我惊到了，是 6 5 4 4，如下所示 ;3（留下了菜鸡的泪水）</p>
-<p><img data-src="/blog/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
+<p><img data-src="/blog/images/2018/11/c-pointer-result.png" alt="result" title="运行结果"></p>
 <p>不过想想也是应该是，32 位系统指针本来就是占 4 个字节，只是它指向的那个字符串是占了 6 个字节而已啊 ;p</p>
     </div>
         <div class="reward-container">
