@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>Windows 右键“发送到”功能增强</title>
+      <link href="/blog/2025/10/18/0083.windows-send-menu-enhancement/"/>
+      <url>/blog/2025/10/18/0083.windows-send-menu-enhancement/</url>
+      
+        <content type="html"><![CDATA[<p>之前还在读研的时候偶然发现这个自定义能力，隐约记得搞了仨，比如当时还有在 B 站投稿，所以加了一个扩展是压缩 PR 导出的视频为 B 站能支持的码率（高了 B 站也会帮你压缩到一个很低的码率，不如手动压缩到一个合适的码率）。</p><p>今天突然有个诉求是将日志压缩为 7z 格式，这不是妥妥的一个应用场景，但是忘了这么添加“发送到”扩展了。</p><p>于是呢，搜了一下怎么做并记录了下来。</p><p>首先进入到展示在“发送到”这个右键菜单的目录：<code>%APPDATA%\Microsoft\Windows\SendTo</code></p><p>然后开写 bat 脚本（注意如果想直接写 Python 是不行的，因为即使你在上述目录放置了一个 Python 脚本，右键点到“发送到”你会发现你的脚本并不会出现在菜单里）。 <strong>“发送到”后边的程序会把操作的文件名作为命令行参数向后传递，传递到程序的第一个参数就是文件路径。</strong></p><p>如果 bat 只是一个入口，那么 Python 就是具体的逻辑实现，使用该命令将参数传递给 Python：<code>python script.py %*</code></p><p>一个 demo：</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python <span class="variable">%APPDATA%</span>/Microsoft/Windows/SendTo/aaa.py %*</span><br><span class="line"><span class="built_in">pause</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;选中文件为：<span class="subst">&#123;<span class="string">&#x27;&#x27;</span>.join(sys.argv[<span class="number">1</span>:])&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure><p>示意图：</p><p><img data-src="/blog/images/2025/10/Recording20251018151720.gif"></p><p>参考：</p><ul><li><a href="https://www.zhihu.com/question/470598956/answer/1983746821">https://www.zhihu.com/question/470598956/answer/1983746821</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+            <tag> menu </tag>
+            
+            <tag> send-to </tag>
+            
+            <tag> bat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2025 博客重启！</title>
       <link href="/blog/2025/10/01/0082.relaunch-2025/"/>
       <url>/blog/2025/10/01/0082.relaunch-2025/</url>
@@ -2562,7 +2593,19 @@
       
         <tags>
             
-            <tag> programming - python - crawler - ram - jingdong - echarts - javascript </tag>
+            <tag> programming </tag>
+            
+            <tag> python </tag>
+            
+            <tag> crawler </tag>
+            
+            <tag> javascript </tag>
+            
+            <tag> ram </tag>
+            
+            <tag> jingdong </tag>
+            
+            <tag> echarts </tag>
             
         </tags>
       

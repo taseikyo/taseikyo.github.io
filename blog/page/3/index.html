@@ -141,6 +141,69 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/22/0067.microsoft-store-0x80131500/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2020/10/22/0067.microsoft-store-0x80131500/" class="post-title-link" itemprop="url">Windows 应用商店错误代码 0x80131500</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2020-10-22 10:43:38" itemprop="dateCreated datePublished" datetime="2020-10-22T10:43:38+08:00">2020-10-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p><img data-src="/blog/images/2020/10/ws-0x80131500.jpg"></p>
+<p>今天遇到这个问题，打开应用商店一直“灰屏”，底部有错误代码：0x80131500，搜了一下解决办法，前几个都没用，不过都记录一下，万一以后遇到这些办法有效。</p>
+<ol>
+<li>重置应用商店<ul>
+<li>管理员 CMD - 输入 <code>wsreset</code></li>
+</ul>
+</li>
+<li>使用 TLS 1.2<ul>
+<li>打开“运行”输入 inetcpl.cpl （“WINDOWS”+“R” 键，输入 inetcpl.cpl）</li>
+<li>点开高级往下拉，勾上”使用TLS 1.2”选项，或者点还原高级设置</li>
+</ul>
+</li>
+<li>关闭代理<ul>
+<li>设置 - 网络和 Internet - “使用代理服务器”关闭</li>
+</ul>
+</li>
+</ol>
+<p>解决的是第三个，之前为了加速 <code>git clone</code> 设置了代理：<code>127.0.0.1:7890</code>，关了之后就好了。舒服！</p>
+<p>参考：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6028738660">https://tieba.baidu.com/p/6028738660</a></li>
+<li><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6033241727">https://tieba.baidu.com/p/6033241727</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40607008/article/details/85055751">https://blog.csdn.net/weixin_40607008/article/details/85055751</a></li>
+</ul>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/10/16/0066.grant-user-sudo-privilege/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -499,52 +562,6 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/08/25/0059.bug-200825-cpp-int2double/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2020/08/25/0059.bug-200825-cpp-int2double/" class="post-title-link" itemprop="url">【C++】每日 Bug - int 转 double</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2020-08-25 11:00:11" itemprop="dateCreated datePublished" datetime="2020-08-25T11:00:11+08:00">2020-08-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>算是一个挺常见的错误（对于我来说），印象中是第二次犯这个错了。</p>
-<p>看下面这个函数，你觉得有没有什么问题？</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">count_avg</span><span class="params">(vector&lt;<span class="type">int</span>&gt;nums)</span> </span>&#123;</span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> num : nums) &#123;</span><br><span class="line">		ans += num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans / nums.<span class="built_in">size</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>看上去没毛病，这个函数就是求平均值嘛，先求和然后除以个数，得到的结果不就是平均值嘛，来几个测试用例看看：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; count_avg(&#123;2, 2&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;1, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2</span><br><span class="line">cout &lt;&lt; count_avg(&#123;2, 3&#125;) &lt;&lt; endl;</span><br><span class="line">// 2!</span><br></pre></td></tr></table></figure>
-<p>最后一个例子出现问题了，聪明的你发现了问题所在吗？</p>
-<p>因为 ans 是 int 类型，而 size() 返回是一个 vector<int>::size_type 类型，就把它当作 int 类型（一般都用 int size 去接嘛），所以最后结果就是个 int 的类型，对于除不断的就直接取整了，所以需要操作一波，把 ans 或者 size 转换成 double 类型。</p>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/blog/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="extend next" rel="next" href="/blog/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -601,7 +618,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">84</span>
+          <span class="site-state-item-count">85</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -612,7 +629,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">210</span>
+        <span class="site-state-item-count">214</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

@@ -141,6 +141,60 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2025/10/18/0083.windows-send-menu-enhancement/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2025/10/18/0083.windows-send-menu-enhancement/" class="post-title-link" itemprop="url">Windows 右键“发送到”功能增强</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2025-10-18 14:44:11" itemprop="dateCreated datePublished" datetime="2025-10-18T14:44:11+08:00">2025-10-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p>之前还在读研的时候偶然发现这个自定义能力，隐约记得搞了仨，比如当时还有在 B 站投稿，所以加了一个扩展是压缩 PR 导出的视频为 B 站能支持的码率（高了 B 站也会帮你压缩到一个很低的码率，不如手动压缩到一个合适的码率）。</p>
+<p>今天突然有个诉求是将日志压缩为 7z 格式，这不是妥妥的一个应用场景，但是忘了这么添加“发送到”扩展了。</p>
+<p>于是呢，搜了一下怎么做并记录了下来。</p>
+<p>首先进入到展示在“发送到”这个右键菜单的目录：<code>%APPDATA%\Microsoft\Windows\SendTo</code></p>
+<p>然后开写 bat 脚本（注意如果想直接写 Python 是不行的，因为即使你在上述目录放置了一个 Python 脚本，右键点到“发送到”你会发现你的脚本并不会出现在菜单里）。 <strong>“发送到”后边的程序会把操作的文件名作为命令行参数向后传递，传递到程序的第一个参数就是文件路径。</strong></p>
+<p>如果 bat 只是一个入口，那么 Python 就是具体的逻辑实现，使用该命令将参数传递给 Python：<code>python script.py %*</code></p>
+<p>一个 demo：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python <span class="variable">%APPDATA%</span>/Microsoft/Windows/SendTo/aaa.py %*</span><br><span class="line"><span class="built_in">pause</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;选中文件为：<span class="subst">&#123;<span class="string">&#x27;&#x27;</span>.join(sys.argv[<span class="number">1</span>:])&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>示意图：</p>
+<p><img data-src="/blog/images/2025/10/Recording20251018151720.gif"></p>
+<p>参考：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/470598956/answer/1983746821">https://www.zhihu.com/question/470598956/answer/1983746821</a></li>
+</ul>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2025/10/01/0082.relaunch-2025/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -482,49 +536,6 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2020/12/21/0075.latex-table-bug/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2020/12/21/0075.latex-table-bug/" class="post-title-link" itemprop="url">vscode LaTex 表格编译错（长时间 build 卡住）</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2020-12-21 19:07:41" itemprop="dateCreated datePublished" datetime="2020-12-21T19:07:41+08:00">2020-12-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>今天用 vscode 写论文，有个表格，于是从给出的模板后面 copy 了表格的代码，稍作修改，然后 <code>ctrl+s</code> 开始 build，结果几分钟过去了一直卡在 build，于是我换了一个 build 的 recipe（侧边栏的 TEX 按钮 - COMMANDS - Build LaTex project），一共有 4 个，我挨个试了个遍都是一样的结果，我：？</p>
-<p>我以为是 xelatex 这个程序出问题了，因为是之前安装 texlive2018，于是用 scoop 重新装了，结果依然会卡在 build。我就迷惑了，哪里出问题了，于是直接把文件代码贴到 overleaf 网站上，结果由于长时间编译不出来报错了，说是有语法错。。。我人傻了，vscode 咋没有报错？</p>
-<p>表格代码如下，目前并不懂哪里出错了 :O</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Table~<span class="keyword">\ref</span>&#123;tab1&#125; lists the comparison.</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;table&#125;</span><br><span class="line">  <span class="keyword">\begin</span>&#123;tabular&#125;&#123;lll&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;Comparison between A, B and C&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;tab1&#125;</span><br><span class="line">    <span class="keyword">\toprule</span></span><br><span class="line">    Virtualization Technology<span class="built_in">&amp;</span>Pros<span class="built_in">&amp;</span>Cons<span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\midrule</span></span><br><span class="line">    As <span class="built_in">&amp;</span> Allows deploying different operating systems on a single host <span class="built_in">&amp;</span> For Swedish names<span class="keyword">\\</span></span><br><span class="line">    Bs <span class="built_in">&amp;</span> 1 in 5<span class="built_in">&amp;</span> Common in math<span class="keyword">\\</span></span><br><span class="line">    Cs <span class="built_in">&amp;</span> 4 in 5 <span class="built_in">&amp;</span> Used in business<span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;</span><br></pre></td></tr></table></figure>
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -581,7 +592,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">84</span>
+          <span class="site-state-item-count">85</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -592,7 +603,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">210</span>
+        <span class="site-state-item-count">214</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

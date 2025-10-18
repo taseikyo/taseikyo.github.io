@@ -141,6 +141,56 @@
         <div class="content-wrap">
           <div class="content index posts-expand">
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
+      <meta itemprop="name" content="Lewis Tian">
+      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
+    </span>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tian's Daily Life">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+            <a href="/blog/2019/10/10/0043.problems-of-installing-ubuntu1804-on-server/" class="post-title-link" itemprop="url">在服务器上装 Ubuntu1804 遇到的一些问题</a>
+        </h2>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Created: 2019-10-10 16:59:35" itemprop="dateCreated datePublished" datetime="2019-10-10T16:59:35+08:00">2019-10-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Bug/" itemprop="url" rel="index"><span itemprop="name">Bug</span></a>
+                </span>
+            </span>
+        </div>
+      </header>
+    <div class="post-body" itemprop="articleBody">
+          <p>由于 OSv 官方只主动地维护 Ubuntu 和 Fedora，而实验室服务器都是 CentOS，而且版本都很高，都是 7.5&#x2F;7.6，而 OSv 只支持到 7.3，所以根本装不了，只能重装系统，而我之前也没在服务器上装过系统，因此遇到许多问题。</p>
+<p>开始我以为由于是给服务器装系统，所以只能装 server 版，然后下的 server 版本的 ubuntu，在制作启动盘的时候用的软碟通，结果缺东西，装的时候有问题，于是又换了个软件重新制作启动盘。</p>
+<p>大概叫 Universal-USB-Installer 吧，在下载目录中还有这个软件，但是问题来了，制作完成，再装的过程中到分区那一步，我有点懵逼了，因为有三块盘，不知道怎么分区，于是百度了一下按照某个教程来的，貌似是装好了，结果重启进不了系统…这还是 9 月 20 号的事了，过了几天（大概是 23）段博他们给新的服务器（NVM）换内存条的位置导致读不出来，于是又换了一下。等他们搞完我让段博帮我看一下，后来还是没搞定他建议我重装，还说可以直接装桌面版的，不一定要 server 版。</p>
+<p>后来由于志愿者的事、出差北京的事耽误了一周，直到今天才重新装的。</p>
+<p>装桌面版的由于有桌面感觉要友好一点，然后到了分区那一步，我这次没手动分区，直接将系统装在 SSD 那个盘，同时勾选建立 LVM 的选项，让它自己分区。</p>
+<p>装完之后进入系统我发现它就没详细分区，就一个根目录，没有 home、boot、swap这些分区，都裹在一起了。但是至少能启动了不是 233</p>
+<p>后来喊来小王博配 IP，搞完之后回去发现 xshell 连不上。然后又回去装 openssh-server，搞完之后可以远程连接了。</p>
+<p>然后又遇到一个问题，那就是新建的用户命令行提示只有一个“$”，其他上下左右方向键会出现 ^H，^[ 这些奇怪的东西。后来查了一下是要将默认的 shell 改成 bash，默认是 sh，然后断开重连就好了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/passwd</span><br><span class="line"><span class="comment"># 将指定用户如:</span></span><br><span class="line">/home/taseikyo:/sh</span><br><span class="line"><span class="comment"># 修改为</span></span><br><span class="line">/home/taseikyo:/bin/bash</span><br></pre></td></tr></table></figure>
+<p>之后想看 IP，结果 ifcofig 命令没装，于是 apt net-tools，又出现问题，Package ‘net-tools’ has no installation candidate。查了一下是需要换源，改成阿里云的源再 update 一下就可以正常安装了。</p>
+<p>我真的服了，麻烦多多啊。</p>
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/09/08/0042.diff-stack-heap/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
@@ -488,54 +538,6 @@
         <div class="post-eof"></div>
       </footer>
   </article>
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taseikyo.github.io/2019/05/10/0035.good-things-recommended-win-softwares/">
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/23132915?v=4&s=150">
-      <meta itemprop="name" content="Lewis Tian">
-      <meta itemprop="description" content="There is no destination for pursuit of knowledge in the finite lifetime.">
-    </span>
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tian's Daily Life">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            <a href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/" class="post-title-link" itemprop="url">好物推荐之 windows 软件</a>
-        </h2>
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Created: 2019-05-10 09:19:43" itemprop="dateCreated datePublished" datetime="2019-05-10T09:19:43+08:00">2019-05-10</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
-                </span>
-            </span>
-        </div>
-      </header>
-    <div class="post-body" itemprop="articleBody">
-          <p>记录一下在 windows 上用过的软件，都是用过之后感觉比同类型好或者用的太久习惯了。<br>目的是为了以后换了电脑&#x2F;笔记本还能将这些老朋友装上，不至于因为健忘（？）而将这些曾用过的“好软”忘掉。<br>本来不想分先后，但是太乱了; 于是最后用 Py 根据软件名排了个序。</p>
-<p><img data-src="/blog/images/banner/francesco-califano-1569940-unsplash.jpg" alt="cover" title="Photo by Francesco Califano on Unsplash"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2019/05/10/0035.good-things-recommended-win-softwares/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-    </div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/blog/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/blog/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="extend next" rel="next" href="/blog/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -592,7 +594,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
-          <span class="site-state-item-count">84</span>
+          <span class="site-state-item-count">85</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -603,7 +605,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
-        <span class="site-state-item-count">210</span>
+        <span class="site-state-item-count">214</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
